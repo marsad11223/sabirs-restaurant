@@ -5,6 +5,7 @@ import Fries from "./fries.png";
 import Burger from "./burger.png";
 import LegPiece from "./legPiece.png";
 import Daal from "./daal.png";
+import BGlabmKarahi from "./bgLabmKarahi.png";
 
 const pngs = {
   BgHero,
@@ -14,6 +15,7 @@ const pngs = {
   Burger,
   LegPiece,
   Daal,
+  BGlabmKarahi,
 };
 
 export default pngs;

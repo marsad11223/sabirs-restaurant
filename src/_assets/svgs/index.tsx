@@ -7,6 +7,7 @@ import Instagram from "./instagram.svg";
 import InstagramWhite from "./instagramWhite.svg";
 import Twitter from "./twitter.svg";
 import TwitterWhite from "./twitterWhite.svg";
+import ArrowWhite from "./arrowWhite.svg";
 
 const svgs = {
   Logo,
@@ -18,6 +19,7 @@ const svgs = {
   InstagramWhite,
   Twitter,
   TwitterWhite,
+  ArrowWhite,
 };
 
 export default svgs;

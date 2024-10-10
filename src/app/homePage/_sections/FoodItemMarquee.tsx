@@ -1,5 +1,4 @@
 import pngs from "@/_assets/pngs";
-// import Marquee from "react-fast-marquee";
 import { Box, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import Marquee from "react-fast-marquee";
