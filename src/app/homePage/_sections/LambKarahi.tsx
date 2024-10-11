@@ -114,7 +114,8 @@ export function OrderButton() {
           position: "relative",
           overflow: "hidden",
           ":hover": {
-            backgroundColor: "rgba(128,0,0,0.7)", // Darken background on hover
+            backgroundColor: "rgba(128,0,0,0.7)",
+            color: "#ffffff",
           },
         }}
         endIcon={

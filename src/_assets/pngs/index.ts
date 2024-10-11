@@ -6,6 +6,11 @@ import Burger from "./burger.png";
 import LegPiece from "./legPiece.png";
 import Daal from "./daal.png";
 import BGlabmKarahi from "./bgLabmKarahi.png";
+import SabriFeast from "./sabriFeast.webp";
+import BGwelcomeSabri from "./bgWelcomeSabri.png";
+import BGsabirsGrill from "./bgSabirsGrill.png";
+import HeroHedding from "./heroHedding.png";
+import HeroBurger from "./heroBurger.png";
 
 const pngs = {
   BgHero,
@@ -16,6 +21,11 @@ const pngs = {
   LegPiece,
   Daal,
   BGlabmKarahi,
+  SabriFeast,
+  BGwelcomeSabri,
+  BGsabirsGrill,
+  HeroHedding,
+  HeroBurger,
 };
 
 export default pngs;

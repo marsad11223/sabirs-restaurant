@@ -1,15 +1,20 @@
 import { Box } from "@mui/material";
 import Navbar from "@/_components/navbar/Navbar";
-import HeroSection from "./_sections/Hero";
+import Hero from "./_sections/Hero";
+// import HeroSection from "./_sections/HeroSection";
 import Marquee from "./_sections/FoodItemMarquee";
-import LabmKarahi from "./_sections/LambKarahi";
+// import LabmKarahi from "./_sections/LambKarahi";
+import SabirsGrillWelcome from "./_sections/SabirsGrillWelcome";
+
 export default function HomePage() {
   return (
     <Box>
       <Navbar />
-      <HeroSection />
+      <Hero />
+      {/* <HeroSection /> */}
       <Marquee />
-      <LabmKarahi />
+      {/* <LabmKarahi /> */}
+      <SabirsGrillWelcome />
     </Box>
   );
 }
