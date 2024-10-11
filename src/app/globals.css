@@ -26,13 +26,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-.welcomeSabri {
-  /* bgWelcomeSabri.png */
-  background-image: url("../_assets/pngs/fries.png");
-
-  /* background-image: url("../_assets//pngs//bgWelcomeSabri.png"); */
-  /* background-color: red; */
-  background-size: cover;
-  background-repeat: no-repeat;
-}

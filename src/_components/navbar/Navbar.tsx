@@ -256,25 +256,41 @@ const Navbar = () => {
         >
           <Typography
             variant="h6"
-            sx={{ cursor: "pointer", fontSize: { xs: "14px", sm: "16px" } }}
+            sx={{
+              cursor: "pointer",
+              fontSize: { xs: "14px", sm: "16px" },
+              color: "#ffffff",
+            }}
           >
             MENU
           </Typography>
           <Typography
             variant="h6"
-            sx={{ cursor: "pointer", fontSize: { xs: "14px", sm: "16px" } }}
+            sx={{
+              cursor: "pointer",
+              fontSize: { xs: "14px", sm: "16px" },
+              color: "#ffffff",
+            }}
           >
             ABOUT
           </Typography>
           <Typography
             variant="h6"
-            sx={{ cursor: "pointer", fontSize: { xs: "14px", sm: "16px" } }}
+            sx={{
+              cursor: "pointer",
+              fontSize: { xs: "14px", sm: "16px" },
+              color: "#ffffff",
+            }}
           >
             LOCATION
           </Typography>
           <Typography
             variant="h6"
-            sx={{ cursor: "pointer", fontSize: { xs: "14px", sm: "16px" } }}
+            sx={{
+              cursor: "pointer",
+              fontSize: { xs: "14px", sm: "16px" },
+              color: "#ffffff",
+            }}
           >
             CONTACT
           </Typography>

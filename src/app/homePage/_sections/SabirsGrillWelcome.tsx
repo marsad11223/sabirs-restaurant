@@ -1,25 +1,39 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import pngs from "@/_assets/pngs";
-// import { url } from "inspector";
-// import BGwelcomeSabri from "../../../_assets/pngs/BGwelcomeSabri.png";
 
 export default function SabirsGrillWelcome() {
   return (
     <>
       <Box
-        className="welcomeSabri"
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
           justifyContent: "center",
           gap: { xs: "60px", lg: "40px", xl: "100px" },
+          position: "relative",
           padding: { xs: "50px 20px", sm: "100px 60px", md: "130px 80px" },
           marginTop: "-4px",
           width: "100%",
+          overflow: "hidden",
         }}
       >
+        {/* bg image  */}
+        <Box
+          sx={{
+            zIndex: "-1",
+            position: "absolute",
+            height: "100%",
+            width: "100%",
+          }}
+        >
+          <Image
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            src={pngs.BGwelcomeSabri}
+            alt="BGwelcomeSabri"
+          />
+        </Box>
         <Box sx={{ position: "relative" }}>
           {/* card  */}
           <Box
