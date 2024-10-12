@@ -184,21 +184,37 @@ const Footer = () => {
             }}
           />
           <Box sx={{ display: "flex", gap: "30px" }}>
-            <Image
-              style={{ height: "auto", width: "30px" }}
-              src={svgs.TwitterWhite}
-              alt="footer links"
-            />
-            <Image
-              style={{ height: "auto", width: "30px" }}
-              src={svgs.InstagramWhite}
-              alt="footer links"
-            />
-            <Image
+            {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
+              <Image
+                style={{ height: "auto", width: "30px" }}
+                src={svgs.TwitterWhite}
+                alt="footer links"
+              />
+            {/* </a> */}
+            <a
+              href="https://www.instagram.com/sabirsgrill/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                style={{ height: "auto", width: "30px" }}
+                src={svgs.InstagramWhite}
+                alt="footer links"
+              />
+            </a>
+            <a
+                href="https://www.facebook.com/sabirsgrill/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
               style={{ height: "auto", width: "30px" }}
               src={svgs.FacebookWhite}
               alt="footer links"
             />
+              </a>
+
+            
           </Box>
         </Box>
       </Box>

@@ -28,20 +28,38 @@ export default function OurMenu() {
     },
     {
       id: 2,
-      name: "12inch Garlic Bread",
+      name: "2Pc Chicken & Fries",
       discount: "-16%",
-      price: "£ 6.29",
-      originalPrice: "£ 9.00",
-      image: pngs.GarlicBread,
+      price: "£ 2.29",
+      originalPrice: "£ 4.89",
+      image: pngs.Fries,
       rating: 5,
     },
     {
       id: 3,
-      name: "12inch Garlic Bread",
+      name: "Flamin Fusion Burger",
+      discount: "-16%",
+      price: "£ 2.29",
+      originalPrice: "£ 4.99",
+      image: pngs.Burger,
+      rating: 5,
+    },
+    {
+      id: 4,
+      name: "Quarter Peri Peri...",
+      discount: "-16%",
+      price: "£ 3.29",
+      originalPrice: "£ 4.29",
+      image: pngs.LegPiece,
+      rating: 5,
+    },
+    {
+      id: 5,
+      name: "Daal",
       discount: "-16%",
       price: "£ 6.29",
-      originalPrice: "£ 9.00",
-      image: pngs.GarlicBread,
+      originalPrice: "£ 8.95",
+      image: pngs.Daal,
       rating: 5,
     },
   ];
@@ -147,7 +165,7 @@ export default function OurMenu() {
       >
         <Image
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          src={pngs.BGsabirsGrill}
+          src={pngs.BGourMenu}
           alt="BGsabirsGrill"
         />
       </Box>

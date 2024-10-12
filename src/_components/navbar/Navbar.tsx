@@ -146,11 +146,13 @@ const Navbar = () => {
                 height: "auto",
               }}
             >
+              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
               <Image
                 style={{ width: "100%", height: "100%" }}
                 src={svgs.Twitter}
                 alt="Twitter"
               />
+              {/* </a> */}
             </Box>
             <Box
               sx={{
@@ -158,7 +160,17 @@ const Navbar = () => {
                 height: "auto",
               }}
             >
-              <Image src={svgs.Instagram} alt="Instagram" />
+              <a
+                href="https://www.instagram.com/sabirsgrill/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  style={{ width: "100%", height: "100%" }}
+                  src={svgs.Instagram}
+                  alt="Facebook"
+                />
+              </a>
             </Box>
             <Box
               sx={{
@@ -166,11 +178,17 @@ const Navbar = () => {
                 height: "auto",
               }}
             >
-              <Image
-                style={{ width: "100%", height: "100%" }}
-                src={svgs.Facebook}
-                alt="Facebook"
-              />
+              <a
+                href="https://www.facebook.com/sabirsgrill/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  style={{ width: "100%", height: "100%" }}
+                  src={svgs.Facebook}
+                  alt="Facebook"
+                />
+              </a>
             </Box>
           </Box>
         </Box>
@@ -307,11 +325,13 @@ const Navbar = () => {
                 height: "auto",
               }}
             >
+              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
               <Image
                 style={{ width: "100%", height: "100%" }}
                 src={svgs.TwitterWhite}
                 alt="Twitter"
               />
+              {/* </a> */}
             </Box>
             <Box
               sx={{
@@ -319,11 +339,17 @@ const Navbar = () => {
                 height: "auto",
               }}
             >
-              <Image
-                style={{ width: "100%", height: "100%" }}
-                src={svgs.InstagramWhite}
-                alt="Instagram"
-              />
+              <a
+                href="https://www.instagram.com/sabirsgrill/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  style={{ width: "100%", height: "100%" }}
+                  src={svgs.InstagramWhite}
+                  alt="Instagram"
+                />
+              </a>
             </Box>
             <Box
               sx={{
@@ -331,11 +357,17 @@ const Navbar = () => {
                 height: "auto",
               }}
             >
-              <Image
-                style={{ width: "100%", height: "100%" }}
-                src={svgs.FacebookWhite}
-                alt="Facebook"
-              />
+              <a
+                href="https://www.facebook.com/sabirsgrill/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  style={{ width: "100%", height: "100%" }}
+                  src={svgs.FacebookWhite}
+                  alt="Facebook"
+                />
+              </a>
             </Box>
           </Box>
         </Box>

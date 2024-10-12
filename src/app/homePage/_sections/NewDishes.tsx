@@ -31,7 +31,7 @@ export default function NewDishes() {
         >
           <Image
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            src={pngs.BGwelcomeSabri}
+            src={pngs.BGnewDishes}
             alt="BGwelcomeSabri"
           />
         </Box>
