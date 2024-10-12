@@ -60,7 +60,7 @@ export default function OurMenu() {
         },
       },
       {
-        breakpoint: 768, // Below 768px screen width
+        breakpoint: 900, // Below 768px screen width
         settings: {
           slidesToShow: 1, // Show 1 card
         },
@@ -69,33 +69,87 @@ export default function OurMenu() {
   };
 
   return (
-    <Box sx={{ backgroundColor: "blue", padding: "100px 80px 200px 80px" }}>
+    <Box sx={{ position: "relative" }}>
       <Box
         sx={{
-          backgroundColor: "white",
-          borderRadius: "48px",
-          padding: "130px 80px",
+          padding: {
+            xs: "40px 16px",
+            sm: "40px 32px",
+            md: "80px 64px",
+            lg: "100px 80px 200px 80px",
+          },
+          position: "relative",
         }}
       >
-        <Box sx={{ textAlign: "center", paddingBottom: "100px" }}>
-          <Typography
+        <Box sx={{ position: "relative", zIndex: "10" }}>
+          <Box
             sx={{
-              color: "#851A1D",
-              fontSize: { xs: "24px", sm: "35px", md: "45px", lg: "64px" },
-              fontWeight: "700",
-              fontFamily: "Oswald",
+              backgroundColor: "white",
+              borderRadius: "48px",
+              padding: {
+                xs: "40px 20px",
+                sm: "90px 60px",
+                md: "100px 70px",
+                lg: "130px 80px",
+              },
+              position: "relative",
+              zIndex: "10",
             }}
           >
-            OUR MENU
-          </Typography>
-        </Box>
+            <Box
+              sx={{
+                textAlign: "center",
+                paddingBottom: { xs: "40px", sm: "60px", lg: "100px" },
+              }}
+            >
+              <Typography
+                sx={{
+                  color: "#851A1D",
+                  fontSize: { xs: "24px", sm: "35px", md: "45px", lg: "64px" },
+                  fontWeight: "700",
+                  fontFamily: "Oswald",
+                }}
+              >
+                OUR MENU
+              </Typography>
+            </Box>
 
-        {/* Add the slider with menu items */}
-        <Slider {...sliderSettings}>
-          {menuItems.map((item) => (
-            <MenuCard key={item.id} data={item} />
-          ))}
-        </Slider>
+            {/* Add the slider with menu items */}
+            <Slider {...sliderSettings}>
+              {menuItems.map((item) => (
+                <MenuCard key={item.id} data={item} />
+              ))}
+            </Slider>
+          </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "0",
+              left: "0",
+              height: "100%",
+              width: "100%",
+              backgroundColor: "#851A1D",
+              borderRadius: "48px",
+              zIndex: "1",
+              transform: "rotate(-3deg)",
+            }}
+          ></Box>
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          top: "0",
+          left: "0",
+        }}
+      >
+        <Image
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          src={pngs.BGsabirsGrill}
+          alt="BGsabirsGrill"
+        />
       </Box>
     </Box>
   );
@@ -114,9 +168,9 @@ export function MenuCard(props: { data: MenuItem }) {
         {/* Card image */}
         <Box
           sx={{
-            width: "288px",
-            height: "263px",
-            maxWidth: "300px",
+            width: { xs: "250px", sm: "288px" },
+            height: { xs: "auto", sm: "263px" },
+            maxWidth: { xs: "270px", sm: "300px" },
             backgroundColor: "#ff9800",
             borderRadius: "30px",
             position: "relative",
