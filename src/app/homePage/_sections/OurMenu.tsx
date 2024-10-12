@@ -4,8 +4,6 @@ import svgs from "@/_assets/svgs";
 import { Box, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import Slider from "react-slick"; // Import the Slider component
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 interface MenuItem {
   id: number;
