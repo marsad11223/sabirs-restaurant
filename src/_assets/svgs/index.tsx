@@ -8,6 +8,8 @@ import InstagramWhite from "./instagramWhite.svg";
 import Twitter from "./twitter.svg";
 import TwitterWhite from "./twitterWhite.svg";
 import ArrowWhite from "./arrowWhite.svg";
+import ArrowRed from "./arrowRed.svg";
+import FooterLogo from "./footerLogo.svg";
 
 const svgs = {
   Logo,
@@ -20,6 +22,8 @@ const svgs = {
   Twitter,
   TwitterWhite,
   ArrowWhite,
+  ArrowRed,
+  FooterLogo,
 };
 
 export default svgs;

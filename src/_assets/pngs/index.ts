@@ -11,6 +11,8 @@ import BGwelcomeSabri from "./bgWelcomeSabri.png";
 import BGsabirsGrill from "./bgSabirsGrill.png";
 import HeroHedding from "./heroHedding.png";
 import HeroBurger from "./heroBurger.png";
+import FooterMashroom from "./footerMashroom.png";
+import Footerleaf from "./footerleaf.png";
 
 const pngs = {
   BgHero,
@@ -26,6 +28,8 @@ const pngs = {
   BGsabirsGrill,
   HeroHedding,
   HeroBurger,
+  FooterMashroom,
+  Footerleaf,
 };
 
 export default pngs;
