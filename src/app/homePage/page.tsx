@@ -5,6 +5,7 @@ import Hero from "./_sections/Hero";
 import Marquee from "./_sections/FoodItemMarquee";
 // import LabmKarahi from "./_sections/LambKarahi";
 import SabirsGrillWelcome from "./_sections/SabirsGrillWelcome";
+import NewDishes from "./_sections/NewDishes";
 import Footer from "@/_components/footer/Footer";
 
 export default function HomePage() {
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Marquee />
       {/* <LabmKarahi /> */}
       <SabirsGrillWelcome />
+      <NewDishes />
       <Footer />
     </Box>
   );

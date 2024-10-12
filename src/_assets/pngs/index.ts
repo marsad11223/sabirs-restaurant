@@ -13,6 +13,7 @@ import HeroHedding from "./heroHedding.png";
 import HeroBurger from "./heroBurger.png";
 import FooterMashroom from "./footerMashroom.png";
 import Footerleaf from "./footerleaf.png";
+import Dishes from "./dishes.png";
 
 const pngs = {
   BgHero,
@@ -30,6 +31,7 @@ const pngs = {
   HeroBurger,
   FooterMashroom,
   Footerleaf,
+  Dishes,
 };
 
 export default pngs;
