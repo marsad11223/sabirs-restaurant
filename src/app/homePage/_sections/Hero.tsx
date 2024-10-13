@@ -70,7 +70,10 @@ export default function Hero() {
             alt="bg heroSection"
           />
           <Image
-            style={{ width: "100%", height: "100%" }}
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
             src={pngs.HeroBurger}
             alt="bg heroSection"
           />

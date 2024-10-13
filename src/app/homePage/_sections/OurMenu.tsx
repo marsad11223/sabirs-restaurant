@@ -87,7 +87,36 @@ export default function OurMenu() {
   };
 
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box
+      sx={{
+        position: "relative",
+        maxHeight: { xl: "1600px" },
+        height: "100%",
+        overflowY: "scroll",
+        marginTop: "-3px",
+        "&::-webkit-scrollbar": {
+          display: "none",
+        },
+        scrollbarWidth: "none",
+      }}
+    >
+      {/* bg image  */}
+      <Box
+        sx={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          top: "0",
+          left: "0",
+        }}
+      >
+        <Image
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          src={pngs.BGourMenu}
+          alt="BGsabirsGrill"
+        />
+      </Box>
+      {/* slider box  */}
       <Box
         sx={{
           padding: {
@@ -154,21 +183,8 @@ export default function OurMenu() {
           ></Box>
         </Box>
       </Box>
-      <Box
-        sx={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          top: "0",
-          left: "0",
-        }}
-      >
-        <Image
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          src={pngs.BGourMenu}
-          alt="BGsabirsGrill"
-        />
-      </Box>
+      {/* section NEW PRODUCTS  */}
+      <Box></Box>
     </Box>
   );
 }
@@ -289,3 +305,5 @@ export function MenuCard(props: { data: MenuItem }) {
     </Box>
   );
 }
+
+// export
