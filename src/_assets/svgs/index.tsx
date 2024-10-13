@@ -12,6 +12,8 @@ import ArrowRed from "./arrowRed.svg";
 import FooterLogo from "./footerLogo.svg";
 import DiscountIcon from "./discountIcon.svg";
 import Star from "./star.svg";
+import Location from "./location.svg";
+import Email from "./email.svg";
 
 const svgs = {
   Logo,
@@ -28,6 +30,8 @@ const svgs = {
   FooterLogo,
   DiscountIcon,
   Star,
+  Location,
+  Email,
 };
 
 export default svgs;
