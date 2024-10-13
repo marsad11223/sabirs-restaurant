@@ -17,6 +17,8 @@ import Dishes from "./dishes.png";
 import BGnewDishes from "./bgNewDishes.png";
 import BGourMenu from "./bgOurMenu.png";
 import ContactUs from "./contactUs.png";
+import ItalianPasta from "./italianPasta.png";
+
 const pngs = {
   BgHero,
   SabriGrill,
@@ -37,6 +39,7 @@ const pngs = {
   BGnewDishes,
   BGourMenu,
   ContactUs,
+  ItalianPasta,
 };
 
 export default pngs;
