@@ -14,6 +14,8 @@ import DiscountIcon from "./discountIcon.svg";
 import Star from "./star.svg";
 import Location from "./location.svg";
 import Email from "./email.svg";
+import LeftAero from "./left-aero.svg"
+import RightAero from "./right-aero.svg"
 
 const svgs = {
   Logo,
@@ -32,6 +34,8 @@ const svgs = {
   Star,
   Location,
   Email,
+  LeftAero,
+  RightAero
 };
 
 export default svgs;
