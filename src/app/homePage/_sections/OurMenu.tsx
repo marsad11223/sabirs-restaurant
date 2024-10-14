@@ -5,6 +5,7 @@ import { Box, Button, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import Slider from "react-slick"; // Import the Slider component
 // import NewDishes from "./NewDishes";
+// import bgiomage from "../../../_assets/pngs/bgOurMenu.png"
 
 interface MenuItem {
   id: number;
@@ -89,16 +90,23 @@ export default function OurMenu() {
 
   return (
     <Box
+      className="bgOurMenu"
       sx={{
+        // backgroundColor: "red",
         position: "relative",
+        height: "100vh",
+        overflowY: "scroll",
         "&::-webkit-scrollbar": {
           display: "none",
         },
         scrollbarWidth: "none",
+        // backgroundImage: 'url("../")',
+        // backgroundSize: "cover",
+        // backgroundPosition: "center",
+        // backgroundRepeat: "no-repeat",
       }}
     >
-      {/* bg image  */}
-      <Box
+      {/* <Box
         sx={{
           position: "absolute",
           width: "100%",
@@ -112,7 +120,7 @@ export default function OurMenu() {
           src={pngs.BGourMenu}
           alt="BGsabirsGrill"
         />
-      </Box>
+      </Box> */}
       {/* slider box  */}
       <Box
         sx={{
