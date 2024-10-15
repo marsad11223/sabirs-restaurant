@@ -155,12 +155,12 @@ export default function OurMenu() {
       className="bgOurMenu"
       sx={{
         position: "relative",
-        height: "100vh",
-        overflowY: "scroll",
-        "&::-webkit-scrollbar": {
-          display: "none",
-        },
-        scrollbarWidth: "none",
+        minHeight: "100vh",
+        backgroundImage: "url(/bgOurMenu.png)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        width: "100%",
       }}
     >
       <Box
