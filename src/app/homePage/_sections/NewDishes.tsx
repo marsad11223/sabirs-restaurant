@@ -1,6 +1,7 @@
 import pngs from "@/_assets/pngs";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
+import Location from "./Location";
 
 export default function NewDishes() {
   const heddingBox = {
@@ -79,6 +80,8 @@ export default function NewDishes() {
             alt="dishes"
           />
         </Box>
+
+        <Location />
       </Box>
     </>
   );
