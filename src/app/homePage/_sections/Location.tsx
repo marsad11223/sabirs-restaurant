@@ -1,5 +1,6 @@
 "use client";
 
+import MapComponent from "@/_components/map/Map";
 import { Box, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 
@@ -66,12 +67,16 @@ export default function Location() {
               <LocationCard
                 address={"36 Westgate, Rotherham S60 1AS, United Kingdom"}
                 tell={"+44 1709 838899"}
+                lat={53.4321}
+                lng={-1.35746}
               />
               <LocationCard
                 address={
                   "Unit 1 A, The gateway retail park, Hillhouse lane, HD1 6EF"
                 }
                 tell={"01484 244111"}
+                lat={53.65738}
+                lng={-1.78314}
               />
             </Box>
           </Box>
@@ -98,9 +103,11 @@ export default function Location() {
 interface CardProps {
   address: string;
   tell: string;
+  lat: number;
+  lng: number;
 }
 
-const LocationCard: React.FC<CardProps> = ({ address, tell }) => {
+const LocationCard: React.FC<CardProps> = ({ address, tell, lat, lng }) => {
   return (
     <Box sx={{ color: "#711619", fontSize: "24px", maxWidth: "450px" }}>
       <Box
@@ -111,7 +118,7 @@ const LocationCard: React.FC<CardProps> = ({ address, tell }) => {
           borderRadius: "12px",
         }}
       >
-        location MAp here
+        <MapComponent lat={lat} lng={lng} />
       </Box>
       <Typography sx={{ fontSize: "24px", m: "20px 0 " }}>{address}</Typography>
       <Typography
