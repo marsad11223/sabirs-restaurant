@@ -1,8 +1,9 @@
 "use client";
 
 import MapComponent from "@/_components/map/Map";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Location() {
   return (
@@ -69,6 +70,7 @@ export default function Location() {
                 tell={"+44 1709 838899"}
                 lat={53.4321}
                 lng={-1.35746}
+                route="/order-huddersfield"
               />
               <LocationCard
                 address={
@@ -77,6 +79,7 @@ export default function Location() {
                 tell={"01484 244111"}
                 lat={53.65738}
                 lng={-1.78314}
+                route="/order-rotherham"
               />
             </Box>
           </Box>
@@ -105,9 +108,18 @@ interface CardProps {
   tell: string;
   lat: number;
   lng: number;
+  route: string;
 }
 
-const LocationCard: React.FC<CardProps> = ({ address, tell, lat, lng }) => {
+const LocationCard: React.FC<CardProps> = ({
+  address,
+  tell,
+  lat,
+  lng,
+  route,
+}) => {
+  const router = useRouter();
+
   return (
     <Box sx={{ color: "#711619", fontSize: "24px", maxWidth: "450px" }}>
       <Box
@@ -130,6 +142,20 @@ const LocationCard: React.FC<CardProps> = ({ address, tell, lat, lng }) => {
       >
         <a href={`tel:${tell}`}>{tell}</a>
       </Typography>
+      <br />
+      <Button
+        sx={{
+          width: "100px",
+          p: "10px 20px",
+          backgroundColor: "#711619",
+          color: "white",
+          borderRadius: "50px",
+          mt: "20px",
+        }}
+        onClick={() => router.push(route)}
+      >
+        Order
+      </Button>
     </Box>
   );
 };
