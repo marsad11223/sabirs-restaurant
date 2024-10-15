@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
+
 import pngs from "@/_assets/pngs";
 
 export default function SabirsGrillWelcome() {
@@ -12,30 +13,21 @@ export default function SabirsGrillWelcome() {
           alignItems: "center",
           justifyContent: "center",
           gap: { xs: "60px", lg: "40px", xl: "100px" },
-          position: "relative",
-          padding: { xs: "50px 20px", sm: "100px 60px", md: "130px 80px" },
-          marginTop: "-4px",
-          width: "100%",
           overflow: "hidden",
+
+          backgroundImage: "url(/bgWelcomeSabri.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          width: "100%",
+          height: { md: "100vh", sm: "auto", xs: "auto" },
+          minHeight: { md: "100vh", sm: "600px", xs: "500px" },
+          position: "relative",
+
+          padding: { xs: "50px 20px", sm: "100px 60px", md: "130px 80px" },
         }}
       >
-        {/* bg image  */}
-        <Box
-          sx={{
-            zIndex: "-1",
-            position: "absolute",
-            height: "100%",
-            width: "100%",
-          }}
-        >
-          <Image
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            src={pngs.BGwelcomeSabri}
-            alt="BGwelcomeSabri"
-          />
-        </Box>
         <Box sx={{ position: "relative" }}>
-          {/* card  */}
           <Box
             sx={{
               background: "#ffffff",
@@ -78,7 +70,6 @@ export default function SabirsGrillWelcome() {
               atmosphere that keeps guests coming back for more.
             </Typography>
           </Box>
-          {/* card shadow  */}
           <Box
             sx={{
               height: "100%",
@@ -97,7 +88,6 @@ export default function SabirsGrillWelcome() {
             }}
           ></Box>
         </Box>
-        {/* section  image */}
         <Box
           sx={{
             width: "100%",
