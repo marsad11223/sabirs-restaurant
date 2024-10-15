@@ -1,6 +1,7 @@
 "use client";
 import { Box, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
+import webp from "@/_assets/webp";
 import Slider from "react-slick";
 
 import pngs from "@/_assets/pngs";
@@ -25,7 +26,7 @@ export default function OurMenu() {
       discount: "-16%",
       price: "£ 6.29",
       originalPrice: "£ 9.00",
-      image: pngs.GarlicBread,
+      image: webp.GarlicBread,
       rating: 5,
     },
     {
@@ -34,7 +35,7 @@ export default function OurMenu() {
       discount: "-16%",
       price: "£ 2.29",
       originalPrice: "£ 4.89",
-      image: pngs.Fries,
+      image: webp.Fries,
       rating: 5,
     },
     {
@@ -43,7 +44,7 @@ export default function OurMenu() {
       discount: "-16%",
       price: "£ 2.29",
       originalPrice: "£ 4.99",
-      image: pngs.Burger,
+      image: webp.Burger,
       rating: 5,
     },
     {
@@ -52,7 +53,7 @@ export default function OurMenu() {
       discount: "-16%",
       price: "£ 3.29",
       originalPrice: "£ 4.29",
-      image: pngs.LegPiece,
+      image: webp.LegPiece,
       rating: 5,
     },
     {
@@ -61,7 +62,7 @@ export default function OurMenu() {
       discount: "-16%",
       price: "£ 6.29",
       originalPrice: "£ 8.95",
-      image: pngs.Daal,
+      image: webp.Daal,
       rating: 5,
     },
   ];

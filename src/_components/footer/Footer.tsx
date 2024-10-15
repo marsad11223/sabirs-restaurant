@@ -2,6 +2,7 @@
 "use client";
 import { Box, Typography, TextField, Button, Divider } from "@mui/material";
 import Image from "next/image";
+import webp from "@/_assets/webp";
 import pngs from "@/_assets/pngs";
 import svgs from "@/_assets/svgs";
 import { useRouter } from "next/navigation";
@@ -52,7 +53,7 @@ const Footer = () => {
         >
           <Image
             style={{ height: "100%", width: "100%" }}
-            src={pngs.FooterMashroom}
+            src={webp.FooterMashroom}
             alt="FooterMashroom"
           />{" "}
         </Box>
@@ -69,7 +70,7 @@ const Footer = () => {
         >
           <Image
             style={{ height: "100%", width: "100%" }}
-            src={pngs.Footerleaf}
+            src={webp.Footerleaf}
             alt="FooterMashroom"
           />{" "}
         </Box>

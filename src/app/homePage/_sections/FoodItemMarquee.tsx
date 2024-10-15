@@ -1,4 +1,5 @@
 import pngs from "@/_assets/pngs";
+import webp from "@/_assets/webp";
 import { Box, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import Marquee from "react-fast-marquee";
@@ -14,56 +15,56 @@ export default function HeroSection() {
     {
       title: "12inch Garlic Bread ....",
       price: "£7.19",
-      image: pngs.GarlicBread,
+      image: webp.GarlicBread,
     },
 
     {
       title: "2Pc Chicken & Fries",
       price: "£4.89",
-      image: pngs.Fries,
+      image: webp.Fries,
     },
     {
       title: "Flamin Fusion Burger",
       price: "£4.99",
-      image: pngs.Burger,
+      image: webp.Burger,
     },
     {
       title: " Quarter Peri Peri...",
       price: "£4.29",
-      image: pngs.LegPiece,
+      image: webp.LegPiece,
     },
     {
       title: "Daal",
       price: "£8.95",
-      image: pngs.Daal,
+      image: webp.Daal,
     },
 
     // dublicate
     {
       title: "12inch Garlic Bread ....",
       price: "£7.19",
-      image: pngs.GarlicBread,
+      image: webp.GarlicBread,
     },
 
     {
       title: "2Pc Chicken & Fries",
       price: "£4.89",
-      image: pngs.Fries,
+      image: webp.Fries,
     },
     {
       title: "Flamin Fusion Burger",
       price: "£4.99",
-      image: pngs.Burger,
+      image: webp.Burger,
     },
     {
       title: " Quarter Peri Peri...",
       price: "£4.29",
-      image: pngs.LegPiece,
+      image: webp.LegPiece,
     },
     {
       title: "Daal",
       price: "£8.95",
-      image: pngs.Daal,
+      image: webp.Daal,
     },
   ];
 

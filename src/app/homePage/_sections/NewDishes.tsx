@@ -1,4 +1,5 @@
 import pngs from "@/_assets/pngs";
+import webp from "@/_assets/webp";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
@@ -75,7 +76,7 @@ export default function NewDishes() {
         >
           <Image
             style={{ width: "100%", height: "100%" }}
-            src={pngs.Dishes}
+            src={webp.Dishes}
             alt="dishes"
           />
         </Box>

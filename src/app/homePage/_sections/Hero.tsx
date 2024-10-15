@@ -1,4 +1,5 @@
 import pngs from "@/_assets/pngs";
+import webp from "@/_assets/webp";
 import { Box } from "@mui/material";
 import Image from "next/image";
 
@@ -48,7 +49,7 @@ export default function Hero() {
           >
             <Image
               style={{ width: "100%", height: "100%" }}
-              src={pngs.HeroHedding}
+              src={webp.HeroHedding}
               alt="bg heroSection"
             />
             <Image
@@ -56,7 +57,7 @@ export default function Hero() {
                 width: "100%",
                 height: "100%",
               }}
-              src={pngs.HeroBurger}
+              src={webp.HeroBurger}
               alt="bg heroSection"
             />
           </Box>

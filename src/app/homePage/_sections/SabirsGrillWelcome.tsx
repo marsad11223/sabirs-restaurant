@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
-import pngs from "@/_assets/pngs";
+import webp from "@/_assets/webp";
 
 export default function SabirsGrillWelcome() {
   return (
@@ -97,7 +97,7 @@ export default function SabirsGrillWelcome() {
         >
           <Image
             style={{ width: "100%", height: "100%" }}
-            src={pngs.SabriFeast}
+            src={webp.SabriFeast}
             alt="group image"
           />
         </Box>
