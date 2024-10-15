@@ -5,22 +5,60 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <>
-      <Box sx={{ position: "relative" }}>
+      <Box
+        sx={{
+          backgroundImage: "url(/bgSabirsGrill.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          width: "100%",
+          height: { md: "100vh", sm: "auto", xs: "auto" },
+          minHeight: { md: "100vh", sm: "600px", xs: "500px" },
+          position: "relative",
+        }}
+      >
         <Box>
-          {/* bg img  */}
           <Box
             sx={{
+              maxWidth: {
+                xs: "250px",
+                sm: "300px",
+                md: "400px",
+                lg: "450px",
+                xl: "500px",
+              },
+              paddingTop: {
+                xs: "50px ",
+                sm: "80px",
+                md: "110px",
+                lg: "195px",
+                xl: "200px",
+              },
               width: "100%",
-              height: { xs: "550px", sm: "500px", md: "650px", lg: "800px" },
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              position: "relative",
+              zIndex: "10",
+              gap: "18px",
+              alignItems: "center",
+              m: "auto auto",
             }}
           >
             <Image
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              src={pngs.BGsabirsGrill}
+              style={{ width: "100%", height: "100%" }}
+              src={pngs.HeroHedding}
+              alt="bg heroSection"
+            />
+            <Image
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+              src={pngs.HeroBurger}
               alt="bg heroSection"
             />
           </Box>
-          {/* red box */}
           <Box
             sx={{
               width: "100%",
@@ -30,53 +68,13 @@ export default function Hero() {
                 md: "143px",
                 lg: "160px",
               },
+              position: "absolute",
+              bottom: 0,
+              left: 0,
               background:
                 "radial-gradient(50% 95.48% at 50% 50%, #851A1D 0%, #560508 71%)",
-              marginTop: "-4px",
             }}
           ></Box>
-        </Box>
-        {/* center image  */}
-        <Box
-          sx={{
-            maxWidth: {
-              xs: "250px",
-              sm: "300px",
-              md: "400px",
-              lg: "450px",
-              xl: "500px",
-            },
-            paddingTop: {
-              xs: "50px ",
-              sm: "80px",
-              md: "110px",
-              lg: "195px",
-              xl: "200px",
-            },
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            gap: "18px",
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50% , -50%)",
-          }}
-        >
-          <Image
-            style={{ width: "100%", height: "100%" }}
-            src={pngs.HeroHedding}
-            alt="bg heroSection"
-          />
-          <Image
-            style={{
-              width: "100%",
-              height: "100%",
-            }}
-            src={pngs.HeroBurger}
-            alt="bg heroSection"
-          />
         </Box>
       </Box>
     </>
