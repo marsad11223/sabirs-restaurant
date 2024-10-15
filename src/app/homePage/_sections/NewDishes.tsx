@@ -1,4 +1,5 @@
-import pngs from "@/_assets/pngs";
+// import pngs from "@/_assets/pngs";
+import webp from "@/_assets/webp";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
@@ -31,7 +32,7 @@ export default function NewDishes() {
         >
           <Image
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            src={pngs.BGnewDishes}
+            src={webp.BGnewDishes}
             alt="BGwelcomeSabri"
           />
         </Box>
@@ -89,7 +90,7 @@ export default function NewDishes() {
         >
           <Image
             style={{ width: "100%", height: "100%" }}
-            src={pngs.Dishes}
+            src={webp.Dishes}
             alt="dishes"
           />
         </Box>
