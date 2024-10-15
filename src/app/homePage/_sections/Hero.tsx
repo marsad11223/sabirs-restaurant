@@ -6,6 +6,7 @@ export default function Hero() {
   return (
     <>
       <Box
+        id="herosection"
         sx={{
           backgroundImage: "url(/bgSabirsGrill.png)",
           backgroundSize: "cover",

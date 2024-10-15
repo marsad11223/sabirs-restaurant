@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 export default function Location() {
   return (
     <Box
+      id="location"
       sx={{
         width: "100%",
       }}

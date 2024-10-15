@@ -7,6 +7,7 @@ export default function SabirsGrillWelcome() {
   return (
     <>
       <Box
+        id="aboutus"
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row" },

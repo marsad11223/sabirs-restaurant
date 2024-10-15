@@ -3,6 +3,7 @@ import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import pngs from "@/_assets/pngs";
 import svgs from "@/_assets/svgs";
+import { scrollToId } from "@/app/utils/helpers";
 
 export default function LabmKarahi() {
   return (
@@ -102,6 +103,7 @@ export function OrderButton() {
     <>
       <Button
         variant="contained"
+        onClick={() => scrollToId("location")}
         sx={{
           width: { xs: "100%", sm: "auto" },
           borderRadius: "50px",

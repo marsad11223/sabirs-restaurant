@@ -16,6 +16,7 @@ export default function NewDishes() {
   return (
     <>
       <Box
+        id="newdishes"
         sx={{
           position: "relative",
           backgroundImage: "url(/bgNewDishes.png)",

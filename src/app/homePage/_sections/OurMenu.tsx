@@ -152,6 +152,7 @@ export default function OurMenu() {
 
   return (
     <Box
+      id="ourmenu"
       sx={{
         position: "relative",
         minHeight: "100vh",
