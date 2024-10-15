@@ -34,7 +34,7 @@ export default function Location() {
               padding: {
                 xs: "40px 20px",
                 sm: "90px 60px",
-                md: "100px 70px",
+                md: "80px 40px",
                 lg: "130px 80px",
               },
               position: "relative",
@@ -62,8 +62,14 @@ export default function Location() {
             <Box
               sx={{
                 display: "flex",
-                justifyContent: "space-around",
+                justifyContent: {
+                  lg: "space-around",
+                  sm: "center",
+                  xs: "center",
+                },
+                flexDirection: { sm: "row", xs: "column" },
                 m: "0 auto",
+                gap: { lg: "", md: "40px", sm: "20px", xs: "30px" },
               }}
             >
               <LocationCard
@@ -122,21 +128,34 @@ const LocationCard: React.FC<CardProps> = ({
   const router = useRouter();
 
   return (
-    <Box sx={{ color: "#711619", fontSize: "24px", maxWidth: "450px" }}>
+    <Box
+      sx={{
+        color: "#711619",
+        fontSize: "24px",
+        maxWidth: { lg: "450px", md: "350px", sm: "250px", xs: "100%" },
+      }}
+    >
       <Box
         sx={{
-          width: "450px",
-          height: "600px",
+          width: { lg: "450px", md: "350px", sm: "250px", xs: "100%" },
+          height: { lg: "600px", md: "500px", sm: "400px", xs: "400px" },
           border: "4px solid #711619",
           borderRadius: "12px",
         }}
       >
         <MapComponent lat={lat} lng={lng} />
       </Box>
-      <Typography sx={{ fontSize: "24px", m: "20px 0 " }}>{address}</Typography>
       <Typography
         sx={{
-          fontSize: "24px",
+          fontSize: { md: "24px", sm: "18px", xs: "18px" },
+          m: { lg: "20px 0 ", sm: "15px 0", xs: "10px" },
+        }}
+      >
+        {address}
+      </Typography>
+      <Typography
+        sx={{
+          fontSize: { md: "24px", sm: "18px", xs: "18px" },
           borderBottom: "1px solid #711619",
           display: "inline",
         }}

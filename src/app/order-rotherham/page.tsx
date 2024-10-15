@@ -4,11 +4,9 @@ import { Box } from "@mui/material";
 import Navbar from "@/_components/navbar/Navbar";
 import Footer from "@/_components/footer/Footer";
 
-export default function OrderRotherham() {
+export default function OrderHuddersfield() {
   useEffect(() => {
-    // Add the window.onmessage listener for handling iframe messages
     window.onmessage = (event) => {
-      // Handle frame height change
       if (event.data.hasOwnProperty("frameHeight")) {
         const iframe = document.getElementById(
           "iframe"
@@ -17,8 +15,6 @@ export default function OrderRotherham() {
           iframe.style.height = `${event.data.frameHeight}px`;
         }
       }
-
-      // Open modal for WP embedded
       if (event.data.hasOwnProperty("openModal")) {
         const {
           menuItemData,
@@ -27,11 +23,14 @@ export default function OrderRotherham() {
           catMenuId,
           openModal,
         } = event.data;
+        const iframeModalContainer = document.getElementById(
+          "iframeModalContainer"
+        ) as HTMLDivElement | null;
         const iframeModal = document.getElementById(
           "iframeModal"
         ) as HTMLIFrameElement | null;
 
-        if (openModal && iframeModal) {
+        if (openModal && iframeModal && iframeModalContainer) {
           iframeModal.contentWindow?.postMessage(
             {
               selectedDeliveryMethod,
@@ -42,14 +41,12 @@ export default function OrderRotherham() {
             },
             "*"
           );
-        }
-
-        if (iframeModal) {
-          iframeModal.style.height = openModal ? "100%" : "0px";
+          iframeModalContainer.style.display = "block";
+        } else if (iframeModalContainer) {
+          iframeModalContainer.style.display = "none";
         }
       }
 
-      // Handle modal on add to cart
       if (event.data.hasOwnProperty("addItemToCart")) {
         const { addItemToCart, cartItemNode } = event.data;
         const iframe = document.getElementById(
@@ -63,16 +60,15 @@ export default function OrderRotherham() {
           );
         }
 
-        const iframeModal = document.getElementById(
-          "iframeModal"
-        ) as HTMLIFrameElement | null;
-        if (iframeModal) {
-          iframeModal.style.height = "0px";
+        const iframeModalContainer = document.getElementById(
+          "iframeModalContainer"
+        ) as HTMLDivElement | null;
+        if (iframeModalContainer) {
+          iframeModalContainer.style.display = "none";
         }
       }
     };
 
-    // Cleanup event listener on unmount
     return () => {
       window.onmessage = null;
     };
@@ -83,37 +79,57 @@ export default function OrderRotherham() {
       <Navbar />
       <Box
         sx={{
+          width: "100%",
+          height: "100%",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "100vh",
-          backgroundColor: "#f2f2f2",
+          position: "relative",
+          m: "0 auto",
         }}
       >
-        {/* First iframe */}
-        <iframe
-          frameBorder="0"
-          id="iframe"
-          style={{
-            height: "1304px",
+        <Box
+          sx={{
             width: "100%",
-            zIndex: 1000,
-            minHeight: "700px",
+            minHeight: "100vh",
           }}
-          src="https://app.eatpresto.co.uk/location/8979294b-91c7-44c3-8486-ea80625b32f1/shop?embedType=WP"
-        ></iframe>
-
-        {/* Second iframe */}
-        <iframe
-          allowFullScreen
-          id="iframeModal"
-          style={{
-            border: "none",
+        >
+          <iframe
+            frameBorder="0"
+            id="iframe"
+            style={{
+              height: "100%",
+              width: "100%",
+              zIndex: 1,
+              minHeight: "700px",
+            }}
+            src="https://app.eatpresto.co.uk/location/8979294b-91c7-44c3-8486-ea80625b32f1/shop?embedType=WP"
+          ></iframe>
+        </Box>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
             width: "100%",
-            height: "100%",
+            height: "90%",
+            zIndex: 2,
+            display: "none",
           }}
-          src="https://app.eatpresto.co.uk/location/8979294b-91c7-44c3-8486-ea80625b32f1/itempopupmodal?embedType=WP"
-        ></iframe>
+          id="iframeModalContainer"
+        >
+          <iframe
+            allowFullScreen
+            id="iframeModal"
+            style={{
+              border: "none",
+              width: "100%",
+              height: "100%",
+            }}
+            src="https://app.eatpresto.co.uk/location/8979294b-91c7-44c3-8486-ea80625b32f1/itempopupmodal?embedType=WP"
+          ></iframe>
+        </Box>
       </Box>
       <Footer />
     </Box>
