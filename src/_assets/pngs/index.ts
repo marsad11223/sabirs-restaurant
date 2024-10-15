@@ -13,7 +13,6 @@ import HeroBurger from "./heroBurger.png";
 import FooterMashroom from "./footerMashroom.png";
 import Footerleaf from "./footerleaf.png";
 import Dishes from "./dishes.png";
-import BGourMenu from "./bgOurMenu.png";
 import ContactUs from "./contactUs.png";
 import ItalianPasta from "./italianPasta.png";
 
@@ -33,7 +32,6 @@ const pngs = {
   FooterMashroom,
   Footerleaf,
   Dishes,
-  BGourMenu,
   ContactUs,
   ItalianPasta,
 };

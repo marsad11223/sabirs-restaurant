@@ -152,11 +152,11 @@ export default function OurMenu() {
 
   return (
     <Box
-      className="bgOurMenu"
       sx={{
         position: "relative",
         minHeight: "100vh",
         backgroundImage: "url(/bgOurMenu.png)",
+        bgcolor: "red",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",

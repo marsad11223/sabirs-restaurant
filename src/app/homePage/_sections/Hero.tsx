@@ -9,11 +9,12 @@ export default function Hero() {
         sx={{
           backgroundImage: "url(/bgSabirsGrill.png)",
           backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
           width: "100%",
           height: { md: "100vh", sm: "auto", xs: "auto" },
-          minHeight: { md: "100vh", sm: "600px", xs: "500px" },
+          minHeight: { md: "100vh", sm: "600px", xs: "580px" },
           position: "relative",
         }}
       >
@@ -28,9 +29,9 @@ export default function Hero() {
                 xl: "500px",
               },
               paddingTop: {
-                xs: "50px ",
+                xs: "140px ",
                 sm: "80px",
-                md: "110px",
+                md: "190px",
                 lg: "195px",
                 xl: "200px",
               },
