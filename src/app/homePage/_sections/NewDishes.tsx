@@ -17,24 +17,13 @@ export default function NewDishes() {
       <Box
         sx={{
           position: "relative",
+          backgroundImage: "url(/bgNewDishes.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          width: "100%",
         }}
       >
-        {/* background image  */}
-        <Box
-          sx={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            opacity: "2",
-            objectFit: "cover",
-          }}
-        >
-          <Image
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            src={pngs.BGnewDishes}
-            alt="BGwelcomeSabri"
-          />
-        </Box>
         <Box
           sx={{
             textAlign: "center",
@@ -54,7 +43,6 @@ export default function NewDishes() {
           >
             OUR NEW DISHES
           </Typography>
-          {/* hedding box  */}
           <Box
             sx={{
               ...heddingBox,
@@ -72,8 +60,6 @@ export default function NewDishes() {
             }}
           ></Box>
         </Box>
-
-        {/* dishes menu  */}
         <Box
           sx={{
             height: "auto",
