@@ -156,7 +156,6 @@ export default function OurMenu() {
         position: "relative",
         minHeight: "100vh",
         backgroundImage: "url(/bgOurMenu.png)",
-        bgcolor: "red",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
