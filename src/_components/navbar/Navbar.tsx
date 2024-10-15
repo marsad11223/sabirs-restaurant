@@ -4,11 +4,12 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import svgs from "../../_assets/svgs/index";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const router = useRouter();
 
-  // Toggle the sidebar open/close state
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
@@ -56,6 +57,7 @@ const Navbar = () => {
               fontSize: "inherit",
               fontWeight: "inherit",
               color: "#00000080",
+              cursor: "pointer",
             }}
           >
             MENU
@@ -65,6 +67,7 @@ const Navbar = () => {
               fontSize: "inherit",
               fontWeight: "inherit",
               color: "#00000080",
+              cursor: "pointer",
             }}
           >
             ABOUT
@@ -74,15 +77,18 @@ const Navbar = () => {
               fontSize: "inherit",
               fontWeight: "inherit",
               color: "#00000080",
+              cursor: "pointer",
             }}
           >
             LOCATION
           </Typography>
           <Typography
+            onClick={() => router.push("/contactUs")}
             sx={{
               fontSize: "inherit",
               fontWeight: "inherit",
               color: "#00000080",
+              cursor: "pointer",
             }}
           >
             CONTACT
@@ -221,7 +227,7 @@ const Navbar = () => {
           background: "linear-gradient(90deg, #541113 0%, #851A1D 100%)",
           boxShadow: sidebarOpen ? "-5px 0 15px rgba(0, 0, 0, 0.3)" : "none",
           overflowX: "hidden",
-          transition: "0.3s", // Smooth transition
+          transition: "0.3s",
           zIndex: 1000,
         }}
       >
@@ -229,7 +235,6 @@ const Navbar = () => {
           sx={{
             display: "flex",
             alignItems: "center",
-            // justifyContent: "space-between",
             gap: { xs: "10px", lg: "30px" },
             backgroundColor: "#F8F8F8",
             padding: { xs: "8px 12px", lg: "15px 30px" },
@@ -237,7 +242,6 @@ const Navbar = () => {
             marginLeft: "20px",
             marginRight: "20px",
             borderRadius: "20px",
-            // maxWidth: "70vw",
           }}
         >
           <Box sx={{ overflow: "hidden", width: "100%" }}>
@@ -303,6 +307,7 @@ const Navbar = () => {
             LOCATION
           </Typography>
           <Typography
+            onClick={() => router.push("/contactUs")}
             variant="h6"
             sx={{
               cursor: "pointer",

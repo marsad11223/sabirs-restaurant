@@ -4,8 +4,11 @@ import { Box, Typography, TextField, Button, Divider } from "@mui/material";
 import Image from "next/image";
 import pngs from "@/_assets/pngs";
 import svgs from "@/_assets/svgs";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
+  const router = useRouter();
+
   const text = {
     fontSize: "12px",
     fontWeight: "400",
@@ -130,6 +133,7 @@ const Footer = () => {
                 sx={{
                   ...text,
                   marginTop: "18px",
+                  cursor: "pointer",
                 }}
               >
                 Menu
@@ -138,6 +142,7 @@ const Footer = () => {
                 sx={{
                   ...text,
                   marginTop: "18px",
+                  cursor: "pointer",
                 }}
               >
                 About Us
@@ -146,14 +151,17 @@ const Footer = () => {
                 sx={{
                   ...text,
                   marginTop: "18px",
+                  cursor: "pointer",
                 }}
               >
                 Location
               </Typography>
               <Typography
+                onClick={() => router.push("/contactUs")}
                 sx={{
                   ...text,
                   marginTop: "18px",
+                  cursor: "pointer",
                 }}
               >
                 Contact Us
@@ -185,11 +193,11 @@ const Footer = () => {
           />
           <Box sx={{ display: "flex", gap: "30px" }}>
             {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
-              <Image
-                style={{ height: "auto", width: "30px" }}
-                src={svgs.TwitterWhite}
-                alt="footer links"
-              />
+            <Image
+              style={{ height: "auto", width: "30px", cursor: "pointer" }}
+              src={svgs.TwitterWhite}
+              alt="footer links"
+            />
             {/* </a> */}
             <a
               href="https://www.instagram.com/sabirsgrill/"
@@ -197,24 +205,22 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <Image
-                style={{ height: "auto", width: "30px" }}
+                style={{ height: "auto", width: "30px", cursor: "pointer" }}
                 src={svgs.InstagramWhite}
                 alt="footer links"
               />
             </a>
             <a
-                href="https://www.facebook.com/sabirsgrill/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-              style={{ height: "auto", width: "30px" }}
-              src={svgs.FacebookWhite}
-              alt="footer links"
-            />
-              </a>
-
-            
+              href="https://www.facebook.com/sabirsgrill/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                style={{ height: "auto", width: "30px", cursor: "pointer" }}
+                src={svgs.FacebookWhite}
+                alt="footer links"
+              />
+            </a>
           </Box>
         </Box>
       </Box>
