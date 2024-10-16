@@ -10,8 +10,13 @@ export default function Hero() {
         id="herosection"
         sx={{
           width: "100%",
-          height: { md: "100vh", sm: "auto", xs: "auto" },
-          minHeight: { md: "100vh", sm: "600px", xs: "480px" },
+          height: {
+            xs: "600px",
+            md: "700px",
+            lg: "800px",
+            xl: "1000px",
+          },
+          // minHeight: { md: "100vh", sm: "600px", xs: "480px" },
           position: "relative",
         }}
       >
@@ -50,7 +55,8 @@ export default function Hero() {
             left: "50%",
             transform: {
               xs: "translate(-50%, -20%)",
-              lg: "translate(-50%, -30%)",
+              md: "translate(-50%, -30%)",
+              lg: "translate(-50%, -40%)",
               xl: "translate(-50%, -40%)",
             },
           }}
