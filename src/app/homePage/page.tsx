@@ -14,9 +14,9 @@ export default function HomePage() {
     <Box>
       <Navbar />
       <Hero />
+      <Marquee />
       {/* <HeroSection /> */}
       <OurMenu />
-      <Marquee />
       {/* <LabmKarahi /> */}
       <SabirsGrillWelcome />
       <NewDishes />

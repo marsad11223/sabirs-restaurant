@@ -69,98 +69,128 @@ export default function NewProducts() {
         {/* card */}
         <Box
           sx={{
-            display: "flex",
-            alignItems: "center",
-            gap: { xs: "20px", sm: "40px", md: "60px" },
             position: "relative",
-            maxWidth: { xs: "100%", sm: "500px", md: "700px", lg: "1000px" },
-            margin: { xs: "0 20px", sm: "0" },
-            padding: {
-              xs: "30px 50px 30px 20px",
-              sm: "50px 70px 50px 30px",
-              md: "50px 70px 50px 30px",
-              lg: "100px 200px 100px 90px",
-            },
-            marginTop: { xs: "40px", sm: "60px", md: "80px", lg: "100px" },
-            backgroundColor: "#ffffff",
-            clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)",
+            maxWidth: { xs: "100%", sm: "515px", md: "718px", lg: "1020px" },
           }}
         >
           <Box
             sx={{
-              textAlign: "left",
-              maxWidth: { xs: "143px", sn: "220px", md: "250px" },
+              display: "flex",
+              alignItems: "center",
+              gap: { xs: "20px", sm: "40px", md: "60px" },
+              position: "relative",
+              maxWidth: { xs: "100%", sm: "500px", md: "700px", lg: "1000px" },
+              margin: { xs: "0 20px", sm: "0" },
+              padding: {
+                xs: "30px 50px 30px 20px",
+                sm: "50px 70px 50px 30px",
+                md: "50px 70px 50px 30px",
+                lg: "100px 200px 100px 90px",
+              },
+              marginTop: { xs: "40px", sm: "60px", md: "80px", lg: "100px" },
+              backgroundColor: "#ffffff",
+              clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)",
             }}
           >
-            <Typography
+            <Box
               sx={{
-                fontFamily: "Oswald",
-                fontWeight: 400,
-                fontSize: "11px",
-                color: "#851A1D",
-                lineHeight: "16px",
-              }}
-            >
-              WEEKEND DEALS
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: "Oswald",
-                fontWeight: 700,
-                fontSize: { xs: "18px", sm: "24px", md: "36px" },
-                color: "#851A1D",
-                lineHeight: "38.54px",
-                padding: { xs: "0", sm: "15px 0 10px 0", md: "20px 0 15px 0" },
-              }}
-            >
-              Fresh Coconut
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: "Raleway",
-                fontWeight: 400,
-                fontSize: { xs: "12px", md: "14px" },
-                color: "#00000080",
-                lineHeight: "23.12px",
                 textAlign: "left",
+                maxWidth: { xs: "143px", sn: "220px", md: "250px" },
               }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              sed dui tempor eros porttitor.
-            </Typography>
-            <Typography
+              <Typography
+                sx={{
+                  fontFamily: "Oswald",
+                  fontWeight: 400,
+                  fontSize: "11px",
+                  color: "#851A1D",
+                  lineHeight: "16px",
+                }}
+              >
+                WEEKEND DEALS
+              </Typography>
+              <Typography
+                sx={{
+                  fontFamily: "Oswald",
+                  fontWeight: 700,
+                  fontSize: { xs: "18px", sm: "24px", md: "36px" },
+                  color: "#851A1D",
+                  lineHeight: "38.54px",
+                  padding: {
+                    xs: "0",
+                    sm: "15px 0 10px 0",
+                    md: "20px 0 15px 0",
+                  },
+                }}
+              >
+                Fresh Coconut
+              </Typography>
+              <Typography
+                sx={{
+                  fontFamily: "Raleway",
+                  fontWeight: 400,
+                  fontSize: { xs: "12px", md: "14px" },
+                  color: "#00000080",
+                  lineHeight: "23.12px",
+                  textAlign: "left",
+                }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Maecenas sed dui tempor eros porttitor.
+              </Typography>
+              <Typography
+                sx={{
+                  fontFamily: "Oswald",
+                  fontWeight: 700,
+                  fontSize: { xs: "15px", sm: "20px", md: "24px" },
+                  lineHeight: "23.12px",
+                  textAlign: "left",
+                  color: "#851A1D",
+                  padding: {
+                    xs: "0 0 15px 0",
+                    sm: "18px 0 15px 0",
+                    md: "20px 0 15px 0",
+                  },
+                }}
+              >
+                £10.00
+              </Typography>
+              {/* Add buttons here */}
+              <OrderButton />
+            </Box>
+            <Box
               sx={{
-                fontFamily: "Oswald",
-                fontWeight: 700,
-                fontSize: { xs: "15px", sm: "20px", md: "24px" },
-                lineHeight: "23.12px",
-                textAlign: "left",
-                color: "#851A1D",
-                padding: {
-                  xs: "0 0 15px 0",
-                  sm: "18px 0 15px 0",
-                  md: "20px 0 15px 0",
-                },
+                maxWidth: { xs: "250px", lg: "350px" },
+                minWidth: { xs: "100px", sm: "0" },
+                width: "100%",
               }}
             >
-              £10.00
-            </Typography>
-            {/* Add buttons here */}
-            <OrderButton />
+              <Image
+                style={{ width: "100%", height: "auto", objectFit: "contain" }}
+                src={pngs.ItalianPasta}
+                alt="Delicious Italian Pasta"
+              />
+            </Box>
           </Box>
           <Box
             sx={{
-              maxWidth: { xs: "250px", lg: "350px" },
-              minWidth: { xs: "100px", sm: "0" },
+              display: { xs: "none", sm: "block" },
+              backgroundColor: "#851A1D",
               width: "100%",
+              height: "100%",
+              position: "absolute",
+              top: "0",
+              left: "0",
+              zIndex: "-1",
+              clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)",
+              transform: {
+                sm: "translateY(15px)",
+                md: "translateY(18px)",
+                lg: "translateY(20px)",
+              },
+              boxShadow: "0px 5.14px 10.28px 0px #00000080",
             }}
-          >
-            <Image
-              style={{ width: "100%", height: "auto", objectFit: "contain" }}
-              src={pngs.ItalianPasta}
-              alt="Delicious Italian Pasta"
-            />
-          </Box>
+          ></Box>
         </Box>
       </Box>
     </>

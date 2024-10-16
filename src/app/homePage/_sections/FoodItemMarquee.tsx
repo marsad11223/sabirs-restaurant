@@ -9,7 +9,6 @@ import Marquee from "react-fast-marquee";
 
 interface FoodCardProps {
   title: string;
-  price: string;
   image: StaticImageData;
 }
 
@@ -17,54 +16,44 @@ export default function HeroSection() {
   const foodItems: FoodCardProps[] = [
     {
       title: "12inch Garlic Bread ....",
-      price: "£7.19",
       image: webp.GarlicBread,
     },
 
     {
       title: "2Pc Chicken & Fries",
-      price: "£4.89",
       image: webp.Fries,
     },
     {
       title: "Flamin Fusion Burger",
-      price: "£4.99",
       image: webp.Burger,
     },
     {
       title: " Quarter Peri Peri...",
-      price: "£4.29",
       image: webp.LegPiece,
     },
     {
       title: "Daal",
-      price: "£8.95",
       image: webp.Daal,
     },
     {
       title: "12inch Garlic Bread ....",
-      price: "£7.19",
       image: webp.GarlicBread,
     },
 
     {
       title: "2Pc Chicken & Fries",
-      price: "£4.89",
       image: webp.Fries,
     },
     {
       title: "Flamin Fusion Burger",
-      price: "£4.99",
       image: webp.Burger,
     },
     {
       title: " Quarter Peri Peri...",
-      price: "£4.29",
       image: webp.LegPiece,
     },
     {
       title: "Daal",
-      price: "£8.95",
       image: webp.Daal,
     },
   ];
@@ -88,11 +77,29 @@ export default function HeroSection() {
     <>
       <Box
         sx={{
-          backgroundColor: "#FFFFFF",
-          padding: { xs: "40px 0", sm: "80px 0", md: "95px 0" },
+          background:
+            "radial-gradient(50% 95.48% at 50% 50%, #851A1D 0%, #560508 71%)",
+          padding: "20px 0 8px 0",
           marginTop: { md: "-4px" },
         }}
       >
+        <Box
+          sx={{
+            textAlign: "center",
+            marginBottom: { xs: "10px", sm: "15px", md: "20px" },
+          }}
+        >
+          <Typography
+            sx={{
+              color: "#ffffff",
+              fontSize: { xs: "18px", sm: "25px", md: "28px", lg: "32px" },
+              fontWeight: "600",
+              fontFamily: "Oswald",
+            }}
+          >
+            OUR CUISINE COLLECTION
+          </Typography>
+        </Box>
         <Marquee
           gradient={false}
           speed={100}
@@ -100,12 +107,7 @@ export default function HeroSection() {
           pauseOnHover={true} // Optional: Pause on hover
         >
           {foodItems.map((item, index) => (
-            <FoodCard
-              key={index}
-              title={item.title}
-              price={item.price}
-              image={item.image}
-            />
+            <FoodCard key={index} title={item.title} image={item.image} />
           ))}
         </Marquee>
       </Box>
@@ -113,14 +115,21 @@ export default function HeroSection() {
   );
 }
 
-export const FoodCard = ({ title, price, image }: FoodCardProps) => {
+export const FoodCard = ({ title, image }: FoodCardProps) => {
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        maxWidth: { xs: "150px", sm: "220px", md: "268px" },
+        // maxWidth: {
+        //   xs: "150px",
+        //   sm: "220px",
+        //   md: "268px",
+        //   lg: "30vw",
+        //   xl: "300px",
+        // },
+        padding: { xs: "0 15px", sm: "0 25px", lg: "0 30px", xl: "0 50px" },
       }}
     >
       {/* Image */}
@@ -142,23 +151,14 @@ export const FoodCard = ({ title, price, image }: FoodCardProps) => {
       {/* Title */}
       <Typography
         sx={{
-          fontSize: { xs: "11px", sm: "14px", md: "16px" },
-          fontWeight: "700",
-          color: "#000000",
+          fontSize: { xs: "16px", sm: "20px", md: "24px" },
+          fontWeight: "600",
+          color: "#FFD40D",
+          backgroundColor: "#000000",
+          padding: "0 7px",
         }}
       >
         {title}
-      </Typography>
-
-      {/* Price */}
-      <Typography
-        sx={{
-          fontSize: { xs: "11px", sm: "14px", md: "16px" },
-          fontWeight: "700",
-          color: "#000000",
-        }}
-      >
-        {price}
       </Typography>
     </Box>
   );
