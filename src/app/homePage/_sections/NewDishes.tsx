@@ -2,6 +2,7 @@ import pngs from "@/_assets/pngs";
 import webp from "@/_assets/webp";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
+import Location from "./Location";
 
 export default function NewDishes() {
   const heddingBox = {
@@ -16,6 +17,7 @@ export default function NewDishes() {
   return (
     <>
       <Box
+        id="newdishes"
         sx={{
           position: "relative",
           backgroundImage: "url(/bgNewDishes.png)",
@@ -80,6 +82,8 @@ export default function NewDishes() {
             alt="dishes"
           />
         </Box>
+
+        <Location />
       </Box>
     </>
   );

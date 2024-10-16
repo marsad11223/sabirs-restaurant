@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import pngs from "@/_assets/pngs";
 import webp from "@/_assets/webp";
 import { Box, Typography } from "@mui/material";
@@ -38,8 +41,6 @@ export default function HeroSection() {
       price: "£8.95",
       image: webp.Daal,
     },
-
-    // dublicate
     {
       title: "12inch Garlic Bread ....",
       price: "£7.19",
@@ -68,6 +69,21 @@ export default function HeroSection() {
     },
   ];
 
+  const [play, setPlay] = useState(true);
+
+  useEffect(() => {
+    const togglePlayState = () => {
+      setPlay(false);
+      setTimeout(() => {
+        setPlay(true);
+      }, 2000);
+    };
+
+    const intervalId = setInterval(togglePlayState, 5000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <>
       <Box
@@ -77,7 +93,12 @@ export default function HeroSection() {
           marginTop: { md: "-4px" },
         }}
       >
-        <Marquee>
+        <Marquee
+          gradient={false}
+          speed={100}
+          play={play}
+          pauseOnHover={true} // Optional: Pause on hover
+        >
           {foodItems.map((item, index) => (
             <FoodCard
               key={index}

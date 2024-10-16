@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 import svgs from "../../_assets/svgs/index";
 import { useRouter } from "next/navigation";
+import { scrollToId } from "@/app/utils/helpers";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -53,6 +54,7 @@ const Navbar = () => {
           }}
         >
           <Typography
+            onClick={() => scrollToId("ourmenu")}
             sx={{
               fontSize: "inherit",
               fontWeight: "inherit",
@@ -63,6 +65,7 @@ const Navbar = () => {
             MENU
           </Typography>
           <Typography
+            onClick={() => scrollToId("aboutus")}
             sx={{
               fontSize: "inherit",
               fontWeight: "inherit",
@@ -73,6 +76,7 @@ const Navbar = () => {
             ABOUT
           </Typography>
           <Typography
+            onClick={() => scrollToId("location")}
             sx={{
               fontSize: "inherit",
               fontWeight: "inherit",

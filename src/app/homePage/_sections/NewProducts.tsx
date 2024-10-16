@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import pngs from "@/_assets/pngs";
 import svgs from "@/_assets/svgs";
+import { scrollToId } from "@/app/utils/helpers";
 
 export default function NewProducts() {
   const heddingBox = {
@@ -170,6 +171,7 @@ export function OrderButton() {
   return (
     <>
       <Button
+        onClick={() => scrollToId("location")}
         variant="contained"
         sx={{
           width: { xs: "100%", sm: "auto" },
