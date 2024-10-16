@@ -21,11 +21,10 @@ export default function SabirsGrillWelcome() {
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
           width: "100%",
-          height: { md: "100vh", sm: "auto", xs: "auto" },
-          minHeight: { md: "100vh", sm: "600px", xs: "500px" },
-          position: "relative",
-
+          // height: { xs: "auto", sm: "auto", md: "auto" },
+          // minHeight: { md: "100vh", sm: "600px", xs: "500px" },
           padding: { xs: "50px 20px", sm: "100px 60px", md: "130px 80px" },
+          position: "relative",
         }}
       >
         <Box sx={{ position: "relative" }}>

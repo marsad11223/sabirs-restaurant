@@ -6,6 +6,7 @@ import webp from "@/_assets/webp";
 import { Box, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import Marquee from "react-fast-marquee";
+import { scrollToId } from "@/app/utils/helpers";
 
 interface FoodCardProps {
   title: string;
@@ -118,6 +119,7 @@ export default function HeroSection() {
 export const FoodCard = ({ title, image }: FoodCardProps) => {
   return (
     <Box
+      onClick={() => scrollToId("location")}
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -130,6 +132,7 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
         //   xl: "300px",
         // },
         padding: { xs: "0 15px", sm: "0 25px", lg: "0 30px", xl: "0 50px" },
+        cursor: "pointer",
       }}
     >
       {/* Image */}
