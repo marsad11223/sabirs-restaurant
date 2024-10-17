@@ -1,5 +1,6 @@
 import pngs from "@/_assets/pngs";
 import webp from "@/_assets/webp";
+import Navbar from "@/_components/navbar/Navbar";
 import { Box, CardMedia } from "@mui/material";
 import Image from "next/image";
 
@@ -10,16 +11,16 @@ export default function Hero() {
         id="herosection"
         sx={{
           width: "100%",
-          height: {
-            xs: "600px",
-            md: "700px",
-            lg: "800px",
-            xl: "1000px",
-          },
+          height: "100vh",
           // minHeight: { md: "100vh", sm: "600px", xs: "480px" },
           position: "relative",
         }}
       >
+        {/* navbar  */}
+        <Box sx={{ position: "relative", zIndex: "1" }}>
+          <Navbar />
+        </Box>
+        {/* bg video  */}
         <Box
           sx={{
             position: "absolute",
@@ -48,38 +49,40 @@ export default function Hero() {
             Your browser does not support the video tag.
           </video>
         </Box>
+        {/* heading  */}
         <Box
           sx={{
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: {
-              xs: "translate(-50%, -20%)",
-              md: "translate(-50%, -30%)",
-              lg: "translate(-50%, -40%)",
-              xl: "translate(-50%, -40%)",
-            },
+            // transform: {
+            //   xs: "translate(-50%, -20%)",
+            //   md: "translate(-50%, -30%)",
+            //   lg: "translate(-50%, -40%)",
+            //   xl: "translate(-50%, -50%)",
+            // },
+            transform: "translate(-50%, -70%)",
           }}
         >
           <Box
             sx={{
               maxWidth: {
-                xs: "250px",
-                sm: "300px",
-                md: "400px",
-                lg: "450px",
-                xl: "500px",
+                xs: "85vw",
+                sm: "70vw",
+                md: "60vw",
+                lg: "50vw",
+                xl: "50vw",
               },
 
               width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              position: "relative",
-              zIndex: "10",
-              gap: "18px",
-              alignItems: "center",
-              m: "auto auto",
+              // display: "flex",
+              // flexDirection: "column",
+              // justifyContent: "center",
+              // position: "relative",
+              // zIndex: "10",
+              // gap: "18px",
+              // alignItems: "center",
+              // m: "auto auto",
             }}
           >
             <Image
@@ -87,14 +90,14 @@ export default function Hero() {
               src={webp.HeroHedding}
               alt="bg heroSection"
             />
-            <Image
+            {/* <Image
               style={{
                 width: "100%",
                 height: "100%",
               }}
               src={webp.HeroBurger}
               alt="bg heroSection"
-            />
+            /> */}
           </Box>
         </Box>
       </Box>
