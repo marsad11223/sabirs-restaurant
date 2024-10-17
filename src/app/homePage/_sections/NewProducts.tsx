@@ -20,11 +20,12 @@ export default function NewProducts() {
       <Box
         sx={{
           padding: {
-            xs: "40px 16px",
-            sm: "40px 32px",
-            md: "80px 64px",
+            xs: "40px 0",
+            sm: "40px 0 100px 0",
+            md: "80px 0px 100px 0",
             lg: "100px 0 200px 0 ",
           },
+          paddingLeft: "0",
           position: "relative",
           zIndex: "10",
         }}
@@ -76,7 +77,7 @@ export default function NewProducts() {
               sm: "515px",
               md: "718px",
               lg: "1020px",
-              xl: "40vw",
+              xl: "45vw",
             },
             width: "100%",
           }}
@@ -92,7 +93,7 @@ export default function NewProducts() {
                 sm: "500px",
                 md: "700px",
                 lg: "1000px",
-                xl: "39.6vw",
+                xl: "44.6vw",
               },
               margin: { xs: "0 20px", sm: "0" },
               padding: {
