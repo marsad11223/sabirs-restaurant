@@ -100,6 +100,7 @@ export default function NewProducts() {
                 sm: "50px 70px 50px 30px",
                 md: "50px 70px 50px 30px",
                 lg: "100px 200px 100px 90px",
+                xl: "100px 100px 100px 90px",
               },
               marginTop: { xs: "40px", sm: "60px", md: "80px", lg: "100px" },
               backgroundColor: "#ffffff",
