@@ -65,11 +65,11 @@ export default function HeroSection() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 3000,
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1600,
@@ -83,7 +83,7 @@ export default function HeroSection() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
-          autoplaySpeed: 2300,
+          autoplaySpeed: 3000,
         },
       },
       {
@@ -91,7 +91,7 @@ export default function HeroSection() {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          autoplaySpeed: 2300,
+          autoplaySpeed: 3000,
         },
       },
       {
@@ -99,7 +99,7 @@ export default function HeroSection() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          autoplaySpeed: 2300,
+          autoplaySpeed: 3000,
         },
       },
     ],
