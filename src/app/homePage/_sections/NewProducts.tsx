@@ -71,7 +71,14 @@ export default function NewProducts() {
         <Box
           sx={{
             position: "relative",
-            maxWidth: { xs: "100%", sm: "515px", md: "718px", lg: "1020px" },
+            maxWidth: {
+              xs: "100%",
+              sm: "515px",
+              md: "718px",
+              lg: "1020px",
+              xl: "40vw",
+            },
+            width: "100%",
           }}
         >
           <Box
@@ -80,7 +87,13 @@ export default function NewProducts() {
               alignItems: "center",
               gap: { xs: "20px", sm: "40px", md: "60px" },
               position: "relative",
-              maxWidth: { xs: "100%", sm: "500px", md: "700px", lg: "1000px" },
+              maxWidth: {
+                xs: "100%",
+                sm: "500px",
+                md: "700px",
+                lg: "1000px",
+                xl: "39.6vw",
+              },
               margin: { xs: "0 20px", sm: "0" },
               padding: {
                 xs: "30px 50px 30px 20px",
