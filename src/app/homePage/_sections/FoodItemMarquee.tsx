@@ -172,10 +172,10 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
         {/* Image */}
         <Box
           sx={{
-            width: { xs: "145px", sm: "200px", md: "268px" },
+            width: { xs: "120px", sm: "160px", md: "220px" }, // Reduced width for each breakpoint
             height: "auto",
-            maxHeight: "268px",
-            paddingBottom: { xs: "8px", sm: "15px", md: "30px" },
+            maxHeight: "220px", // Reduced maxHeight
+            paddingBottom: { xs: "5px", sm: "10px", md: "20px" }, // Reduced padding
           }}
         >
           <Image
