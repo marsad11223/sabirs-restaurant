@@ -14,6 +14,7 @@ export default function Hero() {
           height: "100vh",
           // minHeight: { md: "100vh", sm: "600px", xs: "480px" },
           position: "relative",
+          overflow: "hidden",
         }}
       >
         {/* navbar  */}
@@ -62,6 +63,15 @@ export default function Hero() {
             //   xl: "translate(-50%, -50%)",
             // },
             transform: "translate(-50%, -70%)",
+            maxWidth: {
+              xs: "85vw",
+              sm: "70vw",
+              md: "60vw",
+              lg: "50vw",
+              xl: "50vw",
+            },
+
+            width: "100%",
           }}
         >
           <Box

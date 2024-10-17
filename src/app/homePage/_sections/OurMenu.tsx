@@ -151,6 +151,16 @@ export default function OurMenu() {
     ],
   };
 
+  const heddingBox = {
+    height: { xs: "55px", sm: "98px", lg: "117px" },
+    width: { xs: "220px", sm: "400px", lg: "490px" },
+    clipPath: "polygon(0 0, 100% 0, 97% 100%, 3% 100%)",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate( -50% , -50% )",
+  };
+
   return (
     <Box
       id="ourmenu"
@@ -170,13 +180,50 @@ export default function OurMenu() {
             xs: "40px 16px",
             sm: "40px 32px",
             md: "80px 64px",
-            lg: "100px 80px 200px 80px",
+            lg: "100px 80px 0px 80px",
           },
           maxWidth: "1400px",
           m: "0 auto",
           position: "relative",
         }}
       >
+        {/* heddingBox  */}
+        <Box
+          sx={{
+            textAlign: "center",
+            padding: { xs: "40px 0", sm: "85px 0", lg: "100px 0" },
+            position: "relative",
+          }}
+        >
+          <Typography
+            sx={{
+              color: "#851A1D",
+              fontSize: { xs: "24px", sm: "35px", md: "45px", lg: "64px" },
+              fontWeight: "700",
+              fontFamily: "Oswald",
+              position: "relative",
+              zIndex: "10",
+            }}
+          >
+            OUR MENU
+          </Typography>
+          <Box
+            sx={{
+              ...heddingBox,
+              zIndex: "9",
+              backgroundColor: "#ffffff",
+            }}
+          ></Box>
+          <Box
+            sx={{
+              ...heddingBox,
+              marginTop: { xs: "9px", lg: "12px" },
+              width: { xs: "227px", sm: "420px", lg: "500px" },
+              zIndex: "8",
+              backgroundColor: "#851A1D",
+            }}
+          ></Box>
+        </Box>
         <Box sx={{ position: "relative", zIndex: "10" }}>
           <Box
             sx={{
@@ -192,23 +239,6 @@ export default function OurMenu() {
               zIndex: "10",
             }}
           >
-            <Box
-              sx={{
-                textAlign: "center",
-                paddingBottom: { xs: "40px", sm: "60px", lg: "100px" },
-              }}
-            >
-              <Typography
-                sx={{
-                  color: "#851A1D",
-                  fontSize: { xs: "24px", sm: "35px", md: "45px", lg: "64px" },
-                  fontWeight: "700",
-                  fontFamily: "Oswald",
-                }}
-              >
-                OUR MENU
-              </Typography>
-            </Box>
             {/* Add the slider with menu items */}
             <Box sx={{ maxWidth: { lg: "1000px", md: "700px" }, m: "0 auto" }}>
               <Slider {...sliderSettings}>

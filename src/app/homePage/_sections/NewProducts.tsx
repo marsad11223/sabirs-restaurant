@@ -20,9 +20,10 @@ export default function NewProducts() {
       <Box
         sx={{
           padding: {
-            xs: "0px 0 60px 0 ",
-            sm: "100px 0 100px 0 ",
-            lg: "200px 0 200px 0 ",
+            xs: "40px 16px",
+            sm: "40px 32px",
+            md: "80px 64px",
+            lg: "100px 0 200px 0 ",
           },
           position: "relative",
           zIndex: "10",
@@ -32,7 +33,7 @@ export default function NewProducts() {
         <Box
           sx={{
             textAlign: "center",
-            padding: "100px 0 ",
+            padding: { xs: "40px 0", sm: "85px 0", lg: "100px 0" },
             position: "relative",
           }}
         >
