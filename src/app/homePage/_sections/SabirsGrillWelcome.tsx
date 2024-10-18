@@ -1,13 +1,47 @@
-import { Box, Typography } from "@mui/material";
+"use client";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
+
+import { Box, Typography } from "@mui/material";
 
 import webp from "@/_assets/webp";
 
 export default function SabirsGrillWelcome() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            window.scrollTo({
+              top: section?.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      },
+      { threshold: 0.1 } // Adjust threshold as needed (0.5 means half of the section must be visible)
+    );
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
   return (
     <>
       <Box
         id="aboutus"
+        ref={sectionRef}
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
@@ -15,14 +49,11 @@ export default function SabirsGrillWelcome() {
           justifyContent: "center",
           gap: { xs: "60px", lg: "40px", xl: "100px" },
           overflow: "hidden",
-
           backgroundImage: "url(/bgWelcomeSabri.png)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
           width: "100%",
-          // height: { xs: "auto", sm: "auto", md: "auto" },
-          // minHeight: { md: "100vh", sm: "600px", xs: "500px" },
           padding: { xs: "50px 20px", sm: "100px 60px", md: "130px 80px" },
           position: "relative",
         }}

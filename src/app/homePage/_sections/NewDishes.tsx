@@ -1,23 +1,57 @@
-import pngs from "@/_assets/pngs";
+"use client";
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+
 import webp from "@/_assets/webp";
 import { Box, Typography } from "@mui/material";
-import Image from "next/image";
 import Location from "./Location";
 
+const heddingBox = {
+  height: { xs: "55px", sm: "98px", lg: "117px" },
+  width: { xs: "220px", sm: "400px", lg: "490px" },
+  clipPath: "polygon(0 0, 100% 0, 97% 100%, 3% 100%)",
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate( -50% , -50% )",
+};
+
 export default function NewDishes() {
-  const heddingBox = {
-    height: { xs: "55px", sm: "98px", lg: "117px" },
-    width: { xs: "220px", sm: "400px", lg: "490px" },
-    clipPath: "polygon(0 0, 100% 0, 97% 100%, 3% 100%)",
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate( -50% , -50% )",
-  };
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            window.scrollTo({
+              top: section?.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      },
+      { threshold: 0.55 } // Adjust threshold as needed (0.5 means half of the section must be visible)
+    );
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
   return (
     <>
       <Box
         id="newdishes"
+        ref={sectionRef}
         sx={{
           position: "relative",
           backgroundImage: "url(/bgNewDishes.png)",
