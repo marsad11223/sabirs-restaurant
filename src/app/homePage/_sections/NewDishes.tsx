@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 import webp from "@/_assets/webp";
@@ -17,41 +16,10 @@ const heddingBox = {
 };
 
 export default function NewDishes() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            window.scrollTo({
-              top: section?.offsetTop,
-              behavior: "smooth",
-            });
-          }
-        });
-      },
-      { threshold: 0.1 } // Adjust threshold as needed (0.5 means half of the section must be visible)
-    );
-
-    if (section) {
-      observer.observe(section);
-    }
-
-    return () => {
-      if (section) {
-        observer.unobserve(section);
-      }
-    };
-  }, []);
-
   return (
     <>
       <Box
         id="newdishes"
-        ref={sectionRef}
         sx={{
           position: "relative",
           backgroundImage: "url(/bgNewDishesBlur.png)",
