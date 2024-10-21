@@ -6,11 +6,6 @@ import Image from "next/image";
 import svgs from "../../_assets/svgs/index";
 import { useRouter } from "next/navigation";
 import { scrollToId } from "@/app/utils/helpers";
-// import * as React from "react";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Fade from "@mui/material/Fade";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -119,6 +114,7 @@ const Navbar = () => {
               fontWeight: "inherit",
               color: "#00000080",
               cursor: "pointer",
+              transition: "all 2s ease-in",
             }}
             onMouseLeave={toggleDropdown}
           >
@@ -131,6 +127,7 @@ const Navbar = () => {
                 fontWeight: "inherit",
                 color: "#00000080",
                 display: "inline",
+                transition: "all 2s ease-in",
               }}
             >
               ORDER
@@ -140,24 +137,45 @@ const Navbar = () => {
                 display: open ? "block" : "none",
                 position: "absolute",
                 backgroundColor: "#f9f9f9",
-                // minWidth: "160px",
                 width: "auto",
                 boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
-                padding: "20px 25px",
                 zIndex: 1,
                 textWrap: "nowrap",
                 borderRadius: "4px",
               }}
             >
-              <p onClick={() => router.push("./order-rotherham")}>
+              <Typography
+                sx={{
+                  padding: "20px 25px",
+                  cursor: "pointer",
+                  color: "initial",
+                  transition:
+                    "color 0.5s ease-in, background-color 0.5s ease-in",
+                  "&:hover": {
+                    color: "#ffffff",
+                    backgroundColor: "#541113",
+                  },
+                }}
+                onClick={() => router.push("./order-rotherham")}
+              >
                 Order Rotherham
-              </p>
-              <p
+              </Typography>
+              <Typography
+                sx={{
+                  padding: "20px 25px",
+                  cursor: "pointer",
+                  color: "initial",
+                  transition:
+                    "color 0.5s ease-in, background-color 0.5s ease-in",
+                  "&:hover": {
+                    color: "#ffffff",
+                    backgroundColor: "#541113",
+                  },
+                }}
                 onClick={() => router.push("./order-huddersfield")}
-                style={{ paddingTop: "10px" }}
               >
                 Order Huddersfield
-              </p>
+              </Typography>
             </div>
           </Box>
         </Box>
