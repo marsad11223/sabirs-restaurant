@@ -46,7 +46,7 @@ const Navbar = () => {
           },
           backgroundColor: "#FFFFFF",
           color: "#00000080",
-          borderBottom: { xs: "5px solid #851A1D", lg: "9px solid #851A1D" }
+          borderBottom: { xs: "5px solid #851A1D", lg: "9px solid #851A1D" },
         }}
       >
         {/* Logo */}
@@ -138,8 +138,12 @@ const Navbar = () => {
               onClose={handleClose}
               TransitionComponent={Fade}
             >
-              <MenuItem onClick={handleClose}>Order Rotherham</MenuItem>
-              <MenuItem onClick={handleClose}>Order Huddersfield</MenuItem>
+              <MenuItem onClick={() => router.push("./order-rotherham")}>
+                Order Rotherham
+              </MenuItem>
+              <MenuItem onClick={() => router.push("./order-huddersfield")}>
+                Order Huddersfield
+              </MenuItem>
             </Menu>
           </div>
         </Box>
