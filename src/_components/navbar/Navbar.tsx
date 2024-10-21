@@ -6,6 +6,7 @@ import Image from "next/image";
 import svgs from "../../_assets/svgs/index";
 import { useRouter } from "next/navigation";
 import { scrollToId } from "@/app/utils/helpers";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -126,12 +127,21 @@ const Navbar = () => {
                 fontSize: "inherit",
                 fontWeight: "inherit",
                 color: "#00000080",
-                display: "inline",
+                display: "inline-flex",
+                alignItems: "center",
                 transition: "all 2s ease-in",
               }}
             >
               ORDER
+              <ArrowDropDownIcon
+                style={{
+                  marginLeft: "4px",
+                  fontSize: "20px",
+                  color: "#851A1D",
+                }} // Set to #851A1D
+              />
             </Typography>
+
             <div
               style={{
                 display: open ? "block" : "none",
@@ -429,7 +439,16 @@ const Navbar = () => {
               }}
             >
               ORDER
+              <ArrowDropDownIcon
+                style={{
+                  marginLeft: "4px",
+                  fontSize: "20px",
+                  color: "#ffffff",
+                  paddingTop: "8px",
+                }}
+              />
             </Typography>
+
             <div
               style={{
                 display: open ? "block" : "none",

@@ -61,6 +61,7 @@ export default function SabirsGrillWelcome() {
           width: "100%",
           padding: { xs: "50px 20px", sm: "100px 60px", md: "130px 80px" },
           position: "relative",
+          // minHeight: "100vh",
         }}
       >
         {/* heddingBox  */}
