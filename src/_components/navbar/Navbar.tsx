@@ -21,13 +21,10 @@ const Navbar = () => {
   };
 
   // dropdown code
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
+  const [open, setOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setOpen(!open);
   };
 
   return (
@@ -112,40 +109,57 @@ const Navbar = () => {
           >
             CONTACT
           </Typography>
-          <div>
-            <Button
-              id="fade-button"
-              aria-controls={open ? "fade-menu" : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
-              onClick={handleClick}
-              sx={{
+          {/* order dropdown  */}
+          <Box
+            style={{
+              position: "relative",
+              display: "inline-block",
+              width: "auto",
+              fontSize: "inherit",
+              fontWeight: "inherit",
+              color: "#00000080",
+              cursor: "pointer",
+            }}
+            onMouseLeave={toggleDropdown}
+          >
+            <Typography
+              onClick={() => router.push("./order")}
+              onMouseEnter={toggleDropdown}
+              style={{
+                cursor: "pointer",
                 fontSize: "inherit",
                 fontWeight: "inherit",
                 color: "#00000080",
-                cursor: "pointer",
+                display: "inline",
               }}
             >
-              Dashboard
-            </Button>
-            <Menu
-              id="fade-menu"
-              MenuListProps={{
-                "aria-labelledby": "fade-button",
+              ORDER
+            </Typography>
+            <div
+              style={{
+                display: open ? "block" : "none",
+                position: "absolute",
+                backgroundColor: "#f9f9f9",
+                // minWidth: "160px",
+                width: "auto",
+                boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
+                padding: "20px 25px",
+                zIndex: 1,
+                textWrap: "nowrap",
+                borderRadius: "4px",
               }}
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              TransitionComponent={Fade}
             >
-              <MenuItem onClick={() => router.push("./order-rotherham")}>
+              <p onClick={() => router.push("./order-rotherham")}>
                 Order Rotherham
-              </MenuItem>
-              <MenuItem onClick={() => router.push("./order-huddersfield")}>
+              </p>
+              <p
+                onClick={() => router.push("./order-huddersfield")}
+                style={{ paddingTop: "10px" }}
+              >
                 Order Huddersfield
-              </MenuItem>
-            </Menu>
-          </div>
+              </p>
+            </div>
+          </Box>
         </Box>
 
         {/* Social Media Icons and Search */}
@@ -370,6 +384,57 @@ const Navbar = () => {
           >
             CONTACT
           </Typography>
+          {/* menu dropdown  */}
+          <Box
+            style={{
+              position: "relative",
+              display: "inline-block",
+              width: "auto",
+              fontSize: "inherit",
+              fontWeight: "inherit",
+              color: "inherit",
+              cursor: "pointer",
+            }}
+            onMouseLeave={toggleDropdown}
+          >
+            <Typography
+              onClick={() => router.push("./order")}
+              onMouseEnter={toggleDropdown}
+              style={{
+                cursor: "pointer",
+                fontSize: "inherit",
+                fontWeight: "inherit",
+                color: "#ffffff",
+                display: "inline",
+              }}
+            >
+              ORDER
+            </Typography>
+            <div
+              style={{
+                display: open ? "block" : "none",
+                position: "absolute",
+                backgroundColor: "#f9f9f9",
+                // minWidth: "160px",
+                width: "auto",
+                boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
+                padding: "20px 25px",
+                zIndex: 1,
+                textWrap: "nowrap",
+                borderRadius: "4px",
+              }}
+            >
+              <p onClick={() => router.push("./order-rotherham")}>
+                Order Rotherham
+              </p>
+              <p
+                onClick={() => router.push("./order-huddersfield")}
+                style={{ paddingTop: "10px" }}
+              >
+                Order Huddersfield
+              </p>
+            </div>
+          </Box>
           <Box
             sx={{
               display: "flex",

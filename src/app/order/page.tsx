@@ -1,121 +1,74 @@
 "use client";
-import { useEffect } from "react";
-import { Box } from "@mui/material";
+// import { useEffect } from "react";
+import { Box, Typography } from "@mui/material";
 import Navbar from "@/_components/navbar/Navbar";
 import Footer from "@/_components/footer/Footer";
-
-export default function Order() {
-  useEffect(() => {
-    // Add the window.onmessage listener for handling iframe messages
-    window.onmessage = (event) => {
-      // Handle frame height change
-      if (event.data.hasOwnProperty("frameHeight")) {
-        const iframe = document.getElementById(
-          "iframe"
-        ) as HTMLIFrameElement | null;
-        if (iframe && event.data.frameHeight > 50) {
-          iframe.style.height = `${event.data.frameHeight}px`;
-        }
-      }
-
-      // Open modal for WP embedded
-      if (event.data.hasOwnProperty("openModal")) {
-        const {
-          menuItemData,
-          selectedDeliveryMethod,
-          selectedDateTime,
-          catMenuId,
-          openModal,
-        } = event.data;
-        const iframeModal = document.getElementById(
-          "iframeModal"
-        ) as HTMLIFrameElement | null;
-
-        if (openModal && iframeModal) {
-          iframeModal.contentWindow?.postMessage(
-            {
-              selectedDeliveryMethod,
-              selectedDateTime,
-              menuItemData,
-              catMenuId,
-              openModal,
-            },
-            "*"
-          );
-        }
-
-        if (iframeModal) {
-          iframeModal.style.height = openModal ? "100%" : "0px";
-        }
-      }
-
-      // Handle modal on add to cart
-      if (event.data.hasOwnProperty("addItemToCart")) {
-        const { addItemToCart, cartItemNode } = event.data;
-        const iframe = document.getElementById(
-          "iframe"
-        ) as HTMLIFrameElement | null;
-
-        if (addItemToCart && iframe) {
-          iframe.contentWindow?.postMessage(
-            { cartItemNode, addItemToCart: true },
-            "*"
-          );
-        }
-
-        const iframeModal = document.getElementById(
-          "iframeModal"
-        ) as HTMLIFrameElement | null;
-        if (iframeModal) {
-          iframeModal.style.height = "0px";
-        }
-      }
-    };
-
-    // Cleanup event listener on unmount
-    return () => {
-      window.onmessage = null;
-    };
-  }, []);
-
+import Location from "../homePage/_sections/Location";
+const heddingBox = {
+  height: { xs: "55px", sm: "98px", lg: "117px" },
+  width: { xs: "220px", sm: "400px", lg: "490px" },
+  clipPath: "polygon(0 0, 100% 0, 97% 100%, 3% 100%)",
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate( -50% , -50% )",
+};
+export default function Dashboard() {
   return (
-    <Box>
-      <Navbar />
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh",
-          backgroundColor: "#f2f2f2",
-        }}
-      >
-        {/* First iframe */}
-        <iframe
-          frameBorder="0"
-          id="iframe"
-          style={{
-            height: "1304px",
-            width: "100%",
-            zIndex: 1000,
-            minHeight: "700px",
+    <>
+      <Box>
+        <Navbar />
+        <Box
+          sx={{
+            textAlign: "center",
+            backgroundImage: "url(/bgNewDishes.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
           }}
-          src="https://app.eatpresto.co.uk/location/8979294b-91c7-44c3-8486-ea80625b32f1/shop?embedType=WP"
-        ></iframe>
+        >
+          {/* hedding  */}
+          <Box
+            sx={{
+              textAlign: "center",
+              padding: { xs: "40px 0", sm: "85px 0", lg: "100px 0" },
+              position: "relative",
+            }}
+          >
+            <Typography
+              sx={{
+                color: "#851A1D",
+                fontSize: { xs: "24px", sm: "35px", md: "45px", lg: "64px" },
+                fontWeight: "700",
+                fontFamily: "Oswald",
+                position: "relative",
+                zIndex: "10",
+              }}
+            >
+              Order Online
+            </Typography>
+            <Box
+              sx={{
+                ...heddingBox,
+                zIndex: "9",
+                backgroundColor: "#ffffff",
+              }}
+            ></Box>
+            <Box
+              sx={{
+                ...heddingBox,
+                marginTop: { xs: "9px", lg: "12px" },
+                width: { xs: "227px", sm: "420px", lg: "500px" },
+                zIndex: "8",
+                backgroundColor: "#851A1D",
+              }}
+            ></Box>
+          </Box>
 
-        {/* Second iframe */}
-        <iframe
-          allowFullScreen
-          id="iframeModal"
-          style={{
-            border: "none",
-            width: "100%",
-            height: "100%",
-          }}
-          src="https://app.eatpresto.co.uk/location/8979294b-91c7-44c3-8486-ea80625b32f1/itempopupmodal?embedType=WP"
-        ></iframe>
+          <Location />
+        </Box>
+        <Footer />
       </Box>
-      <Footer />
-    </Box>
+    </>
   );
 }
