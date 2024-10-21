@@ -46,7 +46,7 @@ const Navbar = () => {
           },
           backgroundColor: "#FFFFFF",
           color: "#00000080",
-          borderBottom: { xs: "5px solid #851A1D", lg: "9px solid #851A1D" },backfaceVisibility: "hidden"
+          borderBottom: { xs: "5px solid #851A1D", lg: "9px solid #851A1D" }
         }}
       >
         {/* Logo */}
