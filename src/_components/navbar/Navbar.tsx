@@ -410,8 +410,9 @@ const Navbar = () => {
               width: "auto",
               fontSize: "inherit",
               fontWeight: "inherit",
-              color: "inherit",
+              color: "#00000080",
               cursor: "pointer",
+              transition: "all 2s ease-in",
             }}
             onMouseLeave={toggleDropdown}
           >
@@ -421,9 +422,10 @@ const Navbar = () => {
               style={{
                 cursor: "pointer",
                 fontSize: "inherit",
-                fontWeight: "inherit",
+                fontWeight: "500",
                 color: "#ffffff",
                 display: "inline",
+                transition: "all 2s ease-in",
               }}
             >
               ORDER
@@ -433,24 +435,45 @@ const Navbar = () => {
                 display: open ? "block" : "none",
                 position: "absolute",
                 backgroundColor: "#f9f9f9",
-                // minWidth: "160px",
                 width: "auto",
                 boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
-                padding: "20px 25px",
                 zIndex: 1,
                 textWrap: "nowrap",
                 borderRadius: "4px",
               }}
             >
-              <p onClick={() => router.push("./order-rotherham")}>
+              <Typography
+                sx={{
+                  padding: "20px 25px",
+                  cursor: "pointer",
+                  color: "initial",
+                  transition:
+                    "color 0.5s ease-in, background-color 0.5s ease-in",
+                  "&:hover": {
+                    color: "#ffffff",
+                    backgroundColor: "#851A1D",
+                  },
+                }}
+                onClick={() => router.push("./order-rotherham")}
+              >
                 Order Rotherham
-              </p>
-              <p
+              </Typography>
+              <Typography
+                sx={{
+                  padding: "20px 25px",
+                  cursor: "pointer",
+                  color: "initial",
+                  transition:
+                    "color 0.5s ease-in, background-color 0.5s ease-in",
+                  "&:hover": {
+                    color: "#ffffff",
+                    backgroundColor: "#851A1D",
+                  },
+                }}
                 onClick={() => router.push("./order-huddersfield")}
-                style={{ paddingTop: "10px" }}
               >
                 Order Huddersfield
-              </p>
+              </Typography>
             </div>
           </Box>
           <Box
