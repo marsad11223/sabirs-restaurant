@@ -153,7 +153,7 @@ const Navbar = () => {
                     "color 0.5s ease-in, background-color 0.5s ease-in",
                   "&:hover": {
                     color: "#ffffff",
-                    backgroundColor: "#541113",
+                    backgroundColor: "#851A1D",
                   },
                 }}
                 onClick={() => router.push("./order-rotherham")}
@@ -169,7 +169,7 @@ const Navbar = () => {
                     "color 0.5s ease-in, background-color 0.5s ease-in",
                   "&:hover": {
                     color: "#ffffff",
-                    backgroundColor: "#541113",
+                    backgroundColor: "#851A1D",
                   },
                 }}
                 onClick={() => router.push("./order-huddersfield")}
