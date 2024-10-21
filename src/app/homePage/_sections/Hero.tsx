@@ -1,14 +1,48 @@
+"use client";
+
 import pngs from "@/_assets/pngs";
 import webp from "@/_assets/webp";
 import Navbar from "@/_components/navbar/Navbar";
 import { Box, CardMedia } from "@mui/material";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            window.scrollTo({
+              top: section?.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      },
+      { threshold: 0.1 } // Adjust threshold as needed (0.5 means half of the section must be visible)
+    );
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
   return (
     <>
       <Box
         id="herosection"
+        ref={sectionRef}
         sx={{
           width: "100%",
           height: "100vh",
