@@ -6,6 +6,15 @@ import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function Location() {
+  const heddingBox = {
+    height: { xs: "55px", sm: "98px", lg: "117px" },
+    width: { xs: "220px", sm: "400px", lg: "490px" },
+    clipPath: "polygon(0 0, 100% 0, 97% 100%, 3% 100%)",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate( -50% , -50% )",
+  };
   return (
     <Box
       id="location"
@@ -26,6 +35,44 @@ export default function Location() {
           position: "relative",
         }}
       >
+        {/* hedding  */}
+        <Box sx={{ paddingBottom: { xs: "60px", sm: "100px", lg: "150px" } }}>
+          <Box
+            sx={{
+              textAlign: "center",
+              position: "relative",
+            }}
+          >
+            <Typography
+              sx={{
+                color: "#851A1D",
+                fontSize: { xs: "24px", sm: "35px", md: "45px", lg: "64px" },
+                fontWeight: "700",
+                fontFamily: "Oswald",
+                position: "relative",
+                zIndex: "10",
+              }}
+            >
+              OUR LOCATION
+            </Typography>
+            <Box
+              sx={{
+                ...heddingBox,
+                zIndex: "9",
+                backgroundColor: "#ffffff",
+              }}
+            ></Box>
+            <Box
+              sx={{
+                ...heddingBox,
+                marginTop: { xs: "9px", lg: "12px" },
+                width: { xs: "227px", sm: "420px", lg: "500px" },
+                zIndex: "8",
+                backgroundColor: "#851A1D",
+              }}
+            ></Box>
+          </Box>
+        </Box>
         <Box sx={{ position: "relative", zIndex: "10" }}>
           <Box
             sx={{
@@ -41,23 +88,7 @@ export default function Location() {
               zIndex: "10",
             }}
           >
-            <Box
-              sx={{
-                textAlign: "center",
-                paddingBottom: { xs: "40px", sm: "60px", lg: "100px" },
-              }}
-            >
-              <Typography
-                sx={{
-                  color: "#851A1D",
-                  fontSize: { xs: "24px", sm: "35px", md: "45px", lg: "64px" },
-                  fontWeight: "700",
-                  fontFamily: "Oswald",
-                }}
-              >
-                OUR LOCATION
-              </Typography>
-            </Box>
+          
             {/* Add the slider with menu items */}
             <Box
               sx={{
