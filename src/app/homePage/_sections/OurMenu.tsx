@@ -167,7 +167,7 @@ export default function OurMenu() {
       sx={{
         position: "relative",
         minHeight: "100vh",
-        backgroundImage: "url(/bgOurMenu.png)",
+        backgroundImage: "url(/bgOurMenuBlur.png)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",

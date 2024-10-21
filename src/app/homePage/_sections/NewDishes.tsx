@@ -54,7 +54,7 @@ export default function NewDishes() {
         ref={sectionRef}
         sx={{
           position: "relative",
-          backgroundImage: "url(/bgNewDishes.png)",
+          backgroundImage: "url(/bgNewDishesBlur.png)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
