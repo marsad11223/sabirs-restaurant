@@ -6,6 +6,11 @@ import Image from "next/image";
 import svgs from "../../_assets/svgs/index";
 import { useRouter } from "next/navigation";
 import { scrollToId } from "@/app/utils/helpers";
+// import * as React from "react";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import Fade from "@mui/material/Fade";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -13,6 +18,16 @@ const Navbar = () => {
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
+  };
+
+  // dropdown code
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   return (
@@ -26,12 +41,12 @@ const Navbar = () => {
             xs: "20px",
             sm: "20px 30px",
             md: "20px 80px",
-            lg: "20px 100px",
+            lg: "20px 80px",
             xl: "20px 120px",
           },
           backgroundColor: "#FFFFFF",
           color: "#00000080",
-          borderBottom: { xs: "5px solid #851A1D", lg: "9px solid #851A1D" },
+          borderBottom: { xs: "5px solid #851A1D", lg: "9px solid #851A1D" },backfaceVisibility: "hidden"
         }}
       >
         {/* Logo */}
@@ -48,7 +63,7 @@ const Navbar = () => {
           sx={{
             alignItems: "center",
             gap: { md: "10px", lg: "15px", xl: "28px" },
-            fontSize: { xs: "16px", md: "20px" },
+            fontSize: { xs: "16px", xl: "20px" },
             fontWeight: { xs: "500", md: "600" },
             display: { xs: "none", lg: "flex" },
           }}
@@ -97,6 +112,36 @@ const Navbar = () => {
           >
             CONTACT
           </Typography>
+          <div>
+            <Button
+              id="fade-button"
+              aria-controls={open ? "fade-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={handleClick}
+              sx={{
+                fontSize: "inherit",
+                fontWeight: "inherit",
+                color: "#00000080",
+                cursor: "pointer",
+              }}
+            >
+              Dashboard
+            </Button>
+            <Menu
+              id="fade-menu"
+              MenuListProps={{
+                "aria-labelledby": "fade-button",
+              }}
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              TransitionComponent={Fade}
+            >
+              <MenuItem onClick={handleClose}>Order Rotherham</MenuItem>
+              <MenuItem onClick={handleClose}>Order Huddersfield</MenuItem>
+            </Menu>
+          </div>
         </Box>
 
         {/* Social Media Icons and Search */}
