@@ -117,7 +117,7 @@ export default function NewDishes() {
           />
         </Box>
 
-        <Location />
+        <Location title="OUR LOCATION" />
       </Box>
     </>
   );

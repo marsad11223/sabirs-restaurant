@@ -2,10 +2,9 @@
 
 import MapComponent from "@/_components/map/Map";
 import { Box, Button, Typography } from "@mui/material";
-import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
 
-export default function Location() {
+export default function Location({ title }: { title: string }) {
   const heddingBox = {
     height: { xs: "55px", sm: "98px", lg: "117px" },
     width: { xs: "220px", sm: "400px", lg: "490px" },
@@ -53,7 +52,7 @@ export default function Location() {
                 zIndex: "10",
               }}
             >
-              OUR LOCATION
+              {title}
             </Typography>
             <Box
               sx={{
@@ -88,7 +87,6 @@ export default function Location() {
               zIndex: "10",
             }}
           >
-          
             {/* Add the slider with menu items */}
             <Box
               sx={{
