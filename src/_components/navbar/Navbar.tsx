@@ -444,7 +444,7 @@ const Navbar = () => {
             >
               <Typography
                 sx={{
-                  padding: "20px 25px",
+                  padding: "15px 10px",
                   cursor: "pointer",
                   color: "initial",
                   transition:
@@ -460,7 +460,7 @@ const Navbar = () => {
               </Typography>
               <Typography
                 sx={{
-                  padding: "20px 25px",
+                  padding: "15px 10px",
                   cursor: "pointer",
                   color: "initial",
                   transition:
