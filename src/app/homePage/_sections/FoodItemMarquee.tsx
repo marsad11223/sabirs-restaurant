@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import pngs from "@/_assets/pngs";
 import webp from "@/_assets/webp";
 import { Box, Typography } from "@mui/material";
@@ -16,98 +16,129 @@ interface FoodCardProps {
   image: StaticImageData;
 }
 
+const foodItems: FoodCardProps[] = [
+  {
+    title: "12inch Garlic Bread ....",
+    image: webp.GarlicBread,
+  },
+
+  {
+    title: "2Pc Chicken & Fries",
+    image: webp.Fries,
+  },
+  {
+    title: "Flamin Fusion Burger",
+    image: webp.Burger,
+  },
+  {
+    title: " Quarter Peri Peri...",
+    image: webp.LegPiece,
+  },
+  {
+    title: "Daal",
+    image: webp.Daal,
+  },
+  {
+    title: "12inch Garlic Bread ....",
+    image: webp.GarlicBread,
+  },
+
+  {
+    title: "2Pc Chicken & Fries",
+    image: webp.Fries,
+  },
+  {
+    title: "Flamin Fusion Burger",
+    image: webp.Burger,
+  },
+  {
+    title: " Quarter Peri Peri...",
+    image: webp.LegPiece,
+  },
+  {
+    title: "Daal",
+    image: webp.Daal,
+  },
+];
+
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 3000,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 1600,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        autoplaySpeed: 3000,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        autoplaySpeed: 3000,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplaySpeed: 3000,
+      },
+    },
+  ],
+};
+
 export default function HeroSection() {
-  const foodItems: FoodCardProps[] = [
-    {
-      title: "12inch Garlic Bread ....",
-      image: webp.GarlicBread,
-    },
+  const sectionRef = useRef<HTMLDivElement>(null);
 
-    {
-      title: "2Pc Chicken & Fries",
-      image: webp.Fries,
-    },
-    {
-      title: "Flamin Fusion Burger",
-      image: webp.Burger,
-    },
-    {
-      title: " Quarter Peri Peri...",
-      image: webp.LegPiece,
-    },
-    {
-      title: "Daal",
-      image: webp.Daal,
-    },
-    {
-      title: "12inch Garlic Bread ....",
-      image: webp.GarlicBread,
-    },
+  useEffect(() => {
+    const section = sectionRef.current;
 
-    {
-      title: "2Pc Chicken & Fries",
-      image: webp.Fries,
-    },
-    {
-      title: "Flamin Fusion Burger",
-      image: webp.Burger,
-    },
-    {
-      title: " Quarter Peri Peri...",
-      image: webp.LegPiece,
-    },
-    {
-      title: "Daal",
-      image: webp.Daal,
-    },
-  ];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            window.scrollTo({
+              top: section?.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      },
+      { threshold: 0.1 } // Adjust threshold as needed (0.5 means half of the section must be visible)
+    );
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 3000,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 1600,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
-          autoplaySpeed: 3000,
-        },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          autoplaySpeed: 3000,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplaySpeed: 3000,
-        },
-      },
-    ],
-  };
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
 
   return (
     <>
       <Box
+        ref={sectionRef}
         sx={{
           background:
             "radial-gradient(50% 95.48% at 50% 50%, #851A1D 0%, #560508 71%)",

@@ -33,7 +33,7 @@ export default function NewDishes() {
           }
         });
       },
-      { threshold: 0.55 } // Adjust threshold as needed (0.5 means half of the section must be visible)
+      { threshold: 0.1 } // Adjust threshold as needed (0.5 means half of the section must be visible)
     );
 
     if (section) {
