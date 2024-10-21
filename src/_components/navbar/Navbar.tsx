@@ -4,13 +4,14 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import svgs from "../../_assets/svgs/index";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { scrollToId } from "@/app/utils/helpers";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -62,7 +63,13 @@ const Navbar = () => {
           }}
         >
           <Typography
-            onClick={() => scrollToId("ourmenu")}
+            onClick={() => {
+              if (pathname === "/") {
+                scrollToId("ourmenu");
+              } else {
+                router.replace("/#ourmenu");
+              }
+            }}
             sx={{
               fontSize: "inherit",
               fontWeight: "inherit",
@@ -73,7 +80,13 @@ const Navbar = () => {
             MENU
           </Typography>
           <Typography
-            onClick={() => scrollToId("aboutus")}
+            onClick={() => {
+              if (pathname === "/") {
+                scrollToId("aboutus");
+              } else {
+                router.replace("/#aboutus");
+              }
+            }}
             sx={{
               fontSize: "inherit",
               fontWeight: "inherit",
@@ -84,7 +97,13 @@ const Navbar = () => {
             ABOUT
           </Typography>
           <Typography
-            onClick={() => scrollToId("location")}
+            onClick={() => {
+              if (pathname === "/") {
+                scrollToId("location");
+              } else {
+                router.replace("/#location");
+              }
+            }}
             sx={{
               fontSize: "inherit",
               fontWeight: "inherit",
@@ -120,7 +139,7 @@ const Navbar = () => {
             onMouseLeave={toggleDropdown}
           >
             <Typography
-              onClick={() => router.push("./order")}
+              onClick={() => router.push("/order")}
               onMouseEnter={toggleDropdown}
               style={{
                 cursor: "pointer",
