@@ -197,26 +197,14 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
           flexDirection: "column",
           justifyContent: "space-between",
           alignItems: "center",
-          // width: "100%",
-          // width: {
-          //   xs: "150px",
-          //   sm: "220px",
-          //   md: "268px",
-          //   lg: "300px",
-          // lg: "20vw",
-          // xl: "16vw",
-          // },
-          // width: "100%",
-          // padding: { xs: "0 15px", sm: "0 25px", lg: "0 30px", xl: "0 50px" },
           cursor: "pointer",
-          aspectRatio: "2/0.8",
         }}
       >
         {/* Image */}
         <Box
           sx={{
             height: { xs: "120px", sm: "140px", md: "160px" },
-            width: "auto",
+            width: { xs: "120px", sm: "140px", md: "160px" },
             paddingBottom: { xs: "5px", sm: "10px" },
             transition: "filter 0.3s",
             "&:hover": {
@@ -226,7 +214,7 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
           }}
         >
           <Image
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "100%", height: "100%", objectFit: "contain" }}
             src={image}
             alt={title}
           />
