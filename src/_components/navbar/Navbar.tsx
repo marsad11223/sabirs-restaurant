@@ -217,42 +217,6 @@ const Navbar = () => {
             gap: "30px",
           }}
         >
-          {/* <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: { xs: "10px", lg: "30px" },
-              backgroundColor: "#F8F8F8",
-              padding: { xs: "10px 25px", lg: "15px 30px" },
-              borderRadius: "30px",
-              maxWidth: { xs: "200px", md: "270px" },
-            }}
-          >
-            <Box
-              sx={{ width: { xs: "120px", md: "180px", overflow: "hidden" } }}
-            >
-              <input
-                placeholder="Search"
-                type="text"
-                style={{
-                  fontSize: "16px",
-                  fontWeight: "300",
-                  color: "#00000080",
-                  outline: "none",
-                  border: "none",
-                  backgroundColor: "#F8F8F8",
-                }}
-              />
-            </Box>
-            <Box sx={{ width: "17px", height: "auto" }}>
-              <Image
-                style={{ width: "100%", height: "100%" }}
-                src={svgs.Search}
-                alt="Search"
-              />
-            </Box>
-          </Box> */}
-
           <Box
             sx={{
               display: "flex",
@@ -391,6 +355,14 @@ const Navbar = () => {
           }}
         >
           <Typography
+            onClick={() => {
+              if (pathname === "/") {
+                scrollToId("ourmenu");
+              } else {
+                router.replace("/#ourmenu");
+              }
+              toggleSidebar();
+            }}
             variant="h6"
             sx={{
               cursor: "pointer",
@@ -401,6 +373,14 @@ const Navbar = () => {
             MENU
           </Typography>
           <Typography
+            onClick={() => {
+              if (pathname === "/") {
+                scrollToId("aboutus");
+              } else {
+                router.replace("/#aboutus");
+              }
+              toggleSidebar();
+            }}
             variant="h6"
             sx={{
               cursor: "pointer",
@@ -411,6 +391,14 @@ const Navbar = () => {
             ABOUT
           </Typography>
           <Typography
+            onClick={() => {
+              if (pathname === "/") {
+                scrollToId("location");
+              } else {
+                router.replace("/#location");
+              }
+              toggleSidebar();
+            }}
             variant="h6"
             sx={{
               cursor: "pointer",
@@ -446,7 +434,7 @@ const Navbar = () => {
             onMouseLeave={toggleDropdown}
           >
             <Typography
-              onClick={() => router.push("./order")}
+              onClick={() => router.push("/order")}
               onMouseEnter={toggleDropdown}
               style={{
                 cursor: "pointer",
@@ -492,7 +480,7 @@ const Navbar = () => {
                     backgroundColor: "#851A1D",
                   },
                 }}
-                onClick={() => router.push("./order-rotherham")}
+                onClick={() => router.push("/order-rotherham")}
               >
                 Order Rotherham
               </Typography>
@@ -508,7 +496,7 @@ const Navbar = () => {
                     backgroundColor: "#851A1D",
                   },
                 }}
-                onClick={() => router.push("./order-huddersfield")}
+                onClick={() => router.push("/order-huddersfield")}
               >
                 Order Huddersfield
               </Typography>
