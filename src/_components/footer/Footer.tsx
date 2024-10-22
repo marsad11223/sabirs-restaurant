@@ -5,10 +5,12 @@ import Image from "next/image";
 import webp from "@/_assets/webp";
 import pngs from "@/_assets/pngs";
 import svgs from "@/_assets/svgs";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import { scrollToId } from "@/app/utils/helpers";
 
 const Footer = () => {
   const router = useRouter();
+  const pathname = usePathname();
 
   const text = {
     fontSize: "12px",
@@ -78,9 +80,9 @@ const Footer = () => {
           sx={{
             display: "flex",
             flexWrap: "wrap",
-            // justifyContent: "center",
-            // alignItems: "flexStart"
+            justifyContent: "space-between",
             maxWidth: "836.5px",
+            width: { lg: "100%" },
             gap: { xs: "60px", md: "40px", lg: "100px" },
           }}
         >
@@ -102,35 +104,19 @@ const Footer = () => {
               eiusmod that a tempor incididunt ut labore.
             </Typography>
           </Box>
-          <Box sx={{ maxWidth: "274px" }}>
-            <Typography
-              sx={{
-                ...hedding,
-              }}
-              variant="h3"
-            >
-              Newsletter
-            </Typography>
-            <Typography
-              sx={{
-                ...text,
-                marginTop: "22px",
-              }}
-            >
-              Stay Brew-tally Informed! Subscribe to our newsletter and unlock a
-              world of rich culinary experiences and cooking tips to elevate
-              your daily grind.
-            </Typography>
-            <Box sx={{ marginTop: "22px" }}>
-              <FooterButton />
-            </Box>
-          </Box>
           <Box sx={{ maxWidth: "111px" }}>
             <Typography sx={{ ...hedding }} variant="h3">
               Quick Links
             </Typography>
             <Box sx={{ marginTop: "22px" }}>
               <Typography
+                onClick={() => {
+                  if (pathname === "/") {
+                    scrollToId("ourmenu");
+                  } else {
+                    router.replace("/#ourmenu");
+                  }
+                }}
                 sx={{
                   ...text,
                   marginTop: "18px",
@@ -140,6 +126,13 @@ const Footer = () => {
                 Menu
               </Typography>
               <Typography
+                onClick={() => {
+                  if (pathname === "/") {
+                    scrollToId("aboutus");
+                  } else {
+                    router.replace("/#aboutus");
+                  }
+                }}
                 sx={{
                   ...text,
                   marginTop: "18px",
@@ -149,6 +142,13 @@ const Footer = () => {
                 About Us
               </Typography>
               <Typography
+                onClick={() => {
+                  if (pathname === "/") {
+                    scrollToId("location");
+                  } else {
+                    router.replace("/#location");
+                  }
+                }}
                 sx={{
                   ...text,
                   marginTop: "18px",
@@ -194,11 +194,11 @@ const Footer = () => {
           />
           <Box sx={{ display: "flex", gap: "30px" }}>
             {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
-            <Image
+            {/* <Image
               style={{ height: "auto", width: "30px", cursor: "pointer" }}
               src={svgs.TwitterWhite}
               alt="footer links"
-            />
+            /> */}
             {/* </a> */}
             <a
               href="https://www.instagram.com/sabirsgrill/"
@@ -228,90 +228,5 @@ const Footer = () => {
     </>
   );
 };
-
-export function FooterButton() {
-  return (
-    <Box
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        borderRadius: "40px",
-        backgroundColor: "#FFFFFF",
-        width: "100%",
-        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-      }}
-    >
-      <TextField
-        variant="outlined"
-        placeholder="Your Email"
-        fullWidth
-        sx={{
-          "& .MuiInputBase-root": {
-            borderRadius: "50px",
-            fontSize: "12px",
-          },
-          "& .MuiOutlinedInput-notchedOutline": {
-            border: "none",
-          },
-          "& .MuiInputBase-input": {
-            fontSize: "12px",
-          },
-          "& input::placeholder": {
-            fontSize: "12px",
-          },
-          paddingRight: "0px", // Adjust padding if needed
-        }}
-      />
-      <Button
-        sx={{
-          backgroundColor: "#8A1D1B",
-          color: "#FFFFFF",
-          borderRadius: "40px",
-          fontSize: "8px",
-          fontWeight: "700",
-          display: "flex",
-          width: "160px",
-          alignItems: "center",
-          marginRight: "8px",
-          "&:hover": {
-            backgroundColor: "#701414",
-          },
-        }}
-      >
-        SUBMIT NOW
-        <Box
-          sx={{
-            backgroundColor: "#ffffff",
-            borderRadius: "50%",
-            height: "24px",
-            width: "24px",
-            position: "relative",
-            marginLeft: "5px",
-          }}
-        >
-          <Image
-            src={svgs.ArrowRed}
-            alt="Arrow Icon"
-            width={10}
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-            }}
-          />
-        </Box>
-      </Button>
-
-      <style jsx global>{`
-        @media (max-width: 600px) {
-          [data-lastpass-icon-root] {
-            display: none !important;
-          }
-        }
-      `}</style>
-    </Box>
-  );
-}
 
 export default Footer;
