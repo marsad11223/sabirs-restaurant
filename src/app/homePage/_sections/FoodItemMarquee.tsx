@@ -154,7 +154,7 @@ export default function HeroSection() {
         >
           <Typography
             sx={{
-              color: "#ffffff",
+              color: "#851A1D",
               fontSize: { xs: "18px", sm: "25px", md: "28px", lg: "32px" },
               fontWeight: "600",
               fontFamily: "Oswald",
