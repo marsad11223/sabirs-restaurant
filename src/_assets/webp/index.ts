@@ -1,8 +1,16 @@
-import GarlicBread from "./garlicBread.webp";
-import Fries from "./fries.webp";
-import Burger from "./burger.webp";
-import LegPiece from "./legPiece.webp";
-import Daal from "./daal.webp";
+// slider images start
+import ChickenBruger from "./slider/chickenBruger.webp";
+import Burger from "./slider/burger.webp";
+import FrenchFries from "./slider/frenchFries.webp";
+import Daal from "./slider/daal.webp";
+import Fries from "./slider/fries.webp";
+import GarlicBread from "./slider/garlicBread.webp";
+import LegPiece from "./slider/legPiece.webp";
+import Shake from "./slider/shake.webp";
+import SmashBurger from "./slider/smashBurger.webp";
+import Wrap from "./slider/wrap.webp";
+// slider images end
+
 import SabriFeast from "./sabriFeast.webp";
 import HeroHedding from "./heroHedding.webp";
 import HeroBurger from "./heroBurger.webp";
@@ -13,11 +21,18 @@ import Footerleaf from "./footerleaf.webp";
 import FooterMashroom from "./footerMashroom.webp";
 
 const webp = {
-  GarlicBread,
-  Fries,
+  // slider begain
+  ChickenBruger,
   Burger,
-  LegPiece,
+  FrenchFries,
   Daal,
+  Fries,
+  GarlicBread,
+  LegPiece,
+  Shake,
+  SmashBurger,
+  Wrap,
+  // slider end
   SabriFeast,
   HeroHedding,
   HeroBurger,
@@ -25,7 +40,7 @@ const webp = {
   BGnewDishes,
   BGsabirsGrill,
   Footerleaf,
-  FooterMashroom
+  FooterMashroom,
 };
 
 export default webp;

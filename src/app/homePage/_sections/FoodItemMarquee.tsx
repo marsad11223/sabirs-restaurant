@@ -18,46 +18,46 @@ interface FoodCardProps {
 
 const foodItems: FoodCardProps[] = [
   {
-    title: "12inch Garlic Bread ....",
-    image: webp.GarlicBread,
+    title: "Wrap",
+    image: webp.Wrap,
   },
 
   {
-    title: "2Pc Chicken & Fries",
-    image: webp.Fries,
+    title: "French fries",
+    image: webp.FrenchFries,
   },
   {
-    title: "Flamin Fusion Burger",
-    image: webp.Burger,
+    title: "smash Burger",
+    image: webp.SmashBurger,
   },
   {
-    title: " Quarter Peri Peri...",
-    image: webp.LegPiece,
+    title: "chicken burger",
+    image: webp.ChickenBruger,
   },
   {
-    title: "Daal",
-    image: webp.Daal,
+    title: "Shake",
+    image: webp.Shake,
   },
   {
-    title: "12inch Garlic Bread ....",
-    image: webp.GarlicBread,
+    title: "Wrap",
+    image: webp.Wrap,
   },
 
   {
-    title: "2Pc Chicken & Fries",
-    image: webp.Fries,
+    title: "French fries",
+    image: webp.FrenchFries,
   },
   {
-    title: "Flamin Fusion Burger",
-    image: webp.Burger,
+    title: "smash Burger",
+    image: webp.SmashBurger,
   },
   {
-    title: " Quarter Peri Peri...",
-    image: webp.LegPiece,
+    title: "chicken burger",
+    image: webp.ChickenBruger,
   },
   {
-    title: "Daal",
-    image: webp.Daal,
+    title: "Shake",
+    image: webp.Shake,
   },
 ];
 
@@ -140,8 +140,7 @@ export default function HeroSection() {
       <Box
         ref={sectionRef}
         sx={{
-          background:
-            "radial-gradient(50% 95.48% at 50% 50%, #851A1D 0%, #560508 71%)",
+          backgroundColor: "#ffffff",
           padding: "30px 0 26px 0",
           marginTop: { md: "-4px" },
         }}
@@ -184,7 +183,7 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          justifyContent: "space-between",
           alignItems: "center",
           width: "100%",
           // width: {
@@ -203,10 +202,10 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
         {/* Image */}
         <Box
           sx={{
-            width: { xs: "120px", sm: "160px", md: "220px" }, // Reduced width for each breakpoint
+            width: { xs: "120px", sm: "160px", md: "220px" },
             height: "auto",
-            maxHeight: "220px", // Reduced maxHeight
-            paddingBottom: { xs: "5px", sm: "10px", md: "20px" }, // Reduced padding
+            maxHeight: "220px",
+            paddingBottom: { xs: "5px", sm: "10px", md: "20px" },
           }}
         >
           <Image
@@ -221,8 +220,8 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
           sx={{
             fontSize: { xs: "16px", sm: "20px", md: "24px" },
             fontWeight: "600",
-            color: "#FFD40D",
-            backgroundColor: "#000000",
+            color: "#ffffff",
+            backgroundColor: "#851A1D",
             padding: "0 7px",
           }}
         >
