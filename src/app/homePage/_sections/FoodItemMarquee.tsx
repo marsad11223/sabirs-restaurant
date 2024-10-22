@@ -217,9 +217,12 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
           sx={{
             height: { xs: "120px", sm: "140px", md: "160px" },
             width: "auto",
-            // height: "auto",
-            // maxHeight: "220px",
             paddingBottom: { xs: "5px", sm: "10px" },
+            transition: "filter 0.3s",
+            "&:hover": {
+              WebkitFilter: "grayscale(100%)",
+              filter: "grayscale(100%)",
+            },
           }}
         >
           <Image
@@ -239,6 +242,10 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
             padding: "0 7px",
             textTransform: "upperCase",
             fontFamily: "Raleway",
+            "&:hover": {
+              backgroundColor: "#000",
+              color: "#ffcc00",
+            },
           }}
         >
           {title}
