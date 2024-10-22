@@ -217,7 +217,7 @@ const Navbar = () => {
             gap: "30px",
           }}
         >
-          <Box
+          {/* <Box
             sx={{
               display: "flex",
               alignItems: "center",
@@ -251,7 +251,7 @@ const Navbar = () => {
                 alt="Search"
               />
             </Box>
-          </Box>
+          </Box> */}
 
           <Box
             sx={{
@@ -267,11 +267,11 @@ const Navbar = () => {
               }}
             >
               {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
-              <Image
+              {/* <Image
                 style={{ width: "100%", height: "100%" }}
                 src={svgs.Twitter}
                 alt="Twitter"
-              />
+              /> */}
               {/* </a> */}
             </Box>
             <Box
@@ -345,7 +345,7 @@ const Navbar = () => {
           zIndex: 1000,
         }}
       >
-        <Box
+        {/* <Box
           sx={{
             display: "flex",
             alignItems: "center",
@@ -380,7 +380,7 @@ const Navbar = () => {
               alt="Search"
             />
           </Box>
-        </Box>
+        </Box> */}
         <Box
           sx={{
             display: "flex",
@@ -521,20 +521,6 @@ const Navbar = () => {
               gap: { xs: "15px", sm: "25px" },
             }}
           >
-            <Box
-              sx={{
-                width: { xs: "20px", sm: "25px", lg: "30px" },
-                height: "auto",
-              }}
-            >
-              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
-              <Image
-                style={{ width: "100%", height: "100%" }}
-                src={svgs.TwitterWhite}
-                alt="Twitter"
-              />
-              {/* </a> */}
-            </Box>
             <Box
               sx={{
                 width: { xs: "20px", sm: "25px", lg: "30px" },
