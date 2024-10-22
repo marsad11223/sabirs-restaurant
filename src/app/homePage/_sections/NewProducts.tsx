@@ -4,6 +4,8 @@ import Image from "next/image";
 import pngs from "@/_assets/pngs";
 import svgs from "@/_assets/svgs";
 import { scrollToId } from "@/app/utils/helpers";
+// import SabirsGrillWelcome from "./SabirsGrillWelcome";
+// import NewDishes from "./NewDishes";
 
 export default function NewProducts() {
   const heddingBox = {
@@ -23,7 +25,7 @@ export default function NewProducts() {
             xs: "40px 0",
             sm: "40px 0 100px 0",
             md: "80px 0px 100px 0",
-            lg: "100px 0 200px 0 ",
+            lg: "100px 0 100px 0 ",
           },
           paddingLeft: "0",
           position: "relative",
@@ -208,6 +210,8 @@ export default function NewProducts() {
             }}
           ></Box>
         </Box>
+        {/* <SabirsGrillWelcome />
+        <NewDishes /> */}
       </Box>
     </>
   );

@@ -42,7 +42,7 @@ export default function Hero() {
     <>
       <Box
         id="herosection"
-        ref={sectionRef}
+        // ref={sectionRef}
         sx={{
           width: "100%",
           height: "100vh",

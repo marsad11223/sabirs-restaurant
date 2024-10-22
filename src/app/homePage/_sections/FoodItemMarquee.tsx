@@ -138,7 +138,7 @@ export default function HeroSection() {
   return (
     <>
       <Box
-        ref={sectionRef}
+        // ref={sectionRef}
         sx={{
           backgroundColor: "#ffffff",
           padding: "30px 0 26px 0",
@@ -158,9 +158,11 @@ export default function HeroSection() {
               fontSize: { xs: "18px", sm: "25px", md: "28px", lg: "32px" },
               fontWeight: "600",
               fontFamily: "Oswald",
+              textTransform: "uppercase",
+              lineHeight: "30px",
             }}
           >
-            OUR CUISINE COLLECTION
+            Taste the Flavor!!
           </Typography>
         </Box>
         <Slider {...settings}>
@@ -177,7 +179,17 @@ export default function HeroSection() {
 
 export const FoodCard = ({ title, image }: FoodCardProps) => {
   return (
-    <Box sx={{ display: "flex", justifyContent: "center" }}>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        transition: "transform 0.3s",
+        "&:hover": {
+          // transform: "scale(1.1)",
+          // zIndex: "1000",
+        },
+      }}
+    >
       <Box
         onClick={() => scrollToId("location")}
         sx={{
@@ -185,7 +197,7 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
           flexDirection: "column",
           justifyContent: "space-between",
           alignItems: "center",
-          width: "100%",
+          // width: "100%",
           // width: {
           //   xs: "150px",
           //   sm: "220px",
@@ -197,15 +209,17 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
           // width: "100%",
           // padding: { xs: "0 15px", sm: "0 25px", lg: "0 30px", xl: "0 50px" },
           cursor: "pointer",
+          aspectRatio: "2/0.8",
         }}
       >
         {/* Image */}
         <Box
           sx={{
-            width: { xs: "120px", sm: "160px", md: "220px" },
-            height: "auto",
-            maxHeight: "220px",
-            paddingBottom: { xs: "5px", sm: "10px", md: "20px" },
+            height: { xs: "120px", sm: "140px", md: "160px" },
+            width: "auto",
+            // height: "auto",
+            // maxHeight: "220px",
+            paddingBottom: { xs: "5px", sm: "10px" },
           }}
         >
           <Image
@@ -223,6 +237,8 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
             color: "#ffffff",
             backgroundColor: "#851A1D",
             padding: "0 7px",
+            textTransform: "upperCase",
+            fontFamily: "Raleway",
           }}
         >
           {title}

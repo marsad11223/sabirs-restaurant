@@ -3,6 +3,8 @@ import { Box, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import webp from "@/_assets/webp";
 import Slider from "react-slick";
+import SabirsGrillWelcome from "./SabirsGrillWelcome";
+import NewDishes from "./NewDishes";
 
 import pngs from "@/_assets/pngs";
 import svgs from "@/_assets/svgs";
@@ -166,7 +168,7 @@ export default function OurMenu() {
       id="ourmenu"
       sx={{
         position: "relative",
-        minHeight: "100vh",
+        // minHeight: "100vh",
         backgroundImage: "url(/bgOurMenuBlur.png)",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -177,12 +179,11 @@ export default function OurMenu() {
       <Box
         sx={{
           padding: {
-            xs: "40px 16px",
-            sm: "40px 32px",
-            md: "80px 64px",
-            lg: "100px 80px 0px 80px",
+            xs: "40px 0px",
+            sm: "40px 0px",
+            md: "80px 0px",
+            lg: "100px 0px 0px 0px",
           },
-          maxWidth: "1400px",
           m: "0 auto",
           position: "relative",
         }}
@@ -224,7 +225,20 @@ export default function OurMenu() {
             }}
           ></Box>
         </Box>
-        <Box sx={{ position: "relative", zIndex: "10" }}>
+        <Box
+          sx={{
+            position: "relative",
+            zIndex: "10",
+            maxWidth: "1400px",
+            margin: {
+              xs: "0 20px",
+              sm: "0 50px",
+              md: "0 80px",
+              // lg: "0 80px",
+              xl: "0 auto",
+            },
+          }}
+        >
           <Box
             sx={{
               backgroundColor: "white",
@@ -263,12 +277,15 @@ export default function OurMenu() {
             }}
           ></Box>
         </Box>
+        <NewProducts />
+        <SabirsGrillWelcome />
+        <NewDishes />
       </Box>
-      <NewProducts />
     </Box>
   );
 }
 
+// sub component
 export function MenuCard(props: { data: MenuItem }) {
   const itemName = {
     color: "#851A1D",

@@ -51,15 +51,19 @@ export default function SabirsGrillWelcome() {
     <>
       <Box
         id="aboutus"
-        ref={sectionRef}
+        // ref={sectionRef}
         sx={{
           overflow: "hidden",
-          backgroundImage: "url(/bgWelcomeSabri.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
+          // backgroundImage: "url(/bgWelcomeSabri.png)",
+          // backgroundSize: "cover",
+          // backgroundPosition: "center",
+          // backgroundAttachment: "fixed",
           width: "100%",
-          padding: { xs: "50px 20px", sm: "100px 60px", md: "130px 80px" },
+          padding: {
+            xs: "50px 20px",
+            sm: "100px 60px",
+            md: "100px 80px",
+          },
           position: "relative",
           // minHeight: "100vh",
         }}

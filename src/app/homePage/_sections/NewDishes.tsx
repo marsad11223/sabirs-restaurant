@@ -22,10 +22,10 @@ export default function NewDishes() {
         id="newdishes"
         sx={{
           position: "relative",
-          backgroundImage: "url(/bgNewDishesBlur.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
+          // backgroundImage: "url(/bgNewDishesBlur.png)",
+          // backgroundSize: "cover",
+          // backgroundPosition: "center",
+          // backgroundAttachment: "fixed",
           width: "100%",
         }}
       >

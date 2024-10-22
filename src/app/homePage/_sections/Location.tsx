@@ -26,7 +26,7 @@ export default function Location({ title }: { title: string }) {
           padding: {
             xs: "40px 16px",
             sm: "40px 32px",
-            md: "80px 64px",
+            md: "80px 64px 0 64px",
             lg: "100px 80px 200px 80px",
           },
           maxWidth: "1400px",
