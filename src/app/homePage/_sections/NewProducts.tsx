@@ -97,7 +97,7 @@ export default function NewProducts() {
                 lg: "1000px",
                 xl: "44.6vw",
               },
-              margin: { xs: "0 20px", sm: "0" },
+              margin: { xs: "0 10px 20px 0", sm: "0" },
               padding: {
                 xs: "30px 50px 30px 20px",
                 sm: "50px 70px 50px 30px",
@@ -192,12 +192,12 @@ export default function NewProducts() {
           </Box>
           <Box
             sx={{
-              display: { xs: "none", sm: "block" },
+              // display: { xs: "none", sm: "block" },
               backgroundColor: "#851A1D",
               width: "100%",
               height: "100%",
               position: "absolute",
-              top: "0",
+              top: { xs: "10px", sm: "0" },
               left: "0",
               zIndex: "-1",
               clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)",
