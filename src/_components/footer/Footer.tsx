@@ -81,7 +81,7 @@ const Footer = () => {
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "space-between",
-            maxWidth: "836.5px",
+            maxWidth: { lg: "760px", xl: "1240px" },
             width: { lg: "100%" },
             gap: { xs: "60px", md: "40px", lg: "100px" },
           }}
@@ -176,7 +176,7 @@ const Footer = () => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            maxWidth: { lg: "855px", xl: "1000px" },
+            maxWidth: { lg: "760px", xl: "1240px" },
             width: "100%",
             marginTop: "85px",
           }}
