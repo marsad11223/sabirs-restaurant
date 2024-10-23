@@ -18,60 +18,60 @@ interface FoodCardProps {
 
 const foodItems: FoodCardProps[] = [
   {
-    title: "smash Burger",
+    title: "smash",
     // title: "Wrap",
     image: webp.SmashBurger,
     // image: webp.Wrap,
   },
 
   {
-    title: "smash Burger",
+    title: "smash",
     // title: "French fries",
     image: webp.SmashBurger,
     // image: webp.FrenchFries,
   },
   {
-    title: "smash Burger",
+    title: "smash",
     image: webp.SmashBurger,
   },
   {
     // title: "chicken burger",
-    title: "smash Burger",
+    title: "smash",
     image: webp.SmashBurger,
     // image: webp.ChickenBruger,
   },
   {
     // title: "Shake",
-    title: "smash Burger",
+    title: "smash",
     image: webp.SmashBurger,
     // image: webp.Shake,
   },
   {
     // title: "Wrap",
-    title: "smash Burger",
+    title: "smash",
     image: webp.SmashBurger,
     // image: webp.Wrap,
   },
 
   {
     // title: "French fries",
-    title: "smash Burger",
+    title: "smash",
     image: webp.SmashBurger,
     // image: webp.FrenchFries,
   },
   {
-    title: "smash Burger",
+    title: "smash",
     image: webp.SmashBurger,
   },
   {
     // title: "chicken burger",
-    title: "smash Burger",
+    title: "smash",
     image: webp.SmashBurger,
     // image: webp.ChickenBruger,
   },
   {
     // title: "Shake",
-    title: "smash Burger",
+    title: "smash",
     image: webp.SmashBurger,
     // image: webp.Shake,
   },
