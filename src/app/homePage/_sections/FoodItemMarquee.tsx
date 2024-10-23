@@ -227,7 +227,7 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
               WebkitFilter: "grayscale(100%)",
               filter:
                 "grayscale(100%) drop-shadow(0 4px 10px rgba(50, 50, 50, 0.7))",
-              transform: "scale(1.1)",
+              // transform: "scale(1.1)",
               zIndex: "1000",
               position: "relative",
             },
