@@ -79,27 +79,29 @@ export default function NewProducts() {
               sm: "515px",
               md: "718px",
               lg: "1020px",
-              xl: "45vw",
+              xl: "1200px",
             },
+            // background: "red",
             width: "100%",
+            margin: { xl: "auto" },
           }}
         >
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
-              gap: { xs: "20px", sm: "40px", md: "60px" },
+              gap: { xs: "0px", sm: "40px", md: "60px", xl: "150px" },
               position: "relative",
               maxWidth: {
                 xs: "100%",
                 sm: "500px",
                 md: "700px",
                 lg: "1000px",
-                xl: "44.6vw",
+                xl: "calc(100% - 20px)",
               },
-              margin: { xs: "0 10px 20px 0", sm: "0" },
+              margin: { xs: "0 10px 20px 0", sm: "0", xl: "0 20px 0 0" },
               padding: {
-                xs: "30px 50px 30px 20px",
+                xs: "30px 30px 30px 10px",
                 sm: "50px 70px 50px 30px",
                 md: "50px 70px 50px 30px",
                 lg: "100px 200px 100px 90px",
@@ -229,7 +231,11 @@ export function OrderButton() {
           backgroundColor: "transparent",
           color: "#A52A2A", // Dark red text
           fontWeight: "bold",
-          padding: { xs: "10px 32px 10px 10px", md: "10px 50px 10px 20px" },
+          padding: {
+            xs: "10px",
+            sm: "10px 32px 10px 10px",
+            md: "10px 50px 10px 20px",
+          },
           border: "2px solid #A52A2A", // Border color dark red
           textTransform: "uppercase", // Make text uppercase
           position: "relative",
@@ -246,7 +252,8 @@ export function OrderButton() {
               borderRadius: "50%",
               width: { xs: "25px", sm: "30", md: "38px" },
               height: { xs: "25px", sm: "30", md: "38px" },
-              display: "flex",
+              // display: "flex",
+              display: { xs: "none", sm: "flex" },
               alignItems: "center",
               justifyContent: "center",
               position: "absolute",
