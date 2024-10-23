@@ -29,268 +29,280 @@ const Navbar = () => {
       {/* Navbar */}
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          padding: {
-            xs: "20px",
-            sm: "20px 30px",
-            md: "20px 80px",
-            lg: "20px 80px",
-            xl: "20px 120px",
-          },
+          margin: "auto",
           backgroundColor: "#FFFFFF",
-          color: "#00000080",
           borderBottom: { xs: "5px solid #851A1D", lg: "9px solid #851A1D" },
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
         }}
       >
-        {/* Logo */}
-        <Box sx={{ width: "100%", maxWidth: "114px", height: "auto" }}>
-          <Image
-            style={{ width: "100%", height: "100%" }}
-            src={svgs.Logo}
-            alt="Picture of the author"
-          />
-        </Box>
-
-        {/* Desktop Navigation Links */}
+        {/* maxwidth container  */}
         <Box
           sx={{
-            alignItems: "center",
-            gap: { md: "10px", lg: "15px", xl: "28px" },
-            fontSize: { xs: "16px", xl: "20px" },
-            fontWeight: { xs: "500", md: "600" },
-            display: { xs: "none", lg: "flex" },
+            display: "flex",
+            justifyContent: "space-between",
+            padding: {
+              xs: "20px",
+              sm: "20px 30px",
+              md: "20px 80px",
+              lg: "20px 80px",
+              xl: "20px 120px",
+            },
+            color: "#00000080",
+            maxWidth: "1720px",
+            width: "100%",
           }}
         >
-          <Typography
-            onClick={() => {
-              if (pathname === "/") {
-                scrollToId("ourmenu");
-              } else {
-                router.replace("/#ourmenu");
-              }
-            }}
-            sx={{
-              fontSize: "inherit",
-              fontWeight: "inherit",
-              color: "#00000080",
-              cursor: "pointer",
-            }}
-          >
-            MENU
-          </Typography>
-          <Typography
-            onClick={() => {
-              if (pathname === "/") {
-                scrollToId("aboutus");
-              } else {
-                router.replace("/#aboutus");
-              }
-            }}
-            sx={{
-              fontSize: "inherit",
-              fontWeight: "inherit",
-              color: "#00000080",
-              cursor: "pointer",
-            }}
-          >
-            ABOUT
-          </Typography>
-          <Typography
-            onClick={() => {
-              if (pathname === "/") {
-                scrollToId("location");
-              } else {
-                router.replace("/#location");
-              }
-            }}
-            sx={{
-              fontSize: "inherit",
-              fontWeight: "inherit",
-              color: "#00000080",
-              cursor: "pointer",
-            }}
-          >
-            LOCATION
-          </Typography>
-          <Typography
-            onClick={() => router.push("/contactUs")}
-            sx={{
-              fontSize: "inherit",
-              fontWeight: "inherit",
-              color: "#00000080",
-              cursor: "pointer",
-            }}
-          >
-            CONTACT
-          </Typography>
-          {/* order dropdown  */}
+          {/* Logo */}
+          <Box sx={{ width: "100%", maxWidth: "114px", height: "auto" }}>
+            <Image
+              style={{ width: "100%", height: "100%" }}
+              src={svgs.Logo}
+              alt="Picture of the author"
+            />
+          </Box>
+
+          {/* Desktop Navigation Links */}
           <Box
-            style={{
-              position: "relative",
-              display: "inline-block",
-              width: "auto",
-              fontSize: "inherit",
-              fontWeight: "inherit",
-              color: "#00000080",
-              cursor: "pointer",
-              transition: "all 2s ease-in",
+            sx={{
+              alignItems: "center",
+              gap: { md: "10px", lg: "15px", xl: "28px" },
+              fontSize: { xs: "16px", xl: "20px" },
+              fontWeight: { xs: "500", md: "600" },
+              display: { xs: "none", lg: "flex" },
             }}
-            onMouseLeave={toggleDropdown}
           >
             <Typography
-              onClick={() => router.push("/order")}
-              onMouseEnter={toggleDropdown}
-              style={{
-                cursor: "pointer",
+              onClick={() => {
+                if (pathname === "/") {
+                  scrollToId("ourmenu");
+                } else {
+                  router.replace("/#ourmenu");
+                }
+              }}
+              sx={{
                 fontSize: "inherit",
                 fontWeight: "inherit",
                 color: "#00000080",
-                display: "inline-flex",
-                alignItems: "center",
+                cursor: "pointer",
+              }}
+            >
+              MENU
+            </Typography>
+            <Typography
+              onClick={() => {
+                if (pathname === "/") {
+                  scrollToId("aboutus");
+                } else {
+                  router.replace("/#aboutus");
+                }
+              }}
+              sx={{
+                fontSize: "inherit",
+                fontWeight: "inherit",
+                color: "#00000080",
+                cursor: "pointer",
+              }}
+            >
+              ABOUT
+            </Typography>
+            <Typography
+              onClick={() => {
+                if (pathname === "/") {
+                  scrollToId("location");
+                } else {
+                  router.replace("/#location");
+                }
+              }}
+              sx={{
+                fontSize: "inherit",
+                fontWeight: "inherit",
+                color: "#00000080",
+                cursor: "pointer",
+              }}
+            >
+              LOCATION
+            </Typography>
+            <Typography
+              onClick={() => router.push("/contactUs")}
+              sx={{
+                fontSize: "inherit",
+                fontWeight: "inherit",
+                color: "#00000080",
+                cursor: "pointer",
+              }}
+            >
+              CONTACT
+            </Typography>
+            {/* order dropdown  */}
+            <Box
+              style={{
+                position: "relative",
+                display: "inline-block",
+                width: "auto",
+                fontSize: "inherit",
+                fontWeight: "inherit",
+                color: "#00000080",
+                cursor: "pointer",
                 transition: "all 2s ease-in",
               }}
+              onMouseLeave={toggleDropdown}
             >
-              ORDER
-              <ArrowDropDownIcon
+              <Typography
+                onClick={() => router.push("/order")}
+                onMouseEnter={toggleDropdown}
                 style={{
-                  marginLeft: "4px",
-                  fontSize: "20px",
-                  color: "#851A1D",
-                }} // Set to #851A1D
-              />
-            </Typography>
+                  cursor: "pointer",
+                  fontSize: "inherit",
+                  fontWeight: "inherit",
+                  color: "#00000080",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  transition: "all 2s ease-in",
+                }}
+              >
+                ORDER
+                <ArrowDropDownIcon
+                  style={{
+                    marginLeft: "4px",
+                    fontSize: "20px",
+                    color: "#851A1D",
+                  }} // Set to #851A1D
+                />
+              </Typography>
 
-            <div
-              style={{
-                display: open ? "block" : "none",
-                position: "absolute",
-                backgroundColor: "#f9f9f9",
-                width: "auto",
-                boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
-                zIndex: 1,
-                textWrap: "nowrap",
-                borderRadius: "4px",
-              }}
-            >
-              <Typography
-                sx={{
-                  padding: "20px 25px",
-                  cursor: "pointer",
-                  color: "initial",
-                  transition:
-                    "color 0.5s ease-in, background-color 0.5s ease-in",
-                  "&:hover": {
-                    color: "#ffffff",
-                    backgroundColor: "#851A1D",
-                  },
+              <div
+                style={{
+                  display: open ? "block" : "none",
+                  position: "absolute",
+                  backgroundColor: "#f9f9f9",
+                  width: "auto",
+                  boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
+                  zIndex: 1,
+                  textWrap: "nowrap",
+                  borderRadius: "4px",
                 }}
-                onClick={() => router.push("./order-rotherham")}
               >
-                Order Rotherham
-              </Typography>
-              <Typography
-                sx={{
-                  padding: "20px 25px",
-                  cursor: "pointer",
-                  color: "initial",
-                  transition:
-                    "color 0.5s ease-in, background-color 0.5s ease-in",
-                  "&:hover": {
-                    color: "#ffffff",
-                    backgroundColor: "#851A1D",
-                  },
-                }}
-                onClick={() => router.push("./order-huddersfield")}
-              >
-                Order Huddersfield
-              </Typography>
-            </div>
+                <Typography
+                  sx={{
+                    padding: "20px 25px",
+                    cursor: "pointer",
+                    color: "initial",
+                    transition:
+                      "color 0.5s ease-in, background-color 0.5s ease-in",
+                    "&:hover": {
+                      color: "#ffffff",
+                      backgroundColor: "#851A1D",
+                    },
+                  }}
+                  onClick={() => router.push("./order-rotherham")}
+                >
+                  Order Rotherham
+                </Typography>
+                <Typography
+                  sx={{
+                    padding: "20px 25px",
+                    cursor: "pointer",
+                    color: "initial",
+                    transition:
+                      "color 0.5s ease-in, background-color 0.5s ease-in",
+                    "&:hover": {
+                      color: "#ffffff",
+                      backgroundColor: "#851A1D",
+                    },
+                  }}
+                  onClick={() => router.push("./order-huddersfield")}
+                >
+                  Order Huddersfield
+                </Typography>
+              </div>
+            </Box>
           </Box>
-        </Box>
 
-        {/* Social Media Icons and Search */}
-        <Box
-          sx={{
-            display: { xs: "none", sm: "flex" },
-            alignItems: "center",
-            gap: "30px",
-          }}
-        >
+          {/* Social Media Icons and Search */}
           <Box
             sx={{
-              display: "flex",
+              display: { xs: "none", sm: "flex" },
               alignItems: "center",
-              gap: { xs: "10px", md: "20px" },
+              gap: "30px",
             }}
           >
             <Box
               sx={{
-                width: { xs: "15px", sm: "25px", lg: "30px" },
-                height: "auto",
+                display: "flex",
+                alignItems: "center",
+                gap: { xs: "10px", md: "20px" },
               }}
             >
-              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
-              {/* <Image
+              <Box
+                sx={{
+                  width: { xs: "15px", sm: "25px", lg: "30px" },
+                  height: "auto",
+                }}
+              >
+                {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
+                {/* <Image
                 style={{ width: "100%", height: "100%" }}
                 src={svgs.Twitter}
                 alt="Twitter"
               /> */}
-              {/* </a> */}
-            </Box>
-            <Box
-              sx={{
-                width: { xs: "15px", sm: "25px", lg: "30px" },
-                height: "auto",
-              }}
-            >
-              <a
-                href="https://www.instagram.com/sabirsgrill/"
-                target="_blank"
-                rel="noopener noreferrer"
+                {/* </a> */}
+              </Box>
+              <Box
+                sx={{
+                  width: { xs: "15px", sm: "25px", lg: "30px" },
+                  height: "auto",
+                }}
               >
-                <Image
-                  style={{ width: "100%", height: "100%" }}
-                  src={svgs.Instagram}
-                  alt="Facebook"
-                />
-              </a>
-            </Box>
-            <Box
-              sx={{
-                width: { xs: "15px", sm: "25px", lg: "30px" },
-                height: "auto",
-              }}
-            >
-              <a
-                href="https://www.facebook.com/sabirsgrill/"
-                target="_blank"
-                rel="noopener noreferrer"
+                <a
+                  href="https://www.instagram.com/sabirsgrill/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    style={{ width: "100%", height: "100%" }}
+                    src={svgs.Instagram}
+                    alt="Facebook"
+                  />
+                </a>
+              </Box>
+              <Box
+                sx={{
+                  width: { xs: "15px", sm: "25px", lg: "30px" },
+                  height: "auto",
+                }}
               >
-                <Image
-                  style={{ width: "100%", height: "100%" }}
-                  src={svgs.Facebook}
-                  alt="Facebook"
-                />
-              </a>
+                <a
+                  href="https://www.facebook.com/sabirsgrill/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    style={{ width: "100%", height: "100%" }}
+                    src={svgs.Facebook}
+                    alt="Facebook"
+                  />
+                </a>
+              </Box>
             </Box>
           </Box>
-        </Box>
 
-        {/* Hamburger Icon for Mobile */}
-        <Box
-          sx={{
-            width: "30px",
-            height: "auto",
-            display: { xs: "block", lg: "none" },
-          }}
-        >
-          <Image
-            style={{ width: "100%", height: "100%" }}
-            src={svgs.Hamburger}
-            alt="Hamburger"
-            onClick={toggleSidebar} // Toggle sidebar on hamburger click
-          />
+          {/* Hamburger Icon for Mobile */}
+          <Box
+            sx={{
+              width: "30px",
+              height: "auto",
+              display: { xs: "block", lg: "none" },
+            }}
+          >
+            <Image
+              style={{ width: "100%", height: "100%" }}
+              src={svgs.Hamburger}
+              alt="Hamburger"
+              onClick={toggleSidebar} // Toggle sidebar on hamburger click
+            />
+          </Box>
         </Box>
       </Box>
 
