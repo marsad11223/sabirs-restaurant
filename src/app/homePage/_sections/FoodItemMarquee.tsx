@@ -157,7 +157,7 @@ export default function HeroSection() {
         // ref={sectionRef}
         sx={{
           backgroundColor: "#ffffff",
-          padding: "30px 0 26px 0",
+          padding: { xs: "30px 0 26px 0", lg: "35px 0 31px 0" },
           marginTop: { md: "-4px" },
         }}
       >
