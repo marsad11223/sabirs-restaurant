@@ -18,46 +18,62 @@ interface FoodCardProps {
 
 const foodItems: FoodCardProps[] = [
   {
-    title: "Wrap",
-    image: webp.Wrap,
+    title: "smash Burger",
+    // title: "Wrap",
+    image: webp.SmashBurger,
+    // image: webp.Wrap,
   },
 
   {
-    title: "French fries",
-    image: webp.FrenchFries,
+    title: "smash Burger",
+    // title: "French fries",
+    image: webp.SmashBurger,
+    // image: webp.FrenchFries,
   },
   {
     title: "smash Burger",
     image: webp.SmashBurger,
   },
   {
-    title: "chicken burger",
-    image: webp.ChickenBruger,
+    // title: "chicken burger",
+    title: "smash Burger",
+    image: webp.SmashBurger,
+    // image: webp.ChickenBruger,
   },
   {
-    title: "Shake",
-    image: webp.Shake,
+    // title: "Shake",
+    title: "smash Burger",
+    image: webp.SmashBurger,
+    // image: webp.Shake,
   },
   {
-    title: "Wrap",
-    image: webp.Wrap,
+    // title: "Wrap",
+    title: "smash Burger",
+    image: webp.SmashBurger,
+    // image: webp.Wrap,
   },
 
   {
-    title: "French fries",
-    image: webp.FrenchFries,
+    // title: "French fries",
+    title: "smash Burger",
+    image: webp.SmashBurger,
+    // image: webp.FrenchFries,
   },
   {
     title: "smash Burger",
     image: webp.SmashBurger,
   },
   {
-    title: "chicken burger",
-    image: webp.ChickenBruger,
+    // title: "chicken burger",
+    title: "smash Burger",
+    image: webp.SmashBurger,
+    // image: webp.ChickenBruger,
   },
   {
-    title: "Shake",
-    image: webp.Shake,
+    // title: "Shake",
+    title: "smash Burger",
+    image: webp.SmashBurger,
+    // image: webp.Shake,
   },
 ];
 
