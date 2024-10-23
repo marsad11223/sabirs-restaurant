@@ -29,6 +29,7 @@ export default function NewDishes() {
           width: "100%",
         }}
       >
+        {/* hedding box  */}
         <Box
           sx={{
             textAlign: "center",
@@ -65,24 +66,27 @@ export default function NewDishes() {
             }}
           ></Box>
         </Box>
-        <Box
-          sx={{
-            height: "auto",
-            width: "100%",
-            position: "relative",
-            opacity: "5",
-            padding: {
-              xs: "0 20px 20px 20px ",
-              sm: "0 50px 50px 50px ",
-              lg: "0px 80px 80px 80px",
-            },
-          }}
-        >
-          <Image
-            style={{ width: "100%", height: "100%" }}
-            src={webp.Dishes}
-            alt="dishes"
-          />
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Box
+            sx={{
+              height: "auto",
+              width: "100%",
+              position: "relative",
+              opacity: "5",
+              padding: {
+                xs: "0 20px 20px 20px ",
+                sm: "0 50px 50px 50px ",
+                lg: "0px 80px 80px 80px",
+              },
+              maxWidth: "1700px",
+            }}
+          >
+            <Image
+              style={{ width: "100%", height: "100%" }}
+              src={webp.Dishes}
+              alt="dishes"
+            />
+          </Box>
         </Box>
 
         <Location title="OUR LOCATION" />
