@@ -30,7 +30,7 @@ export default function NewDishes() {
         }}
       >
         {/* hedding box  */}
-        <Box
+        {/* <Box
           sx={{
             textAlign: "center",
             padding: { xs: "40px 0", sm: "85px 0", lg: "100px 0" },
@@ -65,7 +65,7 @@ export default function NewDishes() {
               backgroundColor: "#851A1D",
             }}
           ></Box>
-        </Box>
+        </Box> */}
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Box
             sx={{
@@ -74,9 +74,10 @@ export default function NewDishes() {
               position: "relative",
               opacity: "5",
               padding: {
-                xs: "0 20px 20px 20px ",
-                sm: "0 50px 50px 50px ",
-                lg: "0px 80px 80px 80px",
+                // xs: "40px 0", sm: "85px 0", lg: "100px 0"
+                xs: "40px 0",
+                sm: "85px 50px",
+                lg: "100px 80px",
               },
               maxWidth: "1700px",
             }}
