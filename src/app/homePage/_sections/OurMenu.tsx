@@ -24,7 +24,7 @@ export default function OurMenu() {
   const menuItems: MenuItem[] = [
     {
       id: 1,
-      name: "12inch Garlic Bread",
+      name: "Garlic Bread",
       discount: "-16%",
       price: "£ 6.29",
       originalPrice: "£ 9.00",
@@ -33,7 +33,7 @@ export default function OurMenu() {
     },
     {
       id: 2,
-      name: "2Pc Chicken & Fries",
+      name: "Chicken & Fries",
       discount: "-16%",
       price: "£ 2.29",
       originalPrice: "£ 4.89",
@@ -42,7 +42,7 @@ export default function OurMenu() {
     },
     {
       id: 3,
-      name: "Flamin Fusion Burger",
+      name: "Fusion Burger",
       discount: "-16%",
       price: "£ 2.29",
       originalPrice: "£ 4.99",
@@ -51,7 +51,7 @@ export default function OurMenu() {
     },
     {
       id: 4,
-      name: "Quarter Peri Peri...",
+      name: "Peri Peri",
       discount: "-16%",
       price: "£ 3.29",
       originalPrice: "£ 4.29",
@@ -247,14 +247,15 @@ export default function OurMenu() {
                 xs: "40px 20px",
                 sm: "90px 60px",
                 md: "100px 70px",
-                lg: "130px 80px",
+                lg: "130px 70px",
+                xl: "130px 70px",
               },
               position: "relative",
               zIndex: "10",
             }}
           >
             {/* Add the slider with menu items */}
-            <Box sx={{ maxWidth: { lg: "1000px", md: "700px" }, m: "0 auto" }}>
+            <Box sx={{ maxWidth: { lg: "1100px", md: "700px" }, m: "0 auto" }}>
               <Slider {...sliderSettings}>
                 {menuItems.map((item) => (
                   <MenuCard key={item.id} data={item} />
@@ -285,7 +286,7 @@ export default function OurMenu() {
   );
 }
 
-// sub component
+// slider card
 export function MenuCard(props: { data: MenuItem }) {
   const itemName = {
     color: "#851A1D",
@@ -299,7 +300,7 @@ export function MenuCard(props: { data: MenuItem }) {
         {/* Card image */}
         <Box
           sx={{
-            width: { xs: "250px", sm: "288px" },
+            width: { xs: "200px", sm: "320px" },
             height: { xs: "auto", sm: "263px" },
             maxWidth: { xs: "270px", sm: "300px" },
             backgroundColor: "#ff9800",
@@ -308,7 +309,7 @@ export function MenuCard(props: { data: MenuItem }) {
           }}
         >
           {/* Side icon */}
-          <Box
+          {/* <Box
             sx={{
               display: "flex",
               justifyContent: "center",
@@ -332,13 +333,14 @@ export function MenuCard(props: { data: MenuItem }) {
             >
               {props.data.discount}
             </Typography>
-          </Box>
+          </Box> */}
           <Image
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
             src={props.data.image}
             alt={props.data.name}
           />
         </Box>
+        {/* card Typography  */}
         <Box
           sx={{
             display: "flex",
@@ -346,6 +348,7 @@ export function MenuCard(props: { data: MenuItem }) {
             gap: "10px",
             paddingLeft: "12px",
             marginTop: { xs: "20px", sm: "28px" },
+            textAlign: "center",
           }}
         >
           <Typography
@@ -356,14 +359,13 @@ export function MenuCard(props: { data: MenuItem }) {
           >
             {props.data.name}
           </Typography>
-          <Box
+          {/* <Box
             sx={{
               display: "flex",
               gap: "4px",
               alignItems: "center",
             }}
           >
-            {/* Render stars based on rating */}
             {Array(props.data.rating)
               .fill(0)
               .map((_, index) => (
@@ -396,7 +398,7 @@ export function MenuCard(props: { data: MenuItem }) {
             >
               {props.data.originalPrice}
             </Typography>
-          </Box>
+          </Box> */}
         </Box>
       </Box>
     </Box>
