@@ -222,12 +222,12 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
             height: { xs: "120px", sm: "140px", md: "160px" },
             width: { xs: "120px", sm: "140px", md: "160px" },
             paddingBottom: { xs: "5px", sm: "10px" },
-            transition: "filter 0.5s ease-in , transform 1s ease-in",
+            transition: "filter 0.5s ease-in , transform 0.5s ease-in",
             "&:hover": {
               WebkitFilter: "grayscale(100%)",
               filter:
                 "grayscale(100%) drop-shadow(0 4px 10px rgba(50, 50, 50, 0.7))",
-              transform: "scale(1.22)",
+              transform: "scale(1.1)",
               zIndex: "1000",
               position: "relative",
             },
