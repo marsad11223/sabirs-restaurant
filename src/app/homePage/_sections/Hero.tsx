@@ -103,7 +103,7 @@ export default function Hero() {
               sm: "70vw",
               md: "60vw",
               lg: "50vw",
-              xl: "1200px",
+              xl: "1000px",
             },
 
             width: "100%",
