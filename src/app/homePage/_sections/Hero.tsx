@@ -49,6 +49,7 @@ export default function Hero() {
           // minHeight: { md: "100vh", sm: "600px", xs: "480px" },
           position: "relative",
           overflow: "hidden",
+          // maxWidth: "1600px"
         }}
       >
         {/* navbar  */}
@@ -102,7 +103,7 @@ export default function Hero() {
               sm: "70vw",
               md: "60vw",
               lg: "50vw",
-              xl: "50vw",
+              xl: "1300px",
             },
 
             width: "100%",
@@ -115,7 +116,7 @@ export default function Hero() {
                 sm: "70vw",
                 md: "60vw",
                 lg: "50vw",
-                xl: "50vw",
+                xl: "1300px",
               },
 
               width: "100%",
