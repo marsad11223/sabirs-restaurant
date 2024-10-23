@@ -50,7 +50,7 @@ const Navbar = () => {
               xl: "20px 120px",
             },
             color: "#00000080",
-            maxWidth: "1720px",
+            maxWidth: "1500px",
             width: "100%",
           }}
         >
