@@ -222,15 +222,23 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
             height: { xs: "120px", sm: "140px", md: "160px" },
             width: { xs: "120px", sm: "140px", md: "160px" },
             paddingBottom: { xs: "5px", sm: "10px" },
-            transition: "filter 0.3s",
+            transition: "filter 0.5s ease-in , transform 1s ease-in",
             "&:hover": {
               WebkitFilter: "grayscale(100%)",
-              filter: "grayscale(100%)",
+              filter:
+                "grayscale(100%) drop-shadow(0 4px 10px rgba(50, 50, 50, 0.7))",
+              transform: "scale(1.22)",
+              zIndex: "1000",
+              position: "relative",
             },
           }}
         >
           <Image
-            style={{ width: "100%", height: "100%", objectFit: "contain" }}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+            }}
             src={image}
             alt={title}
           />
@@ -246,6 +254,7 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
             padding: "0 7px",
             textTransform: "upperCase",
             fontFamily: "Raleway",
+            transition: "background-color 1.2s ease, color 0.2s ease-in",
             "&:hover": {
               backgroundColor: "#000",
               color: "#ffcc00",
