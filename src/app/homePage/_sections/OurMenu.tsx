@@ -9,6 +9,7 @@ import NewDishes from "./NewDishes";
 import pngs from "@/_assets/pngs";
 import svgs from "@/_assets/svgs";
 import NewProducts from "./NewProducts";
+import { useRouter } from "next/navigation";
 
 interface MenuItem {
   id: number;
@@ -288,6 +289,8 @@ export default function OurMenu() {
 
 // slider card
 export function MenuCard(props: { data: MenuItem }) {
+  const router = useRouter();
+
   const itemName = {
     color: "#851A1D",
     fontWeight: "600",
@@ -295,7 +298,10 @@ export function MenuCard(props: { data: MenuItem }) {
   };
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "center" }}>
+    <Box
+      onClick={() => router.push("/order")}
+      sx={{ display: "flex", justifyContent: "center", cursor: "pointer" }}
+    >
       <Box>
         {/* Card image */}
         <Box

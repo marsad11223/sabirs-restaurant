@@ -86,6 +86,11 @@ const Navbar = () => {
                 fontWeight: "inherit",
                 color: "#00000080",
                 cursor: "pointer",
+                transition: "color 0.3s ease-in, text-shadow 0.6s ease-in",
+                "&:hover": {
+                  color: "#851A1D",
+                  textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
+                },
               }}
             >
               MENU
@@ -103,6 +108,11 @@ const Navbar = () => {
                 fontWeight: "inherit",
                 color: "#00000080",
                 cursor: "pointer",
+                transition: "color 0.3s ease-in, text-shadow 0.6s ease-in",
+                "&:hover": {
+                  color: "#851A1D",
+                  textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
+                },
               }}
             >
               ABOUT
@@ -120,6 +130,11 @@ const Navbar = () => {
                 fontWeight: "inherit",
                 color: "#00000080",
                 cursor: "pointer",
+                transition: "color 0.3s ease-in, text-shadow 0.6s ease-in",
+                "&:hover": {
+                  color: "#851A1D",
+                  textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
+                },
               }}
             >
               LOCATION
@@ -131,13 +146,18 @@ const Navbar = () => {
                 fontWeight: "inherit",
                 color: "#00000080",
                 cursor: "pointer",
+                transition: "color 0.3s ease-in, text-shadow 0.6s ease-in",
+                "&:hover": {
+                  color: "#851A1D",
+                  textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
+                },
               }}
             >
               CONTACT
             </Typography>
             {/* order dropdown  */}
             <Box
-              style={{
+              sx={{
                 position: "relative",
                 display: "inline-block",
                 width: "auto",
@@ -152,19 +172,24 @@ const Navbar = () => {
               <Typography
                 onClick={() => router.push("/order")}
                 onMouseEnter={toggleDropdown}
-                style={{
+                sx={{
                   cursor: "pointer",
                   fontSize: "inherit",
                   fontWeight: "inherit",
                   color: "#00000080",
                   display: "inline-flex",
                   alignItems: "center",
-                  transition: "all 2s ease-in",
+                  transition:
+                    "all 0.3s ease-in, text-shadow 0.6s ease-in , color 0.3s ease-in",
+                  "&:hover": {
+                    color: "#851A1D",
+                    textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
+                  },
                 }}
               >
                 ORDER
                 <ArrowDropDownIcon
-                  style={{
+                  sx={{
                     marginLeft: "4px",
                     fontSize: "20px",
                     color: "#851A1D",
