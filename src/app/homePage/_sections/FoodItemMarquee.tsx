@@ -83,7 +83,7 @@ const settings = {
   speed: 3000,
   slidesToShow: 5,
   slidesToScroll: 1,
-  autoplay: true,
+  // autoplay: true,
   autoplaySpeed: 3000,
   responsive: [
     {
@@ -164,7 +164,6 @@ export default function HeroSection() {
         <Box
           sx={{
             textAlign: "center",
-            marginBottom: { xs: "10px", sm: "15px", md: "20px" },
             width: "100%",
           }}
         >
@@ -183,9 +182,12 @@ export default function HeroSection() {
         </Box>
         <Slider {...settings}>
           {foodItems.map((item, index) => (
-            <div key={index}>
+            <Box
+              sx={{ marginTop: { xs: "10px", sm: "15px", md: "20px" } }}
+              key={index}
+            >
               <FoodCard title={item.title} image={item.image} />
-            </div>
+            </Box>
           ))}
         </Slider>
       </Box>
