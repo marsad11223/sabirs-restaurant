@@ -1,3 +1,4 @@
+// import { fonts, colors } from "@/app/utils/themes";
 export const colors = {
   primaryRed: "#851A1D",
   secondaryYellow: "#FFD40D",
@@ -21,4 +22,9 @@ export const fonts = {
     md: "50px",
     lg: "64px",
   },
+
+  primaryTypography: { xs: "16px", sm: "20px", md: "24px" },
+  secondaryTypography: {},
+  tertiaryTypography: { xs: "14px", md: "16px", xl: "20px" },
+  quaternaryTypography: {},
 };

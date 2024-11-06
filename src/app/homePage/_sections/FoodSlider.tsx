@@ -195,7 +195,7 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
         {/* Title */}
         <Typography
           sx={{
-            fontSize: { xs: "16px", sm: "20px", md: "24px" },
+            fontSize: fonts.primaryTypography,
             fontWeight: "600",
             color: colors.White,
             backgroundColor: colors.primaryRed,

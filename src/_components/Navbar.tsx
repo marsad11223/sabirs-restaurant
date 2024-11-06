@@ -5,10 +5,9 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 import svgs from "@/_assets/svgs";
 import { useRouter, usePathname } from "next/navigation";
-import { scrollToId } from "@/app/utils/helpers";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Divider } from "@mui/material";
-import { colors } from "@/app/utils/themes";
+import { colors, fonts } from "@/app/utils/themes";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -21,13 +20,12 @@ const Navbar = () => {
 
   // dropdown code
   const [open, setOpen] = useState(false);
-
   const toggleDropdown = () => {
     setOpen(!open);
   };
 
   const textStyle = {
-    fontSize: { xs: "14px", md: "16px", xl: "20px" },
+    fontSize: fonts.tertiaryTypography,
     fontWeight: "400",
     color: colors.textGery,
     cursor: "pointer",
@@ -82,21 +80,12 @@ const Navbar = () => {
           {/* Desktop Navigation Links */}
           <Box
             sx={{
+              display: { xs: "none", md: "flex" },
               alignItems: "center",
               gap: { md: "15px", lg: "20px", xl: "30px" },
-              fontSize: { xs: "16px", xl: "20px" },
-              fontWeight: { xs: "500", md: "600" },
-              display: { xs: "none", md: "flex" },
             }}
           >
             <Typography
-              onClick={() => {
-                if (pathname === "/") {
-                  scrollToId("ourmenu");
-                } else {
-                  router.replace("/#ourmenu");
-                }
-              }}
               sx={{
                 ...textStyle,
                 "&:hover": {
@@ -108,13 +97,6 @@ const Navbar = () => {
               home
             </Typography>
             <Typography
-              onClick={() => {
-                if (pathname === "/") {
-                  scrollToId("aboutus");
-                } else {
-                  router.replace("/#aboutus");
-                }
-              }}
               sx={{
                 ...textStyle,
                 "&:hover": {
@@ -126,13 +108,6 @@ const Navbar = () => {
               about us
             </Typography>
             <Typography
-              onClick={() => {
-                if (pathname === "/") {
-                  scrollToId("location");
-                } else {
-                  router.replace("/#location");
-                }
-              }}
               sx={{
                 ...textStyle,
                 "&:hover": {
@@ -161,9 +136,6 @@ const Navbar = () => {
                 position: "relative",
                 display: "inline-block",
                 width: "auto",
-                fontSize: "inherit",
-                fontWeight: "inherit",
-                cursor: "pointer",
               }}
               onMouseLeave={toggleDropdown}
             >
@@ -332,14 +304,6 @@ const Navbar = () => {
           }}
         >
           <Typography
-            onClick={() => {
-              if (pathname === "/") {
-                scrollToId("ourmenu");
-              } else {
-                router.replace("/#ourmenu");
-              }
-              toggleSidebar();
-            }}
             variant="h6"
             sx={{
               ...textStyle,
@@ -355,14 +319,6 @@ const Navbar = () => {
             }}
           />
           <Typography
-            onClick={() => {
-              if (pathname === "/") {
-                scrollToId("aboutus");
-              } else {
-                router.replace("/#aboutus");
-              }
-              toggleSidebar();
-            }}
             variant="h6"
             sx={{
               ...textStyle,
@@ -378,14 +334,6 @@ const Navbar = () => {
             }}
           />
           <Typography
-            onClick={() => {
-              if (pathname === "/") {
-                scrollToId("location");
-              } else {
-                router.replace("/#location");
-              }
-              toggleSidebar();
-            }}
             variant="h6"
             sx={{
               ...textStyle,
