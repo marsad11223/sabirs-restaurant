@@ -7,6 +7,8 @@ import svgs from "../../_assets/svgs/index";
 import { useRouter, usePathname } from "next/navigation";
 import { scrollToId } from "@/app/utils/helpers";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { Divider } from "@mui/material";
+import { colors } from "@/app/utils/themes";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -24,17 +26,33 @@ const Navbar = () => {
     setOpen(!open);
   };
 
+  const textStyle = {
+    fontSize: { xs: "14px", md: "16px", xl: "20px" },
+    fontWeight: "400",
+    color: colors.textGery,
+    cursor: "pointer",
+    textTransform: "capitalize",
+    transition:
+      "color 0.3s ease-in, background-color 0.5s ease-in, text-shadow 0.6s ease-in",
+  };
+
   return (
     <>
       {/* Navbar */}
       <Box
         sx={{
           margin: "auto",
-          backgroundColor: "#FFFFFF",
-          borderBottom: { xs: "5px solid #851A1D", lg: "9px solid #851A1D" },
+          backgroundColor: colors.White,
           width: "100%",
           display: "flex",
           justifyContent: "center",
+          padding: {
+            xs: "20px",
+            sm: "20px 30px",
+            md: "20px 80px",
+            lg: "20px 80px",
+            xl: "25px 120px",
+          },
         }}
       >
         {/* maxwidth container  */}
@@ -42,20 +60,18 @@ const Navbar = () => {
           sx={{
             display: "flex",
             justifyContent: "space-between",
-            padding: {
-              xs: "20px",
-              sm: "20px 30px",
-              md: "20px 80px",
-              lg: "20px 80px",
-              xl: "20px 120px",
-            },
-            color: "#00000080",
-            maxWidth: "1500px",
+            maxWidth: "1600px",
             width: "100%",
           }}
         >
           {/* Logo */}
-          <Box sx={{ width: "100%", maxWidth: "114px", height: "auto" }}>
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: { xs: "114px", xl: "150px" },
+              height: "auto",
+            }}
+          >
             <Image
               style={{ width: "100%", height: "100%" }}
               src={svgs.Logo}
@@ -67,10 +83,10 @@ const Navbar = () => {
           <Box
             sx={{
               alignItems: "center",
-              gap: { md: "10px", lg: "15px", xl: "28px" },
+              gap: { md: "15px", lg: "20px", xl: "30px" },
               fontSize: { xs: "16px", xl: "20px" },
               fontWeight: { xs: "500", md: "600" },
-              display: { xs: "none", lg: "flex" },
+              display: { xs: "none", md: "flex" },
             }}
           >
             <Typography
@@ -82,18 +98,14 @@ const Navbar = () => {
                 }
               }}
               sx={{
-                fontSize: "inherit",
-                fontWeight: "inherit",
-                color: "#00000080",
-                cursor: "pointer",
-                transition: "color 0.3s ease-in, text-shadow 0.6s ease-in",
+                ...textStyle,
                 "&:hover": {
-                  color: "#851A1D",
+                  color: colors.primaryRed,
                   textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
                 },
               }}
             >
-              MENU
+              home
             </Typography>
             <Typography
               onClick={() => {
@@ -104,18 +116,14 @@ const Navbar = () => {
                 }
               }}
               sx={{
-                fontSize: "inherit",
-                fontWeight: "inherit",
-                color: "#00000080",
-                cursor: "pointer",
-                transition: "color 0.3s ease-in, text-shadow 0.6s ease-in",
+                ...textStyle,
                 "&:hover": {
-                  color: "#851A1D",
+                  color: colors.primaryRed,
                   textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
                 },
               }}
             >
-              ABOUT
+              about us
             </Typography>
             <Typography
               onClick={() => {
@@ -126,34 +134,26 @@ const Navbar = () => {
                 }
               }}
               sx={{
-                fontSize: "inherit",
-                fontWeight: "inherit",
-                color: "#00000080",
-                cursor: "pointer",
-                transition: "color 0.3s ease-in, text-shadow 0.6s ease-in",
+                ...textStyle,
                 "&:hover": {
-                  color: "#851A1D",
+                  color: colors.primaryRed,
                   textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
                 },
               }}
             >
-              LOCATION
+              Our Food
             </Typography>
             <Typography
               onClick={() => router.push("/contactUs")}
               sx={{
-                fontSize: "inherit",
-                fontWeight: "inherit",
-                color: "#00000080",
-                cursor: "pointer",
-                transition: "color 0.3s ease-in, text-shadow 0.6s ease-in",
+                ...textStyle,
                 "&:hover": {
-                  color: "#851A1D",
+                  color: colors.primaryRed,
                   textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
                 },
               }}
             >
-              CONTACT
+              contact us
             </Typography>
             {/* order dropdown  */}
             <Box
@@ -163,45 +163,38 @@ const Navbar = () => {
                 width: "auto",
                 fontSize: "inherit",
                 fontWeight: "inherit",
-                color: "#00000080",
                 cursor: "pointer",
-                transition: "all 2s ease-in",
               }}
               onMouseLeave={toggleDropdown}
             >
               <Typography
-                onClick={() => router.push("/order")}
                 onMouseEnter={toggleDropdown}
+                onClick={() => router.push("/order")}
                 sx={{
-                  cursor: "pointer",
-                  fontSize: "inherit",
-                  fontWeight: "inherit",
-                  color: "#00000080",
+                  ...textStyle,
                   display: "inline-flex",
                   alignItems: "center",
-                  transition:
-                    "all 0.3s ease-in, text-shadow 0.6s ease-in , color 0.3s ease-in",
                   "&:hover": {
-                    color: "#851A1D",
+                    color: colors.primaryRed,
                     textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
                   },
                 }}
               >
-                ORDER
+                order
                 <ArrowDropDownIcon
                   sx={{
                     marginLeft: "4px",
                     fontSize: "20px",
-                    color: "#851A1D",
+                    color: colors.primaryRed,
                   }} // Set to #851A1D
                 />
               </Typography>
 
-              <div
-                style={{
+              <Box
+                sx={{
                   display: open ? "block" : "none",
                   position: "absolute",
-                  backgroundColor: "#f9f9f9",
+                  backgroundColor: colors.White,
                   width: "auto",
                   boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
                   zIndex: 1,
@@ -211,44 +204,38 @@ const Navbar = () => {
               >
                 <Typography
                   sx={{
+                    ...textStyle,
                     padding: "20px 25px",
-                    cursor: "pointer",
-                    color: "initial",
-                    transition:
-                      "color 0.5s ease-in, background-color 0.5s ease-in",
                     "&:hover": {
-                      color: "#ffffff",
-                      backgroundColor: "#851A1D",
+                      color: colors.White,
+                      backgroundColor: colors.primaryRed,
                     },
                   }}
                   onClick={() => router.push("./order-rotherham")}
                 >
-                  Order Rotherham
+                  order rotherham
                 </Typography>
                 <Typography
                   sx={{
+                    ...textStyle,
                     padding: "20px 25px",
-                    cursor: "pointer",
-                    color: "initial",
-                    transition:
-                      "color 0.5s ease-in, background-color 0.5s ease-in",
                     "&:hover": {
-                      color: "#ffffff",
-                      backgroundColor: "#851A1D",
+                      color: colors.White,
+                      backgroundColor: colors.primaryRed,
                     },
                   }}
                   onClick={() => router.push("./order-huddersfield")}
                 >
-                  Order Huddersfield
+                  order huddersfield
                 </Typography>
-              </div>
+              </Box>
             </Box>
           </Box>
 
           {/* Social Media Icons and Search */}
           <Box
             sx={{
-              display: { xs: "none", sm: "flex" },
+              display: { xs: "none", md: "flex" },
               alignItems: "center",
               gap: "30px",
             }}
@@ -262,21 +249,7 @@ const Navbar = () => {
             >
               <Box
                 sx={{
-                  width: { xs: "15px", sm: "25px", lg: "30px" },
-                  height: "auto",
-                }}
-              >
-                {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
-                {/* <Image
-                style={{ width: "100%", height: "100%" }}
-                src={svgs.Twitter}
-                alt="Twitter"
-              /> */}
-                {/* </a> */}
-              </Box>
-              <Box
-                sx={{
-                  width: { xs: "15px", sm: "25px", lg: "30px" },
+                  width: { sm: "30px", xl: "40px" },
                   height: "auto",
                 }}
               >
@@ -294,7 +267,7 @@ const Navbar = () => {
               </Box>
               <Box
                 sx={{
-                  width: { xs: "15px", sm: "25px", lg: "30px" },
+                  width: { sm: "30px", xl: "40px" },
                   height: "auto",
                 }}
               >
@@ -318,7 +291,7 @@ const Navbar = () => {
             sx={{
               width: "30px",
               height: "auto",
-              display: { xs: "block", lg: "none" },
+              display: { xs: "block", md: "none" },
             }}
           >
             <Image
@@ -337,58 +310,25 @@ const Navbar = () => {
           position: "fixed",
           top: 0,
           right: 0,
-          width: sidebarOpen ? { xs: "60%", sm: "40%" } : "0", // 40% width when open
+          width: sidebarOpen ? { xs: "60%", sm: "40%" } : "0",
           height: "100vh",
-          background: "linear-gradient(90deg, #541113 0%, #851A1D 100%)",
+          background: "linear-gradient(90deg, #851A1D 0%, #541113 100%)",
           boxShadow: sidebarOpen ? "-5px 0 15px rgba(0, 0, 0, 0.3)" : "none",
           overflowX: "hidden",
           transition: "0.3s",
           zIndex: 1000,
+          overflow: "hidden",
+          textWrap: "nowrap",
         }}
       >
-        {/* <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            gap: { xs: "10px", lg: "30px" },
-            backgroundColor: "#F8F8F8",
-            padding: { xs: "8px 12px", lg: "15px 30px" },
-            marginTop: "10vh",
-            marginLeft: "20px",
-            marginRight: "20px",
-            borderRadius: "20px",
-          }}
-        >
-          <Box sx={{ overflow: "hidden", width: "100%" }}>
-            <input
-              placeholder="Search"
-              type="text"
-              style={{
-                fontSize: "16px",
-                fontWeight: "300",
-                color: "#00000080",
-                outline: "none",
-                border: "none",
-                backgroundColor: "#F8F8F8",
-                width: "100%",
-              }}
-            />
-          </Box>
-          <Box sx={{ width: "17px", height: "auto" }}>
-            <Image
-              style={{ width: "100%", height: "100%" }}
-              src={svgs.Search}
-              alt="Search"
-            />
-          </Box>
-        </Box> */}
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             padding: "20px",
-            gap: "20px",
+            gap: "10px",
             marginTop: "20px",
+            alignItems: "flex-end",
           }}
         >
           <Typography
@@ -402,13 +342,18 @@ const Navbar = () => {
             }}
             variant="h6"
             sx={{
-              cursor: "pointer",
-              fontSize: { xs: "14px", sm: "16px" },
-              color: "#ffffff",
+              ...textStyle,
+              color: colors.White,
             }}
           >
-            MENU
+            home
           </Typography>
+          <Divider
+            sx={{
+              width: "100%",
+              backgroundColor: colors.White,
+            }}
+          />
           <Typography
             onClick={() => {
               if (pathname === "/") {
@@ -420,13 +365,18 @@ const Navbar = () => {
             }}
             variant="h6"
             sx={{
-              cursor: "pointer",
-              fontSize: { xs: "14px", sm: "16px" },
-              color: "#ffffff",
+              ...textStyle,
+              color: colors.White,
             }}
           >
-            ABOUT
+            About Us
           </Typography>
+          <Divider
+            sx={{
+              width: "100%",
+              backgroundColor: colors.White,
+            }}
+          />
           <Typography
             onClick={() => {
               if (pathname === "/") {
@@ -438,112 +388,88 @@ const Navbar = () => {
             }}
             variant="h6"
             sx={{
-              cursor: "pointer",
-              fontSize: { xs: "14px", sm: "16px" },
-              color: "#ffffff",
+              ...textStyle,
+              color: colors.White,
             }}
           >
-            LOCATION
+            Our Food
           </Typography>
+          <Divider
+            sx={{
+              width: "100%",
+              backgroundColor: colors.White,
+            }}
+          />
           <Typography
             onClick={() => router.push("/contactUs")}
             variant="h6"
             sx={{
-              cursor: "pointer",
-              fontSize: { xs: "14px", sm: "16px" },
-              color: "#ffffff",
+              ...textStyle,
+              color: colors.White,
             }}
           >
-            CONTACT
+            Order
           </Typography>
-          {/* menu dropdown  */}
-          <Box
-            style={{
-              position: "relative",
-              display: "inline-block",
-              width: "auto",
-              fontSize: "inherit",
-              fontWeight: "inherit",
-              color: "#00000080",
-              cursor: "pointer",
-              transition: "all 2s ease-in",
+          <Divider
+            sx={{
+              width: "100%",
+              backgroundColor: colors.White,
             }}
-            onMouseLeave={toggleDropdown}
+          />
+          <Typography
+            onClick={() => router.push("/order")}
+            onMouseEnter={toggleDropdown}
+            sx={{
+              ...textStyle,
+              color: colors.White,
+            }}
           >
-            <Typography
-              onClick={() => router.push("/order")}
-              onMouseEnter={toggleDropdown}
-              style={{
-                cursor: "pointer",
-                fontSize: "inherit",
-                fontWeight: "500",
-                color: "#ffffff",
-                display: "inline",
-                transition: "all 2s ease-in",
-              }}
-            >
-              ORDER
-              <ArrowDropDownIcon
-                style={{
-                  marginLeft: "4px",
-                  fontSize: "20px",
-                  color: "#ffffff",
-                  paddingTop: "8px",
-                }}
-              />
-            </Typography>
-
-            <div
-              style={{
-                display: open ? "block" : "none",
-                position: "absolute",
-                backgroundColor: "#f9f9f9",
-                width: "auto",
-                boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
-                zIndex: 1,
-                textWrap: "nowrap",
-                borderRadius: "4px",
-              }}
-            >
-              <Typography
-                sx={{
-                  padding: "15px 10px",
-                  cursor: "pointer",
-                  color: "initial",
-                  transition:
-                    "color 0.5s ease-in, background-color 0.5s ease-in",
-                  "&:hover": {
-                    color: "#ffffff",
-                    backgroundColor: "#851A1D",
-                  },
-                }}
-                onClick={() => router.push("/order-rotherham")}
-              >
-                Order Rotherham
-              </Typography>
-              <Typography
-                sx={{
-                  padding: "15px 10px",
-                  cursor: "pointer",
-                  color: "initial",
-                  transition:
-                    "color 0.5s ease-in, background-color 0.5s ease-in",
-                  "&:hover": {
-                    color: "#ffffff",
-                    backgroundColor: "#851A1D",
-                  },
-                }}
-                onClick={() => router.push("/order-huddersfield")}
-              >
-                Order Huddersfield
-              </Typography>
-            </div>
-          </Box>
+            Contact Us
+          </Typography>
+          <Divider
+            sx={{
+              width: "100%",
+              backgroundColor: colors.White,
+            }}
+          />
+          <Typography
+            sx={{
+              ...textStyle,
+              color: colors.White,
+            }}
+            onClick={() => router.push("/order-rotherham")}
+          >
+            Order Rotherham
+          </Typography>
+          <Divider
+            sx={{
+              width: "100%",
+              backgroundColor: colors.White,
+            }}
+          />
+          <Typography
+            sx={{
+              ...textStyle,
+              color: colors.White,
+            }}
+            onClick={() => router.push("/order-huddersfield")}
+          >
+            Order Huddersfield
+          </Typography>
+          <Divider
+            sx={{
+              width: "100%",
+              backgroundColor: colors.White,
+            }}
+          />
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
               gap: { xs: "15px", sm: "25px" },
+              width: "100%",
+              justifyContent: "center",
+              overflow: "hidden",
             }}
           >
             <Box
@@ -594,11 +520,11 @@ const Navbar = () => {
             position: "fixed",
             top: 0,
             left: 0,
-            width: "100%", // 60% blue overlay
+            width: "100%",
             height: "100vh",
-            backgroundColor: "rgba(128, 128, 128, 0.3)", // Medium grey with transparency
+            backgroundColor: colors.textGery,
             zIndex: 999,
-            backdropFilter: "blur(10px)", // Blur effect
+            backdropFilter: "blur(10px)",
             transition: "0.3s",
           }}
         />
