@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Image from "next/image";
-import svgs from "../../_assets/svgs/index";
+import svgs from "@/_assets/svgs";
 import { useRouter, usePathname } from "next/navigation";
 import { scrollToId } from "@/app/utils/helpers";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";

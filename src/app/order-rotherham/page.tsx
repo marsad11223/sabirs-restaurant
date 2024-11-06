@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { Box } from "@mui/material";
 import Navbar from "@/_components/navbar/Navbar";
-import Footer from "@/_components/footer/Footer";
+import Footer from "@/_components/Footer";
 
 export default function OrderHuddersfield() {
   useEffect(() => {

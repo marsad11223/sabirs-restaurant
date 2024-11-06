@@ -5,7 +5,6 @@ import webp from "@/_assets/webp";
 import { Box, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import Marquee from "react-fast-marquee";
-import { scrollToId } from "@/app/utils/helpers";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -157,7 +156,6 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
       }}
     >
       <Box
-        onClick={() => scrollToId("location")}
         sx={{
           display: "flex",
           flexDirection: "column",

@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
-import StandardInput from "../../../_components/input/Input";
+import StandardInput from "../../../_components/Input";
 import Image from "next/image";
 import svgs from "@/_assets/svgs";
 import pngs from "@/_assets/pngs";

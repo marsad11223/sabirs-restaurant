@@ -4,7 +4,7 @@ import Marquee from "./_sections/FoodItemMarquee";
 import OurMenu from "./_sections/OurMenu";
 // import SabirsGrillWelcome from "./_sections/SabirsGrillWelcome";
 import NewDishes from "./_sections/NewDishes";
-import Footer from "@/_components/footer/Footer";
+import Footer from "@/_components/Footer";
 
 export default function HomePage() {
   return (

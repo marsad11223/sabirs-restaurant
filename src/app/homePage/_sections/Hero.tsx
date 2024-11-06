@@ -1,25 +1,15 @@
 "use client";
 
 import webp from "@/_assets/webp";
-import { Padding } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
+import { fonts, colors } from "@/app/utils/themes";
 
 export default function Hero() {
   const headingStyles = {
-    color: "#FFD40D",
-    fontSize: {
-      xs: "70px",
-      md: "100px",
-      lg: "120px",
-      xl: "150px",
-    },
-    lineHeight: {
-      xs: "70px",
-      md: "100px",
-      lg: "120px",
-      xl: "150px",
-    },
+    color: colors.secondaryYellow,
+    fontSize: fonts.headingPrimary,
+    lineHeight: fonts.headingPrimary,
     textTransform: "uppercase",
     fontFamily: '"Bebas Neue", sans-serif',
   };
@@ -33,7 +23,7 @@ export default function Hero() {
           height: "800px",
           position: "relative",
           overflow: "hidden",
-          backgroundColor: "#851A1D",
+          backgroundColor: colors.primaryRed,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -72,7 +62,6 @@ export default function Hero() {
           <Typography sx={{ ...headingStyles, color: "#ffffff" }}>
             of flavour
           </Typography>
-          {/* <Image src={} /> */}
         </Box>
       </Box>
     </>
