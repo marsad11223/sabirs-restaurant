@@ -3,9 +3,12 @@ export const colors = {
   primaryRed: "#851A1D",
   secondaryYellow: "#FFD40D",
   White: "#ffffff",
+
   black: "#000",
   fadeBlack: "#000000CC",
+
   darkGrey: "#414142",
+  lightGrey: "#D9D9D9",
   smokeGray: "#41414380",
 };
 

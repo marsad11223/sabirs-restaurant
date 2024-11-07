@@ -40,7 +40,7 @@ export default function NextMeal() {
           lg: "100px 150px 100px 100px",
           xl: "100px 150px",
         },
-        borderRadius: { xs: "0 0 40px 40px", md: "0 0 80px 80px" },
+        borderRadius: { xs: "0", sm: "0 0 40px 40px", md: "0 0 80px 80px" },
         display: "flex",
         justifyContent: "center",
       }}
@@ -77,7 +77,15 @@ export default function NextMeal() {
             taste buds lead the way!"
           </Typography>
           <Box sx={{ marginTop: { xs: "20px", xl: "40px" } }}>
-            <Button>Get In Touch</Button>
+            <Button
+              styles={{
+                "&:hover": {
+                  backgroundColor: colors.secondaryYellow,
+                },
+              }}
+            >
+              Get In Touch
+            </Button>
           </Box>
         </Box>
         {/* Slider with cards */}
@@ -90,6 +98,7 @@ export default function NextMeal() {
               borderRadius: "30px",
               position: "relative",
               zIndex: "30",
+              boxShadow: `-3px 4px 8px ${colors.smokeGray}`,
             }}
           >
             <Slider {...settings}>
