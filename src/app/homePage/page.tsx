@@ -1,9 +1,9 @@
-import { Box } from "@mui/material";
+import Navbar from "@/_components/Navbar";
 import Hero from "./_sections/Hero";
 import Marquee from "./_sections/FoodSlider";
-// import OurMenu from "./_sections/OurMenu";
+import SmashBurger from "./_sections/SmashBurger";
 import Footer from "@/_components/Footer";
-import Navbar from "@/_components/Navbar";
+import { Box } from "@mui/material";
 
 export default function HomePage() {
   return (
@@ -11,7 +11,7 @@ export default function HomePage() {
       <Navbar />
       <Hero />
       <Marquee />
-      {/* <OurMenu /> */}
+      <SmashBurger />
       <Footer />
     </Box>
   );

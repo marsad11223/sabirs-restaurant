@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { Box } from "@mui/material";
-import Navbar from "@/_components/navbar/Navbar";
+import Navbar from "@/_components/Navbar";
 import Footer from "@/_components/Footer";
 
 export default function OrderHuddersfield() {

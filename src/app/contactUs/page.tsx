@@ -1,4 +1,4 @@
-import Navbar from "@/_components/navbar/Navbar";
+import Navbar from "@/_components/Navbar";
 import SectionContactUs from "./_sections/SectionContactUs";
 import Footer from "@/_components/Footer";
 

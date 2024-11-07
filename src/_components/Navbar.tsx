@@ -12,7 +12,6 @@ import { colors, fonts } from "@/app/utils/themes";
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const router = useRouter();
-  const pathname = usePathname();
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -27,7 +26,7 @@ const Navbar = () => {
   const textStyle = {
     fontSize: fonts.tertiaryTypography,
     fontWeight: "400",
-    color: colors.textGery,
+    color: colors.smokeGray,
     cursor: "pointer",
     textTransform: "capitalize",
     transition:
@@ -470,7 +469,7 @@ const Navbar = () => {
             left: 0,
             width: "100%",
             height: "100vh",
-            backgroundColor: colors.textGery,
+            backgroundColor: colors.smokeGray,
             zIndex: 999,
             backdropFilter: "blur(10px)",
             transition: "0.3s",

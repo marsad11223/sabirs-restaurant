@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import webp from "@/_assets/webp";
 import { Box, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
-import Marquee from "react-fast-marquee";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -103,42 +102,57 @@ const settings = {
   ],
 };
 
-export default function HeroSection() {
+export default function FoodSlider() {
   return (
     <>
       <Box
         sx={{
-          backgroundColor: colors.White,
-          padding: { xs: "40px 0", lg: "50px 0", xl: "64px 0" },
+          borderBottom: {
+            xs: "4px solid" + colors.secondaryYellow,
+            md: "6px solid" + colors.secondaryYellow,
+            xl: "10px solid" + colors.secondaryYellow,
+          },
         }}
       >
         <Box
           sx={{
-            textAlign: "center",
-            width: "100%",
+            backgroundColor: colors.White,
+            padding: { xs: "40px 0", lg: "50px 0", xl: "64px 0" },
+            borderBottom: {
+              xs: "4px solid" + colors.darkGrey,
+              md: "6px solid" + colors.darkGrey,
+              xl: "10px solid" + colors.darkGrey,
+            },
           }}
         >
-          <Typography
+          <Box
             sx={{
-              color: colors.primaryRed,
-              fontSize: fonts.headingSecondary,
-              lineHeight: fonts.headingSecondary,
-              fontWeight: "400",
-              fontFamily: '"Bebas Neue", sans-serif',
-              textTransform: "uppercase",
+              textAlign: "center",
+              width: "100%",
             }}
           >
-            have a bite
-          </Typography>
-        </Box>
-        <Box sx={{ paddingTop: { xs: "40px", lg: "50px", xl: "64px" } }}>
-          <Slider {...settings}>
-            {foodItems.map((item, index) => (
-              <Box key={index}>
-                <FoodCard title={item.title} image={item.image} />
-              </Box>
-            ))}
-          </Slider>
+            <Typography
+              sx={{
+                color: colors.primaryRed,
+                fontSize: fonts.headingSecondary,
+                lineHeight: fonts.headingSecondary,
+                fontWeight: "400",
+                fontFamily: '"Bebas Neue", sans-serif',
+                textTransform: "uppercase",
+              }}
+            >
+              have a bite
+            </Typography>
+          </Box>
+          <Box sx={{ paddingTop: { xs: "40px", lg: "50px", xl: "64px" } }}>
+            <Slider {...settings}>
+              {foodItems.map((item, index) => (
+                <Box key={index}>
+                  <FoodCard title={item.title} image={item.image} />
+                </Box>
+              ))}
+            </Slider>
+          </Box>
         </Box>
       </Box>
     </>
@@ -152,7 +166,6 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
         display: "flex",
         justifyContent: "center",
         transition: "transform 0.3s",
-        "&:hover": {},
       }}
     >
       <Box
