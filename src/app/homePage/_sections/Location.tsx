@@ -1,6 +1,6 @@
 "use client";
 
-import MapComponent from "@/_components/map/Map";
+import MapComponent from "@/_components/Map";
 import { Box, Button, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
 

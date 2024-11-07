@@ -1,8 +1,8 @@
 import { Box, Button, Typography } from "@mui/material";
-import StandardInput from "../../../_components/input/Input";
+import StandardInput from "../../../_components/Input";
 import Image from "next/image";
 import svgs from "@/_assets/svgs";
-import pngs from "@/_assets/pngs";
+// import pngs from "@/_assets/pngs";
 export default function SectionContactUs() {
   return (
     <>
@@ -23,11 +23,11 @@ export default function SectionContactUs() {
             zIndex: "-1",
           }}
         >
-          <Image
+          {/* <Image
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
             src={pngs.ContactUs}
             alt="ContactUs"
-          />
+          /> */}
         </Box>
         {/* hedding  */}
         <Box
@@ -277,11 +277,11 @@ export function OrderButton() {
               right: "5px",
             }}
           >
-            <Image
+            {/* <Image
               style={{ width: "12px", height: "auto" }}
               src={svgs.ArrowWhite}
               alt="white arrow"
-            />
+            /> */}
           </Box>
         }
       >
