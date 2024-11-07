@@ -5,6 +5,7 @@ import SmashBurger from "./_sections/SmashBurger";
 import SignatureFlavours from "./_sections/SignatureFlavours";
 import Footer from "@/_components/Footer";
 import { Box } from "@mui/material";
+import Location from "./_sections/Location";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Marquee />
       <SmashBurger />
       <SignatureFlavours />
+      <Location />
       <Footer />
     </Box>
   );
