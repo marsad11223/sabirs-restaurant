@@ -2,25 +2,26 @@
 import { Box, Typography } from "@mui/material";
 import { fonts, colors } from "@/app/utils/themes";
 import Button from "@/_components/Button";
-import webp from "@/_assets/webp";
-import Image from "next/image";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; // Uncomment these imports
-import "slick-carousel/slick/slick-theme.css"; // Uncomment these imports
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import NextMealSlider from "./NextMealSlider";
+import { CustomLeftArrow, CustomRightArrow } from "./CustomArrows";
 
 export default function NextMeal() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1200,
     slidesToShow: 1,
     slidesToScroll: 1,
+    nextArrow: <CustomRightArrow />,
+    prevArrow: <CustomLeftArrow />,
   };
 
   const headingStyles = {
     fontSize: fonts.headingSecondary,
     lineHeight: fonts.headingSecondary,
-    fontWeight: "400",
     textTransform: "uppercase",
     fontFamily: '"Bebas Neue", sans-serif',
   };
@@ -28,17 +29,31 @@ export default function NextMeal() {
   return (
     <Box
       sx={{
-        backgroundColor: "#851A1D",
-        padding: "20px 150px",
+        backgroundColor: colors.primaryRed,
+        backgroundImage: "url(bgNextMeal.png)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "repeat",
+        padding: {
+          xs: "60px 20px",
+          md: "100px 60px",
+          lg: "100px 150px 100px 100px",
+          xl: "100px 150px",
+        },
         borderRadius: { xs: "0 0 40px 40px", md: "0 0 80px 80px" },
+        display: "flex",
+        justifyContent: "center",
       }}
     >
       <Box
         sx={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-between",
           alignItems: "center",
-          gap: "80px",
+          gap: { xs: "50px", sm: "80px", lg: "120px", xl: "200px" },
+          maxWidth: "1300px",
+          width: "100%",
+          flexDirection: { xs: "column", md: "row" },
         }}
       >
         <Box sx={{ maxWidth: "500px" }}>
@@ -66,46 +81,53 @@ export default function NextMeal() {
           </Box>
         </Box>
         {/* Slider with cards */}
-        <Box sx={{ height: "450px", width: "410px" }}>
-          <Slider {...settings}>
-            <NextMealSlider />
-            <NextMealSlider />
-            <NextMealSlider />
-          </Slider>
+        <Box sx={{ position: "relative" }}>
+          <Box
+            sx={{
+              height: { xs: "370px", sm: "370px", lg: "450px" },
+              width: { xs: "320px", sm: "340px", lg: "410px" },
+              backgroundColor: colors.White,
+              borderRadius: "30px",
+              position: "relative",
+              zIndex: "30",
+            }}
+          >
+            <Slider {...settings}>
+              <NextMealSlider />
+              <NextMealSlider />
+            </Slider>
+          </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "0",
+              left: "0",
+              zIndex: "20",
+              height: "100%",
+              width: "100%",
+              backgroundColor: colors.secondaryYellow,
+              boxShadow: `-3px 4px 8px ${colors.smokeGray}`,
+              transform: "rotate(-5deg)",
+              borderRadius: "30px",
+            }}
+          ></Box>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "block" },
+              position: "absolute",
+              top: "0",
+              left: "0",
+              zIndex: "10",
+              height: "100%",
+              width: "100%",
+              backgroundColor: colors.White,
+              boxShadow: `-3px 4px 8px ${colors.smokeGray}`,
+              transform: "rotate(-13deg)",
+              borderRadius: "30px",
+            }}
+          ></Box>
         </Box>
       </Box>
-    </Box>
-  );
-}
-
-export function NextMealSlider() {
-  return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "10px",
-        backgroundColor: "#ffffff",
-        borderRadius: "30px",
-      }}
-    >
-      <Box sx={{ height: "370px", width: "370px" }}>
-        <Image
-          style={{ height: "100%", width: "100%", objectFit: "cover" }}
-          src={webp.CarouselChickenBurger}
-          alt="CarouselChickenBurger"
-        />
-      </Box>
-      <Typography
-        sx={{
-          fontSize: fonts.tertiaryTypography,
-          color: colors.primaryRed,
-        }}
-      >
-        Hot & Spicy Chicken Burger
-      </Typography>
     </Box>
   );
 }

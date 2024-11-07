@@ -4,6 +4,7 @@ export const colors = {
   secondaryYellow: "#FFD40D",
   White: "#ffffff",
   black: "#000",
+  fadeBlack: "#000000CC",
   darkGrey: "#414142",
   smokeGray: "#41414380",
 };
@@ -26,5 +27,4 @@ export const fonts = {
   primaryTypography: { xs: "16px", sm: "20px", md: "24px" },
   secondaryTypography: { xs: "14px", md: "18px", xl: "22px" },
   tertiaryTypography: { xs: "14px", md: "16px", xl: "20px" },
-  quaternaryTypography: {},
 };
