@@ -9,6 +9,7 @@ import SignatureBurger1 from "./signatureBurger1.webp";
 import SignatureBurger2 from "./signatureBurger2.webp";
 import SignatureBurger3 from "./signatureBurger3.webp";
 import SignatureBurger4 from "./signatureBurger4.webp";
+import HeroBurger from "./heroBurger.webp";
 
 const webp = {
   // slider begain
@@ -22,6 +23,7 @@ const webp = {
   SignatureBurger2,
   SignatureBurger3,
   SignatureBurger4,
+  HeroBurger,
 };
 
 export default webp;
