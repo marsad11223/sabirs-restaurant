@@ -13,6 +13,8 @@ import HeroBurger from "./heroBurger.webp";
 import Flavour from "./flavour.webp";
 import Heritage from "./heritage.webp";
 import TeamChef from "./teamChef.webp";
+import ChikenBurgerFries from "./chikenBurgerFries.webp";
+import DesiFood from "./desiFood.webp";
 
 const webp = {
   // slider begain
@@ -30,6 +32,8 @@ const webp = {
   Flavour,
   Heritage,
   TeamChef,
+  ChikenBurgerFries,
+  DesiFood,
 };
 
 export default webp;

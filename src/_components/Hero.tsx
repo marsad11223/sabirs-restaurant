@@ -5,7 +5,11 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import { fonts, colors } from "@/app/utils/themes";
 
-export default function Hero() {
+interface HeroProps {
+  headingText: string; // Define the prop for heading text
+}
+
+export default function Hero({ headingText }: HeroProps) {
   const headingStyles = {
     color: colors.White,
     fontSize: fonts.headingPrimary,
@@ -13,6 +17,7 @@ export default function Hero() {
     textTransform: "uppercase",
     fontFamily: '"Bebas Neue", sans-serif',
   };
+
   return (
     <>
       <Box
@@ -34,7 +39,7 @@ export default function Hero() {
             textWrap: "nowrap",
           }}
         >
-          about us
+          {headingText}
         </Typography>
 
         <Box

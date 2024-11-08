@@ -1,15 +1,15 @@
 import { Box } from "@mui/material";
 import Navbar from "@/_components/Navbar";
 import Footer from "@/_components/Footer";
-import OurBio from "./_sections/OurBio";
+import OurFoodBody from "./_sections/OurFoodBody";
 import Hero from "@/_components/Hero";
 
-export default function AboutUs() {
+export default function OurFood() {
   return (
     <Box>
       <Navbar />
-      <Hero headingText="About Us" />
-      <OurBio />
+      <Hero headingText="our food" />
+      <OurFoodBody />
       <Footer />
     </Box>
   );
