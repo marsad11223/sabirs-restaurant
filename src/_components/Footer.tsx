@@ -26,6 +26,7 @@ const Footer = () => {
           backgroundImage: "url(footerLogo.webp)",
           backgroundPosition: "center center",
           backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
           margin: {
             xs: "40px 30px",
             sm: "30px 50px",
