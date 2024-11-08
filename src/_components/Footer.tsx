@@ -1,9 +1,24 @@
 "use client";
 import svgs from "@/_assets/svgs";
-import { fonts } from "@/app/utils/themes";
+import { fonts, colors } from "@/app/utils/themes";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 const Footer = () => {
+  const headingStyles = {
+    fontSize: fonts.headingSecondary,
+    lineHeight: fonts.headingSecondary,
+    color: colors.primaryRed,
+    textTransform: "uppercase",
+    fontFamily: '"Bebas Neue", sans-serif',
+  };
+
+  const textStyles = {
+    color: colors.smokeGray,
+    textTransform: "capitalize",
+    fontSize: fonts.tertiaryTypography,
+    lineHeight: fonts.tertiaryTypography,
+  };
+
   return (
     <>
       <Box
@@ -29,18 +44,16 @@ const Footer = () => {
             />
           </Box>
           <Box>
-            <Typography sx={{ fontSize: fonts.headingSecondary }}>
-              heading
-            </Typography>
-            <Typography>heading</Typography>
-            <Typography>heading</Typography>
-            <Typography>heading</Typography>
-            <Typography>heading</Typography>
+            <Typography sx={{ ...headingStyles }}>heading</Typography>
+            <Typography sx={{ ...textStyles }}>heading</Typography>
+            <Typography sx={{ ...textStyles }}>heading</Typography>
+            <Typography sx={{ ...textStyles }}>heading</Typography>
+            <Typography sx={{ ...textStyles }}>heading</Typography>
           </Box>
           <Box>
-            <Typography>social</Typography>
-            <Typography>social</Typography>
-            <Typography>social</Typography>
+            <Typography sx={{ ...headingStyles }}>social</Typography>
+            <Typography sx={{ ...textStyles }}>social</Typography>
+            <Typography sx={{ ...textStyles }}>social</Typography>
           </Box>
         </Box>
       </Box>
