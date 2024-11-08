@@ -10,6 +10,9 @@ import SignatureBurger2 from "./signatureBurger2.webp";
 import SignatureBurger3 from "./signatureBurger3.webp";
 import SignatureBurger4 from "./signatureBurger4.webp";
 import HeroBurger from "./heroBurger.webp";
+import Flavour from "./flavour.webp";
+import Heritage from "./heritage.webp";
+import TeamChef from "./teamChef.webp";
 
 const webp = {
   // slider begain
@@ -24,6 +27,9 @@ const webp = {
   SignatureBurger3,
   SignatureBurger4,
   HeroBurger,
+  Flavour,
+  Heritage,
+  TeamChef,
 };
 
 export default webp;

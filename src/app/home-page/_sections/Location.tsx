@@ -19,11 +19,10 @@ export default function Location() {
           md: "80px 40px",
           lg: "130px 80px",
         },
-        m: "0 auto",
-        position: "relative",
         backgroundImage: "url(bgLocation.png)",
-        backgroundPosition: "center center",
         backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
       }}
     >
       {/* hedding  */}

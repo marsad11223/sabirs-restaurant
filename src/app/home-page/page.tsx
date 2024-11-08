@@ -16,7 +16,7 @@ export default function HomePage() {
       <SmashBurger />
       <SignatureFlavours />
       <Location />
-      <Footer />
+      <Footer applyBorderTop={false} />
     </Box>
   );
 }
