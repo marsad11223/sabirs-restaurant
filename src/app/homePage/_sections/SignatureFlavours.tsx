@@ -6,7 +6,7 @@ import Button from "@/_components/Button";
 
 export default function SignatureFlavours() {
   const items = [
-    { image: webp.SignatureBurger4, text: "Cheese Burger" },
+    { image: webp.SignatureBurger1, text: "Cheese Burger" },
     { image: webp.SignatureBurger2, text: "Regular Burger" },
     { image: webp.SignatureBurger3, text: "Grill Burger" },
     { image: webp.SignatureBurger4, text: "Spicy Burger" },
