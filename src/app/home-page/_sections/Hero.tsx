@@ -36,7 +36,7 @@ export default function Hero() {
             flexDirection: "column",
             justifyContent: "space-between",
             alignItems: "center",
-            height: { xs: "60%", sm: "80%" },
+            height: { xs: "60vh", sm: "70vh" },
             width: "100%",
             position: "relative",
             padding: "0 30px",
@@ -45,7 +45,7 @@ export default function Hero() {
           <Typography sx={{ ...headingStyles }}>taste the world</Typography>
           <Box
             sx={{
-              height: "60%",
+              height: { xs: "60%", sm: "70%" },
               width: " 100%",
               position: "absolute",
               top: "50%",
@@ -54,7 +54,12 @@ export default function Hero() {
             }}
           >
             <Image
-              style={{ height: "100%", width: "100%", objectFit: "contain" }}
+              style={{
+                height: "100%",
+                width: "100%",
+                objectFit: "contain",
+                filter: `drop-shadow(2px 4px 8px ${colors.darkGrey})`,
+              }}
               src={webp.SmashBurger}
               alt="SmashBurger"
             />

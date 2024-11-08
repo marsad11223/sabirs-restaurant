@@ -136,7 +136,6 @@ export default function FoodSlider() {
                 color: colors.primaryRed,
                 fontSize: fonts.headingSecondary,
                 lineHeight: fonts.headingSecondary,
-                fontWeight: "400",
                 fontFamily: '"Bebas Neue", sans-serif',
                 textTransform: "uppercase",
               }}

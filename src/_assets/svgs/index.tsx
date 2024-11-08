@@ -9,8 +9,8 @@ import Twitter from "./twitter.svg";
 import TwitterWhite from "./twitterWhite.svg";
 import Star from "./star.svg";
 import Location from "./location.svg";
-import Email from "./email.svg";
 import RightAero from "./right-aero.svg";
+import Arrow from "./arrow.svg";
 
 const svgs = {
   Logo,
@@ -24,8 +24,8 @@ const svgs = {
   TwitterWhite,
   Star,
   Location,
-  Email,
   RightAero,
+  Arrow,
 };
 
 export default svgs;

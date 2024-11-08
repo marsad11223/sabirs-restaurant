@@ -2,9 +2,10 @@ import React from "react";
 import { Button as MuiButton, ButtonProps } from "@mui/material";
 import { colors, fonts } from "@/app/utils/themes";
 
-interface CustomButtonProps extends ButtonProps {}
-
-const Button: React.FC<CustomButtonProps> = ({ children, ...props }) => {
+const Button: React.FC<{
+  children: React.ReactNode;
+  styles?: ButtonProps["sx"];
+}> = ({ children, styles = {} }) => {
   return (
     <MuiButton
       variant="contained"
@@ -21,18 +22,18 @@ const Button: React.FC<CustomButtonProps> = ({ children, ...props }) => {
           lg: "15px 25px",
         },
         transition:
-          "background-color 0.3s ease-in-out, color 0.15s ease-in, box-shadow 0.1s ease-in-out",
+          "background-color 0.6s ease-in-out, color 0.3s ease-in, box-shadow 0.1s ease-in-out",
         textWrap: "nowrap",
         "&:hover": {
-          backgroundColor: colors.black,
-          color: colors.secondaryYellow,
-          boxShadow: "0px 0px 8px #F63333",
+          backgroundColor: colors.primaryRed,
+          color: colors.White,
+          boxShadow: `0px 0px 15px ${colors.smokeGray}`,
         },
         "&:active": {
           backgroundColor: "#e0e0e0",
         },
+        ...styles,
       }}
-      {...props}
     >
       {children}
     </MuiButton>
