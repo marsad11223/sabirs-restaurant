@@ -21,7 +21,9 @@ export default function Location() {
         },
         m: "0 auto",
         position: "relative",
-        background: "linear-gradient(90deg, #851A1D 0%, #551113 100%)",
+        backgroundImage: "url(bgLocation.png)",
+        backgroundPosition: "center center",
+        backgroundSize: "cover",
       }}
     >
       {/* hedding  */}

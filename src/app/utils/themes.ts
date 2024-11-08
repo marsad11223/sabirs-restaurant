@@ -15,7 +15,7 @@ export const colors = {
 export const fonts = {
   headingPrimary: {
     xs: "70px",
-    md: "100px",
+    sm: "100px",
     lg: "120px",
     xl: "150px",
   },
