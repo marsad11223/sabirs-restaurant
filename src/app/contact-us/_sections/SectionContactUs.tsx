@@ -212,11 +212,11 @@ export function CardContactUs() {
               gap: { xs: "20px", sm: "25px", md: "30px" },
             }}
           >
-            <Image
+            {/* <Image
               style={{ width: "40px", height: "auto" }}
               src={svgs.Email}
               alt="location logo"
-            />
+            /> */}
             <Box>
               <Typography
                 sx={{

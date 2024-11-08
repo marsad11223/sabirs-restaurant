@@ -1,9 +1,8 @@
 "use client";
-// import { useEffect } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Navbar from "@/_components/Navbar";
 import Footer from "@/_components/Footer";
-import Location from "../homePage/_sections/Location";
+import Location from "../home-page/_sections/Location";
 
 const heddingBox = {
   height: { xs: "55px", sm: "98px", lg: "117px" },
