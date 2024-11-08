@@ -27,6 +27,13 @@ export const fonts = {
     lg: "64px",
   },
 
+  headingTertiary: {
+    xs: "28px",
+    sm: "32px",
+    md: "36px",
+    lg: "40px",
+  },
+
   primaryTypography: { xs: "16px", sm: "20px", md: "24px" },
   secondaryTypography: { xs: "14px", md: "18px", xl: "22px" },
   tertiaryTypography: { xs: "14px", md: "16px", xl: "20px" },

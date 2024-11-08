@@ -29,7 +29,7 @@ export default function Order() {
             backgroundAttachment: "fixed",
           }}
         >
-          <Location title="Order Online" />
+          <Location />
         </Box>
         <Footer />
       </Box>
