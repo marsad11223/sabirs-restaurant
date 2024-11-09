@@ -23,6 +23,7 @@ export default function Location() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+        overflow: "hidden",
       }}
     >
       {/* hedding  */}

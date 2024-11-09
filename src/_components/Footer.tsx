@@ -35,7 +35,6 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
                 xl: "10px solid" + colors.secondaryYellow,
               }
             : "none",
-          marginTop: applyBorderTop ? "0px" : "-8px",
         }}
       >
         <Box
