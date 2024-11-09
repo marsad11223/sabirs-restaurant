@@ -5,7 +5,7 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import { fonts, colors } from "@/app/utils/themes";
 
-export default function Hero() {
+export default function HeroHome() {
   const headingStyles = {
     color: colors.secondaryYellow,
     fontSize: fonts.headingPrimary,
@@ -16,7 +16,6 @@ export default function Hero() {
   return (
     <>
       <Box
-        id="herosection"
         sx={{
           width: "100%",
           minHeight: "100vh",

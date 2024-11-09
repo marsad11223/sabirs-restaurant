@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import svgs from "@/_assets/svgs";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Divider } from "@mui/material";
 import { colors, fonts } from "@/app/utils/themes";

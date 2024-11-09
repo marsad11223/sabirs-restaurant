@@ -1,44 +1,45 @@
 import React from "react";
 import { TextField } from "@mui/material";
+import { colors } from "@/app/utils/themes";
 
 interface StandardInputProps {
   inputType?: string;
-  placeholder?: string;
+  label?: string;
 }
 
 const StandardInput: React.FC<StandardInputProps> = ({
-  inputType = "text", // Default input type
-  placeholder = "Enter text", // Default placeholder
+  inputType = "text",
+  label = "Enter text",
 }) => {
   return (
     <TextField
-      label={placeholder}
+      id="standard-basic"
+      label={label}
       variant="standard"
       fullWidth
       type={inputType}
       sx={{
         width: "100%",
-        color: "#00000033",
         "& .MuiInputBase-root": {
-          color: "#00000033",
+          color: colors.primaryRed,
         },
         "& .MuiInput-underline:before": {
-          borderBottom: "1px solid #00000033",
+          borderBottom: `1px solid ${colors.primaryRed}`,
         },
         "& .MuiInput-underline:after": {
-          borderBottom: "2px solid #851A1D",
+          borderBottom: `2px solid ${colors.primaryRed}`,
         },
         "& .MuiInputLabel-root": {
-          color: "rgba(0, 0, 0, 0.3)",
+          color: colors.primaryRed,
         },
         "& .MuiInputLabel-root.Mui-focused": {
-          color: "#851A1D",
+          color: colors.primaryRed,
         },
         "& .MuiInputBase-root.Mui-focused": {
-          color: "#851A1D",
+          color: colors.primaryRed,
         },
         "& .MuiInput-underline.Mui-focused:after": {
-          borderBottomColor: "#851A1D",
+          borderBottomColor: colors.primaryRed,
         },
       }}
     />
