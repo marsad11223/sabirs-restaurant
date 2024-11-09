@@ -1,7 +1,9 @@
+import React from "react";
+import { Box, Typography, Grid } from "@mui/material";
 import Button from "@/_components/Button";
 import MapComponent from "@/_components/Map";
 import { fonts, colors } from "@/app/utils/themes";
-import { Box, Typography, Grid } from "@mui/material";
+
 export default function Orderbody() {
   const headingStyles = {
     fontSize: fonts.headingSecondary,
@@ -10,6 +12,7 @@ export default function Orderbody() {
     textAlign: "center",
     fontFamily: '"Bebas Neue", sans-serif',
   };
+
   return (
     <>
       <Box
@@ -43,8 +46,14 @@ export default function Orderbody() {
             }}
             container
           >
-            <LocationCard />
-            <LocationCard />
+            <LocationCard
+              address="36 Westgate, Rotherham S60 1AS, United Kingdom"
+              phoneNumber="+44 1709 838899"
+            />
+            <LocationCard
+              address="Unit 1 A, The gateway retail park, Hillhouse lane, HD1 6EF"
+              phoneNumber="01484 244111"
+            />
           </Grid>
         </Box>
       </Box>
@@ -52,7 +61,12 @@ export default function Orderbody() {
   );
 }
 
-function LocationCard() {
+interface LocationCardProps {
+  address: string;
+  phoneNumber: string;
+}
+
+function LocationCard({ address, phoneNumber }: LocationCardProps) {
   return (
     <Grid
       item
@@ -86,10 +100,8 @@ function LocationCard() {
           }}
         >
           <Box>
-            <Typography>
-              36 Westgate, Rotherham S60 1AS, United Kingdom
-            </Typography>
-            <Typography>+44 1709 838899</Typography>
+            <Typography>{address}</Typography>
+            <Typography>{phoneNumber}</Typography>
           </Box>
           <Button
             styles={{
@@ -105,5 +117,3 @@ function LocationCard() {
     </Grid>
   );
 }
-
-export { LocationCard };
