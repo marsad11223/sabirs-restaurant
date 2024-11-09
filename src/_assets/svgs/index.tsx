@@ -8,9 +8,10 @@ import InstagramWhite from "./instagramWhite.svg";
 import Twitter from "./twitter.svg";
 import TwitterWhite from "./twitterWhite.svg";
 import Star from "./star.svg";
-import Location from "./location.svg";
 import RightAero from "./right-aero.svg";
 import Arrow from "./arrow.svg";
+import Email from "./email.svg";
+import Location from "./location.svg";
 
 const svgs = {
   Logo,
@@ -23,9 +24,10 @@ const svgs = {
   Twitter,
   TwitterWhite,
   Star,
-  Location,
   RightAero,
   Arrow,
+  Email,
+  Location,
 };
 
 export default svgs;

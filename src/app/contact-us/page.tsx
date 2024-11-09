@@ -7,7 +7,7 @@ export default function ContactUs() {
   return (
     <>
       <Navbar />
-      <Hero headingText="our food" />
+      <Hero headingText="contact us" />
       <SectionContactUs />
       <Footer />
     </>

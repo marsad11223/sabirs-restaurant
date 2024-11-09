@@ -4,13 +4,12 @@ import { fonts, colors } from "@/app/utils/themes";
 import { Box, Grid, Typography, SxProps, Theme } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 
-// Define types for bio data
 type BioData = {
   title1: string;
   title2: string;
   description: string;
   imageSrc: string | StaticImageData;
-  rowReverse?: boolean; // Optional rowReverse
+  rowReverse?: boolean;
 };
 
 type OurBioSectionProps = {
@@ -29,7 +28,7 @@ export default function OurBio() {
     textTransform: "uppercase",
     fontFamily: '"Bebas Neue", sans-serif',
   };
-  const setrowReverse = true; // Set this to true if you want row-reverse in the second object
+  const setrowReverse = true;
 
   const bioData: BioData[] = [
     {
@@ -45,7 +44,7 @@ export default function OurBio() {
       description:
         " Our restaurant is built on family recipes, love for the kitchen, and a passion for bold flavors. Every meal is made with care and a commitment to authenticity. Discover the food and story that make us who we are!",
       imageSrc: webp.Heritage,
-      rowReverse: setrowReverse, // Correctly assign the rowReverse prop here
+      rowReverse: setrowReverse,
     },
     {
       title1: "The Heart Behind",
@@ -74,6 +73,10 @@ export default function OurBio() {
         },
         display: "flex",
         justifyContent: "center",
+        backgroundImage: "url(bgAboutUs.webp)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "repeat",
       }}
     >
       <Box sx={{ maxWidth: "1600px", width: "100%" }}>
@@ -85,7 +88,7 @@ export default function OurBio() {
             description={data.description}
             imageSrc={data.imageSrc}
             gridStyles={gridStyles}
-            rowReverse={data.rowReverse} // Pass rowReverse from bioData
+            rowReverse={data.rowReverse}
           />
         ))}
       </Box>
@@ -115,7 +118,7 @@ export function OurBioSection({
         justifyContent: "space-between",
         alignItems: "center",
         paddingBottom: { xs: "50px", sm: "80px", lg: "100px", xl: "120px" },
-        flexDirection: rowReverse ? "row-reverse" : "row", // Use rowReverse here
+        flexDirection: rowReverse ? "row-reverse" : "row",
       }}
       container
       spacing={2}

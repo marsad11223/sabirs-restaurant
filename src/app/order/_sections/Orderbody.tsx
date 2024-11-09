@@ -18,6 +18,10 @@ export default function Orderbody() {
       <Box
         sx={{
           padding: { xs: "40px 20px", sm: "50px 80px", md: "100px 80px" },
+          backgroundImage: "url(worldMap.webp)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "repeat",
         }}
       >
         <Typography
