@@ -30,9 +30,9 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
         sx={{
           borderTop: applyBorderTop
             ? {
-                xs: "4px solid" + colors.secondaryYellow,
-                md: "6px solid" + colors.secondaryYellow,
-                xl: "10px solid" + colors.secondaryYellow,
+                xs: `4px solid ${colors.secondaryYellow}`,
+                md: `6px solid ${colors.secondaryYellow}`,
+                xl: `10px solid ${colors.secondaryYellow}`,
               }
             : "none",
         }}
@@ -41,9 +41,9 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
           sx={{
             borderTop: applyBorderTop
               ? {
-                  xs: "4px solid" + colors.darkGrey,
-                  md: "6px solid" + colors.darkGrey,
-                  xl: "10px solid" + colors.darkGrey,
+                  xs: `4px solid ${colors.darkGrey}`,
+                  md: `6px solid ${colors.darkGrey}`,
+                  xl: `10px solid ${colors.darkGrey}`,
                 }
               : "none",
           }}
