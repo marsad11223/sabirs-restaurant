@@ -63,6 +63,7 @@ const Navbar = () => {
         >
           {/* Logo */}
           <Box
+            onClick={() => router.push("home")}
             sx={{
               width: "100%",
               maxWidth: { xs: "114px", xl: "150px" },
@@ -85,11 +86,13 @@ const Navbar = () => {
             }}
           >
             <Typography
+              onClick={() => router.push("home")}
               sx={{
                 ...textStyle,
                 "&:hover": {
                   color: colors.primaryRed,
-                  textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
+                  textShadow: `0px 2px 2px ${colors.primaryRed}`,
+                  transform: "scale(1.1)",
                 },
               }}
             >
@@ -107,6 +110,7 @@ const Navbar = () => {
               about us
             </Typography>
             <Typography
+              onClick={() => router.push("our-food")}
               sx={{
                 ...textStyle,
                 "&:hover": {
@@ -118,7 +122,6 @@ const Navbar = () => {
               Our Food
             </Typography>
             <Typography
-              onClick={() => router.push("/contactUs")}
               sx={{
                 ...textStyle,
                 "&:hover": {
