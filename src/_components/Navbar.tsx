@@ -30,9 +30,11 @@ const Navbar = () => {
     cursor: "pointer",
     textTransform: "capitalize",
     transition:
-      "color 0.4s ease-in, background-color 0.5s ease-in, text-shadow 0.6s ease-in",
+      "color 0.4s ease-in-out, text-shadow 0.6s ease-in-out , scale .3s ease-in-out  ",
     "&:hover": {
       color: colors.primaryRed,
+      textShadow: `1px 3px 4px ${colors.smokeGray}`,
+      scale: "1.1",
     },
   };
 
@@ -94,30 +96,19 @@ const Navbar = () => {
             >
               home
             </Typography>
-            <Typography sx={{ ...textStyle }}>about us</Typography>
+            <Typography
+              onClick={() => router.push("about-us")}
+              sx={{ ...textStyle }}
+            >
+              about us
+            </Typography>
             <Typography
               onClick={() => router.push("our-food")}
-              sx={{
-                ...textStyle,
-                "&:hover": {
-                  color: colors.primaryRed,
-                  textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
-                },
-              }}
+              sx={{ ...textStyle }}
             >
               Our Food
             </Typography>
-            <Typography
-              sx={{
-                ...textStyle,
-                "&:hover": {
-                  color: colors.primaryRed,
-                  textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
-                },
-              }}
-            >
-              contact us
-            </Typography>
+            <Typography sx={{ ...textStyle }}>contact us</Typography>
             {/* order dropdown  */}
             <Box
               sx={{
@@ -130,15 +121,7 @@ const Navbar = () => {
               <Typography
                 onMouseEnter={toggleDropdown}
                 onClick={() => router.push("/order")}
-                sx={{
-                  ...textStyle,
-                  display: "inline-flex",
-                  alignItems: "center",
-                  "&:hover": {
-                    color: colors.primaryRed,
-                    textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
-                  },
-                }}
+                sx={{ ...textStyle }}
               >
                 order
                 <ArrowDropDownIcon
@@ -146,7 +129,7 @@ const Navbar = () => {
                     marginLeft: "4px",
                     fontSize: "20px",
                     color: colors.primaryRed,
-                  }} // Set to #851A1D
+                  }}
                 />
               </Typography>
 
@@ -166,6 +149,8 @@ const Navbar = () => {
                   sx={{
                     ...textStyle,
                     padding: "20px 25px",
+                    transition:
+                      "color 0.4s ease-in-out, background-color 0.6s ease-in-out",
                     "&:hover": {
                       color: colors.White,
                       backgroundColor: colors.primaryRed,
@@ -179,6 +164,8 @@ const Navbar = () => {
                   sx={{
                     ...textStyle,
                     padding: "20px 25px",
+                    transition:
+                      "color 0.4s ease-in-out, background-color 0.6s ease-in-out",
                     "&:hover": {
                       color: colors.White,
                       backgroundColor: colors.primaryRed,
