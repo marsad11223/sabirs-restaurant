@@ -30,7 +30,10 @@ const Navbar = () => {
     cursor: "pointer",
     textTransform: "capitalize",
     transition:
-      "color 0.3s ease-in, background-color 0.5s ease-in, text-shadow 0.6s ease-in",
+      "color 0.4s ease-in, background-color 0.5s ease-in, text-shadow 0.6s ease-in",
+    "&:hover": {
+      color: colors.primaryRed,
+    },
   };
 
   return (
@@ -71,7 +74,7 @@ const Navbar = () => {
             }}
           >
             <Image
-              style={{ width: "100%", height: "100%" }}
+              style={{ width: "100%", height: "100%", cursor: "pointer" }}
               src={svgs.Logo}
               alt="Picture of the author"
             />
@@ -87,28 +90,11 @@ const Navbar = () => {
           >
             <Typography
               onClick={() => router.push("home")}
-              sx={{
-                ...textStyle,
-                "&:hover": {
-                  color: colors.primaryRed,
-                  textShadow: `0px 2px 2px ${colors.primaryRed}`,
-                  transform: "scale(1.1)",
-                },
-              }}
+              sx={{ ...textStyle }}
             >
               home
             </Typography>
-            <Typography
-              sx={{
-                ...textStyle,
-                "&:hover": {
-                  color: colors.primaryRed,
-                  textShadow: "3px 3px 4px rgba(255, 255, 255, 0.5)",
-                },
-              }}
-            >
-              about us
-            </Typography>
+            <Typography sx={{ ...textStyle }}>about us</Typography>
             <Typography
               onClick={() => router.push("our-food")}
               sx={{
