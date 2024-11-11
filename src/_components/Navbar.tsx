@@ -118,11 +118,7 @@ const Navbar = () => {
               }}
               onMouseLeave={toggleDropdown}
             >
-              <Typography
-                onMouseEnter={toggleDropdown}
-                onClick={() => router.push("/order")}
-                sx={{ ...textStyle }}
-              >
+              <Typography onMouseEnter={toggleDropdown} sx={{ ...textStyle }}>
                 order
                 <ArrowDropDownIcon
                   sx={{
@@ -245,7 +241,7 @@ const Navbar = () => {
               style={{ width: "100%", height: "100%" }}
               src={svgs.Hamburger}
               alt="Hamburger"
-              onClick={toggleSidebar} // Toggle sidebar on hamburger click
+              onClick={toggleSidebar}
             />
           </Box>
         </Box>
@@ -279,6 +275,7 @@ const Navbar = () => {
           }}
         >
           <Typography
+            onClick={() => router.push("home")}
             variant="h6"
             sx={{
               ...textStyle,
@@ -294,6 +291,7 @@ const Navbar = () => {
             }}
           />
           <Typography
+            onClick={() => router.push("about-us")}
             variant="h6"
             sx={{
               ...textStyle,
@@ -309,6 +307,7 @@ const Navbar = () => {
             }}
           />
           <Typography
+            onClick={() => router.push("our-food")}
             variant="h6"
             sx={{
               ...textStyle,
@@ -324,7 +323,6 @@ const Navbar = () => {
             }}
           />
           <Typography
-            onClick={() => router.push("/contactUs")}
             variant="h6"
             sx={{
               ...textStyle,
@@ -340,7 +338,6 @@ const Navbar = () => {
             }}
           />
           <Typography
-            onClick={() => router.push("/order")}
             onMouseEnter={toggleDropdown}
             sx={{
               ...textStyle,
