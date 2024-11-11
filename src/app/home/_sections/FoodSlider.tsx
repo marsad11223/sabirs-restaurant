@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import webp from "@/_assets/webp";
+import webp from "@/_assets/webp/index";
 import { Box, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import "slick-carousel/slick/slick.css";
