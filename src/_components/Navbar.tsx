@@ -19,8 +19,11 @@ const Navbar = () => {
 
   // dropdown code
   const [open, setOpen] = useState(false);
-  const toggleDropdown = () => {
-    setOpen(!open);
+  const openDropdown = () => {
+    setOpen(true);
+  };
+  const closeDropdown = () => {
+    setOpen(false);
   };
 
   const textStyle = {
@@ -111,23 +114,32 @@ const Navbar = () => {
             <Typography sx={{ ...textStyle }}>contact us</Typography>
             {/* order dropdown  */}
             <Box
+              onMouseLeave={closeDropdown}
               sx={{
                 position: "relative",
                 display: "inline-block",
                 width: "auto",
               }}
-              onMouseLeave={toggleDropdown}
             >
-              <Typography onMouseEnter={toggleDropdown} sx={{ ...textStyle }}>
-                order
+              <Box
+                onMouseEnter={openDropdown}
+                sx={{ display: "flex", alignItems: "center" }}
+              >
+                <Typography
+                  onClick={() => router.push("order")}
+                  sx={{ ...textStyle }}
+                >
+                  order
+                </Typography>
                 <ArrowDropDownIcon
                   sx={{
                     marginLeft: "4px",
+                    paddingTop: "-12px",
                     fontSize: "20px",
                     color: colors.primaryRed,
                   }}
                 />
-              </Typography>
+              </Box>
 
               <Box
                 sx={{
@@ -323,6 +335,7 @@ const Navbar = () => {
             }}
           />
           <Typography
+            onClick={() => router.push("order")}
             variant="h6"
             sx={{
               ...textStyle,
@@ -338,7 +351,6 @@ const Navbar = () => {
             }}
           />
           <Typography
-            onMouseEnter={toggleDropdown}
             sx={{
               ...textStyle,
               color: colors.White,
