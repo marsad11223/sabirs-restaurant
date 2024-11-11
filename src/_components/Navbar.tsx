@@ -278,14 +278,34 @@ const Navbar = () => {
       >
         <Box
           sx={{
+            margin: { xs: "20px 20px 0 0", sm: "20px 30px 0  0 " },
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "center",
+          }}
+        >
+          <Image
+            style={{ width: "30px", height: "42.5px", objectFit: "contain" }}
+            src={svgs.HamburgerWhite}
+            alt="Hamburger"
+            onClick={toggleSidebar}
+          />
+        </Box>
+        <Box
+          sx={{
             display: "flex",
             flexDirection: "column",
             padding: "20px",
             gap: "10px",
-            marginTop: "20px",
             alignItems: "flex-end",
           }}
         >
+          <Divider
+            sx={{
+              width: "100%",
+              backgroundColor: colors.White,
+            }}
+          />
           <Typography
             onClick={() => router.push("home")}
             variant="h6"
