@@ -30,7 +30,7 @@ const Navbar = () => {
     cursor: "pointer",
     textTransform: "capitalize",
     transition:
-      "color 0.4s ease-in-out, text-shadow 0.6s ease-in-out , scale .3s ease-in-out",
+      "color 0.4s ease-in-out, text-shadow 0.6s ease-in-out , scale .3s ease-in-out  ",
     "&:hover": {
       color: colors.primaryRed,
       textShadow: `1px 3px 4px ${colors.smokeGray}`,
@@ -96,7 +96,12 @@ const Navbar = () => {
             >
               home
             </Typography>
-            <Typography sx={{ ...textStyle }}>about us</Typography>
+            <Typography
+              onClick={() => router.push("about-us")}
+              sx={{ ...textStyle }}
+            >
+              about us
+            </Typography>
             <Typography
               onClick={() => router.push("our-food")}
               sx={{ ...textStyle }}
@@ -144,6 +149,8 @@ const Navbar = () => {
                   sx={{
                     ...textStyle,
                     padding: "20px 25px",
+                    transition:
+                      "color 0.4s ease-in-out, background-color 0.6s ease-in-out",
                     "&:hover": {
                       color: colors.White,
                       backgroundColor: colors.primaryRed,
@@ -157,6 +164,8 @@ const Navbar = () => {
                   sx={{
                     ...textStyle,
                     padding: "20px 25px",
+                    transition:
+                      "color 0.4s ease-in-out, background-color 0.6s ease-in-out",
                     "&:hover": {
                       color: colors.White,
                       backgroundColor: colors.primaryRed,

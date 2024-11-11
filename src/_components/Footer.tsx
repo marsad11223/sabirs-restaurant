@@ -144,7 +144,12 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
                   >
                     Home
                   </Typography>
-                  <Typography sx={{ ...textStyles }}>About Us</Typography>
+                  <Typography
+                    onClick={() => router.push("about-us")}
+                    sx={{ ...textStyles }}
+                  >
+                    About Us
+                  </Typography>
                   <Typography
                     sx={{ ...textStyles }}
                     onClick={() => router.push("our-food")}
