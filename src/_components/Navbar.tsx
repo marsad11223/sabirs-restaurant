@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Image from "next/image";
@@ -8,7 +8,8 @@ import { useRouter } from "next/navigation";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Divider } from "@mui/material";
 import { colors, fonts } from "@/app/utils/themes";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const router = useRouter();
@@ -25,6 +26,11 @@ const Navbar = () => {
   const closeDropdown = () => {
     setOpen(false);
   };
+  // Animation
+  useEffect(() => {
+    AOS.init({ duration: 10000, once: true });
+    AOS.refresh();
+  }, []);
 
   const textStyle = {
     fontSize: fonts.tertiaryTypography,
@@ -58,10 +64,14 @@ const Navbar = () => {
             lg: "20px 80px",
             xl: "25px 120px",
           },
+          position: "relative",
+          zIndex: "1000",
         }}
       >
         {/* maxwidth container  */}
         <Box
+          data-aos="zoom-in"
+          data-aos-duration="1000"
           sx={{
             display: "flex",
             justifyContent: "space-between",
@@ -300,7 +310,7 @@ const Navbar = () => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            padding: "20px",
+            padding: { xs: "20px", sm: "20px 30px" },
             gap: "10px",
             alignItems: "flex-end",
           }}
