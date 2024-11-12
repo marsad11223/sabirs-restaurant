@@ -64,6 +64,8 @@ const Navbar = () => {
             lg: "20px 80px",
             xl: "25px 120px",
           },
+          position: "relative",
+          zIndex: "1000",
         }}
       >
         {/* maxwidth container  */}
