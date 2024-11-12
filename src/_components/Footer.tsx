@@ -162,7 +162,12 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
                   >
                     Order
                   </Typography>
-                  <Typography sx={{ ...textStyles }}>Contact</Typography>
+                  <Typography
+                    onClick={() => router.push("contact-us")}
+                    sx={{ ...textStyles }}
+                  >
+                    Contact
+                  </Typography>
                 </Box>
               </Box>
               <Box

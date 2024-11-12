@@ -111,7 +111,12 @@ const Navbar = () => {
             >
               Our Food
             </Typography>
-            <Typography sx={{ ...textStyle }}>contact us</Typography>
+            <Typography
+              onClick={() => router.push("contact-us")}
+              sx={{ ...textStyle }}
+            >
+              contact us
+            </Typography>
             {/* order dropdown  */}
             <Box
               onMouseLeave={closeDropdown}
@@ -371,6 +376,7 @@ const Navbar = () => {
             }}
           />
           <Typography
+            onClick={() => router.push("contact-us")}
             sx={{
               ...textStyle,
               color: colors.White,
