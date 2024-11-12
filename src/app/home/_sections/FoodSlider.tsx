@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import webp from "@/_assets/webp/index";
 import { Box, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { fonts, colors } from "@/app/utils/themes";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface FoodCardProps {
   title: string;
@@ -102,6 +104,11 @@ const settings = {
 };
 
 export default function FoodSlider() {
+  // Animation
+  useEffect(() => {
+    AOS.init({ duration: 10000, once: true });
+    AOS.refresh();
+  }, []);
   return (
     <>
       <Box
@@ -131,6 +138,8 @@ export default function FoodSlider() {
             }}
           >
             <Typography
+              data-aos="zoom-in"
+              data-aos-duration="1000"
               sx={{
                 color: colors.primaryRed,
                 fontSize: fonts.headingSecondary,
@@ -158,6 +167,11 @@ export default function FoodSlider() {
 }
 
 export const FoodCard = ({ title, image }: FoodCardProps) => {
+  // Animation
+  useEffect(() => {
+    AOS.init({ duration: 10000, once: true });
+    AOS.refresh();
+  }, []);
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
@@ -166,6 +180,8 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
 
   return (
     <Box
+      data-aos="flip-up"
+      data-aos-duration="1000"
       sx={{
         display: "flex",
         justifyContent: "center",
@@ -193,7 +209,7 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
             transition: "filter 0.4s ease, transform 0.3s ease-in",
             WebkitFilter: isHovered ? "grayscale(100%)" : "none",
             filter: isHovered
-              ? "grayscale(100%) drop-shadow(0 4px 10px rgba(50, 50, 50, 0.7))"
+              ? "grayscale(100%) drop-shadow(0 5px 4px rgba(50, 50, 50, 0.7))"
               : "none",
             zIndex: isHovered ? 1000 : "auto",
             position: isHovered ? "relative" : "static",
