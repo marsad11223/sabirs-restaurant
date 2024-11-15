@@ -4,21 +4,12 @@ import { fonts, colors } from "@/app/utils/themes";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 interface FooterProps {
   applyBorderTop?: boolean;
 }
 
 const Footer = ({ applyBorderTop = true }: FooterProps) => {
-  // Animation
-  useEffect(() => {
-    AOS.init({ duration: 10000, once: true });
-    AOS.refresh();
-  }, []);
-
   const router = useRouter();
 
   const headingStyles = {
@@ -98,8 +89,6 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
               }}
             >
               <Box
-                data-aos="fade-left"
-                data-aos-duration="1000"
                 sx={{
                   maxWidth: {
                     sm: "200px",
@@ -124,8 +113,6 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
                 />
               </Box>
               <Box
-                data-aos="zoom-in"
-                data-aos-duration="1000"
                 sx={{
                   display: "flex",
                   flexDirection: "column",
@@ -183,8 +170,6 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
                 </Box>
               </Box>
               <Box
-                data-aos="fade-right"
-                data-aos-duration="1000"
                 sx={{
                   display: "flex",
                   flexDirection: "column",
