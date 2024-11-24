@@ -7,6 +7,7 @@ import { fonts, colors } from "@/app/utils/themes";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Navbar from "@/_components/Navbar";
 
 export default function HeroHome() {
   // Animation
@@ -24,6 +25,7 @@ export default function HeroHome() {
   };
   return (
     <>
+      <Navbar />
       <Box
         sx={{
           width: "100%",
@@ -61,11 +63,8 @@ export default function HeroHome() {
             sx={{
               height: { xs: "60%", sm: "70%" },
               width: " 100%",
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
               zIndex: "10",
+              // marginY: "-50px",
             }}
           >
             <Image
