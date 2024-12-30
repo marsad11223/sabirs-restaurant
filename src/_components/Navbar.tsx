@@ -173,7 +173,7 @@ const Navbar = () => {
                 >
                   order rotherham
                 </Typography>
-                <Typography
+                {/* <Typography
                   sx={{
                     ...textStyle,
                     padding: "20px 25px",
@@ -187,7 +187,7 @@ const Navbar = () => {
                   onClick={() => router.push("./order-huddersfield")}
                 >
                   order huddersfield
-                </Typography>
+                </Typography> */}
               </Box>
             </Box>
           </Box>
@@ -405,7 +405,7 @@ const Navbar = () => {
               backgroundColor: colors.White,
             }}
           />
-          <Typography
+          {/* <Typography
             sx={{
               ...textStyle,
               color: colors.White,
@@ -413,7 +413,7 @@ const Navbar = () => {
             onClick={() => router.push("/order-huddersfield")}
           >
             Order Huddersfield
-          </Typography>
+          </Typography> */}
           <Divider
             sx={{
               width: "100%",

@@ -67,10 +67,10 @@ export default function Orderbody() {
               address="36 Westgate, Rotherham S60 1AS, United Kingdom"
               phoneNumber="+44 1709 838899"
             />
-            <LocationCard
+            {/* <LocationCard
               address="Unit 1 A, The gateway retail park, Hillhouse lane, HD1 6EF"
               phoneNumber="01484 244111"
-            />
+            /> */}
           </Grid>
         </Box>
       </Box>
