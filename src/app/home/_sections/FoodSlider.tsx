@@ -93,8 +93,8 @@ const settings = {
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         autoplaySpeed: 3000,
       },
     },
