@@ -77,7 +77,7 @@ export default function HeroHome() {
                 filter: `drop-shadow(2px 4px 8px ${colors.darkGrey})`,
                 opacity: "100",
               }}
-              src={webp.SmashBurger}
+              src={webp.HomeHero}
               alt="SmashBurger"
             />
           </Box>

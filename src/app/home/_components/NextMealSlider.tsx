@@ -1,10 +1,15 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import Image from "next/image";
-import webp from "@/_assets/webp";
+import Image, { StaticImageData } from "next/image";
 import { fonts, colors } from "@/app/utils/themes";
 
-export default function NextMealSlider() {
+export default function NextMealSlider({
+  image,
+  title,
+}: {
+  image: StaticImageData;
+  title: string;
+}) {
   return (
     <Box
       sx={{
@@ -24,7 +29,7 @@ export default function NextMealSlider() {
       >
         <Image
           style={{ height: "100%", width: "100%", objectFit: "cover" }}
-          src={webp.CarouselChickenBurger}
+          src={image}
           alt="CarouselChickenBurger"
         />
       </Box>
@@ -34,7 +39,7 @@ export default function NextMealSlider() {
           color: colors.primaryRed,
         }}
       >
-        Hot & Spicy Chicken Burger
+        {title}
       </Typography>
     </Box>
   );

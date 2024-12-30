@@ -10,6 +10,7 @@ import { CustomLeftArrow, CustomRightArrow } from "./CustomArrows";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import webp from "@/_assets/webp";
 
 export default function NextMeal() {
   // Animation
@@ -119,8 +120,23 @@ export default function NextMeal() {
             }}
           >
             <Slider {...settings}>
-              <NextMealSlider />
-              <NextMealSlider />
+              <NextMealSlider
+                image={webp.Pizza1}
+                title="Hot & Spicy Chicken Pizza"
+              />
+              <NextMealSlider
+                image={webp.Pizza2}
+                title="Veggie Delight Pizza"
+              />
+              <NextMealSlider
+                image={webp.Pizza3}
+                title="Pepperoni Paradise Pizza"
+              />
+              <NextMealSlider image={webp.Pizza4} title="Meat Lovers Pizza" />
+              <NextMealSlider image={webp.Pizza5} title="Hawaiian Pizza" />
+              <NextMealSlider image={webp.Pizza6} title="BBQ Chicken Pizza" />
+              <NextMealSlider image={webp.Pizza7} title="Vegan Pizza" />
+              <NextMealSlider image={webp.Pizza8} title="Cheese Pizza" />
             </Slider>
           </Box>
           <Box

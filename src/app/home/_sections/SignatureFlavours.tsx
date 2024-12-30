@@ -16,10 +16,10 @@ export default function SignatureFlavours() {
   }, []);
 
   const items = [
-    { image: webp.SignatureBurger1, text: "Cheese Burger" },
-    { image: webp.SignatureBurger2, text: "Regular Burger" },
-    { image: webp.SignatureBurger3, text: "Grill Burger" },
-    { image: webp.SignatureBurger4, text: "Spicy Burger" },
+    { image: webp.Burger_1, text: "Chicken Deluxe" },
+    { image: webp.Burger_2, text: "Our Famous Chicken Fillet Burger" },
+    { image: webp.Burger_3, text: "Cheese Burger" },
+    { image: webp.Burger_4, text: "Flamin Fusion Burger" },
   ];
 
   const headingStyles = {
