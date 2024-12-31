@@ -32,7 +32,7 @@ import Pizza7 from "./pizza_7.jpg";
 import Pizza8 from "./pizza_8.jpg";
 // burger images
 import Burger_1 from "./Burger_1.jpg";
-import Burger_2 from "./Burger_2.png";
+import Burger_2 from "./Burger_2.jpg";
 import Burger_3 from "./Burger_3.jpg";
 import Burger_4 from "./Burger_4.jpg";
 
