@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { fonts, colors } from "@/app/utils/themes";
+import { useRouter } from "next/navigation";
 
 interface FoodCardProps {
   title: string;
@@ -158,6 +159,7 @@ export default function FoodSlider() {
 }
 
 export const FoodCard = ({ title, image }: FoodCardProps) => {
+  const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
@@ -166,6 +168,7 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
 
   return (
     <Box
+      onClick={() => router.push("order")}
       sx={{
         display: "flex",
         justifyContent: "center",
