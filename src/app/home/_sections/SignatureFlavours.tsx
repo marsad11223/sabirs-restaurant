@@ -17,7 +17,7 @@ export default function SignatureFlavours() {
 
   const items = [
     { image: webp.Burger_1, text: "Chicken Deluxe" },
-    { image: webp.Burger_2, text: "Our Famous Chicken Fillet Burger" },
+    { image: webp.Burger_2, text: "Chicken Fillet Burger" },
     { image: webp.Burger_3, text: "Cheese Burger" },
     { image: webp.Burger_4, text: "Flamin Fusion Burger" },
   ];

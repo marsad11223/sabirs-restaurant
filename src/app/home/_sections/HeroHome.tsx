@@ -70,6 +70,14 @@ export default function HeroHome() {
             <Box
               sx={{
                 zIndex: "10",
+                maxWidth: {
+                  xs: "350px",
+                  md: "500px",
+                  lg: "750px",
+                  xl: "55vw",
+                },
+                height: "auto",
+                width: "100%",
               }}
             >
               <Image
