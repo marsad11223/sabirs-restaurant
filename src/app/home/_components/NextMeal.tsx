@@ -120,22 +120,16 @@ export default function NextMeal() {
             }}
           >
             <Slider {...settings}>
-              <NextMealSlider
-                image={webp.Pizza1}
-                title="Hot & Spicy Chicken Pizza"
-              />
+              <NextMealSlider image={webp.Pizza1} title="Meat Feast Pizza" />
               <NextMealSlider
                 image={webp.Pizza2}
-                title="Veggie Delight Pizza"
+                title="Sabirs Asian Special Pizza"
               />
-              <NextMealSlider
-                image={webp.Pizza3}
-                title="Pepperoni Paradise Pizza"
-              />
+              <NextMealSlider image={webp.Pizza3} title="Vegetarian Pizza" />
               <NextMealSlider image={webp.Pizza4} title="Meat Lovers Pizza" />
-              <NextMealSlider image={webp.Pizza5} title="Hawaiian Pizza" />
-              <NextMealSlider image={webp.Pizza6} title="BBQ Chicken Pizza" />
-              <NextMealSlider image={webp.Pizza7} title="Vegan Pizza" />
+              <NextMealSlider image={webp.Pizza5} title="Chicken Tikka Pizza" />
+              <NextMealSlider image={webp.Pizza6} title="Pepperoni Pizza" />
+              <NextMealSlider image={webp.Pizza7} title="12inch Garlic Bread" />
               <NextMealSlider image={webp.Pizza8} title="Cheese Pizza" />
             </Slider>
           </Box>

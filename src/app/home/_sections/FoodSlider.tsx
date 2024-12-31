@@ -139,7 +139,7 @@ export default function FoodSlider() {
                 textTransform: "uppercase",
               }}
             >
-              have a bite
+              our favourite
             </Typography>
           </Box>
           <Box sx={{ paddingTop: { xs: "40px", lg: "50px", xl: "64px" } }}>
