@@ -13,7 +13,7 @@ import HeroBurger from "./heroBurger.png";
 
 import Flavour from "./flavour.webp";
 import Heritage from "./heritage.webp";
-import TeamChef from "./teamChef.webp";
+import Restaurant from "./restaurant.jpg";
 
 import ChikenBurgerFries from "./chikenBurgerFries.webp";
 import DesiFood from "./desiFood.webp";
@@ -49,9 +49,11 @@ const webp = {
   SignatureBurger3,
   SignatureBurger4,
   HeroBurger,
+
   Flavour,
   Heritage,
-  TeamChef,
+  Restaurant,
+
   ChikenBurgerFries,
   DesiFood,
   SmashBurgerFries,

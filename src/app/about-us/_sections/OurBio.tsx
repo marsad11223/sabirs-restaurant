@@ -54,7 +54,7 @@ export default function OurBio() {
       title2: "every bite",
       description:
         "We’re more than just a restaurant—we’re a team of food lovers committed to quality and creativity. Our kitchen celebrates fresh ingredients, big flavors, and a dining experience that brings people together.",
-      imageSrc: webp.TeamChef,
+      imageSrc: webp.Restaurant,
     },
   ];
 
