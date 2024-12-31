@@ -23,71 +23,77 @@ export default function HeroHome() {
     textTransform: "uppercase",
     fontFamily: '"Bebas Neue", sans-serif',
   };
+
   return (
     <>
-      <Navbar />
       <Box
         sx={{
-          width: "100%",
-          minHeight: "100vh",
-          height: "800px",
-          position: "relative",
-          overflow: "hidden",
-          backgroundColor: colors.primaryRed,
+          height: "100vh",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
+          flexDirection: "column",
         }}
       >
+        <Box sx={{ flexShrink: 0 }}>
+          <Navbar />
+        </Box>
         <Box
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            alignItems: "center",
-            height: { xs: "60vh", sm: "70vh" },
+            flexGrow: 1,
             width: "100%",
             position: "relative",
-            padding: "0 30px",
+            overflow: "hidden",
+            backgroundColor: colors.primaryRed,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
           }}
         >
-          <Typography
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            sx={{ ...headingStyles }}
-          >
-            taste the world
-          </Typography>
           <Box
             sx={{
-              height: { xs: "60%", sm: "70%" },
-              width: " 100%",
-              zIndex: "10",
-              // marginY: "-50px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              height: "100%",
+              padding: "0 30px",
             }}
           >
-            <Image
-              data-aos="zoom-out"
+            <Typography
+              data-aos="fade-left"
               data-aos-duration="1000"
-              style={{
-                height: "100%",
-                width: "100%",
-                objectFit: "contain",
-                filter: `drop-shadow(2px 4px 8px ${colors.darkGrey})`,
-                opacity: "100",
+              sx={{ ...headingStyles }}
+            >
+              taste the world
+            </Typography>
+            <Box
+              sx={{
+                zIndex: "10",
               }}
-              src={webp.HomeHero}
-              alt="SmashBurger"
-            />
+            >
+              <Image
+                data-aos="zoom-out"
+                data-aos-duration="1000"
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  objectFit: "contain",
+                  filter: `drop-shadow(2px 4px 8px ${colors.darkGrey})`,
+                  opacity: "100",
+                }}
+                src={webp.HomeHero}
+                alt="SmashBurger"
+              />
+            </Box>
+            <Typography
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              sx={{ ...headingStyles, color: "#ffffff" }}
+            >
+              of flavour
+            </Typography>
           </Box>
-          <Typography
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            sx={{ ...headingStyles, color: "#ffffff" }}
-          >
-            of flavour
-          </Typography>
         </Box>
       </Box>
     </>
