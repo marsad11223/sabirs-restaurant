@@ -9,7 +9,7 @@ import SignatureBurger1 from "./signatureBurger1.webp";
 import SignatureBurger2 from "./signatureBurger2.webp";
 import SignatureBurger3 from "./signatureBurger3.webp";
 import SignatureBurger4 from "./signatureBurger4.webp";
-import HeroBurger from "./heroBurger.webp";
+import HeroBurger from "./heroBurger.png";
 import Flavour from "./flavour.webp";
 import Heritage from "./heritage.webp";
 import TeamChef from "./teamChef.webp";
