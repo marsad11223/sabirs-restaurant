@@ -1,6 +1,6 @@
 "use client";
 import webp from "@/_assets/webp";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import Image from "next/image";
 import { fonts, colors } from "@/app/utils/themes";
 import { useEffect } from "react";
@@ -30,49 +30,52 @@ export default function Hero({ headingText }: HeroProps) {
     <>
       <Box
         sx={{
-          minHeight: { xs: "40vh", sm: "50vh" },
-          position: "relative",
+          minHeight: { xs: "30vh" },
           overflow: "hidden",
           backgroundColor: colors.primaryRed,
           textAlign: "center",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        <Box
-          sx={{
-            position: "absolute",
-            top: { xs: "45%", sm: "38%", lg: "50%" },
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-          }}
+        <Grid
+          sx={{ padding: { xs: "30px", md: "40px" }, maxWidth: "1000px" }}
+          justifyContent="center"
+          alignItems="center"
+          container
         >
-          <Typography
-            data-aos="zoom-out"
-            data-aos-duration="1000"
-            sx={{
-              ...headingStyles,
-              textWrap: "nowrap",
-            }}
-          >
-            {headingText}
-          </Typography>
-        </Box>
-
-        <Box
-          sx={{
-            position: "absolute",
-            left: "0",
-            bottom: "-10px",
-            width: { xs: "350px", sm: "500px", lg: "560px", xl: "600px" },
-          }}
-        >
-          <Image
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            style={{ height: "100%", width: "100%", objectFit: "contain" }}
-            src={webp.HeroBurger}
-            alt="HeroBurger"
-          />
-        </Box>
+          {/* heading  */}
+          <Grid sx={{}} item xs={12} md={6}>
+            <Typography
+              data-aos="zoom-out"
+              data-aos-duration="1000"
+              sx={{
+                ...headingStyles,
+                textWrap: "nowrap",
+                textAlign: "center",
+              }}
+            >
+              {headingText}
+            </Typography>
+          </Grid>
+          {/* image */}
+          <Grid item xs={12} md={6}>
+            <Box
+              sx={{
+                maxWidth: { xs: "350px", sm: "500px", lg: "560px" },
+              }}
+            >
+              <Image
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                style={{ height: "100%", width: "100%", objectFit: "contain" }}
+                src={webp.HeroBurger}
+                alt="HeroBurger"
+              />
+            </Box>
+          </Grid>
+        </Grid>
       </Box>
     </>
   );
