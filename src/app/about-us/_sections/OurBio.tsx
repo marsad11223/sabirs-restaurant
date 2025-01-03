@@ -46,7 +46,7 @@ export default function OurBio() {
       title2: "Our Heritage",
       description:
         " Our restaurant is built on family recipes, love for the kitchen, and a passion for bold flavors. Every meal is made with care and a commitment to authenticity. Discover the food and story that make us who we are!",
-      imageSrc: webp.Heritage,
+      imageSrc: webp.InteriorSabirs,
       rowReverse: setrowReverse,
     },
     {

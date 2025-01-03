@@ -12,7 +12,7 @@ import SignatureBurger4 from "./signatureBurger4.webp";
 import HeroBurger from "./heroBurger.png";
 
 import Flavour from "./flavour.webp";
-import Heritage from "./heritage.webp";
+import InteriorSabirs from "./interiorSabirs.jpeg";
 import Restaurant from "./restaurant.jpg";
 
 import ChikenBurgerFries from "./chikenBurgerFries.webp";
@@ -51,7 +51,7 @@ const webp = {
   HeroBurger,
 
   Flavour,
-  Heritage,
+  InteriorSabirs,
   Restaurant,
 
   ChikenBurgerFries,
