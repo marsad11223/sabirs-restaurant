@@ -110,8 +110,8 @@ export default function NextMeal() {
         >
           <Box
             sx={{
-              height: { xs: "370px", sm: "370px", lg: "450px" },
-              width: { xs: "320px", sm: "340px", lg: "410px" },
+              height: { xs: "330px", sm: "370px", lg: "450px" },
+              width: { xs: "250px", sm: "340px", lg: "410px" },
               backgroundColor: colors.White,
               borderRadius: "30px",
               position: "relative",
