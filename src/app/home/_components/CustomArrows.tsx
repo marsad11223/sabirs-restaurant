@@ -10,7 +10,7 @@ export function CustomLeftArrow(props: any) {
       sx={{
         position: "absolute",
         top: "50%",
-        left: { xs: "20px", sm: "-40px", md: "-55px", lg: "-70px" },
+        left: { xs: "-30px", sm: "-40px", md: "-55px", lg: "-70px" },
         transform: "translateY(-50%)  rotate(180deg)",
         maxWidth: { xs: "25px", md: "30px", lg: "35px", xl: "42px" },
         width: "100%",
@@ -34,7 +34,7 @@ export function CustomRightArrow(props: any) {
       sx={{
         position: "absolute",
         top: "50%",
-        right: { xs: "20px", sm: "-40px", md: "-55px", lg: "-70px" },
+        right: { xs: "-30px", sm: "-40px", md: "-55px", lg: "-70px" },
         zIndex: "40",
         transform: "translateY(-50%)",
         maxWidth: { xs: "25px", md: "30px", lg: "35px", xl: "42px" },
