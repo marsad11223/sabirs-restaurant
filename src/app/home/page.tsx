@@ -14,7 +14,7 @@ export default function HomePage() {
       <HeroHome />
       <Marquee />
       <SmashBurger />
-      <SignatureFlavours />
+      {/* <SignatureFlavours /> */}
       <Location />
       <Footer applyBorderTop={false} />
     </Box>
