@@ -80,20 +80,12 @@ export function OurBioSection({
       sx={{ flexDirection: reverseOrder ? "row-reverse" : "row" }}
       container
     >
-      <Grid data-aos="fade-right" data-aos-duration="1000" item xs={12} md={6}>
-        <Box sx={{ height: "100%", width: "100%" }}>
-          <Image
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            src={imageSrc}
-            alt={heading1}
-          />
-        </Box>
-      </Grid>
       <Grid
         data-aos="fade-left"
         data-aos-duration="1000"
         sx={{
           display: "flex",
+
           alignItems: "center",
           justifyContent: "center",
           backgroundColor: reverseOrder ? colors.primaryRed : colors.White,
@@ -141,6 +133,15 @@ export function OurBioSection({
           >
             {text}
           </Typography>
+        </Box>
+      </Grid>
+      <Grid data-aos="fade-right" data-aos-duration="1000" item xs={12} md={6}>
+        <Box sx={{ height: "100%", width: "100%" }}>
+          <Image
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            src={imageSrc}
+            alt={heading1}
+          />
         </Box>
       </Grid>
     </Grid>
