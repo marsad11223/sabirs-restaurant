@@ -390,7 +390,7 @@ const Navbar = () => {
               backgroundColor: colors.White,
             }}
           />
-          <Typography
+          {/* <Typography
             sx={{
               ...textStyle,
               color: colors.White,
@@ -405,7 +405,7 @@ const Navbar = () => {
               backgroundColor: colors.White,
             }}
           />
-          {/* <Typography
+          <Typography
             sx={{
               ...textStyle,
               color: colors.White,
@@ -414,12 +414,7 @@ const Navbar = () => {
           >
             Order Huddersfield
           </Typography> */}
-          <Divider
-            sx={{
-              width: "100%",
-              backgroundColor: colors.White,
-            }}
-          />
+
           <Box
             sx={{
               display: "flex",
