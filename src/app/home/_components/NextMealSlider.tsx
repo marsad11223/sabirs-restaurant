@@ -18,13 +18,14 @@ export default function NextMealSlider({
         justifyContent: "center",
         alignItems: "center",
         gap: "10px",
-        marginTop: { xs: "10px", sm: "15px" },
+        marginTop: { xs: "30px", sm: "20px" },
       }}
     >
       <Box
         sx={{
-          height: { xs: "300px", sm: "315px", lg: "380px" },
-          width: { xs: "300px", sm: "315px", lg: "380px" },
+          height: { xs: "250px", sm: "290px", lg: "380px" },
+          width: { xs: "250px", sm: "290px", lg: "380px" },
+          borderRadius: "30px",
         }}
       >
         <Image
