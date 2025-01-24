@@ -221,7 +221,7 @@ export function CardContactUs() {
               <Typography sx={{ ...contactCardText }}>
                 +44 1709 838899
               </Typography>
-              <Divider
+              {/* <Divider
                 sx={{
                   margin: "20px 0",
                   backgroundColor: colors.White,
@@ -232,7 +232,7 @@ export function CardContactUs() {
               <Typography sx={{ ...contactCardText }}>
                 Unit 1 A, The gateway retail park, Hillhouse lane, HD1 6EF
               </Typography>
-              <Typography sx={{ ...contactCardText }}>01484 244111</Typography>
+              <Typography sx={{ ...contactCardText }}>01484 244111</Typography> */}
             </Box>
           </Box>
           <Box
