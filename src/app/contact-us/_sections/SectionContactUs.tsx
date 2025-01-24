@@ -1,5 +1,6 @@
 "use client";
-import { Box, Divider, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { useForm, Controller } from "react-hook-form";
 import StandardInput from "../../../_components/Input";
 import Image from "next/image";
 import svgs from "@/_assets/svgs";
@@ -8,12 +9,39 @@ import Button from "@/_components/Button";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 export default function SectionContactUs() {
   // Animation
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
     AOS.refresh();
   }, []);
+
+  // React Hook Form
+  const {
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  // Form submission handler
+  const onSubmit = (data: any) => {
+    console.log("Form Submitted:", data);
+    alert("Form Submitted Successfully!");
+  };
+
+  // Error message on invalid form submission
+  const onError = () => {
+    alert("Please fix the errors in the form.");
+  };
 
   const headingStyles = {
     fontSize: fonts.headingSecondary,
@@ -102,52 +130,128 @@ export default function SectionContactUs() {
                 have a question, want to make a reservation, or just want to say
                 hi, drop us a line! Our team is ready to serve you.
               </Typography>
-              {/* inputs  */}
-              <Box>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: { xs: "column", sm: "row" },
-                    gap: "30px",
-                    paddingBottom: { xs: "30px", sm: "50px" },
-                  }}
-                >
-                  <StandardInput inputType="text" label="Name" />
-                  <StandardInput inputType="email" label="Email" />
+
+              {/* Form */}
+              <form onSubmit={handleSubmit(onSubmit, onError)}>
+                <Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: { xs: "column", sm: "row" },
+                      gap: "30px",
+                      paddingBottom: { xs: "30px", sm: "50px" },
+                    }}
+                  >
+                    <Controller
+                      name="name"
+                      control={control}
+                      rules={{ required: "Name is required" }}
+                      render={({ field }) => (
+                        <StandardInput
+                          {...field}
+                          inputType="text"
+                          label="Name"
+                          error={!!errors.name}
+                          helperText={errors.name?.message}
+                        />
+                      )}
+                    />
+                    <Controller
+                      name="email"
+                      control={control}
+                      rules={{
+                        required: "Email is required",
+                        pattern: {
+                          value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                          message: "Invalid email format",
+                        },
+                      }}
+                      render={({ field }) => (
+                        <StandardInput
+                          {...field}
+                          inputType="email"
+                          label="Email"
+                          error={!!errors.email}
+                          helperText={errors.email?.message}
+                        />
+                      )}
+                    />
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: { xs: "column", sm: "row" },
+                      gap: "30px",
+                      paddingBottom: { xs: "30px", sm: "50px" },
+                    }}
+                  >
+                    <Controller
+                      name="phone"
+                      control={control}
+                      defaultValue="+44" // Default value for the input
+                      rules={{
+                        required: "Phone number is required",
+                        pattern: {
+                          value: /^\+(\d{1,3})(\d{7,15})$/,
+                          message:
+                            "Phone number must include a valid country code and phone number (e.g., +441234567890)",
+                        },
+                      }}
+                      render={({ field }) => (
+                        <StandardInput
+                          {...field}
+                          inputType="text"
+                          label="Phone"
+                          error={!!errors.phone}
+                          helperText={errors.phone?.message}
+                        />
+                      )}
+                    />
+
+                    <Controller
+                      name="subject"
+                      control={control}
+                      rules={{ required: "Subject is required" }}
+                      render={({ field }) => (
+                        <StandardInput
+                          {...field}
+                          inputType="text"
+                          label="Subject"
+                          error={!!errors.subject}
+                          helperText={errors.subject?.message}
+                        />
+                      )}
+                    />
+                  </Box>
+                  <Box>
+                    <Controller
+                      name="message"
+                      control={control}
+                      rules={{ required: "Message is required" }}
+                      render={({ field }) => (
+                        <StandardInput
+                          {...field}
+                          inputType="text"
+                          label="Message"
+                          error={!!errors.message}
+                          helperText={errors.message?.message}
+                        />
+                      )}
+                    />
+                  </Box>
                 </Box>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: { xs: "column", sm: "row" },
-                    gap: "30px",
-                    paddingBottom: { xs: "30px", sm: "50px" },
-                  }}
-                >
-                  <StandardInput inputType="number" label="Phone" />
-                  <StandardInput inputType="text" label="Subject" />
+                <Box sx={{ paddingTop: { xs: "50px", sm: "80px" } }}>
+                  <Button
+                    type="submit"
+                    styles={{
+                      color: colors.White,
+                      backgroundColor: colors.primaryRed,
+                    }}
+                  >
+                    Order Now
+                  </Button>
                 </Box>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: { xs: "column", sm: "row" },
-                    gap: "30px",
-                    paddingTop: { xs: "0px", sm: "50px" },
-                  }}
-                >
-                  <StandardInput inputType="text" label="Message" />
-                </Box>
-              </Box>
-              {/* button  */}
-              <Box sx={{ paddingTop: { xs: "50px", sm: "80px", lg: "0" } }}>
-                <Button
-                  styles={{
-                    color: colors.White,
-                    backgroundColor: colors.primaryRed,
-                  }}
-                >
-                  Order Now
-                </Button>
-              </Box>
+              </form>
             </Box>
             <Box
               data-aos="fade-up-left"
@@ -221,18 +325,6 @@ export function CardContactUs() {
               <Typography sx={{ ...contactCardText }}>
                 +44 1709 838899
               </Typography>
-              {/* <Divider
-                sx={{
-                  margin: "20px 0",
-                  backgroundColor: colors.White,
-                  width: "100%",
-                  height: "1px",
-                }}
-              />
-              <Typography sx={{ ...contactCardText }}>
-                Unit 1 A, The gateway retail park, Hillhouse lane, HD1 6EF
-              </Typography>
-              <Typography sx={{ ...contactCardText }}>01484 244111</Typography> */}
             </Box>
           </Box>
           <Box

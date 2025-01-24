@@ -2,13 +2,21 @@ import React from "react";
 import { Button as MuiButton, ButtonProps } from "@mui/material";
 import { colors, fonts } from "@/app/utils/themes";
 
-const Button: React.FC<{
+interface CustomButtonProps {
   children: React.ReactNode;
   styles?: ButtonProps["sx"];
-}> = ({ children, styles = {} }) => {
+  type?: "button" | "submit" | "reset"; // Add the `type` prop for form compatibility
+}
+
+const Button: React.FC<CustomButtonProps> = ({
+  children,
+  styles = {},
+  type = "button", // Default type is "button"
+}) => {
   return (
     <MuiButton
       variant="contained"
+      type={type} // Pass the type prop to the underlying Material-UI Button
       sx={{
         fontSize: fonts.tertiaryTypography,
         fontWeight: "400",
