@@ -109,7 +109,7 @@ export default function SectionContactUs() {
                     display: "flex",
                     flexDirection: { xs: "column", sm: "row" },
                     gap: "30px",
-                    paddingBottom: "50px",
+                    paddingBottom: { xs: "30px", sm: "50px" },
                   }}
                 >
                   <StandardInput inputType="text" label="Name" />
@@ -120,6 +120,7 @@ export default function SectionContactUs() {
                     display: "flex",
                     flexDirection: { xs: "column", sm: "row" },
                     gap: "30px",
+                    paddingBottom: { xs: "30px", sm: "50px" },
                   }}
                 >
                   <StandardInput inputType="number" label="Phone" />
@@ -130,14 +131,14 @@ export default function SectionContactUs() {
                     display: "flex",
                     flexDirection: { xs: "column", sm: "row" },
                     gap: "30px",
-                    paddingTop: "80px",
+                    paddingTop: { xs: "0px", sm: "50px" },
                   }}
                 >
                   <StandardInput inputType="text" label="Message" />
                 </Box>
               </Box>
               {/* button  */}
-              <Box sx={{ paddingTop: { xs: "80px", lg: "0" } }}>
+              <Box sx={{ paddingTop: { xs: "50px", sm: "80px", lg: "0" } }}>
                 <Button
                   styles={{
                     color: colors.White,
