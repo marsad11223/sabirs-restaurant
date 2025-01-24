@@ -6,17 +6,20 @@ interface CustomButtonProps {
   children: React.ReactNode;
   styles?: ButtonProps["sx"];
   type?: "button" | "submit" | "reset"; // Add the `type` prop for form compatibility
+  disabled?: boolean;
 }
 
 const Button: React.FC<CustomButtonProps> = ({
   children,
   styles = {},
   type = "button", // Default type is "button"
+  disabled = false,
 }) => {
   return (
     <MuiButton
       variant="contained"
       type={type} // Pass the type prop to the underlying Material-UI Button
+      disabled={disabled}
       sx={{
         fontSize: fonts.tertiaryTypography,
         fontWeight: "400",

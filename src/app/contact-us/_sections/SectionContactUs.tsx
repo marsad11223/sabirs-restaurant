@@ -1,16 +1,28 @@
 "use client";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, CircularProgress } from "@mui/material";
 import { useForm, Controller } from "react-hook-form";
 import StandardInput from "../../../_components/Input";
 import Image from "next/image";
 import svgs from "@/_assets/svgs";
 import { colors, fonts } from "@/app/utils/themes";
 import Button from "@/_components/Button";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import axios from "axios";
+import { showError, showSuccess } from "@/app/utils/toast";
+
+interface FormValues {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+}
 
 export default function SectionContactUs() {
+  const [loading, setLoading] = useState(false);
+
   // Animation
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
@@ -22,6 +34,7 @@ export default function SectionContactUs() {
     handleSubmit,
     control,
     formState: { errors },
+    reset,
   } = useForm({
     defaultValues: {
       name: "",
@@ -33,14 +46,29 @@ export default function SectionContactUs() {
   });
 
   // Form submission handler
-  const onSubmit = (data: any) => {
-    console.log("Form Submitted:", data);
-    alert("Form Submitted Successfully!");
-  };
 
-  // Error message on invalid form submission
-  const onError = () => {
-    alert("Please fix the errors in the form.");
+  const onSubmit = async (data: FormValues) => {
+    try {
+      setLoading(true);
+      const response = await axios.post("/api/contactus", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      setLoading(false);
+
+      if (response?.status === 200) {
+        showSuccess("Email sent successfully!");
+        reset();
+      } else {
+        showError(`Failed to send email: ${response?.data?.error}`);
+        reset();
+      }
+    } catch (error) {
+      console.error(error, "error");
+      showError(`Failed to send email`);
+      reset();
+    }
   };
 
   const headingStyles = {
@@ -132,7 +160,7 @@ export default function SectionContactUs() {
               </Typography>
 
               {/* Form */}
-              <form onSubmit={handleSubmit(onSubmit, onError)}>
+              <form onSubmit={handleSubmit(onSubmit)}>
                 <Box>
                   <Box
                     sx={{
@@ -200,7 +228,7 @@ export default function SectionContactUs() {
                       render={({ field }) => (
                         <StandardInput
                           {...field}
-                          inputType="text"
+                          inputType="number"
                           label="Phone"
                           error={!!errors.phone}
                           helperText={errors.phone?.message}
@@ -243,12 +271,24 @@ export default function SectionContactUs() {
                 <Box sx={{ paddingTop: { xs: "50px", sm: "80px" } }}>
                   <Button
                     type="submit"
+                    disabled={loading}
                     styles={{
                       color: colors.White,
                       backgroundColor: colors.primaryRed,
+                      position: "relative",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
                     }}
                   >
-                    Order Now
+                    {loading ? (
+                      <CircularProgress
+                        size={24}
+                        sx={{ color: colors.White }}
+                      />
+                    ) : (
+                      "Submit"
+                    )}
                   </Button>
                 </Box>
               </form>
