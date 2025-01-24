@@ -1,5 +1,5 @@
 import React from "react";
-import { TextField, InputAdornment } from "@mui/material";
+import { TextField } from "@mui/material";
 import { colors } from "@/app/utils/themes";
 
 interface StandardInputProps {
@@ -10,7 +10,6 @@ interface StandardInputProps {
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   error?: boolean;
   helperText?: string;
-  startAdornment?: string; // For prepending country code
 }
 
 const StandardInput: React.FC<StandardInputProps> = ({
@@ -21,7 +20,6 @@ const StandardInput: React.FC<StandardInputProps> = ({
   onBlur,
   error = false,
   helperText = "",
-  startAdornment,
 }) => {
   return (
     <TextField
@@ -34,11 +32,6 @@ const StandardInput: React.FC<StandardInputProps> = ({
       onBlur={onBlur}
       error={error}
       helperText={helperText}
-      InputProps={{
-        startAdornment: startAdornment && (
-          <InputAdornment position="start">{startAdornment}</InputAdornment>
-        ),
-      }}
       sx={{
         width: "100%",
         "& .MuiInputBase-root": {

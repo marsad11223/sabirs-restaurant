@@ -214,27 +214,22 @@ export default function SectionContactUs() {
                     }}
                   >
                     <Controller
-                      name="phone"
-                      control={control}
-                      defaultValue="+44" // Default value for the input
-                      rules={{
-                        required: "Phone number is required",
-                        pattern: {
-                          value: /^\+(\d{1,3})(\d{7,15})$/,
-                          message:
-                            "Phone number must include a valid country code and phone number (e.g., +441234567890)",
-                        },
-                      }}
-                      render={({ field }) => (
-                        <StandardInput
-                          {...field}
-                          inputType="number"
-                          label="Phone"
-                          error={!!errors.phone}
-                          helperText={errors.phone?.message}
-                        />
-                      )}
-                    />
+  name="phone"
+  control={control}
+  defaultValue="+44" // Default value for the input
+  rules={{
+    required: "Phone number is required", // Only required validation remains
+  }}
+  render={({ field }) => (
+    <StandardInput
+      {...field}
+      inputType="number" // Input type set to "number"
+      label="Phone"
+      error={!!errors.phone}
+      helperText={errors.phone?.message}
+    />
+  )}
+/>
 
                     <Controller
                       name="subject"
