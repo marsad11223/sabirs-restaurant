@@ -279,6 +279,8 @@ export default function SectionContactUs() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
+                      width: "130px",
+                      height: "60px",
                     }}
                   >
                     {loading ? (
