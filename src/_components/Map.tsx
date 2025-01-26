@@ -1,28 +1,14 @@
 import React from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
-interface MapProps {
-  lat: number;
-  lng: number;
-}
-
-const MapComponent: React.FC<MapProps> = ({ lat, lng }) => {
-  const mapStyles = {
-    height: "100%",
-    width: "100%",
-  };
-
-  const defaultCenter = {
-    lat: lat,
-    lng: lng,
-  };
-
+const MapComponent: React.FC<{}> = () => {
   return (
-    <LoadScript googleMapsApiKey="apiKey">
-      <GoogleMap mapContainerStyle={mapStyles} zoom={15} center={defaultCenter}>
-        <Marker position={defaultCenter} />
-      </GoogleMap>
-    </LoadScript>
+    <iframe
+      loading="lazy"
+      src="https://maps.google.com/maps?q=Sabirs%2C%20Westgate%2C%20Rotherham%2C%20UK&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
+      title="Sabirs, Westgate, Rotherham, UK"
+      aria-label="Sabirs, Westgate, Rotherham, UK"
+      style={{ width: "100%", height: "100%" }} // Ensure iframe takes full Box dimensions
+    ></iframe>
   );
 };
 
