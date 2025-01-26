@@ -135,8 +135,16 @@ const LocationCard: React.FC<CardProps> = ({ address, number, lat, lng }) => {
           height: { lg: "600px", md: "500px", sm: "400px", xs: "400px" },
         }}
       >
-        <MapComponent lat={lat} lng={lng} />
+        {/* <MapComponent lat={lat} lng={lng} /> */}
+        <iframe
+          loading="lazy"
+          src="https://maps.google.com/maps?q=Sabirs%2C%20Westgate%2C%20Rotherham%2C%20UK&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
+          title="Sabirs, Westgate, Rotherham, UK"
+          aria-label="Sabirs, Westgate, Rotherham, UK"
+          style={{ width: "100%", height: "100%" }} // Ensure iframe takes full Box dimensions
+        ></iframe>
       </Box>
+
       <Box
         sx={{
           padding: "20px",
