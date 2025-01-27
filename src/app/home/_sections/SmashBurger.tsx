@@ -27,8 +27,11 @@ export default function SmashBurger() {
         backgroundImage: "url(bgSmashBurgers.webp)",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed",
         backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        "@supports (-webkit-touch-callout: none)": {
+          backgroundAttachment: "scroll",
+        },
       }}
     >
       <NextMeal />
