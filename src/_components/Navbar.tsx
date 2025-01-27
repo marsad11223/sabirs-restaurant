@@ -100,7 +100,11 @@ const Navbar = () => {
           >
             <Typography
               onClick={() => router.push("home")}
-              sx={isActiveRoute("/home") ? activeTextStyle : textStyle}
+              sx={
+                isActiveRoute("/home") || isActiveRoute("/")
+                  ? activeTextStyle
+                  : textStyle
+              }
             >
               home
             </Typography>
