@@ -1,29 +1,29 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import svgs from "@/_assets/svgs";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Divider } from "@mui/material";
 import { colors, fonts } from "@/app/utils/themes";
+
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [open, setOpen] = useState(false); // Dropdown state
   const router = useRouter();
+  const pathname = usePathname(); // Get the current route path
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
-  // dropdown code
-  const [open, setOpen] = useState(false);
-  const openDropdown = () => {
-    setOpen(true);
-  };
-  const closeDropdown = () => {
-    setOpen(false);
-  };
+  const openDropdown = () => setOpen(true);
+  const closeDropdown = () => setOpen(false);
+
+  const isActiveRoute = (route: string) => pathname === route;
+
   const textStyle = {
     fontSize: fonts.tertiaryTypography,
     fontWeight: "400",
@@ -31,7 +31,7 @@ const Navbar = () => {
     cursor: "pointer",
     textTransform: "capitalize",
     transition:
-      "color 0.4s ease-in-out, text-shadow 0.6s ease-in-out , scale .3s ease-in-out  ",
+      "color 0.4s ease-in-out, text-shadow 0.6s ease-in-out, scale 0.3s ease-in-out",
     "&:hover": {
       color: colors.primaryRed,
       textShadow: `1px 3px 4px ${colors.smokeGray}`,
@@ -39,9 +39,15 @@ const Navbar = () => {
     },
   };
 
+  const activeTextStyle = {
+    ...textStyle,
+    color: colors.primaryRed,
+    textShadow: `1px 3px 4px ${colors.smokeGray}`,
+    fontWeight: "500", // Optional: make the active route slightly bolder
+  };
+
   return (
     <>
-      {/* Navbar */}
       <Box
         sx={{
           margin: "auto",
@@ -60,7 +66,6 @@ const Navbar = () => {
           zIndex: "1000",
         }}
       >
-        {/* maxwidth container  */}
         <Box
           sx={{
             display: "flex",
@@ -95,29 +100,29 @@ const Navbar = () => {
           >
             <Typography
               onClick={() => router.push("home")}
-              sx={{ ...textStyle }}
+              sx={isActiveRoute("/home") ? activeTextStyle : textStyle}
             >
               home
             </Typography>
             <Typography
               onClick={() => router.push("about-us")}
-              sx={{ ...textStyle }}
+              sx={isActiveRoute("/about-us") ? activeTextStyle : textStyle}
             >
               about us
             </Typography>
             <Typography
               onClick={() => router.push("our-food")}
-              sx={{ ...textStyle }}
+              sx={isActiveRoute("/our-food") ? activeTextStyle : textStyle}
             >
               Our Food
             </Typography>
             <Typography
               onClick={() => router.push("contact-us")}
-              sx={{ ...textStyle }}
+              sx={isActiveRoute("/contact-us") ? activeTextStyle : textStyle}
             >
               contact us
             </Typography>
-            {/* order dropdown  */}
+            {/* order dropdown */}
             <Box
               onMouseLeave={closeDropdown}
               sx={{
@@ -132,7 +137,7 @@ const Navbar = () => {
               >
                 <Typography
                   onClick={() => router.push("order")}
-                  sx={{ ...textStyle }}
+                  sx={isActiveRoute("/order") ? activeTextStyle : textStyle}
                 >
                   order
                 </Typography>
