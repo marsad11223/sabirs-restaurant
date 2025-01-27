@@ -65,7 +65,7 @@ export default function Orderbody() {
           >
             <LocationCard
               address="36 Westgate, Rotherham S60 1AS, United Kingdom"
-              phoneNumber="+44 1709 838899"
+              phoneNumber="01709 838899"
             />
           </Grid>
         </Box>

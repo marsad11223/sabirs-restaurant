@@ -82,7 +82,7 @@ export default function Location() {
           >
             <LocationCard
               address={"36 Westgate, Rotherham S60 1AS, United Kingdom"}
-              number={"+44 1709 838899"}
+              number={"01709 838899"}
               lat={53.4321}
               lng={-1.35746}
             />

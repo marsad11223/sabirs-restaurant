@@ -72,10 +72,10 @@ export default function NextMeal() {
           sx={{ maxWidth: "500px" }}
         >
           <Typography sx={{ ...headingStyles, color: colors.secondaryYellow }}>
-            Come Find Your
+            Are you in the mood for
           </Typography>
           <Typography sx={{ ...headingStyles, color: colors.White }}>
-            next meal
+            Pizza?
           </Typography>
           <Typography
             sx={{
@@ -85,10 +85,8 @@ export default function NextMeal() {
               marginTop: { xs: "10px", xl: "24px" },
             }}
           >
-            Discover a menu crafted to satisfy every craving! Dive into our
-            range of signature dishes, seasonal specials, and classic
-            favorites—all made to order just for you. Take a look and let your
-            taste buds lead the way!"
+            We've got meaty pizzas, veggie pizzas, the classics, 
+            and our very own Sabir's special!
           </Typography>
           <Box sx={{ marginTop: { xs: "20px", xl: "40px" } }}>
             <Button
@@ -98,7 +96,7 @@ export default function NextMeal() {
                 },
               }}
             >
-              Get In Touch
+              I Want Pizza
             </Button>
           </Box>
         </Box>

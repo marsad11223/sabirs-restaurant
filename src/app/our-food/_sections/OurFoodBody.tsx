@@ -20,14 +20,14 @@ export default function OurBio() {
       imageSrc: webp.ChikenBurgerFries,
       heading1: "Crafted with Care",
       heading2: "Served with Passion",
-      text: "Our food isn’t just made—it’s crafted to perfection. Each ingredient is carefully selected to deliver exceptional flavor and texture. With every dish, we strive to make your meal not only tasty but a memorable experience you’ll savor.",
+      text: "Our food isn’t just made - it’s crafted to perfection. Each ingredient is carefully selected to deliver exceptional flavor and texture. With every dish, we strive to make your meal not only tasty but a memorable experience you’ll savour.",
       reverseOrder: true,
     },
     {
       imageSrc: webp.SmashBurgerFries,
       heading1: "Quality You Can Taste",
-      heading2: "in Every Biten",
-      text: "Our food isn’t just made—it’s crafted to perfection. Each ingredient is carefully selected to deliver exceptional flavor and texture. With every dish, we strive to make your meal not only tasty but a memorable experience you’ll savor.",
+      heading2: "in Every Bite",
+      text: "Our food isn’t just prepared - it’s expertly crafted. Every ingredient is handpicked for its exceptional quality, ensuring outstanding flavour and texture. With every dish, we aim to make your meal not only delicious but an unforgettable experience to cherish.",
     },
   ];
 
