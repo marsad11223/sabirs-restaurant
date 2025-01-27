@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
 import { Box, Typography, Grid } from "@mui/material";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Button from "@/_components/Button";
 import MapComponent from "@/_components/Map";
 import { fonts, colors } from "@/app/utils/themes";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function Orderbody() {
   // Animation
@@ -80,6 +82,7 @@ interface LocationCardProps {
 }
 
 function LocationCard({ address, phoneNumber }: LocationCardProps) {
+  const router = useRouter();
   return (
     <Grid
       data-aos="zoom-in-up"
@@ -124,8 +127,11 @@ function LocationCard({ address, phoneNumber }: LocationCardProps) {
                 backgroundColor: colors.secondaryYellow,
               },
             }}
+            onClick={() => {
+              router.push("/order-rotherham");
+            }}
           >
-            Get In Touch
+            Order Now
           </Button>
         </Box>
       </Box>

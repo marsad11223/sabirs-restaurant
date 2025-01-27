@@ -1,18 +1,22 @@
 "use client";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
 import { Box, Typography } from "@mui/material";
-import { fonts, colors } from "@/app/utils/themes";
-import Button from "@/_components/Button";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import { fonts, colors } from "@/app/utils/themes";
+import Button from "@/_components/Button";
 import NextMealSlider from "./NextMealSlider";
 import { CustomLeftArrow, CustomRightArrow } from "./CustomArrows";
-import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import webp from "@/_assets/webp";
 
 export default function NextMeal() {
+  const router = useRouter();
   // Animation
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
@@ -85,8 +89,8 @@ export default function NextMeal() {
               marginTop: { xs: "10px", xl: "24px" },
             }}
           >
-            We've got meaty pizzas, veggie pizzas, the classics, 
-            and our very own Sabir's special!
+            We've got meaty pizzas, veggie pizzas, the classics, and our very
+            own Sabir's special!
           </Typography>
           <Box sx={{ marginTop: { xs: "20px", xl: "40px" } }}>
             <Button
@@ -94,6 +98,9 @@ export default function NextMeal() {
                 "&:hover": {
                   backgroundColor: colors.secondaryYellow,
                 },
+              }}
+              onClick={() => {
+                router.push("/order");
               }}
             >
               I Want Pizza

@@ -137,7 +137,11 @@ const Navbar = () => {
               >
                 <Typography
                   onClick={() => router.push("order")}
-                  sx={isActiveRoute("/order") ? activeTextStyle : textStyle}
+                  sx={
+                    isActiveRoute("/order") || isActiveRoute("/order-rotherham")
+                      ? activeTextStyle
+                      : textStyle
+                  }
                 >
                   order
                 </Typography>
