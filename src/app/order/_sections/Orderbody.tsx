@@ -100,7 +100,7 @@ function LocationCard({ address, phoneNumber }: LocationCardProps) {
             width: "100%",
           }}
         >
-          <MapComponent lat={0} lng={0} />
+          <MapComponent />
         </Box>
         <Box
           sx={{

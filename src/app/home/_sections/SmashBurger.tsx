@@ -6,7 +6,9 @@ import Button from "@/_components/Button";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useRouter } from "next/navigation";
 export default function SmashBurger() {
+  const router = useRouter();
   // Animation
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
@@ -75,7 +77,12 @@ export default function SmashBurger() {
             bite is an explosion of flavor. Perfectly stacked and packed with
             taste, these burgers are crafted for serious burger lovers!
           </Typography>
-          <Box sx={{ marginTop: { xs: "20px", xl: "40px" } }}>
+          <Box
+            sx={{ marginTop: { xs: "20px", xl: "40px" } }}
+            onClick={() => {
+              router.push("order");
+            }}
+          >
             <Button>Order Now</Button>
           </Box>
         </Box>
