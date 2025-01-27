@@ -317,12 +317,13 @@ const Navbar = () => {
             }}
           />
           <Typography
-            onClick={() => router.push("home")}
+            onClick={() =>
+              isActiveRoute("/home")
+                ? setSidebarOpen(false)
+                : router.push("home")
+            }
             variant="h6"
-            sx={{
-              ...textStyle,
-              color: colors.White,
-            }}
+            sx={{ ...textStyle, color: colors.White }}
           >
             home
           </Typography>
@@ -333,7 +334,11 @@ const Navbar = () => {
             }}
           />
           <Typography
-            onClick={() => router.push("about-us")}
+            onClick={() =>
+              isActiveRoute("/about-us")
+                ? setSidebarOpen(false)
+                : router.push("about-us")
+            }
             variant="h6"
             sx={{
               ...textStyle,
@@ -349,7 +354,11 @@ const Navbar = () => {
             }}
           />
           <Typography
-            onClick={() => router.push("our-food")}
+            onClick={() =>
+              isActiveRoute("/our-food")
+                ? setSidebarOpen(false)
+                : router.push("our-food")
+            }
             variant="h6"
             sx={{
               ...textStyle,
@@ -365,7 +374,11 @@ const Navbar = () => {
             }}
           />
           <Typography
-            onClick={() => router.push("order")}
+            onClick={() =>
+              isActiveRoute("/order")
+                ? setSidebarOpen(false)
+                : router.push("order")
+            }
             variant="h6"
             sx={{
               ...textStyle,
@@ -381,7 +394,11 @@ const Navbar = () => {
             }}
           />
           <Typography
-            onClick={() => router.push("contact-us")}
+            onClick={() =>
+              isActiveRoute("/contact-us")
+                ? setSidebarOpen(false)
+                : router.push("contact-us")
+            }
             sx={{
               ...textStyle,
               color: colors.White,
