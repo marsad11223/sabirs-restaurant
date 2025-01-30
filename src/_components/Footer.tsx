@@ -200,7 +200,13 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
                       display: { xs: "none", sm: "block" },
                     }}
                   >
-                    Facebook
+                    <a
+                      href="https://www.facebook.com/sabirsgrill/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Facebook
+                    </a>
                   </Typography>
                   <Typography
                     sx={{
@@ -208,7 +214,13 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
                       display: { xs: "none", sm: "block" },
                     }}
                   >
-                    Instagram
+                    <a
+                      href="https://www.instagram.com/sabirsgrill/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Instagram
+                    </a>
                   </Typography>
                   <Box
                     sx={{
@@ -220,38 +232,58 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
                       alignItems: "center",
                     }}
                   >
-                    <Box
-                      sx={{ display: "flex", gap: "8px", alignItems: "center" }}
+                    <a
+                      href="https://www.facebook.com/sabirsgrill/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <Image
-                        style={{
-                          width: "20px",
-                          height: "20px",
-                          objectFit: "contain",
+                      <Box
+                        sx={{
+                          display: "flex",
+                          gap: "8px",
+                          alignItems: "center",
                         }}
-                        src={svgs.Facebook}
-                        alt="facebook"
-                      />
-                      <Typography sx={{ ...textStyles, opacity: "1" }}>
-                        Facebook
-                      </Typography>
-                    </Box>
-                    <Box
-                      sx={{ display: "flex", gap: "8px", alignItems: "center" }}
+                      >
+                        <Image
+                          style={{
+                            width: "20px",
+                            height: "20px",
+                            objectFit: "contain",
+                          }}
+                          src={svgs.Facebook}
+                          alt="facebook"
+                        />
+                        <Typography sx={{ ...textStyles, opacity: "1" }}>
+                          Facebook
+                        </Typography>
+                      </Box>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/sabirsgrill/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <Image
-                        style={{
-                          width: "20px",
-                          height: "20px",
-                          objectFit: "contain",
+                      <Box
+                        sx={{
+                          display: "flex",
+                          gap: "8px",
+                          alignItems: "center",
                         }}
-                        src={svgs.Instagram}
-                        alt="instagram"
-                      />
-                      <Typography sx={{ ...textStyles, opacity: "1" }}>
-                        Instagram
-                      </Typography>
-                    </Box>
+                      >
+                        <Image
+                          style={{
+                            width: "20px",
+                            height: "20px",
+                            objectFit: "contain",
+                          }}
+                          src={svgs.Instagram}
+                          alt="instagram"
+                        />
+                        <Typography sx={{ ...textStyles, opacity: "1" }}>
+                          Instagram
+                        </Typography>
+                      </Box>
+                    </a>
                   </Box>
                 </Box>
               </Box>

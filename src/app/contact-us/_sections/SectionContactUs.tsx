@@ -214,22 +214,22 @@ export default function SectionContactUs() {
                     }}
                   >
                     <Controller
-  name="phone"
-  control={control}
-  defaultValue="+44" // Default value for the input
-  rules={{
-    required: "Phone number is required", // Only required validation remains
-  }}
-  render={({ field }) => (
-    <StandardInput
-      {...field}
-      inputType="number" // Input type set to "number"
-      label="Phone"
-      error={!!errors.phone}
-      helperText={errors.phone?.message}
-    />
-  )}
-/>
+                      name="phone"
+                      control={control}
+                      defaultValue="+44" // Default value for the input
+                      rules={{
+                        required: "Phone number is required", // Only required validation remains
+                      }}
+                      render={({ field }) => (
+                        <StandardInput
+                          {...field}
+                          inputType="number" // Input type set to "number"
+                          label="Phone"
+                          error={!!errors.phone}
+                          helperText={errors.phone?.message}
+                        />
+                      )}
+                    />
 
                     <Controller
                       name="subject"
@@ -359,9 +359,7 @@ export function CardContactUs() {
               <Typography sx={{ ...contactCardText }}>
                 36 Westgate, Rotherham S60 1AS, United Kingdom
               </Typography>
-              <Typography sx={{ ...contactCardText }}>
-                01709 838899
-              </Typography>
+              <Typography sx={{ ...contactCardText }}>01709 838899</Typography>
             </Box>
           </Box>
           <Box
@@ -390,7 +388,7 @@ export function CardContactUs() {
                   ...contactCardText,
                 }}
               >
-                info@sabirsgrill.com
+                info@sabirs.co.uk
               </Typography>
             </Box>
           </Box>
