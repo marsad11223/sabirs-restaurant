@@ -291,6 +291,44 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
           </Box>
         </Box>
       </Box>
+      <Box
+        sx={{
+          padding: { xs: "20px", md: "25px" },
+          textAlign: "center",
+          backgroundColor: colors.darkGrey + "10",
+        }}
+      >
+        <Typography
+          sx={{
+            color: colors.smokeGray,
+            fontSize: fonts.tertiaryTypography,
+            fontFamily: '"Roboto", sans-serif', // More modern alternative
+            letterSpacing: "0.5px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "6px",
+            "&:hover": {
+              "& span:last-child": {
+                color: colors.primaryRed,
+                textShadow: `1px 2px 3px ${colors.smokeGray}`,
+              },
+            },
+          }}
+        >
+          <span>© {2025} All Rights Reserved</span>
+          <span
+            style={{
+              fontFamily: '"Poppins", sans-serif', // Clean modern font
+              fontWeight: 500,
+              marginLeft: "8px",
+              transition: "color 0.3s ease-in-out",
+            }}
+          >
+            Powered by QashNova
+          </span>
+        </Typography>
+      </Box>
     </>
   );
 };
