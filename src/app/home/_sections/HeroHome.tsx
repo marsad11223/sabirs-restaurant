@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "@/_components/Navbar";
+import svgs from "@/_assets/svgs";
 
 export default function HeroHome() {
   // Animation
@@ -18,7 +19,12 @@ export default function HeroHome() {
 
   const headingStyles = {
     color: colors.secondaryYellow,
-    fontSize: fonts.headingPrimary,
+    fontSize: {
+      xs: "52px",
+      sm: "60px",
+      md: "72px",
+      lg: "96px",
+    },
     lineHeight: fonts.headingPrimary,
     textTransform: "uppercase",
     fontFamily: '"Bebas Neue", sans-serif',
@@ -42,65 +48,68 @@ export default function HeroHome() {
             width: "100%",
             position: "relative",
             overflow: "hidden",
-            backgroundColor: colors.primaryRed,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            textAlign: "center",
+            backgroundImage: "url(./bgHeroHome.webp)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            padding: {
+              xs: "20px",
+              sm: "20px 30px",
+              md: "20px 80px",
+              lg: "20px 80px",
+              xl: "25px 120px",
+            },
           }}
         >
           <Box
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
+              maxWidth: "1600px",
+              margin: "auto",
               width: "100%",
-              height: "100%",
-              padding: "0 30px",
             }}
           >
-            <Typography
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              sx={{ ...headingStyles }}
-            >
-              taste the world
-            </Typography>
+            <Box>
+              <Typography
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                sx={{ ...headingStyles }}
+              >
+                Sabir&rsquo;s is Coming
+              </Typography>
+              <Typography
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                sx={{ ...headingStyles, color: "#ffffff" }}
+              >
+                to Sheffield!
+              </Typography>
+            </Box>
+
             <Box
               sx={{
-                zIndex: "10",
-                maxWidth: {
-                  xs: "350px",
-                  md: "500px",
-                  lg: "750px",
-                  xl: "55vw",
-                },
-                height: "auto",
-                width: "100%",
+                display: "flex",
+                gap: "10px",
+                alignItems: "center",
+                paddingTop: "50px",
               }}
             >
               <Image
-                data-aos="zoom-out"
-                data-aos-duration="1000"
-                style={{
-                  height: "100%",
-                  width: "100%",
-                  objectFit: "contain",
-                  filter: `drop-shadow(2px 4px 8px ${colors.darkGrey})`,
-                  opacity: "100",
-                }}
-                src={webp.HomeHero}
-                alt="SmashBurger"
+                style={{ width: "18px" }}
+                src={svgs.LocationYellowIcon}
+                alt="location"
               />
+              <Typography
+                sx={{
+                  color: colors.White,
+                  fontSize: fonts.primaryTypography,
+                  textDecoration: "underline",
+                }}
+              >
+                224-230 London Rd, Highfield, Sheffield S2 4LW, UK
+              </Typography>
             </Box>
-            <Typography
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              sx={{ ...headingStyles, color: "#ffffff" }}
-            >
-              of flavour
-            </Typography>
           </Box>
         </Box>
       </Box>

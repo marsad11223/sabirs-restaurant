@@ -13,6 +13,7 @@ import RightAero from "./right-aero.svg";
 import Arrow from "./arrow.svg";
 import Email from "./email.svg";
 import Location from "./location.svg";
+import LocationYellowIcon from "./locationYellowIcon.svg";
 
 const svgs = {
   Logo,
@@ -30,6 +31,7 @@ const svgs = {
   Arrow,
   Email,
   Location,
+  LocationYellowIcon,
 };
 
 export default svgs;
