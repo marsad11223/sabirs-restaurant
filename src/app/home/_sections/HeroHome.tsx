@@ -194,7 +194,7 @@ export default function HeroHome() {
               display: "flex",
               gap: "10px",
               alignItems: "center",
-              paddingTop: { xs: "60px", md: "50px" },
+              paddingTop: { xs: "100px", md: "150px" },
             }}
           >
             <Image
