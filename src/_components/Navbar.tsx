@@ -186,6 +186,21 @@ const Navbar = () => {
                 >
                   order rotherham
                 </Typography>
+                <Typography
+                  sx={{
+                    ...textStyle,
+                    padding: "20px 25px",
+                    transition:
+                      "color 0.4s ease-in-out, background-color 0.6s ease-in-out",
+                    "&:hover": {
+                      color: colors.White,
+                      backgroundColor: colors.primaryRed,
+                    },
+                  }}
+                  onClick={() => router.push("./order-sheffield")}
+                >
+                  order sheffield
+                </Typography>
                 {/* <Typography
                   sx={{
                     ...textStyle,
@@ -420,7 +435,7 @@ const Navbar = () => {
               backgroundColor: colors.White,
             }}
           />
-          {/* <Typography
+          <Typography
             sx={{
               ...textStyle,
               color: colors.White,
@@ -440,10 +455,16 @@ const Navbar = () => {
               ...textStyle,
               color: colors.White,
             }}
-            onClick={() => router.push("/order-huddersfield")}
+            onClick={() => router.push("./order-sheffield")}
           >
-            Order Huddersfield
-          </Typography> */}
+            Order Sheffield
+          </Typography>
+          <Divider
+            sx={{
+              width: "100%",
+              backgroundColor: colors.White,
+            }}
+          />
 
           <Box
             sx={{

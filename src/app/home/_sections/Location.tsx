@@ -86,14 +86,12 @@ export default function Location() {
               lat={53.4321}
               lng={-1.35746}
             />
-            {/* <LocationCard
-              address={
-                "Unit 1 A, The gateway retail park, Hillhouse lane, HD1 6EF"
-              }
-              number={"01484 244111"}
-              lat={53.65738}
-              lng={-1.78314}
-            /> */}
+            <LocationCard
+              address={"36 Westgate, Rotherham S60 1AS, United Kingdom"}
+              number={"01709 838899"}
+              lat={53.4321}
+              lng={-1.35746}
+            />
           </Box>
         </Box>
       </Box>
