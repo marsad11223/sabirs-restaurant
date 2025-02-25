@@ -81,16 +81,18 @@ export default function Location() {
             }}
           >
             <LocationCard
-              address={"36 Westgate, Rotherham S60 1AS, United Kingdom"}
-              number={"01709 838899"}
-              lat={53.4321}
-              lng={-1.35746}
+              address="36 Westgate, Rotherham S60 1AS, United Kingdom"
+              phoneNumber="01709 838899"
+              src="https://maps.google.com/maps?q=Sabirs%2C%20Westgate%2C%20Rotherham%2C%20UK&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
+              title="Sabirs, Westgate, Rotherham, UK"
+              ariaLabel="Sabirs, Westgate, Rotherham, UK"
             />
             <LocationCard
-              address={"36 Westgate, Rotherham S60 1AS, United Kingdom"}
-              number={"01709 838899"}
-              lat={53.4321}
-              lng={-1.35746}
+              address="36 Westgate, Rotherham S60 1AS, United Kingdom"
+              phoneNumber="01709 838899"
+              src="https://maps.google.com/maps?q=Sabirs%2C%20Westgate%2C%20Rotherham%2C%20UK&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
+              title="Sabirs, Westgate, Rotherham, UK"
+              ariaLabel="Sabirs, Westgate, Rotherham, UK"
             />
           </Box>
         </Box>
@@ -101,12 +103,19 @@ export default function Location() {
 
 interface CardProps {
   address: string;
-  number: string;
-  lat: number;
-  lng: number;
+  phoneNumber: string;
+  src: string;
+  title: string;
+  ariaLabel: string;
 }
 
-const LocationCard: React.FC<CardProps> = ({ address, number, lat, lng }) => {
+const LocationCard: React.FC<CardProps> = ({
+  address,
+  phoneNumber,
+  src,
+  title,
+  ariaLabel,
+}) => {
   const textStyle = {
     fontSize: fonts.secondaryTypography,
     color: colors.White,
@@ -133,7 +142,7 @@ const LocationCard: React.FC<CardProps> = ({ address, number, lat, lng }) => {
           height: { lg: "600px", md: "500px", sm: "400px", xs: "400px" },
         }}
       >
-        <MapComponent />
+        <MapComponent src={src} title={title} ariaLabel={ariaLabel} />
       </Box>
 
       <Box
@@ -150,7 +159,7 @@ const LocationCard: React.FC<CardProps> = ({ address, number, lat, lng }) => {
             marginTop: { xs: "10px", md: "25px", xl: "32px" },
           }}
         >
-          {number}
+          {phoneNumber}
         </Typography>
       </Box>
     </Box>

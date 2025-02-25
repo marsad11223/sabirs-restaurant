@@ -68,10 +68,16 @@ export default function Orderbody() {
             <LocationCard
               address="36 Westgate, Rotherham S60 1AS, United Kingdom"
               phoneNumber="01709 838899"
+              src="https://maps.google.com/maps?q=Sabirs%2C%20Westgate%2C%20Rotherham%2C%20UK&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
+              title="Sabirs, Westgate, Rotherham, UK"
+              ariaLabel="Sabirs, Westgate, Rotherham, UK"
             />
             <LocationCard
               address="36 Westgate, Rotherham S60 1AS, United Kingdom"
               phoneNumber="01709 838899"
+              src="https://maps.google.com/maps?q=Sabirs%2C%20Westgate%2C%20Rotherham%2C%20UK&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
+              title="Sabirs, Westgate, Rotherham, UK"
+              ariaLabel="Sabirs, Westgate, Rotherham, UK"
             />
           </Grid>
         </Box>
@@ -83,9 +89,18 @@ export default function Orderbody() {
 interface LocationCardProps {
   address: string;
   phoneNumber: string;
+  src: string;
+  title: string;
+  ariaLabel: string;
 }
 
-function LocationCard({ address, phoneNumber }: LocationCardProps) {
+function LocationCard({
+  address,
+  phoneNumber,
+  src,
+  title,
+  ariaLabel,
+}: LocationCardProps) {
   const router = useRouter();
   return (
     <Grid
@@ -107,7 +122,7 @@ function LocationCard({ address, phoneNumber }: LocationCardProps) {
             width: "100%",
           }}
         >
-          <MapComponent />
+          <MapComponent src={src} title={title} ariaLabel={ariaLabel} />
         </Box>
         <Box
           sx={{
