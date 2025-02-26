@@ -24,6 +24,7 @@ export default function Orderbody() {
     fontFamily: '"Bebas Neue", sans-serif',
   };
 
+  const router = useRouter();
   return (
     <>
       <Box
@@ -71,6 +72,9 @@ export default function Orderbody() {
               src="https://maps.google.com/maps?q=Sabirs%2C%20Westgate%2C%20Rotherham%2C%20UK&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
               title="Sabirs, Westgate, Rotherham, UK"
               ariaLabel="Sabirs, Westgate, Rotherham, UK"
+              onClick={() => {
+                router.push("/order-rotherham");
+              }}
             />
             <LocationCard
               address="224-230 London Rd, Highfield, Sheffield S2 4LW, United Kingdom"
@@ -78,6 +82,9 @@ export default function Orderbody() {
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d76125.4595744351!2d-1.4992052!3d53.39836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487983b838a328f5%3A0x6662491a630e161f!2sSabirs%20Grill!5e0!3m2!1sen!2s!4v1740527893868!5m2!1sen!2s"
               title="9G9F+6G Sheffield, United Kingdom"
               ariaLabel="9G9F+6G Sheffield, United Kingdom"
+              onClick={() => {
+                router.push("/order-sheffield");
+              }}
             />
           </Grid>
         </Box>
@@ -92,6 +99,7 @@ interface LocationCardProps {
   src: string;
   title: string;
   ariaLabel: string;
+  onClick: () => void;
 }
 
 function LocationCard({
@@ -100,6 +108,7 @@ function LocationCard({
   src,
   title,
   ariaLabel,
+  onClick,
 }: LocationCardProps) {
   const router = useRouter();
   return (
@@ -146,9 +155,7 @@ function LocationCard({
                 backgroundColor: colors.secondaryYellow,
               },
             }}
-            onClick={() => {
-              router.push("/order-rotherham");
-            }}
+            onClick={onClick}
           >
             Order Now
           </Button>
