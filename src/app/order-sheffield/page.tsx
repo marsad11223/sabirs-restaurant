@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect } from "react";
 import { Box } from "@mui/material";
 import Navbar from "@/_components/Navbar";
@@ -6,15 +7,16 @@ import Footer from "@/_components/Footer";
 
 export default function OrderHuddersfield() {
   useEffect(() => {
-    window.onmessage = (event) => {
+    const handleMessage = (event: MessageEvent) => {
+      // Handle frame height change
       if (event.data.hasOwnProperty("frameHeight")) {
-        const iframe = document.getElementById(
-          "iframe"
-        ) as HTMLIFrameElement | null;
-        if (iframe && event.data.frameHeight > 50) {
+        const iframe = document.getElementById("iframe") as HTMLIFrameElement;
+        if (event.data.frameHeight > 50 && iframe) {
           iframe.style.height = `${event.data.frameHeight}px`;
         }
       }
+
+      // Open modal for WP embedded
       if (event.data.hasOwnProperty("openModal")) {
         const {
           menuItemData,
@@ -23,15 +25,11 @@ export default function OrderHuddersfield() {
           catMenuId,
           openModal,
         } = event.data;
-        const iframeModalContainer = document.getElementById(
-          "iframeModalContainer"
-        ) as HTMLDivElement | null;
         const iframeModal = document.getElementById(
           "iframeModal"
-        ) as HTMLIFrameElement | null;
-
-        if (openModal && iframeModal && iframeModalContainer) {
-          iframeModal.contentWindow?.postMessage(
+        ) as HTMLIFrameElement;
+        if (openModal && iframeModal?.contentWindow) {
+          iframeModal.contentWindow.postMessage(
             {
               selectedDeliveryMethod,
               selectedDateTime,
@@ -41,36 +39,37 @@ export default function OrderHuddersfield() {
             },
             "*"
           );
-          iframeModalContainer.style.display = "block";
-        } else if (iframeModalContainer) {
-          iframeModalContainer.style.display = "none";
+        }
+        if (iframeModal) {
+          iframeModal.style.height = openModal ? "100%" : "0px";
         }
       }
 
+      // Handle modal on add to cart
       if (event.data.hasOwnProperty("addItemToCart")) {
         const { addItemToCart, cartItemNode } = event.data;
-        const iframe = document.getElementById(
-          "iframe"
-        ) as HTMLIFrameElement | null;
-
-        if (addItemToCart && iframe) {
-          iframe.contentWindow?.postMessage(
+        const iframe = document.getElementById("iframe") as HTMLIFrameElement;
+        if (addItemToCart && iframe?.contentWindow) {
+          iframe.contentWindow.postMessage(
             { cartItemNode, addItemToCart: true },
             "*"
           );
         }
-
-        const iframeModalContainer = document.getElementById(
-          "iframeModalContainer"
-        ) as HTMLDivElement | null;
-        if (iframeModalContainer) {
-          iframeModalContainer.style.display = "none";
+        const iframeModal = document.getElementById(
+          "iframeModal"
+        ) as HTMLIFrameElement;
+        if (iframeModal) {
+          iframeModal.style.height = "0px";
         }
       }
     };
 
+    // Add event listener
+    window.addEventListener("message", handleMessage);
+
+    // Cleanup on unmount
     return () => {
-      window.onmessage = null;
+      window.removeEventListener("message", handleMessage);
     };
   }, []);
 
@@ -88,48 +87,32 @@ export default function OrderHuddersfield() {
           m: "0 auto",
         }}
       >
-        <Box
-          sx={{
+        <iframe
+          frameBorder="0"
+          allowFullScreen
+          id="iframeModal"
+          style={{
+            height: "0",
             width: "100%",
-            minHeight: "100vh",
+            position: "fixed",
+            left: 0,
+            top: 0,
+            overflow: "auto",
+            zIndex: 1100,
           }}
-        >
-          <iframe
-            frameBorder="0"
-            id="iframe"
-            style={{
-              height: "100%",
-              width: "100%",
-              zIndex: 1,
-              minHeight: "700px",
-            }}
-            src="https://app.eatpresto.co.uk/location/8979294b-91c7-44c3-8486-ea80625b32f1/shop?embedType=WP"
-          ></iframe>
-        </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
+          src="https://app.eatpresto.co.uk/location/7e08a82f-27df-4bb9-9c96-e811a1726467/itempopupmodal?embedType=WP"
+        ></iframe>
+        <iframe
+          frameBorder="0"
+          id="iframe"
+          style={{
+            height: "100%",
             width: "100%",
-            height: "90%",
-            zIndex: 2,
-            display: "none",
+            minHeight: "700px",
+            position: "relative",
           }}
-          id="iframeModalContainer"
-        >
-          <iframe
-            allowFullScreen
-            id="iframeModal"
-            style={{
-              border: "none",
-              width: "100%",
-              height: "100%",
-            }}
-            src="https://app.eatpresto.co.uk/location/8979294b-91c7-44c3-8486-ea80625b32f1/itempopupmodal?embedType=WP"
-          ></iframe>
-        </Box>
+          src="https://app.eatpresto.co.uk/location/7e08a82f-27df-4bb9-9c96-e811a1726467/shop?embedType=WP&popupBrand=421&popupCategory=8408"
+        ></iframe>
       </Box>
       <Footer />
     </Box>
