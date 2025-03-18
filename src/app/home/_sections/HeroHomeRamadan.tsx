@@ -10,6 +10,7 @@ import svgs from "@/_assets/svgs";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
+import webp from "@/_assets/webp";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -34,7 +35,7 @@ export default function HeroHome() {
   };
 
   return (
-    <Box sx={{ height: "100vh", display: "flex", flexDirection: "column" }}>
+    <Box sx={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       <Box sx={{ flexShrink: 0 }}>
         <Navbar />
       </Box>
@@ -51,16 +52,83 @@ export default function HeroHome() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           padding: {
-            xs: "20px",
-            sm: "20px 30px",
-            md: "20px 80px",
-            lg: "20px 80px",
-            xl: "25px 120px",
+            xs: "50px 30px",
+            sm: "60px 30px",
+            md: "60px 80px",
+            lg: "60px 80px",
+            xl: "60px 120px",
           },
         }}
       >
-        <Box sx={{ maxWidth: "1360px", margin: "auto", width: "100%" }}>
-          {/* <Image /> */}
+        <Box
+          sx={{
+            maxWidth: "1360px",
+            margin: "auto",
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            gap: { xs: "30px", md: "50px" },
+          }}
+        >
+          {/* logo  */}
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: { xs: "140px", sm: "150px", lg: "250", xl: "350px" },
+              margin: "auto",
+            }}
+          >
+            <Image
+              style={{ height: "100%", width: "100%", objectFit: "contain" }}
+              src={svgs.LogoRed}
+              alt="logo red"
+            />
+          </Box>
+          {/* main image ramadan mubrik */}
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: {
+                xs: "300px",
+                sm: "600px",
+                md: "900px",
+                lg: "1000px",
+                xl: "1200px",
+              },
+              margin: "auto",
+            }}
+          >
+            <Image
+              style={{ height: "100%", width: "100%", objectFit: "contain" }}
+              src={webp.Ramzan}
+              alt="ramzan image"
+            />
+          </Box>
+          {/* textual content */}
+          <Box sx={{ textAlign: "center", margin: "auto" }}>
+            <Typography
+              sx={{
+                color: "#333333",
+                fontWeight: "900",
+                fontSize: {
+                  xs: "36px",
+                  sm: "45px",
+                  md: "55px",
+                  lg: "80px",
+                },
+              }}
+            >
+              Book Your Table Now
+            </Typography>
+            <Typography
+              sx={{
+                color: "#333333",
+                fontSize: fonts.headingTertiary,
+              }}
+            >
+              Call or Text: 0774 3007 329
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </Box>
