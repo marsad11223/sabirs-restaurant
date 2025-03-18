@@ -36,6 +36,9 @@ import Burger_2 from "./Burger_2.jpg";
 import Burger_3 from "./Burger_3.jpg";
 import Burger_4 from "./Burger_4.jpg";
 
+// ramadan special
+import Ramzan from "./ramzan.png";
+
 const webp = {
   // slider begain
   ChickenBruger,
@@ -74,6 +77,8 @@ const webp = {
   Pizza6,
   Pizza7,
   Pizza8,
+
+  Ramzan,
 };
 
 export default webp;

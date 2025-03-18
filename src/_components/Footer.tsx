@@ -319,7 +319,7 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
           <span>© {2025} All Rights Reserved</span>
           <span
             style={{
-              fontFamily: '"Poppins", sans-serif', // Clean modern font
+              fontFamily: '"Poppins", sans-serif',
               fontWeight: 500,
               marginLeft: "8px",
               transition: "color 0.3s ease-in-out",

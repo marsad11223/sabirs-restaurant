@@ -1,4 +1,5 @@
 import Logo from "./logo.svg";
+import LogoRed from "./logoRed.svg";
 import Hamburger from "./hamburger.svg";
 import HamburgerWhite from "./hamburgerWhite.svg";
 import Search from "./search.svg";
@@ -17,6 +18,7 @@ import LocationYellowIcon from "./locationYellowIcon.svg";
 
 const svgs = {
   Logo,
+  LogoRed,
   Hamburger,
   HamburgerWhite,
   Search,
