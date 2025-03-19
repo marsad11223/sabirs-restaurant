@@ -87,14 +87,15 @@ export default function HeroHome() {
           {/* main image ramadan mubrik */}
           <Box
             sx={{
-              width: "100%",
+              width: { xs: "100%", xl: "52vw" },
               maxWidth: {
                 xs: "300px",
                 sm: "600px",
-                md: "900px",
-                lg: "1000px",
+                md: "800px",
+                lg: "900px",
                 xl: "1200px",
               },
+
               margin: "auto",
             }}
           >
@@ -110,12 +111,7 @@ export default function HeroHome() {
               sx={{
                 color: "#333333",
                 fontWeight: "900",
-                fontSize: {
-                  xs: "36px",
-                  sm: "45px",
-                  md: "55px",
-                  lg: "80px",
-                },
+                fontSize: fonts.headingSecondary,
               }}
             >
               Book Your Table Now
@@ -123,7 +119,7 @@ export default function HeroHome() {
             <Typography
               sx={{
                 color: "#333333",
-                fontSize: fonts.headingTertiary,
+                fontSize: fonts.primaryTypography,
               }}
             >
               Call or Text: 0774 3007 329
