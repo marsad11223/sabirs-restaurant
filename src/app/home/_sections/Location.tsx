@@ -27,7 +27,7 @@ export default function Location() {
           md: "80px 40px",
           lg: "130px 80px",
         },
-        backgroundImage: "url(bgLocation.png)",
+        backgroundImage: "url(bgLocation.webp)",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",

@@ -9,35 +9,35 @@ import SignatureBurger1 from "./signatureBurger1.webp";
 import SignatureBurger2 from "./signatureBurger2.webp";
 import SignatureBurger3 from "./signatureBurger3.webp";
 import SignatureBurger4 from "./signatureBurger4.webp";
-import HeroBurger from "./heroBurger.png";
+import HeroBurger from "./heroBurger.webp";
 
 import Flavour from "./flavour.webp";
-import InteriorSabirs from "./interiorSabirs.jpeg";
-import Restaurant from "./restaurant.jpg";
+import InteriorSabirs from "./interiorSabirs.webp";
+import Restaurant from "./restaurant.webp";
 
 import ChikenBurgerFries from "./chikenBurgerFries.webp";
 import DesiFood from "./desiFood.webp";
 import SmashBurgerFries from "./smashBurgerFries.webp";
 
-import HomeHero from "./HomeHero.png";
-import AboutUsBanner from "./aboutusBanner.jpg";
+import HomeHero from "./HomeHero.webp";
+import AboutUsBanner from "./aboutusBanner.webp";
 // pizza images
-import Pizza1 from "./pizza_1.jpg";
-import Pizza2 from "./pizza_2.jpg";
-import Pizza3 from "./pizza_3.jpg";
-import Pizza4 from "./pizza_4.png";
-import Pizza5 from "./pizza_5.jpg";
-import Pizza6 from "./pizza_6.jpg";
-import Pizza7 from "./pizza_7.jpg";
-import Pizza8 from "./pizza_8.jpg";
+import Pizza1 from "./pizza_1.webp";
+import Pizza2 from "./pizza_2.webp";
+import Pizza3 from "./pizza_3.webp";
+import Pizza4 from "./pizza_4.webp";
+import Pizza5 from "./pizza_5.webp";
+import Pizza6 from "./pizza_6.webp";
+import Pizza7 from "./pizza_7.webp";
+import Pizza8 from "./pizza_8.webp";
 // burger images
-import Burger_1 from "./Burger_1.jpg";
-import Burger_2 from "./Burger_2.jpg";
-import Burger_3 from "./Burger_3.jpg";
-import Burger_4 from "./Burger_4.jpg";
+import Burger_1 from "./Burger_1.webp";
+import Burger_2 from "./Burger_2.webp";
+import Burger_3 from "./Burger_3.webp";
+import Burger_4 from "./Burger_4.webp";
 
 // ramadan special
-import Ramzan from "./ramzan.png";
+import Ramzan from "./ramzan.webp";
 
 const webp = {
   // slider begain

@@ -44,7 +44,7 @@ export default function NextMeal() {
     <Box
       sx={{
         backgroundColor: colors.primaryRed,
-        backgroundImage: "url(bgNextMeal.png)",
+        backgroundImage: "url(bgNextMeal.webp)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "repeat",
