@@ -8,11 +8,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 interface HeroProps {
-  headingText: string; // Define the prop for heading text
+  headingText: string;
+  displayImage?: boolean;
 }
 
-export default function Hero({ headingText }: HeroProps) {
-  // Animation
+export default function Hero({ headingText, displayImage = true }: HeroProps) {
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
     AOS.refresh();
@@ -46,7 +46,7 @@ export default function Hero({ headingText }: HeroProps) {
           container
         >
           {/* heading  */}
-          <Grid sx={{}} item xs={12} md={6}>
+          <Grid sx={{ width: "100%" }} item xs={12} md={displayImage ? 6 : 12}>
             <Typography
               data-aos="zoom-out"
               data-aos-duration="1000"
@@ -60,7 +60,12 @@ export default function Hero({ headingText }: HeroProps) {
             </Typography>
           </Grid>
           {/* image */}
-          <Grid item xs={12} md={6}>
+          <Grid
+            sx={{ display: displayImage ? "block" : "none" }}
+            item
+            xs={12}
+            md={6}
+          >
             <Box
               sx={{
                 maxWidth: { xs: "350px", sm: "500px", lg: "560px" },

@@ -101,7 +101,7 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
                 }}
               >
                 <Image
-                  onClick={() => router.push("home")}
+                  onClick={() => router.push("/home")}
                   style={{
                     height: "100%",
                     width: "100%",
@@ -139,33 +139,39 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
                 >
                   <Typography
                     sx={{ ...textStyles }}
-                    onClick={() => router.push("home")}
+                    onClick={() => router.push("/home")}
                   >
                     Home
                   </Typography>
                   <Typography
-                    onClick={() => router.push("about-us")}
+                    onClick={() => router.push("/about-us")}
                     sx={{ ...textStyles }}
                   >
                     About Us
                   </Typography>
                   <Typography
                     sx={{ ...textStyles }}
-                    onClick={() => router.push("our-food")}
+                    onClick={() => router.push("/our-food")}
                   >
                     Our Food
                   </Typography>
                   <Typography
                     sx={{ ...textStyles }}
-                    onClick={() => router.push("order")}
+                    onClick={() => router.push("/order")}
                   >
                     Order
                   </Typography>
                   <Typography
-                    onClick={() => router.push("contact-us")}
+                    onClick={() => router.push("/contact-us")}
                     sx={{ ...textStyles }}
                   >
                     Contact
+                  </Typography>
+                  <Typography
+                    onClick={() => router.push("./privacy-policy")}
+                    sx={{ ...textStyles }}
+                  >
+                    Privacy Policy
                   </Typography>
                 </Box>
               </Box>
@@ -302,7 +308,7 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
           sx={{
             color: colors.smokeGray,
             fontSize: fonts.tertiaryTypography,
-            fontFamily: '"Roboto", sans-serif', // More modern alternative
+            fontFamily: '"Roboto", sans-serif',
             letterSpacing: "0.5px",
             display: "flex",
             alignItems: "center",
