@@ -11,9 +11,9 @@ import { colors, fonts } from "@/app/utils/themes";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [open, setOpen] = useState(false); // Dropdown state
+  const [open, setOpen] = useState(false);
   const router = useRouter();
-  const pathname = usePathname(); // Get the current route path
+  const pathname = usePathname();
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
