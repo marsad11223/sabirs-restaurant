@@ -2,6 +2,7 @@
 import { Box, Typography } from "@mui/material";
 import { fonts, colors } from "@/app/utils/themes";
 import NextMeal from "../_components/NextMeal";
+import SabirInSheffield from "../_sections/SabirInSheffield";
 import Button from "@/_components/Button";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -90,6 +91,8 @@ export default function SmashBurger() {
           </Box>
         </Box>
       </Box>
+      {/* call this new component there */}
+      <SabirInSheffield />
     </Box>
   );
 }
