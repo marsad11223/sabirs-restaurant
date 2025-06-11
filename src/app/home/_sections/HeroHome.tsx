@@ -103,7 +103,7 @@ export default function HeroHome() {
             </Typography>
           </Box>
 
-          {/* Countdown Timer */}
+          {/* Countdown the Timer */}
           <Box
             display="flex"
             alignItems="center"
