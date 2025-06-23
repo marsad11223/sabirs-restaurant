@@ -32,7 +32,7 @@ export default function NextMeal() {
     nextArrow: <CustomRightArrow />,
     prevArrow: <CustomLeftArrow />,
   };
-
+  2;
   const headingStyles = {
     fontSize: fonts.headingSecondary,
     lineHeight: fonts.headingSecondary,
@@ -125,17 +125,22 @@ export default function NextMeal() {
             }}
           >
             <Slider {...settings}>
-              <NextMealSlider image={webp.Pizza1} title="Meat Feast Pizza" />
+              {/* <NextMealSlider image={webp.Pizza1} title="Meat Feast Pizza" />
               <NextMealSlider
                 image={webp.Pizza2}
                 title="Sabirs Asian Special Pizza"
-              />
-              <NextMealSlider image={webp.Pizza3} title="Vegetarian Pizza" />
+              /> */}
+              {/* <NextMealSlider image={webp.Pizza3} title="Vegetarian Pizza" />
               <NextMealSlider image={webp.Pizza4} title="Meat Lovers Pizza" />
               <NextMealSlider image={webp.Pizza5} title="Chicken Tikka Pizza" />
               <NextMealSlider image={webp.Pizza6} title="Pepperoni Pizza" />
               <NextMealSlider image={webp.Pizza7} title="12inch Garlic Bread" />
-              <NextMealSlider image={webp.Pizza8} title="Cheese Pizza" />
+              <NextMealSlider image={webp.Pizza8} title="Cheese Pizza" /> */}
+              <NextMealSlider
+                image={webp.Pizza9}
+                title="Sabirs has arrived in Sheffield"
+              />
+              <NextMealSlider image={webp.Pizza10} title="Sabir’s Steak" />
             </Slider>
           </Box>
           <Box

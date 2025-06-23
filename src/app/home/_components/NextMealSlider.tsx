@@ -8,7 +8,7 @@ export default function NextMealSlider({
   title,
 }: {
   image: StaticImageData;
-  title: string;
+  title?: string;
 }) {
   return (
     <Box
@@ -34,14 +34,16 @@ export default function NextMealSlider({
           alt="CarouselChickenBurger"
         />
       </Box>
-      <Typography
-        sx={{
-          fontSize: fonts.tertiaryTypography,
-          color: colors.primaryRed,
-        }}
-      >
-        {title}
-      </Typography>
+      {title && (
+        <Typography
+          sx={{
+            fontSize: fonts.tertiaryTypography,
+            color: colors.primaryRed,
+          }}
+        >
+          {title}
+        </Typography>
+      )}
     </Box>
   );
 }

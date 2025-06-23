@@ -30,6 +30,8 @@ import Pizza5 from "./pizza_5.webp";
 import Pizza6 from "./pizza_6.webp";
 import Pizza7 from "./pizza_7.webp";
 import Pizza8 from "./pizza_8.webp";
+import Pizza9 from "./pizza_9.jpg";
+import Pizza10 from "./pizza_10.jpg";
 // burger images
 import Burger_1 from "./Burger_1.webp";
 import Burger_2 from "./Burger_2.webp";
@@ -77,6 +79,8 @@ const webp = {
   Pizza6,
   Pizza7,
   Pizza8,
+  Pizza9,
+  Pizza10,
 
   Ramzan,
 };
