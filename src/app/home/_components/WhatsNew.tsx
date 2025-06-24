@@ -15,7 +15,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import webp from "@/_assets/webp";
 
-export default function NextMeal() {
+export default function WhatsNew() {
   const router = useRouter();
   // Animation
   useEffect(() => {
@@ -54,7 +54,7 @@ export default function NextMeal() {
           lg: "100px 150px 100px 100px",
           xl: "100px 150px",
         },
-        borderRadius: { xs: "0", sm: "0 0 40px 40px", md: "0 0 80px 80px" },
+        borderRadius: { xs: "0", sm: "40px 40px 0 0", md: "80px 80px 0 0" },
         display: "flex",
         justifyContent: "center",
       }}
@@ -76,10 +76,10 @@ export default function NextMeal() {
           sx={{ maxWidth: "500px" }}
         >
           <Typography sx={{ ...headingStyles, color: colors.secondaryYellow }}>
-            Are you in the mood for
+            What’s New
           </Typography>
           <Typography sx={{ ...headingStyles, color: colors.White }}>
-            Pizza?
+            about Sabir’s?
           </Typography>
           <Typography
             sx={{
@@ -89,23 +89,11 @@ export default function NextMeal() {
               marginTop: { xs: "10px", xl: "24px" },
             }}
           >
-            We've got meaty pizzas, veggie pizzas, the classics, and our very
-            own Sabir's special!
+            Sabir’s has launched a convenient direct delivery service, making it
+            easier than ever to enjoy your favorite meals at home. Their new
+            branch on London Road, Sheffield is now open, bringing their
+            signature flavors to even more customers.
           </Typography>
-          <Box sx={{ marginTop: { xs: "20px", xl: "40px" } }}>
-            <Button
-              styles={{
-                "&:hover": {
-                  backgroundColor: colors.secondaryYellow,
-                },
-              }}
-              onClick={() => {
-                router.push("/order");
-              }}
-            >
-              I Want Pizza
-            </Button>
-          </Box>
         </Box>
         {/* Slider with cards */}
         <Box
@@ -125,22 +113,22 @@ export default function NextMeal() {
             }}
           >
             <Slider {...settings}>
-              <NextMealSlider image={webp.Pizza1} title="Meat Feast Pizza" />
+              {/* <NextMealSlider image={webp.Pizza1} title="Meat Feast Pizza" />
               <NextMealSlider
                 image={webp.Pizza2}
                 title="Sabirs Asian Special Pizza"
-              />
-              <NextMealSlider image={webp.Pizza3} title="Vegetarian Pizza" />
+              /> */}
+              {/* <NextMealSlider image={webp.Pizza3} title="Vegetarian Pizza" />
               <NextMealSlider image={webp.Pizza4} title="Meat Lovers Pizza" />
               <NextMealSlider image={webp.Pizza5} title="Chicken Tikka Pizza" />
               <NextMealSlider image={webp.Pizza6} title="Pepperoni Pizza" />
               <NextMealSlider image={webp.Pizza7} title="12inch Garlic Bread" />
-              <NextMealSlider image={webp.Pizza8} title="Cheese Pizza" />
-              {/* <NextMealSlider
+              <NextMealSlider image={webp.Pizza8} title="Cheese Pizza" /> */}
+              <NextMealSlider
                 image={webp.Pizza9}
                 title="Sabirs has arrived in Sheffield"
               />
-              <NextMealSlider image={webp.Pizza10} title="Sabir’s Steak" /> */}
+              <NextMealSlider image={webp.Pizza10} title="Sabir’s Steak" />
             </Slider>
           </Box>
           <Box

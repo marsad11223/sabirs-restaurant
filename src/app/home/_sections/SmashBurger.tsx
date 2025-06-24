@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/navigation";
+import WhatsNew from "../_components/WhatsNew";
 export default function SmashBurger() {
   const router = useRouter();
   // Animation
@@ -35,6 +36,7 @@ export default function SmashBurger() {
       }}
     >
       <NextMeal />
+
       <Box
         sx={{
           minHeight: "100vh",
@@ -90,6 +92,7 @@ export default function SmashBurger() {
           </Box>
         </Box>
       </Box>
+      <WhatsNew />
     </Box>
   );
 }
