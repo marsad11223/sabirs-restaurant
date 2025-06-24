@@ -124,11 +124,11 @@ export default function WhatsNew() {
               <NextMealSlider image={webp.Pizza6} title="Pepperoni Pizza" />
               <NextMealSlider image={webp.Pizza7} title="12inch Garlic Bread" />
               <NextMealSlider image={webp.Pizza8} title="Cheese Pizza" /> */}
+              <NextMealSlider image={webp.Pizza10} title="Sabir’s Steak" />{" "}
               <NextMealSlider
                 image={webp.Pizza9}
                 title="Sabirs has arrived in Sheffield"
               />
-              <NextMealSlider image={webp.Pizza10} title="Sabir’s Steak" />
             </Slider>
           </Box>
           <Box
