@@ -126,7 +126,7 @@ export default function WhatsNew() {
               <NextMealSlider image={webp.Pizza8} title="Cheese Pizza" /> */}
               <NextMealSlider image={webp.Pizza10} title="Sabir’s Steak" />{" "}
               <NextMealSlider
-                image={webp.Pizza9}
+                image={webp.Pizza11}
                 title="Sabirs has arrived in Sheffield"
               />
             </Slider>
