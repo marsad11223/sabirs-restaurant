@@ -11,51 +11,51 @@ import { useRouter } from "next/navigation";
 
 interface FoodCardProps {
   title: string;
-  image: StaticImageData;
+  image: string | StaticImageData;
 }
 
 const foodItems: FoodCardProps[] = [
   {
     title: "Wrap",
-    image: webp.Wrap,
+    image: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360829/sabir%27s/slider/wrap_rjpggv.webp`,
   },
 
   {
     title: "French fries",
-    image: webp.FrenchFries,
+    image: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360824/sabir%27s/slider/frenchFries_fxfjym.webp`,
   },
   {
     title: "smash Burger",
-    image: webp.SmashBurger,
+    image: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360827/sabir%27s/slider/smashBurger_bvp1ld.webp`,
   },
   {
     title: "chicken burger",
-    image: webp.ChickenBruger,
+    image: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360829/sabir%27s/slider/chickenBruger_txjhue.webp`,
   },
   {
     title: "Shake",
-    image: webp.Shake,
+    image: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360825/sabir%27s/slider/shake_uamnpl.webp`,
   },
   {
     title: "Wrap",
-    image: webp.Wrap,
+    image: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360829/sabir%27s/slider/wrap_rjpggv.webp`,
   },
 
   {
     title: "French fries",
-    image: webp.FrenchFries,
+    image: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360824/sabir%27s/slider/frenchFries_fxfjym.webp`,
   },
   {
     title: "smash Burger",
-    image: webp.SmashBurger,
+    image: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360827/sabir%27s/slider/smashBurger_bvp1ld.webp`,
   },
   {
     title: "chicken burger",
-    image: webp.ChickenBruger,
+    image: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360829/sabir%27s/slider/chickenBruger_txjhue.webp`,
   },
   {
     title: "Shake",
-    image: webp.Shake,
+    image: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360825/sabir%27s/slider/shake_uamnpl.webp`,
   },
 ];
 
@@ -203,6 +203,8 @@ export const FoodCard = ({ title, image }: FoodCardProps) => {
           }}
         >
           <Image
+            width={200}
+            height={180}
             style={{
               width: "100%",
               height: "100%",

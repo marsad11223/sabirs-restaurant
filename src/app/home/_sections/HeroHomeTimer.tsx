@@ -73,7 +73,8 @@ export default function HeroHome() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundImage: "url(./bgHeroHome.webp)",
+          backgroundImage:
+            "url(https://res.cloudinary.com/ddixiuh7h/image/upload/v1751361353/sabir%27s/backgroundImages/bgHeroHome_mgkpbf.webp)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           padding: {

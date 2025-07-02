@@ -11,20 +11,20 @@ import "aos/dist/aos.css";
 export default function OurBio() {
   const bioSections = [
     {
-      imageSrc: webp.DesiFood,
+      imageSrc: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360506/sabir%27s/desiFood_jgjh8o.webp`,
       heading1: "Fresh Ingredients",
       heading2: "Rich Flavors",
       text: "Every dish is made with high-quality, fresh ingredients that bring out the best in every bite. Our chefs handcraft each recipe to create flavors that stand out and keep you coming back for more. From signature sauces to perfectly seasoned toppings, your taste buds are in for a treat!",
     },
     {
-      imageSrc: webp.ChikenBurgerFries,
+      imageSrc: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360504/sabir%27s/chikenBurgerFries_tftr8q.webp`,
       heading1: "Crafted with Care",
       heading2: "Served with Passion",
       text: "Our food isn’t just made - it’s crafted to perfection. Each ingredient is carefully selected to deliver exceptional flavor and texture. With every dish, we strive to make your meal not only tasty but a memorable experience you’ll savour.",
       reverseOrder: true,
     },
     {
-      imageSrc: webp.SmashBurgerFries,
+      imageSrc: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360557/sabir%27s/smashBurgerFries_lfp8i4.webp`,
       heading1: "Quality You Can Taste",
       heading2: "in Every Bite",
       text: "Our food isn’t just prepared - it’s expertly crafted. Every ingredient is handpicked for its exceptional quality, ensuring outstanding flavour and texture. With every dish, we aim to make your meal not only delicious but an unforgettable experience to cherish.",
@@ -48,7 +48,7 @@ export default function OurBio() {
 }
 
 interface OurBioSectionProps {
-  imageSrc: StaticImageData;
+  imageSrc: string | StaticImageData;
   heading1: string;
   heading2: string;
   text: string;
@@ -138,6 +138,8 @@ export function OurBioSection({
       <Grid data-aos="fade-right" data-aos-duration="1000" item xs={12} md={6}>
         <Box sx={{ height: "100%", width: "100%" }}>
           <Image
+            width={720}
+            height={475}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
             src={imageSrc}
             alt={heading1}

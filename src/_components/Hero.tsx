@@ -67,10 +67,12 @@ export default function Hero({ headingText }: HeroProps) {
               }}
             >
               <Image
+                width={560}
+                height={560}
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 style={{ height: "100%", width: "100%", objectFit: "contain" }}
-                src={webp.HeroBurger}
+                src={`https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360511/sabir%27s/heroBurger_nrf1jj.webp`}
                 alt="HeroBurger"
               />
             </Box>

@@ -48,7 +48,8 @@ export default function HeroHome() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundImage: "url(./bgHeroHomeRamadan.webp)",
+          backgroundImage:
+            "url(https://res.cloudinary.com/ddixiuh7h/image/upload/v1751361356/sabir%27s/backgroundImages/bgHeroHomeRamadan_mvnqqo.webp)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           padding: {
@@ -101,7 +102,7 @@ export default function HeroHome() {
           >
             <Image
               style={{ height: "100%", width: "100%", objectFit: "contain" }}
-              src={webp.Ramzan}
+              src={`https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360542/sabir%27s/ramzan_b8hxz2.webp`}
               alt="ramzan image"
             />
           </Box>

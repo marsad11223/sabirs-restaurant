@@ -84,7 +84,8 @@ export default function SectionContactUs() {
       <Box
         sx={{
           padding: { xs: "40px 20px", sm: "50px 80px", md: "100px 80px" },
-          backgroundImage: "url(worldMap.webp)",
+          backgroundImage:
+            "url(https://res.cloudinary.com/ddixiuh7h/image/upload/v1751361377/sabir%27s/backgroundImages/worldMap_tjk8ek.png)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "repeat",

@@ -39,14 +39,14 @@ export default function OurBio() {
       title2: "journey",
       description:
         "What started as a small dream turned into a vibrant dining experience, where each dish tells a story. With recipes inspired by global tastes and local traditions, we bring you flavors worth savoring. Thank you for being part of our journey!",
-      imageSrc: webp.Flavour,
+      imageSrc: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360507/sabir%27s/flavour_nwa84h.webp`,
     },
     {
       title1: "A Taste of",
       title2: "Our Heritage",
       description:
         " Our restaurant is built on family recipes, love for the kitchen, and a passion for bold flavors. Every meal is made with care and a commitment to authenticity. Discover the food and story that make us who we are!",
-      imageSrc: webp.InteriorSabirs,
+      imageSrc: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360518/sabir%27s/interiorSabirs_voo5pa.webp`,
       rowReverse: setrowReverse,
     },
     {
@@ -54,7 +54,7 @@ export default function OurBio() {
       title2: "every bite",
       description:
         "We’re more than just a restaurant—we’re a team of food lovers committed to quality and creativity. Our kitchen celebrates fresh ingredients, big flavors, and a dining experience that brings people together.",
-      imageSrc: webp.Restaurant,
+      imageSrc: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360545/sabir%27s/restaurant_qvxupd.webp`,
     },
   ];
 
@@ -76,7 +76,8 @@ export default function OurBio() {
         },
         display: "flex",
         justifyContent: "center",
-        backgroundImage: "url(bgAboutUs.webp)",
+        backgroundImage:
+          "url(https://res.cloudinary.com/ddixiuh7h/image/upload/v1751361351/sabir%27s/backgroundImages/bgAboutUs_mwidqi.png)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "repeat",
@@ -183,6 +184,8 @@ export function OurBioSection({
           }}
         >
           <Image
+            width={466}
+            height={261}
             style={{ height: "100%", width: "100%", objectFit: "cover" }}
             src={imageSrc}
             alt="Flavour"

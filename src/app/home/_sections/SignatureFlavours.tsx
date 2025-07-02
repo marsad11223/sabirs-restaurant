@@ -16,10 +16,22 @@ export default function SignatureFlavours() {
   }, []);
 
   const items = [
-    { image: webp.Burger_1, text: "Chicken Deluxe" },
-    { image: webp.Burger_2, text: "Chicken Fillet Burger" },
-    { image: webp.Burger_3, text: "Cheese Burger" },
-    { image: webp.Burger_4, text: "Flamin Fusion Burger" },
+    {
+      image: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360494/sabir%27s/Burger_1_upepqx.webp`,
+      text: "Chicken Deluxe",
+    },
+    {
+      image: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360496/sabir%27s/Burger_2_lqvuyl.webp`,
+      text: "Chicken Fillet Burger",
+    },
+    {
+      image: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360498/sabir%27s/Burger_3_snqnra.webp`,
+      text: "Cheese Burger",
+    },
+    {
+      image: `https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360499/sabir%27s/Burger_4_vnztqx.webp`,
+      text: "Flamin Fusion Burger",
+    },
   ];
 
   const headingStyles = {
@@ -95,6 +107,8 @@ export default function SignatureFlavours() {
                     }}
                   >
                     <Image
+                      width={250}
+                      height={250}
                       style={{
                         height: "100%",
                         width: "100%",

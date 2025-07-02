@@ -44,7 +44,8 @@ export default function WhatsNew() {
     <Box
       sx={{
         backgroundColor: colors.primaryRed,
-        backgroundImage: "url(bgNextMeal.webp)",
+        backgroundImage:
+          "url(https://res.cloudinary.com/ddixiuh7h/image/upload/v1751361364/sabir%27s/backgroundImages/bgNextMeal_lu5eec.webp)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "repeat",
@@ -124,9 +125,12 @@ export default function WhatsNew() {
               <NextMealSlider image={webp.Pizza6} title="Pepperoni Pizza" />
               <NextMealSlider image={webp.Pizza7} title="12inch Garlic Bread" />
               <NextMealSlider image={webp.Pizza8} title="Cheese Pizza" /> */}
-              <NextMealSlider image={webp.Pizza10} title="Sabir’s Steak" />{" "}
               <NextMealSlider
-                image={webp.Pizza11}
+                image={`https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360538/sabir%27s/pizza_10_yqb2yr.jpg`}
+                title="Sabir’s Steak"
+              />{" "}
+              <NextMealSlider
+                image={`https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360541/sabir%27s/pizza_11_basp2m.webp`}
                 title="Sabirs has arrived in Sheffield"
               />
             </Slider>

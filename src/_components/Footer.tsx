@@ -61,7 +61,8 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
         >
           <Box
             sx={{
-              backgroundImage: "url(footerLogo.webp)",
+              backgroundImage:
+                "url(https://res.cloudinary.com/ddixiuh7h/image/upload/v1751361372/sabir%27s/backgroundImages/footerLogo_xkkrwx.webp)",
               backgroundPosition: "center center",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",

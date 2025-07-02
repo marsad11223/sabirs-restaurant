@@ -83,6 +83,8 @@ export default function HeroHome() {
               <Image
                 data-aos="zoom-out"
                 data-aos-duration="1000"
+                width={750}
+                height={750}
                 style={{
                   height: "100%",
                   width: "100%",
@@ -90,7 +92,7 @@ export default function HeroHome() {
                   filter: `drop-shadow(2px 4px 8px ${colors.darkGrey})`,
                   opacity: "100",
                 }}
-                src={webp.HomeHero}
+                src={`https://res.cloudinary.com/ddixiuh7h/image/upload/v1751360514/sabir%27s/HomeHero_yp9yq7.webp`}
                 alt="SmashBurger"
               />
             </Box>

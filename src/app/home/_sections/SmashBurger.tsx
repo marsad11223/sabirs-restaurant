@@ -25,7 +25,8 @@ export default function SmashBurger() {
   return (
     <Box
       sx={{
-        backgroundImage: "url(bgSmashBurgers.webp)",
+        backgroundImage:
+          "url(https://res.cloudinary.com/ddixiuh7h/image/upload/v1751361369/sabir%27s/backgroundImages/bgSmashBurgers_xct528.webp)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

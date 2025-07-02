@@ -44,7 +44,8 @@ export default function NextMeal() {
     <Box
       sx={{
         backgroundColor: colors.primaryRed,
-        backgroundImage: "url(bgNextMeal.webp)",
+        backgroundImage:
+          "url(https://res.cloudinary.com/ddixiuh7h/image/upload/v1751361364/sabir%27s/backgroundImages/bgNextMeal_lu5eec.webp)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "repeat",
@@ -125,17 +126,38 @@ export default function NextMeal() {
             }}
           >
             <Slider {...settings}>
-              <NextMealSlider image={webp.Pizza1} title="Meat Feast Pizza" />
               <NextMealSlider
-                image={webp.Pizza2}
+                image={`https://res.cloudinary.com/ddixiuh7h/image/upload/v1751362132/sabir%27s/nextMeal_slider/pizza_1_alfgns.webp`}
+                title="Meat Feast Pizza"
+              />
+              <NextMealSlider
+                image={`https://res.cloudinary.com/ddixiuh7h/image/upload/v1751362135/sabir%27s/nextMeal_slider/pizza_2_dubil2.webp`}
                 title="Sabirs Asian Special Pizza"
               />
-              <NextMealSlider image={webp.Pizza3} title="Vegetarian Pizza" />
-              <NextMealSlider image={webp.Pizza4} title="Meat Lovers Pizza" />
-              <NextMealSlider image={webp.Pizza5} title="Chicken Tikka Pizza" />
-              <NextMealSlider image={webp.Pizza6} title="Pepperoni Pizza" />
-              <NextMealSlider image={webp.Pizza7} title="12inch Garlic Bread" />
-              <NextMealSlider image={webp.Pizza8} title="Cheese Pizza" />
+              <NextMealSlider
+                image={`https://res.cloudinary.com/ddixiuh7h/image/upload/v1751362173/sabir%27s/nextMeal_slider/pizza_3_tkmvno.webp`}
+                title="Vegetarian Pizza"
+              />
+              <NextMealSlider
+                image={`https://res.cloudinary.com/ddixiuh7h/image/upload/v1751362181/sabir%27s/nextMeal_slider/pizza_4_bly7oy.webp`}
+                title="Meat Lovers Pizza"
+              />
+              <NextMealSlider
+                image={`https://res.cloudinary.com/ddixiuh7h/image/upload/v1751362190/sabir%27s/nextMeal_slider/pizza_5_qug6mo.webp`}
+                title="Chicken Tikka Pizza"
+              />
+              <NextMealSlider
+                image={`https://res.cloudinary.com/ddixiuh7h/image/upload/v1751362190/sabir%27s/nextMeal_slider/pizza_6_hplt4j.webp`}
+                title="Pepperoni Pizza"
+              />
+              <NextMealSlider
+                image={`https://res.cloudinary.com/ddixiuh7h/image/upload/v1751362195/sabir%27s/nextMeal_slider/pizza_7_zk4aaj.webp`}
+                title="12inch Garlic Bread"
+              />
+              <NextMealSlider
+                image={`https://res.cloudinary.com/ddixiuh7h/image/upload/v1751362200/sabir%27s/nextMeal_slider/pizza_8_x3lhjc.webp`}
+                title="Cheese Pizza"
+              />
               {/* <NextMealSlider
                 image={webp.Pizza9}
                 title="Sabirs has arrived in Sheffield"

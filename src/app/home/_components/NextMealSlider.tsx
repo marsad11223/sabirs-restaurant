@@ -7,12 +7,13 @@ export default function NextMealSlider({
   image,
   title,
 }: {
-  image: StaticImageData;
+  image: string | StaticImageData;
   title?: string;
 }) {
   return (
     <Box
       sx={{
+        // bgcolor: "green",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -29,6 +30,8 @@ export default function NextMealSlider({
         }}
       >
         <Image
+          width={380}
+          height={380}
           style={{ height: "100%", width: "100%", objectFit: "cover" }}
           src={image}
           alt="CarouselChickenBurger"

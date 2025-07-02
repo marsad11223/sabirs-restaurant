@@ -27,7 +27,8 @@ export default function Location() {
           md: "80px 40px",
           lg: "130px 80px",
         },
-        backgroundImage: "url(bgLocation.webp)",
+        backgroundImage:
+          "url(https://res.cloudinary.com/ddixiuh7h/image/upload/v1751361360/sabir%27s/backgroundImages/bgLocation_yb5hes.webp)",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
