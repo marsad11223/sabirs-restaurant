@@ -14,15 +14,25 @@ import RightAero from "./right-aero.svg";
 import Arrow from "./arrow.svg";
 import Email from "./email.svg";
 import Location from "./location.svg";
+import User from "./User.svg";
+import emailfeed from "./emailfeed.svg";
+import mobfeed from "./mobfeed.svg";
+import ratingGrayStars from "./ratingGrayStars.svg";
+import ratingStars from "./ratingStars.svg";
 import LocationYellowIcon from "./locationYellowIcon.svg";
 
 const svgs = {
   Logo,
   LogoRed,
+  User,
   Hamburger,
+  emailfeed,
   HamburgerWhite,
+  mobfeed,
   Search,
+  ratingGrayStars,
   Facebook,
+  ratingStars,
   FacebookWhite,
   Instagram,
   InstagramWhite,
