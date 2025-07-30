@@ -218,6 +218,13 @@ const Navbar = () => {
                 </Typography> */}
               </Box>
             </Box>
+
+            <Typography
+              onClick={() => router.push("feedback")}
+              sx={isActiveRoute("/feedback") ? activeTextStyle : textStyle}
+            >
+              feedback
+            </Typography>
           </Box>
 
           {/* Social Media Icons and Search */}
@@ -465,6 +472,20 @@ const Navbar = () => {
               backgroundColor: colors.White,
             }}
           />
+
+          <Typography
+            onClick={() =>
+              isActiveRoute("/feedback")
+                ? setSidebarOpen(false)
+                : router.push("feedback")
+            }
+            sx={{
+              ...textStyle,
+              color: colors.White,
+            }}
+          >
+            feedback
+          </Typography>
 
           <Box
             sx={{
