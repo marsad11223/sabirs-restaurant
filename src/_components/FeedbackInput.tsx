@@ -39,7 +39,7 @@ const InputFeedback: React.FC<StandardInputProps> = ({
 }) => {
   return (
     <>
-      <Box>
+      <Box sx={{ width: "100%" }}>
         <InputLabel
           sx={{
             width: "100%",
@@ -55,7 +55,7 @@ const InputFeedback: React.FC<StandardInputProps> = ({
           // rows={10}
           placeholder={placeholder}
           fullWidth
-          multiline={inputType === "message"} // 👈 Enable multiline for message
+          multiline={inputType === "message"}
           rows={inputType === "message" ? 4 : undefined}
           type={inputType}
           value={value}

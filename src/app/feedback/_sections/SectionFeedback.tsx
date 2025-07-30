@@ -44,6 +44,7 @@ export default function SectionFeedback() {
               textAlign: "center",
               maxWidth: "430px",
               width: "100%",
+              textWrap: "nowrap",
             }}
           >
             <Typography
@@ -84,7 +85,7 @@ export default function SectionFeedback() {
                   sx={{
                     width: "100%",
                     display: "flex",
-                    gap: "20px",
+                    gap: { xs: "16px", md: "24px" },
                     justifyContent: "space-between",
                   }}
                 >
@@ -93,12 +94,14 @@ export default function SectionFeedback() {
                     placeholder="John Carter"
                     label="Name"
                     icon={svgs.User}
+                    sx={{ maxWidth: "260px" }}
                   />
                   <InputFeedback
                     inputType="email"
                     placeholder="Email address"
                     label="Email"
                     icon={svgs.emailfeed}
+                    sx={{ maxWidth: "260px" }}
                   />
                 </Box>
                 <Box sx={{ width: "100%", mt: "30px" }}>
@@ -169,7 +172,7 @@ export default function SectionFeedback() {
                       mt: { xs: "10px", sm: "20px" },
                       border: `1px solid ${colors.primaryRed}`,
                       "& .MuiInputBase-root": {
-                        padding: { xs: "13px", sm: "24px" },
+                        padding: { xs: "14px", sm: "24px" },
                         color: "#41414380", // Placeholder text color
                       },
                       "& .MuiInput-underline:before": {
