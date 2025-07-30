@@ -1,9 +1,13 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch, { SwitchProps } from "@mui/material/Switch";
-import { colors } from "@mui/material";
+import {
+  Switch,
+  SwitchProps,
+  FormGroup,
+  FormControlLabel,
+  SxProps,
+  Theme,
+} from "@mui/material";
 import { fonts } from "@/app/utils/themes";
 
 const IOSSwitch = styled((props: SwitchProps) => (
@@ -70,18 +74,33 @@ const IOSSwitch = styled((props: SwitchProps) => (
   },
 }));
 
-export default function CustomizedSwitches() {
+type CustomizedSwitchesProps = {
+  label?: string;
+  checked: boolean;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  sx?: SxProps<Theme>;
+};
+
+export default function CustomizedSwitches({
+  label = "Send Anonymously",
+  checked,
+  onChange,
+  sx,
+}: CustomizedSwitchesProps) {
   return (
     <FormGroup sx={{ textAlign: "center" }}>
       <FormControlLabel
-        control={<IOSSwitch sx={{ m: "1px" }} defaultChecked />}
-        label="Send Anonymously"
+        control={
+          <IOSSwitch sx={{ m: 1 }} checked={checked} onChange={onChange} />
+        }
+        label={label}
         sx={{
           color: "#41414380",
           textAlign: "center",
-          margin: "0",
+          margin: 0,
           fontSize: fonts.tertiaryTypography,
           gap: "20px",
+          ...sx,
         }}
       />
     </FormGroup>
