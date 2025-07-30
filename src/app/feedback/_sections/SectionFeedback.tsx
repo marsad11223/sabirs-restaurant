@@ -6,8 +6,65 @@ import CustomizedSwitches from "../_components/IOSSwitch";
 import InputFeedback from "@/_components/FeedbackInput";
 import svgs from "@/_assets/svgs";
 import Image from "next/image";
-
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
+import axios from "axios";
+type ContactFormInputs = {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+};
 export default function SectionFeedback() {
+  const [rating, setRating] = useState(0);
+
+  const [loading, setLoading] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ContactFormInputs>({
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (data: ContactFormInputs) => {
+    console.log("Form Submitted:", data);
+    try {
+      setLoading(true);
+      const response = await axios.post("/api/contactus", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if (response?.status === 200) {
+        toast.success("Form submitted successfully!");
+      } else {
+        toast.error("Submission failed! Please try again.");
+      }
+      reset();
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (err) {
+      toast.error("Submission failed! Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const onError = () => {};
+
+  const handleClick = (index: number) => {
+    setRating(index + 1);
+  };
   const headingStyles = {
     fontSize: fonts.headingSecondary,
     lineHeight: fonts.headingSecondary,
@@ -70,6 +127,7 @@ export default function SectionFeedback() {
           </Box>
           <Box
             component="form"
+            onSubmit={handleSubmit(onSubmit, onError)}
             sx={{
               width: "100%",
               maxWidth: "640px",
@@ -95,6 +153,12 @@ export default function SectionFeedback() {
                     label="Name"
                     icon={svgs.User}
                     sx={{ maxWidth: "260px" }}
+                    {...register("name", {
+                      required: "Name is required",
+                      minLength: { value: 3, message: "Minimum 3 characters" },
+                    })}
+                    error={!!errors.name}
+                    helperText={errors.name?.message}
                   />
                   <InputFeedback
                     inputType="email"
@@ -102,6 +166,15 @@ export default function SectionFeedback() {
                     label="Email"
                     icon={svgs.emailfeed}
                     sx={{ maxWidth: "260px" }}
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: {
+                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        message: "Invalid email format",
+                      },
+                    })}
+                    error={!!errors.email}
+                    helperText={errors.email?.message}
                   />
                 </Box>
                 <Box sx={{ width: "100%", mt: "30px" }}>
@@ -110,6 +183,15 @@ export default function SectionFeedback() {
                     placeholder="Your Number"
                     label="Phone number"
                     icon={svgs.mobfeed}
+                    {...register("phone", {
+                      required: "Phone number is required",
+                      pattern: {
+                        value: /^[0-9]{10,15}$/,
+                        message: "Enter a valid phone number",
+                      },
+                    })}
+                    error={!!errors.phone}
+                    helperText={errors.phone?.message}
                   />
                 </Box>
 
@@ -131,31 +213,19 @@ export default function SectionFeedback() {
                       gap: { xs: "6px", sm: "12px" },
                     }}
                   >
-                    <Image
-                      src={svgs.ratingStars}
-                      alt="start"
-                      style={{ width: "21px", height: "24px" }}
-                    />
-                    <Image
-                      src={svgs.ratingStars}
-                      alt="start"
-                      style={{ width: "21px", height: "24px" }}
-                    />
-                    <Image
-                      src={svgs.ratingStars}
-                      alt="start"
-                      style={{ width: "21px", height: "24px" }}
-                    />
-                    <Image
-                      src={svgs.ratingGrayStars}
-                      alt="start"
-                      style={{ width: "21px", height: "24px" }}
-                    />
-                    <Image
-                      src={svgs.ratingGrayStars}
-                      alt="start"
-                      style={{ width: "21px", height: "24px" }}
-                    />
+                    {[0, 1, 2, 3, 4].map((index) => (
+                      <Image
+                        key={index}
+                        src={
+                          index < rating
+                            ? svgs.ratingStars
+                            : svgs.ratingGrayStars
+                        }
+                        alt="star"
+                        style={{ width: "21px", height: "24px" }}
+                        onClick={() => handleClick(index)}
+                      />
+                    ))}
                   </Box>
                 </Box>
 
@@ -165,22 +235,32 @@ export default function SectionFeedback() {
                     placeholder="If you have more to add, please type it here..."
                     label="Your Feedback"
                     isbool={true}
+                    {...register("message", {
+                      required: "Feedback message is required",
+                      minLength: {
+                        value: 10,
+                        message: "Minimum 10 characters required",
+                      },
+                    })}
+                    error={!!errors.message}
+                    helperText={errors.message?.message}
                     sx={{
                       width: "100%",
-                      minHeight: "120px",
-                      borderRadius: "20px",
+                      border: "1px solid #851A1D",
                       mt: { xs: "10px", sm: "20px" },
-                      border: `1px solid ${colors.primaryRed}`,
+                      borderRadius: "12px",
+                      padding: { xs: "14px", sm: "24px" },
+                      backgroundColor: "#fff",
                       "& .MuiInputBase-root": {
-                        padding: { xs: "14px", sm: "24px" },
-                        color: "#41414380", // Placeholder text color
+                        padding: 0,
                       },
                       "& .MuiInput-underline:before": {
-                        border: `0px solid ${colors.primaryRed} `,
+                        border: "none",
                       },
                       "& .MuiInput-underline:after": {
-                        border: `0px solid ${colors.primaryRed}`,
+                        border: "none",
                       },
+
                       "& .MuiInput-underline.Mui-focused:after": {
                         borderBottomColor: colors.primaryRed,
                       },
@@ -195,8 +275,7 @@ export default function SectionFeedback() {
             <Box sx={{ paddingTop: { xs: "27px", sm: "30px" } }}>
               <Button
                 type="submit"
-                disabled={false}
-                // onClick={}
+                disabled={loading}
                 styles={{
                   color: "#fff",
                   padding: { xs: "10px 21px", sm: "16px 32px" },
@@ -211,7 +290,11 @@ export default function SectionFeedback() {
                   fontWeight: 700,
                 }}
               >
-                Send Feedback
+                {loading ? (
+                  <CircularProgress size={24} sx={{ color: colors.White }} />
+                ) : (
+                  "Send Feedback"
+                )}
               </Button>
             </Box>
           </Box>

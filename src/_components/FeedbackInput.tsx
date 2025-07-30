@@ -22,6 +22,7 @@ interface StandardInputProps {
   placeholder?: string;
   sx?: SxProps<Theme>;
   isbool?: boolean;
+  // FormHelperTextProps?: SxProps<Theme>;
 }
 
 const InputFeedback: React.FC<StandardInputProps> = ({
@@ -36,6 +37,7 @@ const InputFeedback: React.FC<StandardInputProps> = ({
   placeholder,
   sx,
   isbool = false,
+  // FormHelperTextProps,
 }) => {
   return (
     <>
@@ -52,7 +54,7 @@ const InputFeedback: React.FC<StandardInputProps> = ({
         </InputLabel>
         <TextField
           variant="standard"
-          // rows={10}
+          // FormHelperTextProps={FormHelperTextProps}
           placeholder={placeholder}
           fullWidth
           multiline={inputType === "message"}
