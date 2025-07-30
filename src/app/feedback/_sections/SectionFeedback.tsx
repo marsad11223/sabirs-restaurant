@@ -61,7 +61,7 @@ export default function SectionFeedback() {
       });
 
       if (response?.status === 200) {
-        toast.success("Form submitted successfully!");
+        toast.success("Feedback submitted successfully!");
         reset();
         setRating(0);
       } else {
