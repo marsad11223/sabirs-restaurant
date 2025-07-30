@@ -55,8 +55,8 @@ const InputFeedback: React.FC<StandardInputProps> = ({
           // rows={10}
           placeholder={placeholder}
           fullWidth
-          // multiline={inputType === "message"} // 👈 Enable multiline for message
-          // rows={inputType === "message" ? 10 : undefined}
+          multiline={inputType === "message"} // 👈 Enable multiline for message
+          rows={inputType === "message" ? 4 : undefined}
           type={inputType}
           value={value}
           onChange={onChange}
@@ -112,6 +112,9 @@ const InputFeedback: React.FC<StandardInputProps> = ({
             },
             "& .MuiInput-underline.Mui-focused:after": {
               borderBottomColor: colors.primaryRed,
+            },
+            "& .MuiInput-underline:hover:not(.Mui-disabled):before": {
+              borderBottom: `1px solid ${colors.primaryRed}`,
             },
             ...sx,
           }}

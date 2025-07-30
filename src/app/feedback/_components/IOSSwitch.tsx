@@ -74,7 +74,7 @@ export default function CustomizedSwitches() {
   return (
     <FormGroup sx={{ textAlign: "center" }}>
       <FormControlLabel
-        control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
+        control={<IOSSwitch sx={{ m: "1px" }} defaultChecked />}
         label="Send Anonymously"
         sx={{
           color: "#41414380",

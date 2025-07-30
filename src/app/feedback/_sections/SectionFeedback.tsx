@@ -42,7 +42,7 @@ export default function SectionFeedback() {
           <Box
             sx={{
               textAlign: "center",
-              maxWidth: "450px",
+              maxWidth: "430px",
               width: "100%",
             }}
           >
@@ -80,7 +80,14 @@ export default function SectionFeedback() {
             <Box sx={{ width: "100%" }}>
               <CustomizedSwitches />
               <Box sx={{ width: "100%", mt: "30px" }}>
-                <Box sx={{ width: "100%", display: "flex", gap: "20px" }}>
+                <Box
+                  sx={{
+                    width: "100%",
+                    display: "flex",
+                    gap: "20px",
+                    justifyContent: "space-between",
+                  }}
+                >
                   <InputFeedback
                     inputType="text"
                     placeholder="John Carter"
@@ -161,7 +168,10 @@ export default function SectionFeedback() {
                       borderRadius: "20px",
                       mt: { xs: "10px", sm: "20px" },
                       border: `1px solid ${colors.primaryRed}`,
-
+                      "& .MuiInputBase-root": {
+                        padding: { xs: "13px", sm: "24px" },
+                        color: "#41414380", // Placeholder text color
+                      },
                       "& .MuiInput-underline:before": {
                         border: `0px solid ${colors.primaryRed} `,
                       },
@@ -169,7 +179,10 @@ export default function SectionFeedback() {
                         border: `0px solid ${colors.primaryRed}`,
                       },
                       "& .MuiInput-underline.Mui-focused:after": {
-                        borderColor: colors.primaryRed,
+                        borderBottomColor: colors.primaryRed,
+                      },
+                      "& .MuiInput-underline:hover:not(.Mui-disabled):before": {
+                        borderBottom: "none",
                       },
                     }}
                   />
@@ -183,13 +196,16 @@ export default function SectionFeedback() {
                 // onClick={}
                 styles={{
                   color: "#fff",
+                  padding: { xs: "10px 21px", sm: "16px 32px" },
                   backgroundColor: "#851A1D",
                   position: "relative",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  width: { xs: "143px", sm: "172px" },
+                  width: "100%",
+                  maxWidth: { xs: "153px", sm: "192px" },
                   height: { xs: "34px", sm: "60px" },
+                  fontWeight: 700,
                 }}
               >
                 Send Feedback
