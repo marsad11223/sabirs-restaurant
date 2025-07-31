@@ -89,6 +89,8 @@ export default function SectionFeedback() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "repeat",
+        height: { xs: "772px", sm: "931px", md: "937px", xl: "960px" },
+        display: "flex",
       }}
     >
       <Box
@@ -122,6 +124,7 @@ export default function SectionFeedback() {
             bgcolor: "#fff",
             borderRadius: { xs: "13px", sm: "24px" },
             p: { xs: "28px", sm: "48px" },
+            overflow: "hidden",
           }}
         >
           <CustomizedSwitches
@@ -129,64 +132,67 @@ export default function SectionFeedback() {
             onChange={() => setIsAnonymous((prev) => !prev)}
           />
 
-          {!isAnonymous && (
-            <Box
-              sx={{
-                width: "100%",
-                display: "flex",
-                gap: { xs: "16px", md: "24px" },
-                flexDirection: "column",
-                mt: "30px",
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              gap: { xs: "16px", md: "24px" },
+              flexDirection: "column",
+              mt: "30px",
+              maxHeight: isAnonymous ? 0 : "300px",
+              opacity: isAnonymous ? 0 : 1,
+              transform: isAnonymous ? "translateY(-10px)" : "translateY(0)",
+              transition: "all 0.6s ease-in-out",
+              pointerEvents: isAnonymous ? "none" : "auto",
+            }}
+          >
+            <Controller
+              name="name"
+              control={control}
+              rules={{
+                required: !isAnonymous ? "Name is required" : false,
+                minLength: {
+                  value: 3,
+                  message: "Minimum 3 characters",
+                },
               }}
-            >
-              <Controller
-                name="name"
-                control={control}
-                rules={{
-                  required: !isAnonymous ? "Name is required" : false,
-                  minLength: {
-                    value: 3,
-                    message: "Minimum 3 characters",
-                  },
-                }}
-                render={({ field }) => (
-                  <InputFeedback
-                    {...field}
-                    inputType="text"
-                    placeholder="John Carter"
-                    label="Name"
-                    icon={svgs.User}
-                    sx={{ width: "100%" }}
-                    error={!!errors.name}
-                    helperText={errors.name?.message}
-                  />
-                )}
-              />
-              <Controller
-                name="email"
-                control={control}
-                rules={{
-                  required: !isAnonymous ? "Email is required" : false,
-                  pattern: {
-                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                    message: "Invalid email format",
-                  },
-                }}
-                render={({ field }) => (
-                  <InputFeedback
-                    {...field}
-                    inputType="email"
-                    placeholder="Email address"
-                    label="Email"
-                    icon={svgs.emailfeed}
-                    sx={{ width: "100%" }}
-                    error={!!errors.email}
-                    helperText={errors.email?.message}
-                  />
-                )}
-              />
-            </Box>
-          )}
+              render={({ field }) => (
+                <InputFeedback
+                  {...field}
+                  inputType="text"
+                  placeholder="John Carter"
+                  label="Name"
+                  icon={svgs.User}
+                  sx={{ width: "100%" }}
+                  error={!!errors.name}
+                  helperText={errors.name?.message}
+                />
+              )}
+            />
+            <Controller
+              name="email"
+              control={control}
+              rules={{
+                required: !isAnonymous ? "Email is required" : false,
+                pattern: {
+                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                  message: "Invalid email format",
+                },
+              }}
+              render={({ field }) => (
+                <InputFeedback
+                  {...field}
+                  inputType="email"
+                  placeholder="Email address"
+                  label="Email"
+                  icon={svgs.emailfeed}
+                  sx={{ width: "100%" }}
+                  error={!!errors.email}
+                  helperText={errors.email?.message}
+                />
+              )}
+            />
+          </Box>
 
           <Box sx={{ width: "100%", mt: "30px" }}>
             <Typography
