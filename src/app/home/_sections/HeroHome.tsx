@@ -1,7 +1,6 @@
 "use client";
-
 import webp from "@/_assets/webp";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import { fonts, colors } from "@/app/utils/themes";
 import { useEffect } from "react";
@@ -15,6 +14,9 @@ export default function HeroHome() {
     AOS.init({ duration: 10000, once: true });
     AOS.refresh();
   }, []);
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // detect xs → sm screens
 
   const headingStyles = {
     color: colors.secondaryYellow,
@@ -36,20 +38,47 @@ export default function HeroHome() {
         <Box sx={{ flexShrink: 0 }}>
           <Navbar />
         </Box>
+
         <Box
           sx={{
             flexGrow: 1,
             width: "100%",
             position: "relative",
             overflow: "hidden",
-            backgroundColor: colors.primaryRed,
+            // backgroundColor: colors.primaryRed,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             textAlign: "center",
           }}
         >
-          <Box
+          <video
+            autoPlay
+            loop
+            muted
+            // alt="explosion 3d animation"
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              transform: "translate(-50%, -50%)",
+              zIndex: -1,
+            }}
+          >
+            <source
+              src={
+                isMobile
+                  ? "/mobileVideoCompressed.mp4"
+                  : "/desktopVideoCompressed.mp4"
+              }
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          {/*  <Box
             sx={{
               display: "flex",
               flexDirection: "column",
@@ -101,7 +130,7 @@ export default function HeroHome() {
             >
               of flavour
             </Typography>
-          </Box>
+          </Box>*/}
         </Box>
       </Box>
     </>
