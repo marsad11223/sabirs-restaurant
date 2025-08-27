@@ -56,8 +56,8 @@ export default function HeroHome() {
             autoPlay
             loop
             muted
-            // playsInline
-            // preload="auto"
+            playsInline
+            preload="auto"
             // alt="explosion 3d animation"
             style={{
               position: "absolute",
@@ -76,7 +76,7 @@ export default function HeroHome() {
                   ? "/mobileVideoCompressed.mp4"
                   : "/desktopVideoCompressed.mp4"
               }
-              type="video/webm"
+              type="video/mp4"
             />
             Your browser does not support the video tag.
           </video>
