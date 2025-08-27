@@ -105,14 +105,17 @@ export default function HeroHome() {
               transform: "translate(-50%, -50%)",
               zIndex: -1,
             }}
+            key="hero-bg-video"
           >
             <source
-              src={
-                isMobile
-                  ? "/mobileVideoCompressed.mp4"
-                  : "/desktopVideoCompressed.mp4"
-              }
+              src="/mobileVideoCompressed.mp4"
               type="video/mp4"
+              media="(max-width: 600px)"
+            />
+            <source
+              src="/desktopVideoCompressed.mp4"
+              type="video/mp4"
+              media="(min-width: 601px)"
             />
           </video>
         </Box>
