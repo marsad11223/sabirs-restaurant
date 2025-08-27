@@ -1,13 +1,13 @@
 "use client";
-import webp from "@/_assets/webp";
+// import webp from "@/_assets/webp";
 import {
   Box,
-  Typography,
+  // Typography,
   useTheme,
   useMediaQuery,
   CircularProgress,
 } from "@mui/material";
-import Image from "next/image";
+// import Image from "next/image";
 import { fonts, colors } from "@/app/utils/themes";
 import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
