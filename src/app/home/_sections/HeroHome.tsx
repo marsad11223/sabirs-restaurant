@@ -42,7 +42,6 @@ export default function HeroHome() {
     v.setAttribute("loop", "");
     v.setAttribute("preload", "auto");
     v.muted = true;
-    // @ts-expect-error
     v.playsInline = true;
 
     const tryPlay = async () => {
