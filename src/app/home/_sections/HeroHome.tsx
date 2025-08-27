@@ -46,60 +46,40 @@ export default function HeroHome() {
     v.muted = true;
     v.playsInline = true;
 
-    let playedOnce = false;
-
     const tryPlay = async () => {
       try {
         if (v.paused) await v.play();
       } catch {}
     };
 
-    const onLoadedMetadata = () => tryPlay();
-    const onCanPlay = () => tryPlay();
-    const onPlaying = () => {
-      playedOnce = true;
+    const onCanPlayThrough = () => {
+      tryPlay();
       setLoading(false);
     };
-    const onTimeUpdate = () => {
-      if (!playedOnce && v.currentTime > 0.05) {
-        playedOnce = true;
-        setLoading(false);
-      }
+
+    const onPlaying = () => {
+      setLoading(false);
     };
-    const onStalled = () => setLoading(true);
-    const onWaiting = () => setLoading(true);
-    const onError = () => setLoading(true);
-
-    v.addEventListener("loadedmetadata", onLoadedMetadata);
-    v.addEventListener("canplay", onCanPlay);
-    v.addEventListener("playing", onPlaying);
-    v.addEventListener("timeupdate", onTimeUpdate);
-    v.addEventListener("stalled", onStalled);
-    v.addEventListener("waiting", onWaiting);
-    v.addEventListener("error", onError);
-
-    if (v.readyState >= 2) {
-      tryPlay();
-    } else {
-      setLoading(true);
-    }
 
     const onFirstUserInteraction = async () => {
       await tryPlay();
       window.removeEventListener("touchend", onFirstUserInteraction);
       window.removeEventListener("click", onFirstUserInteraction);
     };
+
+    v.addEventListener("canplaythrough", onCanPlayThrough);
+    v.addEventListener("playing", onPlaying);
     window.addEventListener("touchend", onFirstUserInteraction, { once: true });
     window.addEventListener("click", onFirstUserInteraction, { once: true });
 
+    if (v.readyState >= 3) {
+      // already enough data to play
+      setLoading(false);
+    }
+
     return () => {
-      v.removeEventListener("loadedmetadata", onLoadedMetadata);
-      v.removeEventListener("canplay", onCanPlay);
+      v.removeEventListener("canplaythrough", onCanPlayThrough);
       v.removeEventListener("playing", onPlaying);
-      v.removeEventListener("timeupdate", onTimeUpdate);
-      v.removeEventListener("stalled", onStalled);
-      v.removeEventListener("waiting", onWaiting);
-      v.removeEventListener("error", onError);
       window.removeEventListener("touchend", onFirstUserInteraction);
       window.removeEventListener("click", onFirstUserInteraction);
     };
