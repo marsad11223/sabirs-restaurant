@@ -56,6 +56,8 @@ export default function HeroHome() {
             autoPlay
             loop
             muted
+            playsInline
+            preload="auto"
             // alt="explosion 3d animation"
             style={{
               position: "absolute",
