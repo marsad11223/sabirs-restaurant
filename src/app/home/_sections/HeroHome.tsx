@@ -16,7 +16,7 @@ export default function HeroHome() {
   }, []);
 
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // detect xs → sm screens
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const headingStyles = {
     color: colors.secondaryYellow,
@@ -56,8 +56,8 @@ export default function HeroHome() {
             autoPlay
             loop
             muted
-            playsInline
-            preload="auto"
+            // playsInline
+            // preload="auto"
             // alt="explosion 3d animation"
             style={{
               position: "absolute",
@@ -76,7 +76,7 @@ export default function HeroHome() {
                   ? "/mobileVideoCompressed.mp4"
                   : "/desktopVideoCompressed.mp4"
               }
-              type="video/mp4"
+              type="video/webm"
             />
             Your browser does not support the video tag.
           </video>
