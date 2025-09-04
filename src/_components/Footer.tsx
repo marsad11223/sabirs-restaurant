@@ -1,7 +1,7 @@
 "use client";
 import svgs from "@/_assets/svgs";
 import { fonts, colors } from "@/app/utils/themes";
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -300,33 +300,30 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
       >
         <Typography
           sx={{
-            color: colors.smokeGray,
             fontSize: fonts.tertiaryTypography,
+            color: colors.smokeGray,
             fontFamily: '"Roboto", sans-serif', // More modern alternative
-            letterSpacing: "0.5px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "6px",
-            "&:hover": {
-              "& span:last-child": {
-                color: colors.primaryRed,
-                textShadow: `1px 2px 3px ${colors.smokeGray}`,
+            textAlign: "center",
+            "& a": {
+              fontSize: "inherit",
+              fontWeight: "inherit",
+              textDecoration: "none",
+              transition: "all 0.4s ease-in-out",
+              color: "#8B0000",
+              "&:hover": {
+                color: "#8B0000",
               },
             },
           }}
         >
-          <span>© {2025} All Rights Reserved</span>
-          <span
-            style={{
-              fontFamily: '"Poppins", sans-serif',
-              fontWeight: 500,
-              marginLeft: "8px",
-              transition: "color 0.3s ease-in-out",
-            }}
+          Copyright © 2025. All Rights Reserved.{" "}
+          <Link
+            href="https://www.qashnova.com/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Powered by QashNova
-          </span>
+            Powered By Qashnova
+          </Link>
         </Typography>
       </Box>
     </>
