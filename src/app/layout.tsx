@@ -26,13 +26,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ToastContainer transition={Slide} />
-      <body>{children}</body>
-      <ConsentGate>
-        {gaId && <AnalyticsGA gaId={gaId} />}
-        {pixelId && <MetaPixel pixelId={pixelId} />}
-      </ConsentGate>
+      <body>
+        {children}
+        <ConsentGate>
+          {gaId && <AnalyticsGA gaId={gaId} />}
+          {pixelId && <MetaPixel pixelId={pixelId} />}
+        </ConsentGate>
 
-      <CookieBanner />
+        <CookieBanner />
+      </body>
     </html>
   );
 }
