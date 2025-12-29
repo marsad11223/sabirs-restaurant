@@ -168,8 +168,6 @@ export default function SabirsGrillYourChoice() {
             <Box>
               <Typography
                 sx={{
-                  // fontSize: { xs: "16px", sm: "18px", md: "20px", lg: "24px" },
-                  // color: colors.White,
                   fontSize: fonts.h5,
                   fontWeight: fonts.h5,
                   color: colors.White,

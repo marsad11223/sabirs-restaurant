@@ -44,10 +44,25 @@ export const fonts = {
     sm: "28px",
     md: "32px",
   },
+  h6: { xs: "22px", md: "28px" },
 
   primaryTypography: { xs: "16px", sm: "20px", md: "24px" },
   secondaryTypography: { xs: "14px", md: "18px", xl: "22px" },
   tertiaryTypography: { xs: "14px", md: "16px", xl: "20px" },
-  p4: { xs: "16px", md: "18px" },
-  p5: "16px",
+  p4: { xs: "14px", md: "16px", xl: "18px" },
+  p5: { xs: "14px", md: "16px" },
+
+  // primaryTypography: { xs: "20px", sm: "20px", md: "24px" },
+  // secondaryTypography: { xs: "14px", md: "18px", xl: "22px" },
+  // tertiaryTypography: { xs: "14px", md: "16px", xl: "20px" },
+  // p4: { xs: "18px", md: "18px" },
+  // p5: "16px",
+};
+
+export const sectionPadding = {
+  xs: "40px 20px",
+  sm: "50px 30px",
+  md: "60px 40px",
+  lg: "80px 60px",
+  xl: "100px 80px",
 };

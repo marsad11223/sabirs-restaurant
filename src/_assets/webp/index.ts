@@ -42,6 +42,12 @@ import Burger_4 from "./Burger_4.webp";
 // ramadan special
 import Ramzan from "./ramzan.webp";
 
+// customer favorites images
+import CustomerFavorite1 from "./customerFavorites1.png";
+import CustomerFavorite2 from "./customerFavorites2.png";
+import CustomerFavorite3 from "./customerFavorites3.png";
+import CustomerFavorite4 from "./customerFavorites4.png";
+
 const webp = {
   // slider begain
   ChickenBruger,
@@ -85,6 +91,10 @@ const webp = {
   Pizza11,
 
   Ramzan,
+  CustomerFavorite1,
+  CustomerFavorite2,
+  CustomerFavorite3,
+  CustomerFavorite4,
 };
 
 export default webp;
