@@ -20,6 +20,7 @@ import mobfeed from "./mobfeed.svg";
 import ratingGrayStars from "./ratingGrayStars.svg";
 import ratingStars from "./ratingStars.svg";
 import LocationYellowIcon from "./locationYellowIcon.svg";
+import redStar from "./redStar.svg";
 
 const svgs = {
   Logo,
@@ -44,6 +45,7 @@ const svgs = {
   Email,
   Location,
   LocationYellowIcon,
+  redStar,
 };
 
 export default svgs;
