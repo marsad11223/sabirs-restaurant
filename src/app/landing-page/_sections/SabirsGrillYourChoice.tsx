@@ -52,7 +52,6 @@ function FeatureCard({
         sx={{
           fontSize: fonts.h4,
           lineHeight: fonts.h4,
-          // fontFamily: '"Bebas Neue", sans-serif',
           fontFamily: '"Bebas Neue", sans-serif !important',
         }}
       >

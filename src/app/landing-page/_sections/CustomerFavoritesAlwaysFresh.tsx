@@ -27,7 +27,6 @@ function FoodCard({ image, title, title2, price, description }: FoodCardProps) {
       <Box
         sx={{
           width: "100%",
-          // height: { xs: "200px", sm: "220px", md: "240px", lg: "260px" },
           overflow: "hidden",
           aspectRatio: "139 / 125",
         }}
@@ -65,7 +64,6 @@ function FoodCard({ image, title, title2, price, description }: FoodCardProps) {
         >
           <Typography
             sx={{
-              // fontFamily: '"Bebas Neue", sans-serif',
               textTransform: "uppercase",
               color: colors.secondaryYellow,
               fontSize: fonts.h6,

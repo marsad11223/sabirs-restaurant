@@ -302,7 +302,7 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
           sx={{
             fontSize: fonts.tertiaryTypography,
             color: colors.smokeGray,
-            fontFamily: '"Roboto", sans-serif', // More modern alternative
+            fontFamily: '"Roboto", sans-serif',
             textAlign: "center",
             "& a": {
               fontSize: "inherit",

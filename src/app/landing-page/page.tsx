@@ -9,7 +9,6 @@ import CravingSomethingDeliciousNow from "./_sections/CravingSomethingDeliciousN
 export default function LandingPage() {
   return (
     <Box>
-      <CravingSomethingDeliciousNow />
       <HeroLandingPage />
       <SabirsGrillYourChoice />
       <CustomerFavoritesAlwaysFresh />
