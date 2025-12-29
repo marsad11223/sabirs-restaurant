@@ -16,7 +16,7 @@ export default function HeroLandingPage() {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-
+  2;
   return (
     <>
       <Box
@@ -43,175 +43,184 @@ export default function HeroLandingPage() {
             backgroundImage: "url(./bgHeroLandingPage.png)",
             backgroundSize: "cover",
             backgroundPosition: "center",
+
             padding: {
-              xs: "40px 20px",
-              sm: "60px 40px",
-              md: "80px 60px",
-              lg: "100px 80px",
-              xl: "120px 100px",
+              xs: "40px 30px",
+              sm: "30px 50px",
+              md: "40px 100px",
+              lg: "60px 150px",
+              xl: "60px 200px",
             },
           }}
         >
           <Box
             sx={{
-              maxWidth: { xs: "100%", md: "600px", lg: "700px" },
+              maxWidth: "1600px",
               width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              gap: { xs: "20px", md: "30px", lg: "50px" },
-              alignItems: { xs: "center", md: "flex-start" },
-              textAlign: { xs: "center", md: "left" },
+              margin: "0 auto",
             }}
           >
-            {/* Rating Badge */}
             <Box
               sx={{
-                backgroundColor: "#FFD40D",
-                borderRadius: "30px",
-                padding: { xs: "8px 16px", sm: "10px 20px" },
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "10px",
-                width: "fit-content",
+                maxWidth: { xs: "100%", md: "600px", lg: "700px" },
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                gap: { xs: "20px", md: "30px", lg: "50px" },
+                alignItems: { xs: "center", md: "flex-start" },
+                textAlign: { xs: "center", md: "left" },
               }}
             >
-              <Image
-                src={svgs.redStar}
-                alt="redStar"
-                style={{
-                  width: "20px",
-                  height: "20px",
-                }}
-                width={20}
-                height={20}
-              />
-              <Typography
-                component="span"
+              {/* Rating Badge */}
+              <Box
                 sx={{
-                  fontSize: { xs: "14px", md: "16px" },
-                  color: "#851A1D",
+                  backgroundColor: "#FFD40D",
+                  borderRadius: "30px",
+                  padding: { xs: "8px 16px", sm: "10px 20px" },
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  width: "fit-content",
+                }}
+              >
+                <Image
+                  src={svgs.redStar}
+                  alt="redStar"
+                  style={{
+                    width: "20px",
+                    height: "20px",
+                  }}
+                  width={20}
+                  height={20}
+                />
+                <Typography
+                  component="span"
+                  sx={{
+                    fontSize: { xs: "14px", md: "16px" },
+                    color: "#851A1D",
+                    fontFamily: '"Open Sans", sans-serif',
+                  }}
+                >
+                  Rated #1 Burger Joint in Sheffield
+                </Typography>
+              </Box>
+
+              <Box>
+                {/* Main Headline - Part 1 */}
+                <Typography
+                  sx={{
+                    color: colors.secondaryYellow,
+                    fontSize: fonts.headingPrimary,
+                    lineHeight: fonts.headingPrimary,
+                    textTransform: "uppercase",
+                    fontFamily: '"Bebas Neue", sans-serif',
+                  }}
+                >
+                  SHEFFIELD'S BEST
+                </Typography>
+                {/* Main Headline - Part 2 */}
+                <Typography
+                  sx={{
+                    color: colors.White,
+                    fontSize: fonts.headingPrimary,
+                    lineHeight: fonts.headingPrimary,
+                    textTransform: "uppercase",
+                    fontFamily: '"Bebas Neue", sans-serif',
+                  }}
+                >
+                  CRAFTED BURGERS
+                </Typography>
+              </Box>
+
+              {/* Descriptive Paragraph */}
+              <Typography
+                sx={{
+                  color: colors.White,
+                  fontSize: fonts.p4,
                   fontFamily: '"Open Sans", sans-serif',
                 }}
               >
-                Rated #1 Burger Joint in Sheffield
+                At Sabir’s Grill, we serve freshly grilled food made with
+                quality ingredients and bold flavours. Every dish is prepared
+                with care, cooked to perfection, and designed to give you a
+                satisfying dining experience worth coming back for.
               </Typography>
-            </Box>
 
-            <Box>
-              {/* Main Headline - Part 1 */}
-              <Typography
-                sx={{
-                  color: colors.secondaryYellow,
-                  fontSize: fonts.headingPrimary,
-                  lineHeight: fonts.headingPrimary,
-                  textTransform: "uppercase",
-                  fontFamily: '"Bebas Neue", sans-serif',
-                }}
-              >
-                SHEFFIELD'S BEST
-              </Typography>
-              {/* Main Headline - Part 2 */}
-              <Typography
-                sx={{
-                  color: colors.White,
-                  fontSize: fonts.headingPrimary,
-                  lineHeight: fonts.headingPrimary,
-                  textTransform: "uppercase",
-                  fontFamily: '"Bebas Neue", sans-serif',
-                }}
-              >
-                CRAFTED BURGERS
-              </Typography>
-            </Box>
-
-            {/* Descriptive Paragraph */}
-            <Typography
-              sx={{
-                color: colors.White,
-                fontSize: fonts.p4,
-                fontFamily: '"Open Sans", sans-serif',
-              }}
-            >
-              At Sabir’s Grill, we serve freshly grilled food made with quality
-              ingredients and bold flavours. Every dish is prepared with care,
-              cooked to perfection, and designed to give you a satisfying dining
-              experience worth coming back for.
-            </Typography>
-
-            {/* Call-to-Action Buttons */}
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: { xs: "column", sm: "row" },
-                gap: { xs: "16px", sm: "20px" },
-                marginTop: { xs: "20px", md: "10px" },
-                width: { xs: "100%", sm: "auto" },
-              }}
-            >
-              {/* Order Now Button */}
+              {/* Call-to-Action Buttons */}
               <Box
-                component="button"
                 sx={{
-                  backgroundColor: colors.secondaryYellow,
-                  color: "#851A1D",
-                  border: "none",
-                  borderRadius: "10px",
-                  padding: {
-                    xs: "15px 30px",
-                    md: "20px 40px",
-                  },
-                  height: "56px",
-                  fontSize: fonts.p5,
-                  lineHeight: fonts.p5,
-                  fontWeight: "700",
-                  fontFamily: "inherit",
-                  cursor: "pointer",
-                  transition: "all 0.3s ease",
-                  textTransform: "none",
-                  "&:hover": {
-                    backgroundColor: "#FFE033",
-                    transform: "translateY(-2px)",
-                    boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
-                  },
-                  "&:active": {
-                    transform: "translateY(0)",
-                  },
+                  display: "flex",
+                  flexDirection: { xs: "column", sm: "row" },
+                  gap: { xs: "16px", sm: "20px" },
+                  marginTop: { xs: "20px", md: "10px" },
+                  width: { xs: "100%", sm: "auto" },
                 }}
               >
-                Order Now
-              </Box>
+                {/* Order Now Button */}
+                <Box
+                  component="button"
+                  sx={{
+                    backgroundColor: colors.secondaryYellow,
+                    color: "#851A1D",
+                    border: "none",
+                    borderRadius: "10px",
+                    padding: {
+                      xs: "15px 30px",
+                      md: "20px 40px",
+                    },
+                    height: "56px",
+                    fontSize: fonts.p5,
+                    lineHeight: fonts.p5,
+                    fontWeight: "700",
+                    fontFamily: "inherit",
+                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                    textTransform: "none",
+                    "&:hover": {
+                      backgroundColor: "#FFE033",
+                      transform: "translateY(-2px)",
+                      boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
+                    },
+                    "&:active": {
+                      transform: "translateY(0)",
+                    },
+                  }}
+                >
+                  Order Now
+                </Box>
 
-              {/* Explore Menu Button */}
-              <Box
-                component="button"
-                sx={{
-                  backgroundColor: "#FFFFFF33",
-                  border: "none",
-                  color: colors.White,
-                  borderRadius: "10px",
-                  padding: {
-                    xs: "15px 30px",
-                    md: "20px 40px",
-                  },
-                  height: "56px",
-                  fontSize: fonts.p5,
-                  lineHeight: fonts.p5,
-                  fontWeight: "700",
-                  fontFamily: "inherit",
-                  cursor: "pointer",
-                  transition: "all 0.3s ease",
-                  textTransform: "none",
-                  "&:hover": {
-                    backgroundColor: "rgba(133, 26, 29, 0.9)",
-                    transform: "translateY(-2px)",
-                    boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
-                  },
-                  "&:active": {
-                    transform: "translateY(0)",
-                  },
-                }}
-              >
-                Explore Menu
+                {/* Explore Menu Button */}
+                <Box
+                  component="button"
+                  sx={{
+                    backgroundColor: "#FFFFFF33",
+                    border: "none",
+                    color: colors.White,
+                    borderRadius: "10px",
+                    padding: {
+                      xs: "15px 30px",
+                      md: "20px 40px",
+                    },
+                    height: "56px",
+                    fontSize: fonts.p5,
+                    lineHeight: fonts.p5,
+                    fontWeight: "700",
+                    fontFamily: "inherit",
+                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                    textTransform: "none",
+                    "&:hover": {
+                      backgroundColor: "rgba(133, 26, 29, 0.9)",
+                      transform: "translateY(-2px)",
+                      boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
+                    },
+                    "&:active": {
+                      transform: "translateY(0)",
+                    },
+                  }}
+                >
+                  Explore Menu
+                </Box>
               </Box>
             </Box>
           </Box>

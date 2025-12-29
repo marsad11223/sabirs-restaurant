@@ -21,6 +21,8 @@ import ratingGrayStars from "./ratingGrayStars.svg";
 import ratingStars from "./ratingStars.svg";
 import LocationYellowIcon from "./locationYellowIcon.svg";
 import redStar from "./redStar.svg";
+import expertChefs from "./expertChefs.svg";
+import premiumQuality from "./premiumQuality.svg";
 
 const svgs = {
   Logo,
@@ -46,6 +48,8 @@ const svgs = {
   Location,
   LocationYellowIcon,
   redStar,
+  expertChefs,
+  premiumQuality,
 };
 
 export default svgs;

@@ -33,6 +33,17 @@ export const fonts = {
     md: "36px",
     lg: "40px",
   },
+  h4: {
+    xs: "28px",
+    sm: "32px",
+    md: "36px",
+  },
+
+  h5: {
+    xs: "24px",
+    sm: "28px",
+    md: "32px",
+  },
 
   primaryTypography: { xs: "16px", sm: "20px", md: "24px" },
   secondaryTypography: { xs: "14px", md: "18px", xl: "22px" },
