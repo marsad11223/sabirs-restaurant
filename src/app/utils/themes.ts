@@ -47,9 +47,9 @@ export const fonts = {
   h6: { xs: "22px", md: "28px" },
 
   primaryTypography: { xs: "16px", sm: "20px", md: "24px" },
-  secondaryTypography: { xs: "14px", md: "18px", xl: "22px" },
-  tertiaryTypography: { xs: "14px", md: "16px", xl: "20px" },
-  p4: { xs: "14px", md: "16px", xl: "18px" },
+  secondaryTypography: { xs: "14px", md: "18px", lg: "22px" },
+  tertiaryTypography: { xs: "14px", md: "16px", lg: "20px" },
+  p4: { xs: "14px", md: "16px", lg: "18px" },
   p5: { xs: "14px", md: "16px" },
 
   // primaryTypography: { xs: "20px", sm: "20px", md: "24px" },

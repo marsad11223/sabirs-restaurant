@@ -24,6 +24,11 @@ import redStar from "./redStar.svg";
 import expertChefs from "./expertChefs.svg";
 import premiumQuality from "./premiumQuality.svg";
 
+import customizableMenus from "./customizableMenus.svg";
+import equipmentAvailability from "./equipmentAvailability.svg";
+import eventCoordinator from "./eventCoordinator.svg";
+import flexibleSeating from "./flexibleSeating.svg";
+
 const svgs = {
   Logo,
   LogoRed,
@@ -50,6 +55,10 @@ const svgs = {
   redStar,
   expertChefs,
   premiumQuality,
+  customizableMenus,
+  eventCoordinator,
+  equipmentAvailability,
+  flexibleSeating,
 };
 
 export default svgs;
