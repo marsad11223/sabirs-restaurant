@@ -3,6 +3,9 @@ import { Box, Typography, Grid } from "@mui/material";
 import { fonts, colors } from "@/app/utils/themes";
 import Image, { StaticImageData } from "next/image";
 import webp from "@/_assets/webp";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface FoodCardProps {
   image: StaticImageData;
@@ -13,8 +16,15 @@ interface FoodCardProps {
 }
 
 function FoodCard({ image, title, title2, price, description }: FoodCardProps) {
+  useEffect(() => {
+    AOS.init({ duration: 10000, once: true });
+    AOS.refresh();
+  }, []);
+
   return (
     <Box
+      data-aos="zoom-in"
+      data-aos-duration="400"
       sx={{
         borderRadius: "10px",
         overflow: "hidden",
@@ -161,8 +171,14 @@ interface MenuTicketsProps {
   description: string;
 }
 function MenuTickets({ title, price, description }: MenuTicketsProps) {
+  useEffect(() => {
+    AOS.init({ duration: 10000, once: true });
+    AOS.refresh();
+  }, []);
   return (
     <Box
+      data-aos="zoom-in"
+      data-aos-duration="400"
       sx={{
         borderRadius: "10px",
         overflow: "hidden",

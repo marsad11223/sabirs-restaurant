@@ -3,6 +3,9 @@ import { Box, Typography } from "@mui/material";
 import { fonts, colors } from "@/app/utils/themes";
 import Image from "next/image";
 import svgs from "@/_assets/svgs";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface FeatureCardProps {
   icon: any;
@@ -19,6 +22,8 @@ function FeatureCard({
 }: FeatureCardProps) {
   return (
     <Box
+      data-aos="zoom-in"
+      data-aos-duration="400"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -88,6 +93,10 @@ function FeatureCard({
 }
 
 export default function CelebrateTogetherAtSabirs() {
+  useEffect(() => {
+    AOS.init({ duration: 10000, once: true });
+    AOS.refresh();
+  }, []);
   const features = [
     {
       icon: svgs.flexibleSeating,

@@ -3,6 +3,9 @@ import { Box, Typography } from "@mui/material";
 import { fonts, colors } from "@/app/utils/themes";
 import Image from "next/image";
 import svgs from "@/_assets/svgs";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface FeatureCardProps {
   icon: any;
@@ -17,8 +20,15 @@ function FeatureCard({
   secondWord,
   description,
 }: FeatureCardProps) {
+  useEffect(() => {
+    AOS.init({ duration: 10000, once: true });
+    AOS.refresh();
+  }, []);
+
   return (
     <Box
+      data-aos="zoom-in"
+      data-aos-duration="400"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -117,6 +127,10 @@ export default function SabirsGrillYourChoice() {
         "Hot, fresh burgers delivered to your door in 30 minutes or less.",
     },
   ];
+  useEffect(() => {
+    AOS.init({ duration: 10000, once: true });
+    AOS.refresh();
+  }, []);
 
   return (
     <Box sx={{ width: "100%", backgroundColor: colors.White }}>
@@ -155,6 +169,8 @@ export default function SabirsGrillYourChoice() {
             }}
           >
             <Typography
+              data-aos="fade-right"
+              data-aos-duration="400"
               sx={{
                 fontSize: fonts.headingSecondary,
                 lineHeight: fonts.headingSecondary,
@@ -164,7 +180,7 @@ export default function SabirsGrillYourChoice() {
             >
               DEAL!!!
             </Typography>
-            <Box>
+            <Box data-aos="zoom-in" data-aos-duration="400">
               <Typography
                 sx={{
                   fontSize: fonts.h5,
@@ -189,6 +205,8 @@ export default function SabirsGrillYourChoice() {
 
           {/* Right Side - Claim Now Button */}
           <Box
+            data-aos="fade-left"
+            data-aos-duration="400"
             component="button"
             sx={{
               backgroundColor: colors.primaryRed,

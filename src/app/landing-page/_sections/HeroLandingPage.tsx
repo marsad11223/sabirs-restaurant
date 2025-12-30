@@ -73,6 +73,9 @@ export default function HeroLandingPage() {
             >
               {/* Rating Badge */}
               <Box
+                data-aos="zoom-in"
+                data-aos-duration="400"
+                data-aos-delay="300"
                 sx={{
                   backgroundColor: "#FFD40D",
                   borderRadius: "30px",
@@ -108,6 +111,8 @@ export default function HeroLandingPage() {
               <Box>
                 {/* Main Headline - Part 1 */}
                 <Typography
+                  data-aos="fade-left"
+                  data-aos-duration="400"
                   sx={{
                     color: colors.secondaryYellow,
                     fontSize: fonts.headingPrimary,
@@ -120,6 +125,8 @@ export default function HeroLandingPage() {
                 </Typography>
                 {/* Main Headline - Part 2 */}
                 <Typography
+                  data-aos="fade-right"
+                  data-aos-duration="400"
                   sx={{
                     color: colors.White,
                     fontSize: fonts.headingPrimary,
@@ -134,6 +141,9 @@ export default function HeroLandingPage() {
 
               {/* Descriptive Paragraph */}
               <Typography
+                data-aos="zoom-in"
+                data-aos-duration="400"
+                data-aos-delay="500"
                 sx={{
                   color: colors.White,
                   fontSize: fonts.p4,
@@ -158,6 +168,9 @@ export default function HeroLandingPage() {
               >
                 {/* Order Now Button */}
                 <Box
+                  data-aos="zoom-in"
+                  data-aos-duration="400"
+                  data-aos-delay="700"
                   component="button"
                   sx={{
                     backgroundColor: colors.secondaryYellow,
@@ -191,6 +204,9 @@ export default function HeroLandingPage() {
 
                 {/* Explore Menu Button */}
                 <Box
+                  data-aos="zoom-in"
+                  data-aos-duration="400"
+                  data-aos-delay="700"
                   component="button"
                   sx={{
                     backgroundColor: "#FFFFFF33",
