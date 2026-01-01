@@ -24,18 +24,11 @@ export default function SabirsGrillYourChoice() {
       description: "Only the finest ingredients sourced locally.",
     },
     {
-      icon: svgs.premiumQuality,
+      icon: svgs.madeWithLove,
       firstWord: "MADE",
       secondWord: "WITH LOVE",
       description:
         "Every item is crafted with passion and attention to detail.",
-    },
-    {
-      icon: svgs.premiumQuality,
-      firstWord: "FAST",
-      secondWord: "DELIVERY",
-      description:
-        "Hot, fresh burgers delivered to your door in 30 minutes or less.",
     },
   ];
   useEffect(() => {
@@ -203,16 +196,13 @@ export default function SabirsGrillYourChoice() {
         <Box
           sx={{
             width: "100%",
-            maxWidth: "1400px",
-            display: "grid",
-            gridTemplateColumns: {
-              xs: "1fr",
-              sm: "repeat(2, 1fr)",
-              md: "repeat(4, 1fr)",
-            },
+            maxWidth: "1200px",
+            display: "flex",
+            flexWrap: "wrap",
             gap: { xs: "15px", md: "20px", lg: "30px" },
+            rowGap: "40px !important",
             justifyContent: "center",
-            alignItems: "flex-start",
+            alignItems: "center",
           }}
         >
           {features.map((feature, index) => (

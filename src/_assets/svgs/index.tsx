@@ -29,6 +29,17 @@ import equipmentAvailability from "./equipmentAvailability.svg";
 import eventCoordinator from "./eventCoordinator.svg";
 import flexibleSeating from "./flexibleSeating.svg";
 
+import dineInTakeaway from "./dineInTakeaway.svg";
+import friendlyService from "./friendlyService.svg";
+import irresistiblePizzas from "./irresistiblePizzas.svg";
+import juicySmashBurgers from "./juicySmashBurgers.svg";
+import tenderKebab from "./tenderKebab.svg";
+
+import goldContact from "./goldContact.svg";
+import goldLocation from "./goldLocation.svg";
+import goldTime from "./goldTime.svg";
+import madeWithLove from "./madeWithLove.svg";
+
 const svgs = {
   Logo,
   LogoRed,
@@ -59,6 +70,15 @@ const svgs = {
   eventCoordinator,
   equipmentAvailability,
   flexibleSeating,
+  dineInTakeaway,
+  friendlyService,
+  irresistiblePizzas,
+  juicySmashBurgers,
+  tenderKebab,
+  goldContact,
+  goldLocation,
+  goldTime,
+  madeWithLove,
 };
 
 export default svgs;

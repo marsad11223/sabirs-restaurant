@@ -9,12 +9,7 @@ import Footer from "@/_components/Footer";
 export default function LandingPage() {
   return (
     <Box>
-      <HeroLandingPage
-        bgImage="./bgHeroLandingPage.png"
-        heading1="CUSTOM HEADING"
-        heading2="SECOND PART"
-        button1Text="Custom Button"
-      />
+      <HeroLandingPage bgImage="./bgHeroLandingPage.png" />
       <SabirsGrillYourChoice />
       <CustomerFavoritesAlwaysFresh />
       <CelebrateTogetherAtSabirs />

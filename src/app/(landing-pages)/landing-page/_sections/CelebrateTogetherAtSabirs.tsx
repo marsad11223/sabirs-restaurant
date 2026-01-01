@@ -109,19 +109,22 @@ export default function CelebrateTogetherAtSabirs() {
               sm: "repeat(2, 1fr)",
               md: "repeat(4, 1fr)",
             },
-            gap: { xs: "35px", md: "20px", lg: "30px" },
+            gap: { xs: "40px", md: "20px", lg: "30px" },
+            rowGap: "40px !important",
             justifyContent: "center",
             alignItems: "flex-start",
           }}
         >
           {features.map((feature, index) => (
-            <FeatureCard
-              key={index}
-              icon={feature.icon}
-              firstWord={feature.firstWord}
-              secondWord={feature.secondWord}
-              description={feature.description}
-            />
+            <Box key={index} sx={{ width: "fit-content", margin: "auto" }}>
+              <FeatureCard
+                // key={index}
+                icon={feature.icon}
+                firstWord={feature.firstWord}
+                secondWord={feature.secondWord}
+                description={feature.description}
+              />
+            </Box>
           ))}
         </Box>
         <Box

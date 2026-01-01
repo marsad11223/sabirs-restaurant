@@ -35,7 +35,8 @@ export default function FeatureCard({
         textAlign: "center",
         gap: { xs: "12px", md: "16px" },
         maxWidth: { xs: "300px", sm: "280px", md: "300px" },
-        margin: "auto",
+        // margin: "auto",
+        width: "100%",
       }}
     >
       {/* Icon Circle */}
