@@ -6,9 +6,29 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "@/_components/Navbar";
 import svgs from "@/_assets/svgs";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-export default function HeroLandingPage() {
+interface HeroLandingPageProps {
+  bgImage?: string;
+  icon?: StaticImageData | string;
+  bannerText?: string;
+  heading1?: string;
+  heading2?: string;
+  description?: string;
+  button1Text?: string;
+  button2Text?: string;
+}
+
+export default function HeroLandingPage({
+  bgImage = "./bgHeroLandingPage.png",
+  icon = svgs.redStar,
+  bannerText = "Rated #1 Burger Joint in Sheffield",
+  heading1 = "SHEFFIELD'S BEST",
+  heading2 = "CRAFTED BURGERS",
+  description = "At Sabir's Grill, we serve freshly grilled food made with quality ingredients and bold flavours. Every dish is prepared with care, cooked to perfection, and designed to give you a satisfying dining experience worth coming back for.",
+  button1Text = "Order Now",
+  button2Text = "Explore Menu",
+}: HeroLandingPageProps) {
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
     AOS.refresh();
@@ -16,7 +36,6 @@ export default function HeroLandingPage() {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  2;
   return (
     <>
       <Box
@@ -40,7 +59,7 @@ export default function HeroLandingPage() {
             display: "flex",
             alignItems: "center",
             justifyContent: { xs: "center", md: "flex-start" },
-            backgroundImage: "url(./bgHeroLandingPage.png)",
+            backgroundImage: `url(${bgImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
 
@@ -87,8 +106,8 @@ export default function HeroLandingPage() {
                 }}
               >
                 <Image
-                  src={svgs.redStar}
-                  alt="redStar"
+                  src={icon}
+                  alt="icon"
                   style={{
                     width: "20px",
                     height: "20px",
@@ -104,7 +123,7 @@ export default function HeroLandingPage() {
                     fontFamily: '"Open Sans", sans-serif',
                   }}
                 >
-                  Rated #1 Burger Joint in Sheffield
+                  {bannerText}
                 </Typography>
               </Box>
 
@@ -121,7 +140,7 @@ export default function HeroLandingPage() {
                     fontFamily: '"Bebas Neue", sans-serif',
                   }}
                 >
-                  SHEFFIELD'S BEST
+                  {heading1}
                 </Typography>
                 {/* Main Headline - Part 2 */}
                 <Typography
@@ -135,7 +154,7 @@ export default function HeroLandingPage() {
                     fontFamily: '"Bebas Neue", sans-serif',
                   }}
                 >
-                  CRAFTED BURGERS
+                  {heading2}
                 </Typography>
               </Box>
 
@@ -150,10 +169,7 @@ export default function HeroLandingPage() {
                   fontFamily: '"Open Sans", sans-serif',
                 }}
               >
-                At Sabir’s Grill, we serve freshly grilled food made with
-                quality ingredients and bold flavours. Every dish is prepared
-                with care, cooked to perfection, and designed to give you a
-                satisfying dining experience worth coming back for.
+                {description}
               </Typography>
 
               {/* Call-to-Action Buttons */}
@@ -199,7 +215,7 @@ export default function HeroLandingPage() {
                     },
                   }}
                 >
-                  Order Now
+                  {button1Text}
                 </Box>
 
                 {/* Explore Menu Button */}
@@ -235,7 +251,7 @@ export default function HeroLandingPage() {
                     },
                   }}
                 >
-                  Explore Menu
+                  {button2Text}
                 </Box>
               </Box>
             </Box>
