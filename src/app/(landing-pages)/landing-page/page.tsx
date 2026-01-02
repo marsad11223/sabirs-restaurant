@@ -3,7 +3,6 @@ import HeroLandingPage from "../components/HeroLandingPage";
 import SabirsGrillYourChoice from "./_sections/SabirsGrillYourChoice";
 import CustomerFavoritesAlwaysFresh from "./_sections/CustomerFavoritesAlwaysFresh";
 import CelebrateTogetherAtSabirs from "./_sections/CelebrateTogetherAtSabirs";
-import CravingSomethingDeliciousNow from "./_sections/CravingSomethingDeliciousNow";
 import Footer from "@/_components/Footer";
 import FeatureGridSection from "../components/FeatureGridSection";
 import svgs from "@/_assets/svgs";
@@ -47,7 +46,6 @@ export default function LandingPage() {
 
       <CustomerFavoritesAlwaysFresh />
       <CelebrateTogetherAtSabirs />
-      <CravingSomethingDeliciousNow />
       <Footer applyBorderTop={false} />
     </Box>
   );

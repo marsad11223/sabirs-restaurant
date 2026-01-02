@@ -62,6 +62,8 @@ export default function DineInOrGrabTakeAway() {
             justifyContent: "center",
             alignItems: "center",
             gap: "20px",
+            flexDirection: { xs: "column", sm: "row" },
+            flexWrap: "wrap",
           }}
         >
           <Box
@@ -87,7 +89,7 @@ export default function DineInOrGrabTakeAway() {
               "&:active": {
                 transform: "translateY(0)",
               },
-              marginTop: { xs: "30px", sm: "40px", md: "60px", lg: "80px" },
+              marginTop: { xs: "40px", sm: "40px", md: "60px", lg: "80px" },
               margin: "auto",
             }}
           >
@@ -116,7 +118,7 @@ export default function DineInOrGrabTakeAway() {
               "&:active": {
                 transform: "translateY(0)",
               },
-              marginTop: { xs: "30px", sm: "40px", md: "60px", lg: "80px" },
+              marginTop: { sm: "40px", md: "60px", lg: "80px" },
               margin: "auto",
             }}
           >

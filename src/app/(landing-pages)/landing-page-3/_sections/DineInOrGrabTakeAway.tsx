@@ -61,6 +61,8 @@ export default function DineInOrGrabTakeAway() {
             justifyContent: "center",
             alignItems: "center",
             gap: "20px",
+            flexWrap: "wrap",
+            flexDirection: { xs: "column", sm: "row" },
           }}
         >
           <Box
@@ -86,11 +88,12 @@ export default function DineInOrGrabTakeAway() {
               "&:active": {
                 transform: "translateY(0)",
               },
-              marginTop: { xs: "30px", sm: "40px", md: "60px", lg: "80px" },
+              marginTop: { xs: "40px", sm: "40px", md: "60px", lg: "80px" },
               margin: "auto",
+              width: "200px",
             }}
           >
-            Go To Main Page{" "}
+            Go To Main Page
           </Box>
           <Box
             component="button"
@@ -115,11 +118,12 @@ export default function DineInOrGrabTakeAway() {
               "&:active": {
                 transform: "translateY(0)",
               },
-              marginTop: { xs: "30px", sm: "40px", md: "60px", lg: "80px" },
+              marginTop: { sm: "40px", md: "60px", lg: "80px" },
               margin: "auto",
+              width: "200px",
             }}
           >
-            Our Menu{" "}
+            Our Menu
           </Box>
         </Box>
       </Box>
