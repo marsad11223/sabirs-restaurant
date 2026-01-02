@@ -39,6 +39,7 @@ import goldContact from "./goldContact.svg";
 import goldLocation from "./goldLocation.svg";
 import goldTime from "./goldTime.svg";
 import madeWithLove from "./madeWithLove.svg";
+import redPrityIcon from "./redPrityIcon.svg";
 
 const svgs = {
   Logo,
@@ -79,6 +80,7 @@ const svgs = {
   goldLocation,
   goldTime,
   madeWithLove,
+  redPrityIcon,
 };
 
 export default svgs;

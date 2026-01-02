@@ -81,7 +81,7 @@ export default function HeroLandingPage({
           >
             <Box
               sx={{
-                maxWidth: { xs: "100%", md: "600px", lg: "700px" },
+                maxWidth: { xs: "100%", md: "600px", lg: "900px" },
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
@@ -187,71 +187,76 @@ export default function HeroLandingPage({
                   data-aos="zoom-in"
                   data-aos-duration="400"
                   data-aos-delay="700"
-                  component="button"
-                  sx={{
-                    backgroundColor: colors.secondaryYellow,
-                    color: "#851A1D",
-                    border: "none",
-                    borderRadius: "10px",
-                    padding: {
-                      xs: "15px 30px",
-                      md: "20px 40px",
-                    },
-                    height: "56px",
-                    fontSize: fonts.p5,
-                    lineHeight: fonts.p5,
-                    fontWeight: "700",
-                    fontFamily: "inherit",
-                    cursor: "pointer",
-                    transition: "all 0.3s ease",
-                    textTransform: "none",
-                    "&:hover": {
-                      backgroundColor: "#FFE033",
-                      transform: "translateY(-2px)",
-                      boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
-                    },
-                    "&:active": {
-                      transform: "translateY(0)",
-                    },
-                  }}
                 >
-                  {button1Text}
+                  <Box
+                    component="button"
+                    sx={{
+                      backgroundColor: colors.secondaryYellow,
+                      color: "#851A1D",
+                      border: "none",
+                      borderRadius: "10px",
+                      padding: {
+                        xs: "15px 30px",
+                        md: "20px 40px",
+                      },
+                      height: "56px",
+                      fontSize: fonts.p5,
+                      lineHeight: fonts.p5,
+                      fontWeight: "700",
+                      fontFamily: "inherit",
+                      cursor: "pointer",
+                      transition: "all 0.3s ease",
+                      textTransform: "none",
+                      "&:hover": {
+                        backgroundColor: "#FFE033",
+                        transform: "translateY(-2px)",
+                        boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
+                      },
+                      "&:active": {
+                        transform: "translateY(0)",
+                      },
+                    }}
+                  >
+                    {button1Text}
+                  </Box>
                 </Box>
-
                 {/* Explore Menu Button */}
                 <Box
                   data-aos="zoom-in"
                   data-aos-duration="400"
                   data-aos-delay="700"
-                  component="button"
-                  sx={{
-                    backgroundColor: "#FFFFFF33",
-                    border: "none",
-                    color: colors.White,
-                    borderRadius: "10px",
-                    padding: {
-                      xs: "15px 30px",
-                      md: "20px 40px",
-                    },
-                    height: "56px",
-                    fontSize: fonts.p5,
-                    lineHeight: fonts.p5,
-                    fontWeight: "700",
-                    fontFamily: "inherit",
-                    cursor: "pointer",
-                    transition: "all 0.3s ease",
-                    textTransform: "none",
-                    "&:hover": {
-                      backgroundColor: "rgba(133, 26, 29, 0.9)",
-                      transform: "translateY(-2px)",
-                      boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
-                    },
-                    "&:active": {
-                      transform: "translateY(0)",
-                    },
-                  }}
                 >
-                  {button2Text}
+                  <Box
+                    component="button"
+                    sx={{
+                      backgroundColor: "#FFFFFF33",
+                      border: "none",
+                      color: colors.White,
+                      borderRadius: "10px",
+                      padding: {
+                        xs: "15px 30px",
+                        md: "20px 40px",
+                      },
+                      height: "56px",
+                      fontSize: fonts.p5,
+                      lineHeight: fonts.p5,
+                      fontWeight: "700",
+                      fontFamily: "inherit",
+                      cursor: "pointer",
+                      transition: "all 0.3s ease",
+                      textTransform: "none",
+                      "&:hover": {
+                        backgroundColor: "rgba(133, 26, 29, 0.9)",
+                        transform: "translateY(-2px)",
+                        boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
+                      },
+                      "&:active": {
+                        transform: "translateY(0)",
+                      },
+                    }}
+                  >
+                    {button2Text}
+                  </Box>
                 </Box>
               </Box>
             </Box>
