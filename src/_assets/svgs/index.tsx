@@ -40,6 +40,9 @@ import goldLocation from "./goldLocation.svg";
 import goldTime from "./goldTime.svg";
 import madeWithLove from "./madeWithLove.svg";
 import redPrityIcon from "./redPrityIcon.svg";
+import cookedFreshToOrder from "./cookedFreshToOrder.svg";
+import grilledOrSmashed from "./grilledOrSmashed.svg";
+import topTierQuality from "./topTierQuality.svg";
 
 const svgs = {
   Logo,
@@ -81,6 +84,9 @@ const svgs = {
   goldTime,
   madeWithLove,
   redPrityIcon,
+  cookedFreshToOrder,
+  grilledOrSmashed,
+  topTierQuality,
 };
 
 export default svgs;
