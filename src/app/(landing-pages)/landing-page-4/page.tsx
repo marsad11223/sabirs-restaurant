@@ -7,6 +7,7 @@ import webp from "@/_assets/webp";
 import FeatureGridSection from "../components/FeatureGridSection";
 import CTASection from "../components/CTASection";
 import OurPizzaMenuInSheffield from "./_sections/OurPizzaMenuInSheffield";
+import PizzaStylesForEveryTaste from "../components/PizzaStylesForEveryTaste";
 
 export default function LandingPage4() {
   const features = [
@@ -38,10 +39,29 @@ export default function LandingPage4() {
   ];
   const features2 = [
     {
-      icon: svgs.cookedFreshToOrder,
-      firstWord: "",
-      secondWord: "",
-      description: "",
+      icon: svgs.handTopped,
+      firstWord: "Hand",
+      secondWord: "topped",
+      description: "Hand-topped before baking using fresh, quality ingredients",
+    },
+    {
+      icon: svgs.freshFromOven,
+      firstWord: "Fresh from",
+      secondWord: "oven",
+      description: "Fresh from oven to box, locking in heat and flavour",
+    },
+    {
+      icon: svgs.bigPortions,
+      firstWord: "Big",
+      secondWord: "portions",
+      description: "Big portions, generous toppings, and excellent value",
+    },
+    {
+      icon: svgs.consistentQuality,
+      firstWord: "Consistent",
+      secondWord: "quality",
+      description:
+        "Consistent quality every time for a reliable, delicious experience",
     },
   ];
 
@@ -71,6 +91,7 @@ export default function LandingPage4() {
         backgroundColor="#FFFFFF"
       />
       <OurPizzaMenuInSheffield />
+      <PizzaStylesForEveryTaste />
       <InfoSection
         heading1="Freshly Baked Pizza"
         heading2="Served Generousl"
@@ -85,13 +106,13 @@ export default function LandingPage4() {
         features={features2}
         backgroundColor="#FFFFFF"
       />
-      {/* <CTASection
-        headingWhite="Ready For"
-        headingRed="Great Burgers?"
-        description="Explore more on our main diner page and see the full menu overview:"
+      <CTASection
+        headingWhite="Order Fresh Pizza"
+        headingRed="in Sheffield Today"
+        description="Hungry for freshly baked pizza on London Road? Order now and enjoy bold flavours, generous portions and fast service."
         button1Text="Go To Main Page"
         button2Text="Our Menu"
-      /> */}
+      />
       <Footer applyBorderTop={false} />
     </Box>
   );

@@ -47,7 +47,11 @@ import cookedFreshToOrder from "./cookedFreshToOrder.svg";
 import cheeseAndTopping from "./cheeseAndTopping.svg";
 import classicAndSpeciality from "./classicAndSpeciality.svg";
 import bakedFresh from "./bakedFresh.svg";
-
+// sdsf
+import bigPortions from "./bigPortions.svg";
+import consistentQuality from "./consistentQuality.svg";
+import freshFromOven from "./freshFromOven.svg";
+import handTopped from "./handTopped.svg";
 const svgs = {
   Logo,
   LogoRed,
@@ -94,6 +98,10 @@ const svgs = {
   bakedFresh,
   cheeseAndTopping,
   classicAndSpeciality,
+  bigPortions,
+  consistentQuality,
+  freshFromOven,
+  handTopped,
 };
 
 export default svgs;
