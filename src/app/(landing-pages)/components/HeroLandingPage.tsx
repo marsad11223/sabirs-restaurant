@@ -1,6 +1,6 @@
 "use client";
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
-import { fonts, colors } from "@/app/utils/themes";
+import { fonts, colors, sectionPadding } from "@/app/utils/themes";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -54,7 +54,6 @@ export default function HeroLandingPage({
           sx={{
             flexGrow: 1,
             width: "100%",
-            position: "relative",
             overflow: "hidden",
             display: "flex",
             alignItems: "center",
@@ -62,19 +61,12 @@ export default function HeroLandingPage({
             backgroundImage: `url(${bgImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-
-            padding: {
-              xs: "40px 30px",
-              sm: "30px 50px",
-              md: "40px 100px",
-              lg: "60px 150px",
-              xl: "60px 200px",
-            },
+            padding: sectionPadding,
           }}
         >
           <Box
             sx={{
-              maxWidth: "1600px",
+              maxWidth: "1440px",
               width: "100%",
               margin: "0 auto",
             }}

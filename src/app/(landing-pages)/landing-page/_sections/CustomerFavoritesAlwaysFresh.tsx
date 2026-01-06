@@ -1,6 +1,6 @@
 "use client";
 import { Box, Typography, Grid } from "@mui/material";
-import { fonts, colors } from "@/app/utils/themes";
+import { fonts, colors, sectionPadding } from "@/app/utils/themes";
 import Image, { StaticImageData } from "next/image";
 import webp from "@/_assets/webp";
 import { useEffect } from "react";
@@ -50,15 +50,7 @@ export default function CustomerFavoritesAlwaysFresh() {
       <Box
         sx={{
           backgroundImage: "url(./bgCustomerFavoritesAlwaysFresh.png)",
-          padding: {
-            xs: "40px 20px",
-            sm: "50px 30px",
-            md: "60px 40px",
-            lg: "80px 60px",
-            xl: "100px 80px",
-          },
-          position: "relative",
-          overflow: "hidden",
+          padding: sectionPadding,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -157,7 +149,7 @@ export default function CustomerFavoritesAlwaysFresh() {
               md: "repeat(4, 1fr)",
             },
             gap: { xs: "24px", sm: "28px", md: "24px", lg: "32px" },
-            maxWidth: "1600px",
+            maxWidth: "1440px",
             margin: "0 auto",
             marginBottom: { xs: "30px", sm: "40px", md: "60px", lg: "80px" },
           }}
@@ -175,7 +167,7 @@ export default function CustomerFavoritesAlwaysFresh() {
         </Box>
         <Box
           sx={{
-            maxWidth: "1600px",
+            maxWidth: "1440px",
             margin: "0 auto",
           }}
         >

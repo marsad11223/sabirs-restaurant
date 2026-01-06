@@ -1,6 +1,6 @@
 "use client";
 import { Box, Typography } from "@mui/material";
-import { fonts, colors } from "@/app/utils/themes";
+import { fonts, colors, sectionPadding } from "@/app/utils/themes";
 import svgs from "@/_assets/svgs";
 import LocationCard, { MapData, InfoItem } from "../../components/LocationCard";
 
@@ -67,17 +67,7 @@ export default function FoodWorthTheTrip() {
   return (
     <Box sx={{ width: "100%", backgroundColor: "#FFFFFF" }}>
       {/* Main Content Area */}
-      <Box
-        sx={{
-          padding: {
-            xs: "40px 20px",
-            sm: "50px 30px",
-            md: "60px 40px",
-            lg: "80px 60px",
-            xl: "100px 80px",
-          },
-        }}
-      >
+      <Box sx={{ padding: sectionPadding }}>
         {/* Title Section */}
         <Box sx={{ textAlign: "center", maxWidth: "680px", margin: "auto" }}>
           <Typography
@@ -126,7 +116,7 @@ export default function FoodWorthTheTrip() {
               md: "repeat(2, 1fr)",
             },
             gap: { xs: "20px", md: "30px", lg: "40px" },
-            maxWidth: "1400px",
+            maxWidth: "1440px",
             marginLeft: "auto",
             marginRight: "auto",
           }}

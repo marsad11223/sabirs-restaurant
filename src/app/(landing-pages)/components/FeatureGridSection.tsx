@@ -1,6 +1,6 @@
 "use client";
 import { Box, Typography } from "@mui/material";
-import { fonts, colors } from "@/app/utils/themes";
+import { fonts, colors, sectionPadding } from "@/app/utils/themes";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -39,27 +39,28 @@ export default function FeatureGridSection({
   }, []);
 
   return (
-    <Box sx={{ width: "100%", backgroundColor: backgroundColor }}>
+    <Box
+      sx={{
+        width: "100%",
+        backgroundColor: backgroundColor,
+        padding: sectionPadding,
+        ...(backgroundImage && {
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "100% 70%",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "top center",
+        }),
+      }}
+    >
       {/* Main Content Area */}
       <Box
         sx={{
-          padding: {
-            xs: "40px 20px",
-            sm: "50px 30px",
-            md: "60px 40px",
-            lg: "80px 60px",
-            xl: "100px 80px",
-          },
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           gap: { xs: "30px", sm: "40px", md: "50px" },
-          ...(backgroundImage && {
-            backgroundImage: `url(${backgroundImage})`,
-            backgroundSize: "100% 70%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "top center",
-          }),
+          maxWidth: "1440px",
+          margin: "auto",
         }}
       >
         {/* Title Section */}
@@ -102,7 +103,7 @@ export default function FeatureGridSection({
         <Box
           sx={{
             width: "100%",
-            maxWidth: "1240px",
+            maxWidth: "1440px",
             display: "flex",
             flexWrap: "wrap",
             gap: { xs: "15px", md: "20px", lg: "30px" },

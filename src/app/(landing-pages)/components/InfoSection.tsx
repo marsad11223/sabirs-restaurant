@@ -50,6 +50,7 @@ export default function InfoSection({
             md: reverseOrder ? "row-reverse" : "row",
           },
           alignItems: "center",
+          justifyContent: "space-between",
           gap: { xs: "32px", md: "48px", lg: "60px" },
           maxWidth: "1200px",
           margin: "0 auto",

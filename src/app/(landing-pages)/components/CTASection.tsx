@@ -1,6 +1,6 @@
 "use client";
 import { Box, Typography } from "@mui/material";
-import { fonts, colors } from "@/app/utils/themes";
+import { fonts, colors, sectionPadding } from "@/app/utils/themes";
 
 interface CTASectionProps {
   headingWhite: string;
@@ -19,17 +19,7 @@ export default function CTASection({
 }: CTASectionProps) {
   return (
     <Box sx={{ width: "100%", backgroundColor: "#FFD40D" }}>
-      <Box
-        sx={{
-          padding: {
-            xs: "40px 20px",
-            sm: "50px 30px",
-            md: "60px 40px",
-            lg: "80px 60px",
-            xl: "100px 80px",
-          },
-        }}
-      >
+      <Box sx={{ padding: sectionPadding, maxWidth: "1440px", margin: "auto" }}>
         {/* Title Section */}
         <Box sx={{ textAlign: "center", maxWidth: "680px", margin: "auto" }}>
           <Typography

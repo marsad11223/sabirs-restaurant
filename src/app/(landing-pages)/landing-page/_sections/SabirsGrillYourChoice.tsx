@@ -1,12 +1,10 @@
 "use client";
 import { Box, Typography } from "@mui/material";
-import { fonts, colors } from "@/app/utils/themes";
-import Image from "next/image";
+import { fonts, colors, sectionPaddingX } from "@/app/utils/themes";
 import svgs from "@/_assets/svgs";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import FeatureCard from "../../components/FeatureCard";
 
 export default function SabirsGrillYourChoice() {
   const features = [
@@ -40,13 +38,8 @@ export default function SabirsGrillYourChoice() {
     <Box
       sx={{
         backgroundColor: colors.secondaryYellow,
-        padding: {
-          xs: "20px 30px",
-          sm: "30px 50px",
-          md: "40px 100px",
-          lg: "40px 150px",
-          xl: "40px 200px",
-        },
+        paddingX: sectionPaddingX,
+        paddingY: "40px",
       }}
     >
       <Box
@@ -56,7 +49,7 @@ export default function SabirsGrillYourChoice() {
           alignItems: { xs: "flex-start", md: "center" },
           justifyContent: "space-between",
           gap: { xs: "16px", md: "20px" },
-          maxWidth: "1600px",
+          maxWidth: "1440px",
           width: "100%",
           margin: "0 auto",
         }}
