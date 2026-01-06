@@ -1,12 +1,12 @@
 import { Box } from "@mui/material";
 import HeroLandingPage from "../components/HeroLandingPage";
 import WhereFlavourComesFirst from "./_sections/WhereFlavourComesFirst";
-import DineInOrGrabTakeAway from "./_sections/DineInOrGrabTakeAway";
 import Footer from "@/_components/Footer";
 import svgs from "@/_assets/svgs";
 import InfoSection from "../components/InfoSection";
 import webp from "@/_assets/webp";
 import FeatureGridSection from "../components/FeatureGridSection";
+import CTASection from "../components/CTASection";
 
 export default function LandingPage3() {
   const features = [
@@ -62,7 +62,13 @@ export default function LandingPage3() {
         backgroundColor="#FFFFFF"
       />
       <WhereFlavourComesFirst />
-      <DineInOrGrabTakeAway />
+      <CTASection
+        headingWhite="Ready For"
+        headingRed="Great Burgers?"
+        description="Explore more on our main diner page and see the full menu overview:"
+        button1Text="Go To Main Page"
+        button2Text="Our Menu"
+      />
       <Footer applyBorderTop={false} />
     </Box>
   );

@@ -1,10 +1,10 @@
 import { Box } from "@mui/material";
 import HeroLandingPage from "../components/HeroLandingPage";
-import DineInOrGrabTakeAway from "./_sections/DineInOrGrabTakeAway";
 import FoodWorthTheTrip from "./_sections/FoodWorthTheTrip";
 import Footer from "@/_components/Footer";
 import svgs from "@/_assets/svgs";
 import FeatureGridSection from "../components/FeatureGridSection";
+import CTASection from "../components/CTASection";
 
 export default function LandingPage2() {
   const features = [
@@ -60,7 +60,13 @@ export default function LandingPage2() {
         buttonText="Get Started"
       />
       <FoodWorthTheTrip />
-      <DineInOrGrabTakeAway />
+      <CTASection
+        headingWhite="Dine-In or"
+        headingRed="Grab Takeaway"
+        description="Big flavours, quality ingredients, and food you’ll love—freshly prepared, perfectly grilled, and served just the way it should be."
+        button1Text="Order Now"
+        button2Text="Reserve Your Table"
+      />
       <Footer applyBorderTop={false} />
     </Box>
   );

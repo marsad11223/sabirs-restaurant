@@ -2,10 +2,23 @@
 import { Box, Typography } from "@mui/material";
 import { fonts, colors } from "@/app/utils/themes";
 
-export default function DineInOrGrabTakeAway() {
+interface CTASectionProps {
+  headingWhite: string;
+  headingRed: string;
+  description: string;
+  button1Text: string;
+  button2Text: string;
+}
+
+export default function CTASection({
+  headingWhite,
+  headingRed,
+  description,
+  button1Text,
+  button2Text,
+}: CTASectionProps) {
   return (
     <Box sx={{ width: "100%", backgroundColor: "#FFD40D" }}>
-      {/* Main Content Area */}
       <Box
         sx={{
           padding: {
@@ -28,7 +41,7 @@ export default function DineInOrGrabTakeAway() {
               textTransform: "uppercase",
             }}
           >
-            Ready For
+            {headingWhite}
           </Typography>
           <Typography
             sx={{
@@ -39,7 +52,7 @@ export default function DineInOrGrabTakeAway() {
               textTransform: "uppercase",
             }}
           >
-            Great Burgers?
+            {headingRed}
           </Typography>
           <Typography
             sx={{
@@ -49,10 +62,11 @@ export default function DineInOrGrabTakeAway() {
               marginTop: { xs: "16px", md: "20px" },
             }}
           >
-            Explore more on our main diner page and see the full menu overview:
+            {description}
           </Typography>
         </Box>
 
+        {/* Buttons */}
         <Box
           sx={{
             margin: "auto",
@@ -61,8 +75,8 @@ export default function DineInOrGrabTakeAway() {
             justifyContent: "center",
             alignItems: "center",
             gap: "20px",
-            flexWrap: "wrap",
             flexDirection: { xs: "column", sm: "row" },
+            flexWrap: "wrap",
           }}
         >
           <Box
@@ -72,10 +86,7 @@ export default function DineInOrGrabTakeAway() {
               color: "#fff",
               border: "none",
               borderRadius: "10px",
-              padding: {
-                xs: "15px 30px",
-                md: "20px 40px",
-              },
+              padding: { xs: "15px 30px", md: "20px 40px" },
               fontSize: fonts.p5,
               cursor: "pointer",
               transition: "all 0.3s ease",
@@ -90,10 +101,11 @@ export default function DineInOrGrabTakeAway() {
               },
               marginTop: { xs: "40px", sm: "40px", md: "60px", lg: "80px" },
               margin: "auto",
-              width: "200px",
+              fontWeight: "700",
+              minWidth: "210px",
             }}
           >
-            Go To Main Page
+            {button1Text}
           </Box>
           <Box
             component="button"
@@ -102,10 +114,7 @@ export default function DineInOrGrabTakeAway() {
               backgroundColor: "#fff",
               border: "none",
               borderRadius: "10px",
-              padding: {
-                xs: "15px 30px",
-                md: "20px 40px",
-              },
+              padding: { xs: "15px 30px", md: "20px 40px" },
               fontSize: fonts.p5,
               cursor: "pointer",
               transition: "all 0.3s ease",
@@ -120,10 +129,11 @@ export default function DineInOrGrabTakeAway() {
               },
               marginTop: { sm: "40px", md: "60px", lg: "80px" },
               margin: "auto",
-              width: "200px",
+              fontWeight: "700",
+              minWidth: "210px",
             }}
           >
-            Our Menu
+            {button2Text}
           </Box>
         </Box>
       </Box>
