@@ -50,6 +50,13 @@ import CustomerFavorite4 from "./customerFavorites4.png";
 
 import whatMakesThemGreat from "./whatMakesThemGreat.png";
 import whyOurBurgersAreSpecial from "./whyOurBurgersAreSpecial.png";
+import whyOurPizza from "./whyOurPizza.png";
+
+import popularChoices1 from "./popularChoices1.png";
+import popularChoices2 from "./popularChoices2.png";
+import popularChoices3 from "./popularChoices3.png";
+import popularChoices4 from "./popularChoices4.png";
+import freshlyBakedPizzay from "./freshlyBakedPizzay.png";
 
 const webp = {
   // slider begain
@@ -101,6 +108,12 @@ const webp = {
 
   whatMakesThemGreat,
   whyOurBurgersAreSpecial,
+  whyOurPizza,
+  popularChoices1,
+  popularChoices2,
+  popularChoices3,
+  popularChoices4,
+  freshlyBakedPizzay,
 };
 
 export default webp;

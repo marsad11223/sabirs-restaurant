@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
 import HeroLandingPage from "../components/HeroLandingPage";
-import WhereFlavourComesFirst from "./_sections/WhereFlavourComesFirst";
 import Footer from "@/_components/Footer";
 import svgs from "@/_assets/svgs";
 import InfoSection from "../components/InfoSection";
@@ -53,6 +52,7 @@ export default function LandingPage3() {
         description="Smash burgers are a our favourite — thin, seared patties pressed on the grill for that crispy edge and juicy inside, packed with toppings and served in a soft bun. Scratch-made and cooked to lock in flavour, they’re a go-to option for burger lovers."
         imageSrc={webp.whatMakesThemGreat}
         backgroundColor="#851A1D"
+        reverseOrder={true}
       />
       <FeatureGridSection
         heading1="how we cook"
@@ -61,7 +61,6 @@ export default function LandingPage3() {
         features={features}
         backgroundColor="#FFFFFF"
       />
-      <WhereFlavourComesFirst />
       <CTASection
         headingWhite="Ready For"
         headingRed="Great Burgers?"

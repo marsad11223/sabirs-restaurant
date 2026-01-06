@@ -40,9 +40,13 @@ import goldLocation from "./goldLocation.svg";
 import goldTime from "./goldTime.svg";
 import madeWithLove from "./madeWithLove.svg";
 import redPrityIcon from "./redPrityIcon.svg";
-import cookedFreshToOrder from "./cookedFreshToOrder.svg";
 import grilledOrSmashed from "./grilledOrSmashed.svg";
 import topTierQuality from "./topTierQuality.svg";
+
+import cookedFreshToOrder from "./cookedFreshToOrder.svg";
+import cheeseAndTopping from "./cheeseAndTopping.svg";
+import classicAndSpeciality from "./classicAndSpeciality.svg";
+import bakedFresh from "./bakedFresh.svg";
 
 const svgs = {
   Logo,
@@ -87,6 +91,9 @@ const svgs = {
   cookedFreshToOrder,
   grilledOrSmashed,
   topTierQuality,
+  bakedFresh,
+  cheeseAndTopping,
+  classicAndSpeciality,
 };
 
 export default svgs;
