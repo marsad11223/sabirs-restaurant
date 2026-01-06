@@ -91,6 +91,7 @@ export default function DineInOrGrabTakeAway() {
               },
               marginTop: { xs: "40px", sm: "40px", md: "60px", lg: "80px" },
               margin: "auto",
+              fontWeight: "700",
             }}
           >
             Reserve Your Spot
@@ -120,6 +121,7 @@ export default function DineInOrGrabTakeAway() {
               },
               marginTop: { sm: "40px", md: "60px", lg: "80px" },
               margin: "auto",
+              fontWeight: "700",
             }}
           >
             Reserve Your Table

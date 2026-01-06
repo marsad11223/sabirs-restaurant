@@ -131,6 +131,7 @@ export default function SabirsGrillYourChoice() {
             "&:active": {
               transform: "translateY(0)",
             },
+            fontWeight: "700",
           }}
         >
           Claim Now

@@ -55,7 +55,7 @@ export default function FeatureGridSection({
           alignItems: "center",
           gap: { xs: "30px", sm: "40px", md: "50px" },
           ...(backgroundImage && {
-            backgroundImage: backgroundImage,
+            backgroundImage: `url(${backgroundImage})`,
             backgroundSize: "100% 70%",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "top center",
@@ -102,7 +102,7 @@ export default function FeatureGridSection({
         <Box
           sx={{
             width: "100%",
-            maxWidth: "1200px",
+            maxWidth: "1240px",
             display: "flex",
             flexWrap: "wrap",
             gap: { xs: "15px", md: "20px", lg: "30px" },
@@ -122,6 +122,40 @@ export default function FeatureGridSection({
             />
           ))}
         </Box>
+
+        {/* Button */}
+        {buttonText && (
+          <Box>
+            <Box
+              component="button"
+              sx={{
+                backgroundColor: colors.primaryRed,
+                color: "#FFFFFF",
+                border: "none",
+                borderRadius: "10px",
+                padding: {
+                  xs: "15px 30px",
+                  md: "20px 40px",
+                },
+                fontSize: fonts.p5,
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+                whiteSpace: "nowrap",
+                minWidth: "210px",
+                fontWeight: "700",
+                "&:hover": {
+                  transform: "translateY(-2px)",
+                  boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
+                },
+                "&:active": {
+                  transform: "translateY(0)",
+                },
+              }}
+            >
+              {buttonText}
+            </Box>
+          </Box>
+        )}
       </Box>
     </Box>
   );

@@ -215,6 +215,7 @@ export default function HeroLandingPage({
                       "&:active": {
                         transform: "translateY(0)",
                       },
+                      minWidth: "200px",
                     }}
                   >
                     {button1Text}
@@ -253,6 +254,7 @@ export default function HeroLandingPage({
                       "&:active": {
                         transform: "translateY(0)",
                       },
+                      minWidth: "200px",
                     }}
                   >
                     {button2Text}

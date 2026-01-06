@@ -6,8 +6,31 @@ import Footer from "@/_components/Footer";
 import svgs from "@/_assets/svgs";
 import InfoSection from "../components/InfoSection";
 import webp from "@/_assets/webp";
+import FeatureGridSection from "../components/FeatureGridSection";
 
 export default function LandingPage3() {
+  const features = [
+    {
+      icon: svgs.cookedFreshToOrder,
+      firstWord: "Cooked fresh",
+      secondWord: "to order",
+      description: "Prepared fresh when you order, never pre-made.",
+    },
+    {
+      icon: svgs.grilledOrSmashed,
+      firstWord: "top tier",
+      secondWord: "Quality",
+      description:
+        "Made with quality beef, tender chicken or delicious vegies.",
+    },
+    {
+      icon: svgs.topTierQuality,
+      firstWord: "Grilled or",
+      secondWord: "smashed",
+      description: "Grilled or smashed on a hot plate for maximum flavour",
+    },
+  ];
+
   return (
     <Box>
       <HeroLandingPage
@@ -30,6 +53,13 @@ export default function LandingPage3() {
         description="Smash burgers are a our favourite — thin, seared patties pressed on the grill for that crispy edge and juicy inside, packed with toppings and served in a soft bun. Scratch-made and cooked to lock in flavour, they’re a go-to option for burger lovers."
         imageSrc={webp.whatMakesThemGreat}
         backgroundColor="#851A1D"
+      />
+      <FeatureGridSection
+        heading1="how we cook"
+        heading2="your burger"
+        description="Expect generous portions, comforting favourites, and flavours that keep people coming back. Eat in, take away, or order ahead — good food is always waiting."
+        features={features}
+        backgroundColor="#FFFFFF"
       />
       <WhereFlavourComesFirst />
       <DineInOrGrabTakeAway />
