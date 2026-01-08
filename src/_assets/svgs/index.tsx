@@ -52,6 +52,9 @@ import bigPortions from "./bigPortions.svg";
 import consistentQuality from "./consistentQuality.svg";
 import freshFromOven from "./freshFromOven.svg";
 import handTopped from "./handTopped.svg";
+import sheffieldFavorite from "./sheffieldFavorite.svg";
+import familyFriendlyRestaurantInSheffield from "./familyFriendlyRestaurantInSheffield.svg";
+
 const svgs = {
   Logo,
   LogoRed,
@@ -102,6 +105,8 @@ const svgs = {
   consistentQuality,
   freshFromOven,
   handTopped,
+  sheffieldFavorite,
+  familyFriendlyRestaurantInSheffield,
 };
 
 export default svgs;

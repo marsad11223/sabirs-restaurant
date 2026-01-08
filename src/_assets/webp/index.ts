@@ -57,6 +57,7 @@ import popularChoices2 from "./popularChoices2.png";
 import popularChoices3 from "./popularChoices3.png";
 import popularChoices4 from "./popularChoices4.png";
 import freshlyBakedPizzay from "./freshlyBakedPizzay.png";
+import aPlaceFamiliesFeelWelcome from "./infoSection/aPlaceFamiliesFeelWelcome.png";
 
 const webp = {
   // slider begain
@@ -114,6 +115,7 @@ const webp = {
   popularChoices3,
   popularChoices4,
   freshlyBakedPizzay,
+  aPlaceFamiliesFeelWelcome,
 };
 
 export default webp;

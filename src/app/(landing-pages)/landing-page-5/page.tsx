@@ -9,7 +9,7 @@ import CTASection from "../components/CTASection";
 import OurPizzaMenuInSheffield from "./_sections/OurPizzaMenuInSheffield";
 import PizzaStylesForEveryTaste from "../components/PizzaStylesForEveryTaste";
 
-export default function LandingPage4() {
+export default function LandingPage5() {
   const features = [
     {
       icon: svgs.cookedFreshToOrder,
@@ -68,25 +68,26 @@ export default function LandingPage4() {
   return (
     <Box>
       <HeroLandingPage
-        icon={svgs.sheffieldFavorite}
-        bannerText="Juicy, flavour-packed burgers"
-        bgImage="./bgHeroLandingPage4.png"
-        heading1="Pizza in Sheffield "
-        heading2="Freshly Baked"
-        description="Craving authentic, freshly baked pizza in Sheffield? At Sabir’s on London Road, we serve generous, flavour-packed pizzas made fresh to order — from classic favourites to bold signature specials."
-        button1Text="Order Pizza"
-        button2Text="Explore Menu"
+        icon={svgs.familyFriendlyRestaurantInSheffield}
+        bannerText="Family Friendly Restaurant in Sheffield"
+        bgImage="./bgHeroLandingPage5.png"
+        heading1="Relaxed Dining for"
+        heading2="Families & Groups"
+        description="At Sabir’s, we bring people together over great food in a welcoming, relaxed space. Known as a family friendly restaurant in Sheffield, we’re the perfect place for family meals, catch-ups with friends, and group dining in Sheffield. With spacious seating, generous portions, and a comfortable atmosphere, every visit feels easy and enjoyable."
+        button1Text="Book a Table"
+        button2Text="Plan Group Dining"
       />
       <InfoSection
-        heading1="WHY OUR"
-        heading2="PIZZA"
-        description="At Sabir’s, pizza is our passion. Every pizza is prepared with fresh dough, rich tomato sauce, quality cheese and generous toppings. Whether you prefer a classic base or something bold and spicy, our pizzas are baked fresh and served in satisfying portions every time."
-        imageSrc={webp.whyOurPizza}
+        heading1="A Place Families"
+        heading2="Feel Welcome"
+        description="Sabir’s is designed with families in mind. Whether you’re visiting with young children, teenagers, or multiple generations, our calm and friendly environment makes dining together stress-free and enjoyable."
+        description2="We focus on comfort, space, and service — so families can relax, talk, and enjoy their meal without feeling rushed. From weekday dinners to weekend family outings, Sabir’s has become a trusted choice for family meals in Sheffield."
+        imageSrc={webp.aPlaceFamiliesFeelWelcome}
       />
       <FeatureGridSection
-        heading1="Why locals"
-        heading2="our pizza love"
-        description="Expect generous portions, comforting favourites, and flavours that keep people coming back. Eat in, take away, or order ahead — good food is always waiting."
+        heading1="Why customers"
+        heading2="love our grill"
+        description="At Sabir’s, grilling isn’t just cooking — it’s a craft. Our chefs specialise in flame-grilled meats and traditional kebabs, delivering rich flavour, perfect char, and juicy texture in every bite."
         features={features}
         backgroundColor="#FFFFFF"
       />

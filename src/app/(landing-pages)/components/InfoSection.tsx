@@ -11,6 +11,7 @@ export interface InfoSectionProps {
   heading1: string;
   heading2: string;
   description: string;
+  description2?: string;
   imageSrc: StaticImageData | string;
   reverseOrder?: boolean;
 }
@@ -20,6 +21,7 @@ export default function InfoSection({
   heading1,
   heading2,
   description,
+  description2,
   imageSrc,
   reverseOrder = false,
 }: InfoSectionProps) {
@@ -103,20 +105,36 @@ export default function InfoSection({
             </Typography>
 
             {/* Description Text */}
-            <Typography
-              sx={{
-                fontSize: fonts.p4,
-                lineHeight: "1.6",
-                color:
-                  backgroundColor === "#851A1D"
-                    ? colors.White
-                    : colors.darkGrey,
-                marginTop: { xs: "8px", md: "12px" },
-                maxWidth: "100%",
-              }}
-            >
-              {description}
-            </Typography>
+            <Box>
+              <Typography
+                sx={{
+                  fontSize: fonts.p4,
+                  lineHeight: "1.6",
+                  color:
+                    backgroundColor === "#851A1D"
+                      ? colors.White
+                      : colors.darkGrey,
+                  marginTop: { xs: "8px", md: "12px" },
+                  maxWidth: "100%",
+                }}
+              >
+                {description}
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: fonts.p4,
+                  lineHeight: "1.6",
+                  color:
+                    backgroundColor === "#851A1D"
+                      ? colors.White
+                      : colors.darkGrey,
+                  marginTop: { xs: "8px", md: "12px" },
+                  maxWidth: "100%",
+                }}
+              >
+                {description2}
+              </Typography>
+            </Box>
           </Box>
         </Box>
 

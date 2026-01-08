@@ -113,6 +113,7 @@ export default function HeroLandingPage({
                     fontSize: { xs: "14px", md: "16px" },
                     color: "#851A1D",
                     fontFamily: '"Open Sans", sans-serif',
+                    textTransform: "uppercase",
                   }}
                 >
                   {bannerText}
