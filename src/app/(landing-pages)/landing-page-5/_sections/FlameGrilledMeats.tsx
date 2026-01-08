@@ -9,36 +9,37 @@ import "aos/dist/aos.css";
 import FoodCard from "../../components/FoodCard";
 import MenuTickets from "../../components/MenuTickets";
 
-export default function OurPizzaMenuInSheffield() {
+export default function FlameGrilledMeats() {
   const foodItems = [
     {
-      image: webp.popularChoices1,
-      title: "Chicken Tikka",
-      title2: "Pizza",
+      image: webp.customerFavourites5,
+      title: "Chicken Shish",
+      title2: "Kebab",
       price: "£8.99",
-      description: "Juicy chicken with bold tikka flavour.",
+      description: "Tender chicken breast marinated for 24 hours.",
     },
     {
-      image: webp.popularChoices2,
-      title: "Pepperoni ",
-      title2: "Pizza",
+      image: webp.customerFavourites6,
+      title: "Mixed Grill",
+      title2: "Platters",
       price: "£3.99",
-      description: "Loaded with spicy pepperoni slices",
-    },
-    {
-      image: webp.popularChoices3,
-      title: "Meat Feast",
-      title2: "Pizza",
-      price: "£8.99",
-      description: "A rich mix of premium meats.",
-    },
-    {
-      image: webp.popularChoices4,
-      title: "MARGHERITA",
-      title2: "PIZZA",
-      price: "£9.99",
       description:
-        "Classic thin crust with fresh tomatoes, mozzarella, and basil.",
+        "The ultimate grill experience. Perfect for the seriously hungry.",
+    },
+    {
+      image: webp.customerFavourites7,
+      title: "Charcoal-Grilled",
+      title2: "Chicken",
+      price: "£8.99",
+      description:
+        "Juicy chicken grilled over charcoal for a rich, smoky flavour.",
+    },
+    {
+      image: webp.customerFavourites8,
+      title: "Lamb",
+      title2: "Kebabs",
+      price: "£9.99",
+      description: "Premium cuts of lamb marinated in Middle Eastern spices.",
     },
   ];
 
@@ -72,7 +73,7 @@ export default function OurPizzaMenuInSheffield() {
                 textTransform: "uppercase",
               }}
             >
-              Our Pizza Menu
+              Flame-Grilled Meats
             </Typography>
 
             {/* Subtitle */}
@@ -85,7 +86,7 @@ export default function OurPizzaMenuInSheffield() {
                 textTransform: "uppercase",
               }}
             >
-              in Sheffield
+              Cooked to Perfection
             </Typography>
           </Box>
 
@@ -98,8 +99,9 @@ export default function OurPizzaMenuInSheffield() {
               marginTop: { xs: "16px", md: "20px" },
             }}
           >
-            Explore our range of freshly baked pizzas, all served on a hearty
-            base and made to fill you up.
+            Our menu is built around the grill. From tender chicken to richly
+            seasoned lamb, every dish is cooked over open flames to lock in
+            flavour and create a perfect char.
           </Typography>
         </Box>
 
@@ -122,7 +124,7 @@ export default function OurPizzaMenuInSheffield() {
               textTransform: "uppercase",
             }}
           >
-            Popular
+            Customer
           </Typography>
           <Typography
             sx={{
@@ -133,7 +135,7 @@ export default function OurPizzaMenuInSheffield() {
               textTransform: "uppercase",
             }}
           >
-            Choices
+            favourites
           </Typography>
         </Box>
 

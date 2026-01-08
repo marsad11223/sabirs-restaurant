@@ -59,6 +59,11 @@ import popularChoices4 from "./popularChoices4.png";
 import freshlyBakedPizzay from "./freshlyBakedPizzay.png";
 import aPlaceFamiliesFeelWelcome from "./infoSection/aPlaceFamiliesFeelWelcome.png";
 
+import customerFavourites5 from "./customerFavourite5.png";
+import customerFavourites6 from "./customerFavourite6.png";
+import customerFavourites7 from "./customerFavourite7.png";
+import customerFavourites8 from "./customerFavourite8.png";
+
 const webp = {
   // slider begain
   ChickenBruger,
@@ -116,6 +121,10 @@ const webp = {
   popularChoices4,
   freshlyBakedPizzay,
   aPlaceFamiliesFeelWelcome,
+  customerFavourites5,
+  customerFavourites6,
+  customerFavourites7,
+  customerFavourites8,
 };
 
 export default webp;

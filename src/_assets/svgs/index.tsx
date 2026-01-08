@@ -54,6 +54,13 @@ import freshFromOven from "./freshFromOven.svg";
 import handTopped from "./handTopped.svg";
 import sheffieldFavorite from "./sheffieldFavorite.svg";
 import familyFriendlyRestaurantInSheffield from "./familyFriendlyRestaurantInSheffield.svg";
+// iconsFeatureCard
+import authenticKebabsMadeFresh from "./iconsFeatureCard/authenticKebabsMadeFresh.svg";
+import boldMarinadesAndSpices from "./iconsFeatureCard/boldMarinadesAndSpices.svg";
+import charcoalAndFlameGrilled from "./iconsFeatureCard/charcoalAndFlameGrilled.svg";
+import dineInAndQuickTakeaway from "./iconsFeatureCard/dineInAndQuickTakeaway.svg";
+import hundredPercentHalalMeat from "./iconsFeatureCard/hundredPercentHalalMeat.svg";
+import locatedInSheffield from "./iconsFeatureCard/locatedInSheffield.svg";
 
 const svgs = {
   Logo,
@@ -107,6 +114,13 @@ const svgs = {
   handTopped,
   sheffieldFavorite,
   familyFriendlyRestaurantInSheffield,
+  // iconsFeatureCard
+  authenticKebabsMadeFresh,
+  boldMarinadesAndSpices,
+  charcoalAndFlameGrilled,
+  dineInAndQuickTakeaway,
+  hundredPercentHalalMeat,
+  locatedInSheffield,
 };
 
 export default svgs;

@@ -6,35 +6,48 @@ import InfoSection from "../components/InfoSection";
 import webp from "@/_assets/webp";
 import FeatureGridSection from "../components/FeatureGridSection";
 import CTASection from "../components/CTASection";
-import OurPizzaMenuInSheffield from "./_sections/OurPizzaMenuInSheffield";
 import PizzaStylesForEveryTaste from "../components/PizzaStylesForEveryTaste";
+import FlameGrilledMeats from "./_sections/flameGrilledMeats";
+// import FlameGrilledMeats from "./_sections/flameGrilledMeats";
 
 export default function LandingPage5() {
   const features = [
     {
-      icon: svgs.cookedFreshToOrder,
-      firstWord: "Cooked fresh",
-      secondWord: "to order",
+      icon: svgs.charcoalAndFlameGrilled,
+      firstWord: "Charcoal &",
+      secondWord: "flame-grilled",
+      description: "Our meats are cooked over real charcoal and open flames",
+    },
+    {
+      icon: svgs.authenticKebabsMadeFresh,
+      firstWord: "Authentic kebabs",
+      secondWord: "made fresh",
+      description: "Authentic kebabs made fresh daily, marinated with spices",
+    },
+    {
+      icon: svgs.hundredPercentHalalMeat,
+      firstWord: "100% halal",
+      secondWord: "meat",
       description:
-        "Fresh dough prepared daily, baked for a soft and airy base.",
+        "100% halal meat options, cooked fresh and handled with integrity",
     },
     {
-      icon: svgs.cheeseAndTopping,
-      firstWord: "cheese and",
-      secondWord: "topping",
-      description: "Generous cheese and topping portions",
+      icon: svgs.boldMarinadesAndSpices,
+      firstWord: "Bold marinades",
+      secondWord: "and spices",
+      description: "Bold marinades and traditional spices, carefully blended.",
     },
     {
-      icon: svgs.classicAndSpeciality,
-      firstWord: "classic &",
-      secondWord: "speciality",
-      description: "Wide range of classic & speciality pizzas",
+      icon: svgs.dineInAndQuickTakeaway,
+      firstWord: "dine-in &",
+      secondWord: "quick takeaway",
+      description: "Comfortable dine-in & quick takeaway",
     },
     {
-      icon: svgs.bakedFresh,
-      firstWord: "Baked",
-      secondWord: "fresh",
-      description: "Baked fresh on London Road, Sheffield",
+      icon: svgs.locatedInSheffield,
+      firstWord: "located",
+      secondWord: "in Sheffield",
+      description: "Conveniently located in Sheffield, for relaxed dining",
     },
   ];
   const features2 = [
@@ -91,7 +104,7 @@ export default function LandingPage5() {
         features={features}
         backgroundColor="#FFFFFF"
       />
-      <OurPizzaMenuInSheffield />
+      <FlameGrilledMeats />
       <PizzaStylesForEveryTaste />
       <InfoSection
         heading1="Freshly Baked Pizza"
