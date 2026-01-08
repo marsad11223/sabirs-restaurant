@@ -64,7 +64,7 @@ export default function CTASection({
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            gap: "20px",
+            gap: { xs: "8px", sm: "20px" },
             flexDirection: { xs: "column", sm: "row" },
             flexWrap: "wrap",
           }}

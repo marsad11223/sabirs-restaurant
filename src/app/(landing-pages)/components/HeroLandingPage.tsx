@@ -169,7 +169,7 @@ export default function HeroLandingPage({
                 sx={{
                   display: "flex",
                   flexDirection: { xs: "column", sm: "row" },
-                  gap: { xs: "16px", sm: "20px" },
+                  gap: { xs: "8px", sm: "20px" },
                   marginTop: { xs: "20px", md: "10px" },
                   width: { xs: "100%", sm: "auto" },
                 }}

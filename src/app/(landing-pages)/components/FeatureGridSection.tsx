@@ -17,7 +17,7 @@ export interface FeatureItem {
 export interface FeatureGridSectionProps {
   heading1: string;
   heading2: string;
-  description: string;
+  description?: string;
   features: FeatureItem[];
   backgroundColor?: string;
   backgroundImage?: string;
@@ -87,16 +87,18 @@ export default function FeatureGridSection({
           >
             {heading2}
           </Typography>
-          <Typography
-            sx={{
-              fontSize: fonts.p4,
-              lineHeight: fonts.p4,
-              color: colors.darkGrey,
-              marginTop: { xs: "16px", md: "20px" },
-            }}
-          >
-            {description}
-          </Typography>
+          {description && (
+            <Typography
+              sx={{
+                fontSize: fonts.p4,
+                lineHeight: fonts.p4,
+                color: colors.darkGrey,
+                marginTop: { xs: "16px", md: "20px" },
+              }}
+            >
+              {description}
+            </Typography>
+          )}
         </Box>
 
         {/* Four Feature Cards */}

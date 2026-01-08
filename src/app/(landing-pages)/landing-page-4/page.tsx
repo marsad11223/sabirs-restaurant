@@ -70,7 +70,7 @@ export default function LandingPage4() {
       <HeroLandingPage
         icon={svgs.Hamburger}
         bannerText="Juicy, flavour-packed burgers"
-        bgImage="./bgHeroLandingPage3.png"
+        bgImage="./bgHeroLandingPage4.png"
         heading1="Pizza in Sheffield "
         heading2="Freshly Baked"
         description="Craving authentic, freshly baked pizza in Sheffield? At Sabir’s on London Road, we serve generous, flavour-packed pizzas made fresh to order — from classic favourites to bold signature specials."
@@ -100,9 +100,8 @@ export default function LandingPage4() {
         backgroundColor="#851A1D"
       />
       <FeatureGridSection
-        heading1="Why locals"
-        heading2="our pizza love"
-        description="Expect generous portions, comforting favourites, and flavours that keep people coming back. Eat in, take away, or order ahead — good food is always waiting."
+        heading1="Why Our Pizza"
+        heading2="Stands Out"
         features={features2}
         backgroundColor="#FFFFFF"
       />

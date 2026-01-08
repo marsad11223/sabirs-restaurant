@@ -114,10 +114,11 @@ export default function PizzaStylesForEveryTaste() {
         {/* Four Feature Cards */}
         <Box
           sx={{
-            width: "50%",
+            width: { md: "50%" },
             "& > *:not(:last-child)": {
               marginBottom: { xs: "20px", md: "40px" },
             },
+            maxWidth: "500px",
           }}
         >
           <FeatureCard2
