@@ -21,37 +21,13 @@ import ratingGrayStars from "./ratingGrayStars.svg";
 import ratingStars from "./ratingStars.svg";
 import LocationYellowIcon from "./locationYellowIcon.svg";
 import redStar from "./redStar.svg";
-import expertChefs from "./expertChefs.svg";
-import premiumQuality from "./premiumQuality.svg";
-
-import customizableMenus from "./customizableMenus.svg";
-import equipmentAvailability from "./equipmentAvailability.svg";
-import eventCoordinator from "./eventCoordinator.svg";
-import flexibleSeating from "./flexibleSeating.svg";
-
-import dineInTakeaway from "./dineInTakeaway.svg";
-import friendlyService from "./friendlyService.svg";
-import irresistiblePizzas from "./irresistiblePizzas.svg";
-import juicySmashBurgers from "./juicySmashBurgers.svg";
-import tenderKebab from "./tenderKebab.svg";
 
 import goldContact from "./goldContact.svg";
 import goldLocation from "./goldLocation.svg";
 import goldTime from "./goldTime.svg";
-import madeWithLove from "./madeWithLove.svg";
 import redPrityIcon from "./redPrityIcon.svg";
-import grilledOrSmashed from "./grilledOrSmashed.svg";
-import topTierQuality from "./topTierQuality.svg";
 
-import cookedFreshToOrder from "./cookedFreshToOrder.svg";
-import cheeseAndTopping from "./cheeseAndTopping.svg";
-import classicAndSpeciality from "./classicAndSpeciality.svg";
-import bakedFresh from "./bakedFresh.svg";
 // sdsf
-import bigPortions from "./bigPortions.svg";
-import consistentQuality from "./consistentQuality.svg";
-import freshFromOven from "./freshFromOven.svg";
-import handTopped from "./handTopped.svg";
 import sheffieldFavorite from "./sheffieldFavorite.svg";
 import familyFriendlyRestaurantInSheffield from "./familyFriendlyRestaurantInSheffield.svg";
 import flameGrilledSpicedMeat from "./flameGrilledSpicedMeat.svg";
@@ -62,6 +38,28 @@ import charcoalAndFlameGrilled from "./iconsFeatureCard/charcoalAndFlameGrilled.
 import dineInAndQuickTakeaway from "./iconsFeatureCard/dineInAndQuickTakeaway.svg";
 import hundredPercentHalalMeat from "./iconsFeatureCard/hundredPercentHalalMeat.svg";
 import locatedInSheffield from "./iconsFeatureCard/locatedInSheffield.svg";
+import customizableMenus from "./iconsFeatureCard/customizableMenus.svg";
+import equipmentAvailability from "./iconsFeatureCard/equipmentAvailability.svg";
+import eventCoordinator from "./iconsFeatureCard/eventCoordinator.svg";
+import flexibleSeating from "./iconsFeatureCard/flexibleSeating.svg";
+import madeWithLove from "./iconsFeatureCard/madeWithLove.svg";
+import premiumQuality from "./iconsFeatureCard/premiumQuality.svg";
+import expertChefs from "./iconsFeatureCard/expertChefs.svg";
+import juicySmashBurgers from "./iconsFeatureCard/juicySmashBurgers.svg";
+import dineInTakeaway from "./iconsFeatureCard/dineInTakeaway.svg";
+import friendlyService from "./iconsFeatureCard/friendlyService.svg";
+import irresistiblePizzas from "./iconsFeatureCard/irresistiblePizzas.svg";
+import tenderKebab from "./iconsFeatureCard/tenderKebab.svg";
+import topTierQuality from "./iconsFeatureCard/topTierQuality.svg";
+import cookedFreshToOrder from "./iconsFeatureCard/cookedFreshToOrder.svg";
+import grilledOrSmashed from "./iconsFeatureCard/grilledOrSmashed.svg";
+import bigPortions from "./iconsFeatureCard/bigPortions.svg";
+import cheeseAndTopping from "./iconsFeatureCard/cheeseAndTopping.svg";
+import classicAndSpeciality from "./iconsFeatureCard/classicAndSpeciality.svg";
+import bakedFresh from "./iconsFeatureCard/bakedFresh.svg";
+import freshFromOven from "./iconsFeatureCard/freshFromOven.svg";
+import handTopped from "./iconsFeatureCard/handTopped.svg";
+import consistentQuality from "./iconsFeatureCard/consistentQuality.svg";
 
 const svgs = {
   Logo,
