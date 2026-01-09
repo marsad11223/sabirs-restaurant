@@ -12,7 +12,7 @@ import MenuTickets from "../../components/MenuTickets";
 export default function CustomerFavoritesAlwaysFresh() {
   const foodItems = [
     {
-      image: webp.CustomerFavorite1,
+      image: webp.customerFavourites1,
       title: "SIGNATURE BEEF",
       title2: "BURGER",
       price: "£8.99",
@@ -20,7 +20,7 @@ export default function CustomerFavoritesAlwaysFresh() {
         "Juicy beef patty, melted cheese, fresh salad, and house sauce.",
     },
     {
-      image: webp.CustomerFavorite2,
+      image: webp.customerFavourites2,
       title: "CHICKEN FILLET",
       title2: "BURGER",
       price: "£6.99",
@@ -28,7 +28,7 @@ export default function CustomerFavoritesAlwaysFresh() {
         "Marinated chicken breast, flame-grilled and packed with flavour.",
     },
     {
-      image: webp.CustomerFavorite3,
+      image: webp.customerFavourites3,
       title: "PERI PERI",
       title2: "CHICKEN",
       price: "£6.99",
@@ -36,7 +36,7 @@ export default function CustomerFavoritesAlwaysFresh() {
         "Tender chicken grilled to perfection with peri peri spices.",
     },
     {
-      image: webp.CustomerFavorite4,
+      image: webp.customerFavourites4,
       title: "MARGHERITA",
       title2: "PIZZA",
       price: "£9.99",
