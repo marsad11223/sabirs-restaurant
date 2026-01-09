@@ -54,6 +54,7 @@ import freshFromOven from "./freshFromOven.svg";
 import handTopped from "./handTopped.svg";
 import sheffieldFavorite from "./sheffieldFavorite.svg";
 import familyFriendlyRestaurantInSheffield from "./familyFriendlyRestaurantInSheffield.svg";
+import flameGrilledSpicedMeat from "./flameGrilledSpicedMeat.svg";
 // iconsFeatureCard
 import authenticKebabsMadeFresh from "./iconsFeatureCard/authenticKebabsMadeFresh.svg";
 import boldMarinadesAndSpices from "./iconsFeatureCard/boldMarinadesAndSpices.svg";
@@ -114,6 +115,7 @@ const svgs = {
   handTopped,
   sheffieldFavorite,
   familyFriendlyRestaurantInSheffield,
+  flameGrilledSpicedMeat,
   // iconsFeatureCard
   authenticKebabsMadeFresh,
   boldMarinadesAndSpices,

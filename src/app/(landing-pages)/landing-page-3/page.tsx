@@ -16,14 +16,14 @@ export default function LandingPage3() {
       description: "Prepared fresh when you order, never pre-made.",
     },
     {
-      icon: svgs.grilledOrSmashed,
+      icon: svgs.topTierQuality,
       firstWord: "top tier",
       secondWord: "Quality",
       description:
         "Made with quality beef, tender chicken or delicious vegies.",
     },
     {
-      icon: svgs.topTierQuality,
+      icon: svgs.grilledOrSmashed,
       firstWord: "Grilled or",
       secondWord: "smashed",
       description: "Grilled or smashed on a hot plate for maximum flavour",
@@ -38,6 +38,7 @@ export default function LandingPage3() {
         bgImage="./bgHeroLandingPage3.png"
         heading1="Best Burgers"
         heading2="at sabir’s"
+        button1Text="Visit Our Diner"
         description="Find classic beef burgers, crispy chicken burgers and tasty veg options — all cooked to order and served with fresh toppings and sauces."
       />
       <InfoSection

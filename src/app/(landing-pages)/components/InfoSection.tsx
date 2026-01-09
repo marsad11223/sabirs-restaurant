@@ -65,7 +65,7 @@ export default function InfoSection({
             maxWidth: "520px",
           }}
           data-aos={reverseOrder ? "fade-left" : "fade-right"}
-          data-aos-duration="1000"
+          data-aos-duration="400"
         >
           <Box
             sx={{
@@ -144,7 +144,7 @@ export default function InfoSection({
             width: { xs: "100%", md: "50%" },
           }}
           data-aos={reverseOrder ? "fade-right" : "fade-left"}
-          data-aos-duration="1000"
+          data-aos-duration="400"
         >
           <Box
             sx={{

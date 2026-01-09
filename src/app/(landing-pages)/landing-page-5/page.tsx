@@ -6,123 +6,118 @@ import InfoSection from "../components/InfoSection";
 import webp from "@/_assets/webp";
 import FeatureGridSection from "../components/FeatureGridSection";
 import CTASection from "../components/CTASection";
-import PizzaStylesForEveryTaste from "../components/PizzaStylesForEveryTaste";
-import FlameGrilledMeats from "./_sections/flameGrilledMeats";
-// import FlameGrilledMeats from "./_sections/flameGrilledMeats";
+import FeatureHighlights from "../components/FeatureHighlights";
+import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
 
 export default function LandingPage5() {
-  const features = [
+  const highlightCardsData = [
     {
-      icon: svgs.charcoalAndFlameGrilled,
-      firstWord: "Charcoal &",
-      secondWord: "flame-grilled",
-      description: "Our meats are cooked over real charcoal and open flames",
-    },
-    {
-      icon: svgs.authenticKebabsMadeFresh,
-      firstWord: "Authentic kebabs",
-      secondWord: "made fresh",
-      description: "Authentic kebabs made fresh daily, marinated with spices",
-    },
-    {
-      icon: svgs.hundredPercentHalalMeat,
-      firstWord: "100% halal",
-      secondWord: "meat",
+      title: "Charcoal & flame-grilled meats",
       description:
-        "100% halal meat options, cooked fresh and handled with integrity",
+        "Our meats are cooked over real charcoal and open flames, creating a deep smoky flavour and perfect char you can’t achieve any other way.",
     },
     {
-      icon: svgs.boldMarinadesAndSpices,
-      firstWord: "Bold marinades",
-      secondWord: "and spices",
-      description: "Bold marinades and traditional spices, carefully blended.",
+      title: "Bold marinades and traditional spices.",
+      description:
+        "Bold marinades and traditional spices, carefully blended and slow-marinated to enhance flavour and bring out the rich, authentic taste in every grilled bite.",
     },
     {
-      icon: svgs.dineInAndQuickTakeaway,
-      firstWord: "dine-in &",
-      secondWord: "quick takeaway",
-      description: "Comfortable dine-in & quick takeaway",
+      title: "Authentic kebabs made fresh daily",
+      description:
+        "Authentic kebabs made fresh daily, marinated with traditional spices and grilled over open flames for rich, smoky flavour.",
     },
     {
-      icon: svgs.locatedInSheffield,
-      firstWord: "located",
-      secondWord: "in Sheffield",
-      description: "Conveniently located in Sheffield, for relaxed dining",
+      title: "Convenient location in Sheffield.",
+      description:
+        "Convenient location in Sheffield, making it easy to enjoy freshly grilled food anytime.",
+    },
+    {
+      title: "100% halal meat options.",
+      description:
+        "100% halal meat options, prepared according to authentic halal standards",
+    },
+    {
+      title: "Comfortable dine-in & quick takeaway",
+      description:
+        "Comfortable dine-in atmosphere with quick takeaway for relaxed meals or busy days.",
     },
   ];
-  const features2 = [
+  const showcaseItems = [
     {
-      icon: svgs.handTopped,
-      firstWord: "Hand",
-      secondWord: "topped",
-      description: "Hand-topped before baking using fresh, quality ingredients",
+      image: webp.customerFavourites5,
+      title: "Chicken Shish",
+      title2: "Kebab",
+      price: "£8.99",
+      description: "Tender chicken breast marinated for 24 hours.",
     },
     {
-      icon: svgs.freshFromOven,
-      firstWord: "Fresh from",
-      secondWord: "oven",
-      description: "Fresh from oven to box, locking in heat and flavour",
-    },
-    {
-      icon: svgs.bigPortions,
-      firstWord: "Big",
-      secondWord: "portions",
-      description: "Big portions, generous toppings, and excellent value",
-    },
-    {
-      icon: svgs.consistentQuality,
-      firstWord: "Consistent",
-      secondWord: "quality",
+      image: webp.customerFavourites6,
+      title: "Mixed Grill",
+      title2: "Platters",
+      price: "£3.99",
       description:
-        "Consistent quality every time for a reliable, delicious experience",
+        "The ultimate grill experience. Perfect for the seriously hungry.",
+    },
+    {
+      image: webp.customerFavourites7,
+      title: "Charcoal-Grilled",
+      title2: "Chicken",
+      price: "£8.99",
+      description:
+        "Juicy chicken grilled over charcoal for a rich, smoky flavour.",
+    },
+    {
+      image: webp.customerFavourites8,
+      title: "Lamb",
+      title2: "Kebabs",
+      price: "£9.99",
+      description: "Premium cuts of lamb marinated in Middle Eastern spices.",
     },
   ];
 
   return (
     <Box>
       <HeroLandingPage
-        icon={svgs.familyFriendlyRestaurantInSheffield}
-        bannerText="Family Friendly Restaurant in Sheffield"
+        icon={svgs.flameGrilledSpicedMeat}
+        bannerText="flame grilled meat with traditional spices"
         bgImage="./bgHeroLandingPage5.png"
-        heading1="Relaxed Dining for"
-        heading2="Families & Groups"
-        description="At Sabir’s, we bring people together over great food in a welcoming, relaxed space. Known as a family friendly restaurant in Sheffield, we’re the perfect place for family meals, catch-ups with friends, and group dining in Sheffield. With spacious seating, generous portions, and a comfortable atmosphere, every visit feels easy and enjoyable."
-        button1Text="Book a Table"
-        button2Text="Plan Group Dining"
+        heading1="Sheffield’s Home of"
+        heading2="Flame-Grilled meat"
+        description="Welcome to Sabir’s, a trusted grill restaurant in Sheffield known for expertly cooked kebabs, charcoal-grilled meats, and bold flavours. Every dish is freshly prepared using halal meats and grilled to perfection for that unmistakable smoky taste."
+        button1Text="Order Online"
+        button2Text="View Grill Menu"
       />
       <InfoSection
-        heading1="A Place Families"
-        heading2="Feel Welcome"
-        description="Sabir’s is designed with families in mind. Whether you’re visiting with young children, teenagers, or multiple generations, our calm and friendly environment makes dining together stress-free and enjoyable."
-        description2="We focus on comfort, space, and service — so families can relax, talk, and enjoy their meal without feeling rushed. From weekday dinners to weekend family outings, Sabir’s has become a trusted choice for family meals in Sheffield."
+        heading1="A True Grill Restaurant"
+        heading2="in Sheffield"
+        description="At Sabir’s, grilling isn’t just cooking — it’s a craft. Our chefs specialise in flame-grilled meats and traditional kebabs, delivering rich flavour, perfect char, and juicy texture in every bite."
         imageSrc={webp.aPlaceFamiliesFeelWelcome}
       />
-      <FeatureGridSection
+      <FeatureHighlights
         heading1="Why customers"
         heading2="love our grill"
-        description="At Sabir’s, grilling isn’t just cooking — it’s a craft. Our chefs specialise in flame-grilled meats and traditional kebabs, delivering rich flavour, perfect char, and juicy texture in every bite."
-        features={features}
-        backgroundColor="#FFFFFF"
+        cards={highlightCardsData}
       />
-      <FlameGrilledMeats />
-      <PizzaStylesForEveryTaste />
+      <RedThemeShowcaseSection
+        primaryHeading1="Flame-Grilled Meats"
+        primaryHeading2="Cooked to Perfection"
+        primaryDescription="Our menu is built around the grill. From tender chicken to richly seasoned lamb, every dish is cooked over open flames to lock in flavour and create a perfect char."
+        secondaryHeading1="Customer"
+        secondaryHeading2="favourites"
+        items={showcaseItems}
+        button="View More"
+      />
       <InfoSection
-        heading1="Freshly Baked Pizza"
-        heading2="Served Generousl"
-        description="Every pizza at Sabir’s is baked fresh to order — never rushed, never reheated. Our portions are designed to satisfy, whether you’re ordering for yourself or sharing with friends and family."
-        imageSrc={webp.freshlyBakedPizzay}
-        backgroundColor="#851A1D"
-      />
-      <FeatureGridSection
-        heading1="Why Our Pizza"
-        heading2="Stands Out"
-        features={features2}
-        backgroundColor="#FFFFFF"
+        heading1="Halal Grilled Food"
+        heading2="You Can Trust"
+        description="We proudly serve halal-certified meats, prepared with care and respect at every stage. From sourcing to grilling, our process ensures both quality and authenticity. Whether you’re dining in or ordering takeaway, you can enjoy delicious halal kebabs in Sheffield with complete confidence."
+        imageSrc={webp.halalGrilledFoodYouCanTrust}
+        reverseOrder={true}
       />
       <CTASection
-        headingWhite="Order Fresh Pizza"
-        headingRed="in Sheffield Today"
-        description="Hungry for freshly baked pizza on London Road? Order now and enjoy bold flavours, generous portions and fast service."
+        headingWhite="Craving authentic"
+        headingRed="grilled food?"
+        description="Visit Sabir’s or order online for freshly prepared kebabs and grilled meats."
         button1Text="Go To Main Page"
         button2Text="Our Menu"
       />

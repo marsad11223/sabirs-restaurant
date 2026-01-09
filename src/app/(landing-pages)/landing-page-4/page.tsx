@@ -6,8 +6,8 @@ import InfoSection from "../components/InfoSection";
 import webp from "@/_assets/webp";
 import FeatureGridSection from "../components/FeatureGridSection";
 import CTASection from "../components/CTASection";
-import OurPizzaMenuInSheffield from "./_sections/OurPizzaMenuInSheffield";
 import PizzaStylesForEveryTaste from "../components/PizzaStylesForEveryTaste";
+import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
 
 export default function LandingPage4() {
   const features = [
@@ -65,11 +65,43 @@ export default function LandingPage4() {
     },
   ];
 
+  const showcaseItems = [
+    {
+      image: webp.popularChoices1,
+      title: "Chicken Tikka",
+      title2: "Pizza",
+      price: "£8.99",
+      description: "Juicy chicken with bold tikka flavour.",
+    },
+    {
+      image: webp.popularChoices2,
+      title: "Pepperoni ",
+      title2: "Pizza",
+      price: "£3.99",
+      description: "Loaded with spicy pepperoni slices",
+    },
+    {
+      image: webp.popularChoices3,
+      title: "Meat Feast",
+      title2: "Pizza",
+      price: "£8.99",
+      description: "A rich mix of premium meats.",
+    },
+    {
+      image: webp.popularChoices4,
+      title: "MARGHERITA",
+      title2: "PIZZA",
+      price: "£9.99",
+      description:
+        "Classic thin crust with fresh tomatoes, mozzarella, and basil.",
+    },
+  ];
+
   return (
     <Box>
       <HeroLandingPage
         icon={svgs.sheffieldFavorite}
-        bannerText="Juicy, flavour-packed burgers"
+        bannerText="SHEFFIELD FAVORITE"
         bgImage="./bgHeroLandingPage4.png"
         heading1="Pizza in Sheffield "
         heading2="Freshly Baked"
@@ -90,7 +122,15 @@ export default function LandingPage4() {
         features={features}
         backgroundColor="#FFFFFF"
       />
-      <OurPizzaMenuInSheffield />
+      <RedThemeShowcaseSection
+        primaryHeading1="Our Pizza Menu"
+        primaryHeading2="In Sheffield"
+        primaryDescription="Explore our range of freshly baked pizzas, all served on a hearty base and made to fill you up."
+        secondaryHeading1="Popular"
+        secondaryHeading2="Choices"
+        items={showcaseItems}
+        button="View More"
+      />
       <PizzaStylesForEveryTaste />
       <InfoSection
         heading1="Freshly Baked Pizza"

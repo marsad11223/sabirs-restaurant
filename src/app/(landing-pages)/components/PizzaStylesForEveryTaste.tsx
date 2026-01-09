@@ -4,41 +4,7 @@ import { fonts, colors, sectionPadding } from "@/app/utils/themes";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-interface FeatureCard2Props {
-  title: string;
-  description: string;
-}
-
-function FeatureCard2({ title, description }: FeatureCard2Props) {
-  return (
-    <Box
-      sx={{
-        paddingLeft: "15px",
-        borderLeft: { xs: "2px solid #6D1212", md: "3px solid #6D1212" },
-      }}
-    >
-      <Typography
-        sx={{
-          fontSize: fonts.primaryTypography,
-          color: "#6D1212",
-          fontFamily: '"Bebas Neue", sans-serif',
-        }}
-      >
-        {title}
-      </Typography>
-
-      <Typography
-        sx={{
-          fontSize: fonts.p5,
-          color: "#00000080",
-        }}
-      >
-        {description}
-      </Typography>
-    </Box>
-  );
-}
+import HighlightCard from "./HighlightCard";
 
 export default function PizzaStylesForEveryTaste() {
   useEffect(() => {
@@ -121,19 +87,19 @@ export default function PizzaStylesForEveryTaste() {
             maxWidth: "500px",
           }}
         >
-          <FeatureCard2
+          <HighlightCard
             title="Classic Pizzas"
             description="Timeless favourites made with rich sauce and melted cheese."
           />
-          <FeatureCard2
+          <HighlightCard
             title="Meaty Pizzas"
             description="Hearty, filling pizzas stacked with flavour and generous toppings."
           />
-          <FeatureCard2
+          <HighlightCard
             title="Signature Specials"
             description="Unique flavour combinations you won’t find anywhere else."
           />
-          <FeatureCard2
+          <HighlightCard
             title="Vegetarian Options"
             description="Fresh, colourful toppings baked to perfection."
           />

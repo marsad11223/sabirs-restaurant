@@ -64,6 +64,8 @@ import customerFavourites6 from "./customerFavourite6.png";
 import customerFavourites7 from "./customerFavourite7.png";
 import customerFavourites8 from "./customerFavourite8.png";
 
+import halalGrilledFoodYouCanTrust from "./halalGrilledFoodYouCanTrust.png";
+
 const webp = {
   // slider begain
   ChickenBruger,
@@ -125,6 +127,7 @@ const webp = {
   customerFavourites6,
   customerFavourites7,
   customerFavourites8,
+  halalGrilledFoodYouCanTrust,
 };
 
 export default webp;

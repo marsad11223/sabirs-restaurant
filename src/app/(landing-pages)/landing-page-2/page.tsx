@@ -57,7 +57,6 @@ export default function LandingPage2() {
             destination that brings bold, comforting flavours to every plate:"
         features={features}
         backgroundColor="#FFFFFF"
-        buttonText="Get Started"
       />
       <FoodWorthTheTrip />
       <CTASection
