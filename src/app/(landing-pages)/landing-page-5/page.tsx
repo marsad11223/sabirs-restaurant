@@ -91,7 +91,7 @@ export default function LandingPage5() {
         heading1="A True Grill Restaurant"
         heading2="in Sheffield"
         description="At Sabir’s, grilling isn’t just cooking — it’s a craft. Our chefs specialise in flame-grilled meats and traditional kebabs, delivering rich flavour, perfect char, and juicy texture in every bite."
-        imageSrc={webp.aPlaceFamiliesFeelWelcome}
+        imageSrc={webp.aTrueGrillRestaurantInSheffield}
       />
       <FeatureHighlights
         heading1="Why customers"

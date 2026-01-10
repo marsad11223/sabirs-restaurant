@@ -1,9 +1,3 @@
-// slider images start
-import Wrap from "./slider/wrap.webp";
-import FrenchFries from "./slider/frenchFries.webp";
-import SmashBurger from "./slider/smashBurger.webp";
-import ChickenBruger from "./slider/chickenBruger.webp";
-import Shake from "./slider/shake.webp";
 import CarouselChickenBurger from "./carouselChickenBurger.webp";
 import SignatureBurger1 from "./signatureBurger1.webp";
 import SignatureBurger2 from "./signatureBurger2.webp";
@@ -18,6 +12,13 @@ import DesiFood from "./desiFood.webp";
 import SmashBurgerFries from "./smashBurgerFries.webp";
 import HomeHero from "./HomeHero.webp";
 import AboutUsBanner from "./aboutusBanner.webp";
+import generousPortionsMeantForSharing from "./generousPortionsMeantForSharing.png";
+// slider images start
+import Wrap from "./slider/wrap.webp";
+import FrenchFries from "./slider/frenchFries.webp";
+import SmashBurger from "./slider/smashBurger.webp";
+import ChickenBruger from "./slider/chickenBruger.webp";
+import Shake from "./slider/shake.webp";
 // pizza images
 import Pizza1 from "./pizza/pizza_1.webp";
 import Pizza2 from "./pizza/pizza_2.webp";
@@ -44,6 +45,8 @@ import whyOurPizza from "./infoSection/whyOurPizza.png";
 import halalGrilledFoodYouCanTrust from "./infoSection/halalGrilledFoodYouCanTrust.png";
 import aPlaceFamiliesFeelWelcome from "./infoSection/aPlaceFamiliesFeelWelcome.png";
 import whatMakesThemGreat from "./infoSection/whatMakesThemGreat.png";
+import aTrueGrillRestaurantInSheffield from "./infoSection/aTrueGrillRestaurantInSheffield.png";
+import groupDiningMadeEasy from "./infoSection/groupDiningMadeEasy.png";
 // images redThemeShowcaseSection
 import popularChoices1 from "./redThemeShowcaseSection/popularChoices1.png";
 import popularChoices2 from "./redThemeShowcaseSection/popularChoices2.png";
@@ -59,12 +62,7 @@ import customerFavourites7 from "./redThemeShowcaseSection/customerFavourites7.p
 import customerFavourites8 from "./redThemeShowcaseSection/customerFavourites8.png";
 
 const webp = {
-  // slider images start
-  Wrap,
-  FrenchFries,
-  SmashBurger,
-  ChickenBruger,
-  Shake,
+  // main / hero & general images
   CarouselChickenBurger,
   SignatureBurger1,
   SignatureBurger2,
@@ -79,6 +77,15 @@ const webp = {
   SmashBurgerFries,
   HomeHero,
   AboutUsBanner,
+  generousPortionsMeantForSharing,
+
+  // slider images
+  Wrap,
+  FrenchFries,
+  SmashBurger,
+  ChickenBruger,
+  Shake,
+
   // pizza images
   Pizza1,
   Pizza2,
@@ -91,21 +98,27 @@ const webp = {
   Pizza9,
   Pizza10,
   Pizza11,
+
   // burger images
   Burger_1,
   Burger_2,
   Burger_3,
   Burger_4,
+
   // ramadan special
   Ramzan,
-  // InfoSection image
+
+  // InfoSection images
   whyOurBurgersAreSpecial,
   freshlyBakedPizzay,
   whyOurPizza,
   halalGrilledFoodYouCanTrust,
   aPlaceFamiliesFeelWelcome,
   whatMakesThemGreat,
-  // images redThemeShowcaseSection
+  aTrueGrillRestaurantInSheffield,
+  groupDiningMadeEasy,
+
+  // redThemeShowcaseSection images
   popularChoices1,
   popularChoices2,
   popularChoices3,

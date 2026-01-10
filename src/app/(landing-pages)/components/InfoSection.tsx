@@ -1,6 +1,6 @@
 "use client";
 import { Box, Typography } from "@mui/material";
-import { fonts, colors } from "@/app/utils/themes";
+import { fonts, colors, sectionPadding } from "@/app/utils/themes";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -35,13 +35,7 @@ export default function InfoSection({
       sx={{
         width: "100%",
         backgroundColor: backgroundColor,
-        padding: {
-          xs: "40px 20px",
-          sm: "50px 30px",
-          md: "60px 40px",
-          lg: "80px 60px",
-          xl: "100px 80px",
-        },
+        padding: sectionPadding,
       }}
     >
       <Box

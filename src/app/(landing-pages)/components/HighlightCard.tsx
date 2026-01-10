@@ -6,17 +6,21 @@ import { fonts } from "@/app/utils/themes";
 interface HighlightCardProps {
   title: string;
   description: string;
+  redTheme?: boolean;
 }
 
 export default function HighlightCard({
   title,
   description,
+  redTheme,
 }: HighlightCardProps) {
   return (
     <Box
       sx={{
         paddingLeft: "15px",
-        borderLeft: { xs: "2px solid #6D1212", md: "3px solid #6D1212" },
+        borderLeft: redTheme
+          ? { xs: "2px solid #FFD40D", md: "3px solid #FFD40D" }
+          : { xs: "2px solid #6D1212", md: "3px solid #6D1212" },
         height: "-webkit-fill-available",
         paddingY: "10px",
       }}
@@ -25,7 +29,7 @@ export default function HighlightCard({
         sx={{
           fontSize: fonts.primaryTypography,
           lineHeight: fonts.primaryTypography,
-          color: "#6D1212",
+          color: redTheme ? "#FFD40D" : "#6D1212",
           fontFamily: '"Bebas Neue", sans-serif',
         }}
       >
@@ -35,7 +39,7 @@ export default function HighlightCard({
       <Typography
         sx={{
           fontSize: fonts.p5,
-          color: "#00000080",
+          color: redTheme ? "#ffffff" : "#414143",
         }}
       >
         {description}

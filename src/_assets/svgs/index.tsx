@@ -1,3 +1,4 @@
+// base / common icons
 import Logo from "./logo.svg";
 import LogoRed from "./logoRed.svg";
 import Hamburger from "./hamburger.svg";
@@ -20,12 +21,9 @@ import mobfeed from "./mobfeed.svg";
 import ratingGrayStars from "./ratingGrayStars.svg";
 import ratingStars from "./ratingStars.svg";
 import LocationYellowIcon from "./locationYellowIcon.svg";
-
 import goldContact from "./goldContact.svg";
 import goldLocation from "./goldLocation.svg";
 import goldTime from "./goldTime.svg";
-
-import familyFriendlyRestaurantInSheffield from "./familyFriendlyRestaurantInSheffield.svg";
 // iconsFeatureCard
 import authenticKebabsMadeFresh from "./iconsFeatureCard/authenticKebabsMadeFresh.svg";
 import boldMarinadesAndSpices from "./iconsFeatureCard/boldMarinadesAndSpices.svg";
@@ -55,25 +53,21 @@ import bakedFresh from "./iconsFeatureCard/bakedFresh.svg";
 import freshFromOven from "./iconsFeatureCard/freshFromOven.svg";
 import handTopped from "./iconsFeatureCard/handTopped.svg";
 import consistentQuality from "./iconsFeatureCard/consistentQuality.svg";
-
 // hero banner icons
 import redStar from "./heroBannerIcon/redStar.svg";
 import redPrityIcon from "./heroBannerIcon/redPrityIcon.svg";
 import sheffieldFavorite from "./heroBannerIcon/sheffieldFavorite.svg";
 import flameGrilledSpicedMeat from "./heroBannerIcon/flameGrilledSpicedMeat.svg";
+import familyFriendlyRestaurantInSheffield from "./heroBannerIcon/familyFriendlyRestaurantInSheffield.svg";
 
 const svgs = {
+  // base / common icons
   Logo,
   LogoRed,
-  User,
   Hamburger,
-  emailfeed,
   HamburgerWhite,
-  mobfeed,
   Search,
-  ratingGrayStars,
   Facebook,
-  ratingStars,
   FacebookWhite,
   Instagram,
   InstagramWhite,
@@ -84,37 +78,16 @@ const svgs = {
   Arrow,
   Email,
   Location,
+  User,
+  emailfeed,
+  mobfeed,
+  ratingGrayStars,
+  ratingStars,
   LocationYellowIcon,
-  redStar,
-  expertChefs,
-  premiumQuality,
-  customizableMenus,
-  eventCoordinator,
-  equipmentAvailability,
-  flexibleSeating,
-  dineInTakeaway,
-  friendlyService,
-  irresistiblePizzas,
-  juicySmashBurgers,
-  tenderKebab,
   goldContact,
   goldLocation,
   goldTime,
-  madeWithLove,
-  redPrityIcon,
-  cookedFreshToOrder,
-  grilledOrSmashed,
-  topTierQuality,
-  bakedFresh,
-  cheeseAndTopping,
-  classicAndSpeciality,
-  bigPortions,
-  consistentQuality,
-  freshFromOven,
-  handTopped,
-  sheffieldFavorite,
-  familyFriendlyRestaurantInSheffield,
-  flameGrilledSpicedMeat,
+
   // iconsFeatureCard
   authenticKebabsMadeFresh,
   boldMarinadesAndSpices,
@@ -122,6 +95,35 @@ const svgs = {
   dineInAndQuickTakeaway,
   hundredPercentHalalMeat,
   locatedInSheffield,
+  customizableMenus,
+  equipmentAvailability,
+  eventCoordinator,
+  flexibleSeating,
+  madeWithLove,
+  premiumQuality,
+  expertChefs,
+  juicySmashBurgers,
+  dineInTakeaway,
+  friendlyService,
+  irresistiblePizzas,
+  tenderKebab,
+  topTierQuality,
+  cookedFreshToOrder,
+  grilledOrSmashed,
+  bigPortions,
+  cheeseAndTopping,
+  classicAndSpeciality,
+  bakedFresh,
+  freshFromOven,
+  handTopped,
+  consistentQuality,
+
+  // hero banner icons
+  redStar,
+  redPrityIcon,
+  sheffieldFavorite,
+  flameGrilledSpicedMeat,
+  familyFriendlyRestaurantInSheffield,
 };
 
 export default svgs;

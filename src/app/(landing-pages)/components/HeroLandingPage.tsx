@@ -46,7 +46,14 @@ export default function HeroLandingPage({
           maxHeight: "1000px",
         }}
       >
-        <Box sx={{ flexShrink: 0 }}>
+        <Box
+          sx={{
+            flexShrink: 0,
+            maxWidth: "1440px",
+            margin: "auto",
+            width: "100%",
+          }}
+        >
           <Navbar />
         </Box>
 
@@ -61,13 +68,13 @@ export default function HeroLandingPage({
             backgroundImage: `url(${bgImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            padding: sectionPadding,
           }}
         >
           <Box
             sx={{
               maxWidth: "1440px",
               width: "100%",
+              padding: sectionPadding,
               margin: "0 auto",
             }}
           >
