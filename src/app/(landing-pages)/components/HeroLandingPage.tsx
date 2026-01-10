@@ -24,7 +24,7 @@ export default function HeroLandingPage({
   icon = svgs.redStar,
   bannerText = "Rated #1 Burger Joint in Sheffield",
   heading1 = "SHEFFIELD'S BEST",
-  heading2 = "CRAFTED BURGERS",
+  heading2 = "CRAFTED menu",
   description = "At Sabir's Grill, we serve freshly grilled food made with quality ingredients and bold flavours. Every dish is prepared with care, cooked to perfection, and designed to give you a satisfying dining experience worth coming back for.",
   button1Text = "Order Now",
   button2Text = "Explore Menu",

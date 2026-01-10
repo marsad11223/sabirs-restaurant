@@ -295,7 +295,9 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
         sx={{
           padding: { xs: "20px", md: "25px" },
           textAlign: "center",
-          backgroundColor: colors.darkGrey + "10",
+          // backgroundColor: colors.darkGrey + "10",
+          borderTop: { xs: "5px solid #FFD40D", md: "10px solid #FFD40D" },
+          outline: { xs: "5px solid #851A1D", md: "10px solid #851A1D" },
         }}
       >
         <Typography
