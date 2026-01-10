@@ -45,7 +45,7 @@ export default function LandingPage2() {
       <HeroLandingPage
         icon={svgs.redPrityIcon}
         bannerText="Welcome to Sabir's Grill"
-        bgImage="./bgHeroLandingPage2.png"
+        bgImage="./LandingPages/bgHeroLandingPage2.png"
         heading1="Local Diner Sheffield"
         heading2="& Rotherham"
         description="Looking for a diner in Sheffield that serves great food, offers both dine-in and takeaway, and is conveniently located on London Road Sheffield? You’ve come to the right place!"

@@ -102,7 +102,7 @@ export default function LandingPage4() {
       <HeroLandingPage
         icon={svgs.sheffieldFavorite}
         bannerText="SHEFFIELD FAVORITE"
-        bgImage="./bgHeroLandingPage4.png"
+        bgImage="./LandingPages/bgHeroLandingPage4.png"
         heading1="Pizza in Sheffield "
         heading2="Freshly Baked"
         description="Craving authentic, freshly baked pizza in Sheffield? At Sabir’s on London Road, we serve generous, flavour-packed pizzas made fresh to order — from classic favourites to bold signature specials."

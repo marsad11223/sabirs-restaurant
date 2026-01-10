@@ -35,7 +35,7 @@ export default function LandingPage3() {
       <HeroLandingPage
         icon={svgs.Hamburger}
         bannerText="Juicy, flavour-packed burgers"
-        bgImage="./bgHeroLandingPage3.png"
+        bgImage="./LandingPages/bgHeroLandingPage3.png"
         heading1="Best Burgers"
         heading2="at sabir’s"
         button1Text="Visit Our Diner"

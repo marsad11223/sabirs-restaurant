@@ -23,8 +23,8 @@ export default function LandingPage() {
     },
     {
       icon: svgs.madeWithLove,
-      firstWord: "MADE",
-      secondWord: "WITH LOVE",
+      firstWord: "MADE WITH",
+      secondWord: "LOVE",
       description:
         "Every item is crafted with passion and attention to detail.",
     },
@@ -58,7 +58,7 @@ export default function LandingPage() {
   ];
   return (
     <Box>
-      <HeroLandingPage bgImage="./bgHeroLandingPage.png" />
+      <HeroLandingPage bgImage="./LandingPages/bgHeroLandingPage.png" />
       <SabirsGrillYourChoice />
       <FeatureGridSection
         heading1="Sabir’s Grill"

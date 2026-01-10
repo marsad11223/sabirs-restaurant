@@ -80,7 +80,7 @@ export default function LandingPage5() {
       <HeroLandingPage
         icon={svgs.flameGrilledSpicedMeat}
         bannerText="flame grilled meat with traditional spices"
-        bgImage="./bgHeroLandingPage5.png"
+        bgImage="./LandingPages/bgHeroLandingPage5.png"
         heading1="Sheffield’s Home of"
         heading2="Flame-Grilled meat"
         description="Welcome to Sabir’s, a trusted grill restaurant in Sheffield known for expertly cooked kebabs, charcoal-grilled meats, and bold flavours. Every dish is freshly prepared using halal meats and grilled to perfection for that unmistakable smoky taste."
