@@ -20,17 +20,12 @@ import mobfeed from "./mobfeed.svg";
 import ratingGrayStars from "./ratingGrayStars.svg";
 import ratingStars from "./ratingStars.svg";
 import LocationYellowIcon from "./locationYellowIcon.svg";
-import redStar from "./redStar.svg";
 
 import goldContact from "./goldContact.svg";
 import goldLocation from "./goldLocation.svg";
 import goldTime from "./goldTime.svg";
-import redPrityIcon from "./redPrityIcon.svg";
 
-// sdsf
-import sheffieldFavorite from "./sheffieldFavorite.svg";
 import familyFriendlyRestaurantInSheffield from "./familyFriendlyRestaurantInSheffield.svg";
-import flameGrilledSpicedMeat from "./flameGrilledSpicedMeat.svg";
 // iconsFeatureCard
 import authenticKebabsMadeFresh from "./iconsFeatureCard/authenticKebabsMadeFresh.svg";
 import boldMarinadesAndSpices from "./iconsFeatureCard/boldMarinadesAndSpices.svg";
@@ -60,6 +55,12 @@ import bakedFresh from "./iconsFeatureCard/bakedFresh.svg";
 import freshFromOven from "./iconsFeatureCard/freshFromOven.svg";
 import handTopped from "./iconsFeatureCard/handTopped.svg";
 import consistentQuality from "./iconsFeatureCard/consistentQuality.svg";
+
+// hero banner icons
+import redStar from "./heroBannerIcon/redStar.svg";
+import redPrityIcon from "./heroBannerIcon/redPrityIcon.svg";
+import sheffieldFavorite from "./heroBannerIcon/sheffieldFavorite.svg";
+import flameGrilledSpicedMeat from "./heroBannerIcon/flameGrilledSpicedMeat.svg";
 
 const svgs = {
   Logo,
