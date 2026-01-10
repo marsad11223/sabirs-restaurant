@@ -4,7 +4,6 @@ import Footer from "@/_components/Footer";
 import svgs from "@/_assets/svgs";
 import InfoSection from "../components/InfoSection";
 import webp from "@/_assets/webp";
-import FeatureGridSection from "../components/FeatureGridSection";
 import CTASection from "../components/CTASection";
 import FeatureHighlights from "../components/FeatureHighlights";
 import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";

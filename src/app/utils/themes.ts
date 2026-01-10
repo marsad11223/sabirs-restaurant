@@ -14,6 +14,11 @@ export const colors = {
 };
 
 export const fonts = {
+  headingPrimaryLandingpage: {
+    xs: "80px",
+    md: "100px",
+    xl: "128px",
+  },
   headingPrimary: {
     xs: "70px",
     md: "100px",

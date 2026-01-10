@@ -36,6 +36,8 @@ export default function FoodCard({
         display: "flex",
         flexDirection: "column",
         height: "100%",
+        maxWidth: "450px",
+        margin: "auto",
       }}
     >
       {/* Image */}

@@ -59,6 +59,7 @@ import redPrityIcon from "./heroBannerIcon/redPrityIcon.svg";
 import sheffieldFavorite from "./heroBannerIcon/sheffieldFavorite.svg";
 import flameGrilledSpicedMeat from "./heroBannerIcon/flameGrilledSpicedMeat.svg";
 import familyFriendlyRestaurantInSheffield from "./heroBannerIcon/familyFriendlyRestaurantInSheffield.svg";
+import halalFoodPreparedWithCare from "./heroBannerIcon/halalFoodPreparedWithCare.svg";
 
 const svgs = {
   // base / common icons
@@ -124,6 +125,7 @@ const svgs = {
   sheffieldFavorite,
   flameGrilledSpicedMeat,
   familyFriendlyRestaurantInSheffield,
+  halalFoodPreparedWithCare,
 };
 
 export default svgs;

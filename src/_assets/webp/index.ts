@@ -47,6 +47,8 @@ import aPlaceFamiliesFeelWelcome from "./infoSection/aPlaceFamiliesFeelWelcome.p
 import whatMakesThemGreat from "./infoSection/whatMakesThemGreat.png";
 import aTrueGrillRestaurantInSheffield from "./infoSection/aTrueGrillRestaurantInSheffield.png";
 import groupDiningMadeEasy from "./infoSection/groupDiningMadeEasy.png";
+import halalFoodYouCanTrust from "./infoSection/halalFoodYouCanTrust.png";
+
 // images redThemeShowcaseSection
 import popularChoices1 from "./redThemeShowcaseSection/popularChoices1.png";
 import popularChoices2 from "./redThemeShowcaseSection/popularChoices2.png";
@@ -60,6 +62,9 @@ import customerFavourites5 from "./redThemeShowcaseSection/customerFavourites5.p
 import customerFavourites6 from "./redThemeShowcaseSection/customerFavourites6.png";
 import customerFavourites7 from "./redThemeShowcaseSection/customerFavourites7.png";
 import customerFavourites8 from "./redThemeShowcaseSection/customerFavourites8.png";
+import customerFavourites9 from "./redThemeShowcaseSection/customerFavourites9.png";
+import customerFavourites10 from "./redThemeShowcaseSection/customerFavourites10.png";
+import customerFavourites11 from "./redThemeShowcaseSection/customerFavourites11.png";
 
 const webp = {
   // main / hero & general images
@@ -117,6 +122,7 @@ const webp = {
   whatMakesThemGreat,
   aTrueGrillRestaurantInSheffield,
   groupDiningMadeEasy,
+  halalFoodYouCanTrust,
 
   // redThemeShowcaseSection images
   popularChoices1,
@@ -131,6 +137,9 @@ const webp = {
   customerFavourites6,
   customerFavourites7,
   customerFavourites8,
+  customerFavourites9,
+  customerFavourites10,
+  customerFavourites11,
 };
 
 export default webp;

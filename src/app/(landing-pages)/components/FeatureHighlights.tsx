@@ -23,7 +23,7 @@ export default function FeatureHighlights({
   heading1,
   heading2,
   cards,
-  redTheme,
+  redTheme = false,
 }: FeatureHighlightsProps) {
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
@@ -100,7 +100,7 @@ export default function FeatureHighlights({
                 <HighlightCard
                   title={card.title}
                   description={card.description}
-                  redTheme={true}
+                  redTheme={redTheme}
                 />
               </Box>
             </Grid>

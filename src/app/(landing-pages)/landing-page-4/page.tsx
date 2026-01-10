@@ -64,7 +64,6 @@ export default function LandingPage4() {
         "Consistent quality every time for a reliable, delicious experience",
     },
   ];
-
   const showcaseItems = [
     {
       image: webp.popularChoices1,

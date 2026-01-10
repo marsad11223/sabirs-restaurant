@@ -80,7 +80,7 @@ export default function HeroLandingPage({
           >
             <Box
               sx={{
-                maxWidth: { xs: "100%", md: "600px", lg: "900px" },
+                maxWidth: "880px",
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
@@ -134,8 +134,8 @@ export default function HeroLandingPage({
                   data-aos-duration="400"
                   sx={{
                     color: colors.secondaryYellow,
-                    fontSize: fonts.headingPrimary,
-                    lineHeight: fonts.headingPrimary,
+                    fontSize: fonts.headingPrimaryLandingpage,
+                    lineHeight: fonts.headingPrimaryLandingpage,
                     textTransform: "uppercase",
                     fontFamily: '"Bebas Neue", sans-serif',
                   }}
@@ -148,8 +148,8 @@ export default function HeroLandingPage({
                   data-aos-duration="400"
                   sx={{
                     color: colors.White,
-                    fontSize: fonts.headingPrimary,
-                    lineHeight: fonts.headingPrimary,
+                    fontSize: fonts.headingPrimaryLandingpage,
+                    lineHeight: fonts.headingPrimaryLandingpage,
                     textTransform: "uppercase",
                     fontFamily: '"Bebas Neue", sans-serif',
                   }}

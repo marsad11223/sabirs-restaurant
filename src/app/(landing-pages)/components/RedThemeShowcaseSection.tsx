@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import { fonts, colors, sectionPadding } from "@/app/utils/themes";
 import ShowcaseCard from "./ShowcaseCard";
 import { StaticImageData } from "next/image";
@@ -129,44 +129,57 @@ export default function RedThemeShowcaseSection({
         </Box>
 
         {/* Cards Grid */}
-        <Box
+        {/* Cards Grid */}
+        <Grid
+          container
+          spacing={{ xs: 3, sm: 3.5, md: 3, lg: 4 }}
           sx={{
-            display: "grid",
-            gridTemplateColumns: {
-              xs: "1fr",
-              md: "repeat(2, 1fr)",
-              lg: "repeat(4, 1fr)",
-            },
-            gap: { xs: "24px", sm: "28px", md: "24px", lg: "32px" },
             maxWidth: "1440px",
             margin: "0 auto",
-            marginBottom: { xs: "30px", sm: "40px", md: "60px", lg: "80px" },
+            justifyContent: "center",
           }}
         >
           {items.map((item, index) => (
-            // <FoodCard
-            //   key={index}
-            //   image={item.image}
-            //   title={item.title}
-            //   title2={item.title2}
-            //   price={item.price}
-            //   description={item.description}
-            // />
-            <ShowcaseCard
+            <Grid
+              item
               key={index}
-              image={item.image}
-              title={item.title}
-              title2={item.title2}
-              price={item.price}
-              description={item.description}
-            />
+              xs={12}
+              md={6}
+              lg={3}
+              sx={{
+                justifyContent: "center",
+              }}
+            >
+              <ShowcaseCard
+                image={item.image}
+                title={item.title}
+                title2={item.title2}
+                price={item.price}
+                description={item.description}
+              />
+            </Grid>
           ))}
-        </Box>
+        </Grid>
+        <Typography
+          sx={{
+            fontSize: fonts.p4,
+            lineHeight: fonts.p4,
+            color: colors.White,
+            marginTop: { xs: "30px", md: "40px" },
+            maxWidth: "590px",
+            margin: "auto",
+            textAlign: "center",
+          }}
+        >
+          {primaryDescription}
+        </Typography>
+
         {/* bottom button */}
         {button && (
           <Box
             component="button"
             sx={{
+              marginTop: { xs: "40px", md: "60px", lg: "80px" },
               backgroundColor: colors.secondaryYellow,
               color: "#851A1D",
               border: "none",

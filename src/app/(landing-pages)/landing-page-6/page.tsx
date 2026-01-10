@@ -4,13 +4,11 @@ import Footer from "@/_components/Footer";
 import svgs from "@/_assets/svgs";
 import InfoSection from "../components/InfoSection";
 import webp from "@/_assets/webp";
-import FeatureGridSection from "../components/FeatureGridSection";
 import CTASection from "../components/CTASection";
 import FeatureHighlights from "../components/FeatureHighlights";
-import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
 import GenerousPortionsMeantForSharing from "./_sections/GenerousPortionsMeantForSharing";
 
-export default function LandingPage5() {
+export default function LandingPage6() {
   const highlightCardsData = [
     {
       title: "Family friendly restaurant in Sheffield",
@@ -36,38 +34,6 @@ export default function LandingPage5() {
       title: "Spacious seating for groups",
       description:
         "Thoughtfully arranged seating designed to comfortably accommodate families and larger groups.",
-    },
-  ];
-  const showcaseItems = [
-    {
-      image: webp.customerFavourites5,
-      title: "Chicken Shish",
-      title2: "Kebab",
-      price: "£8.99",
-      description: "Tender chicken breast marinated for 24 hours.",
-    },
-    {
-      image: webp.customerFavourites6,
-      title: "Mixed Grill",
-      title2: "Platters",
-      price: "£3.99",
-      description:
-        "The ultimate grill experience. Perfect for the seriously hungry.",
-    },
-    {
-      image: webp.customerFavourites7,
-      title: "Charcoal-Grilled",
-      title2: "Chicken",
-      price: "£8.99",
-      description:
-        "Juicy chicken grilled over charcoal for a rich, smoky flavour.",
-    },
-    {
-      image: webp.customerFavourites8,
-      title: "Lamb",
-      title2: "Kebabs",
-      price: "£9.99",
-      description: "Premium cuts of lamb marinated in Middle Eastern spices.",
     },
   ];
 
