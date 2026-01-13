@@ -38,7 +38,6 @@ export default function SabirsGrillYourChoice() {
     <Box
       sx={{
         backgroundColor: colors.secondaryYellow,
-        paddingX: sectionPaddingX,
         paddingY: "40px",
       }}
     >
@@ -49,6 +48,7 @@ export default function SabirsGrillYourChoice() {
           alignItems: { xs: "flex-start", md: "center" },
           justifyContent: "space-between",
           gap: { xs: "16px", md: "20px" },
+          paddingX: sectionPaddingX,
           maxWidth: "1440px",
           width: "100%",
           margin: "0 auto",

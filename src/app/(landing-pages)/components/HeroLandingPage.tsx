@@ -15,6 +15,7 @@ interface HeroLandingPageProps {
   heading1?: string;
   heading2?: string;
   description?: string;
+  maxWidth?: string;
   button1Text?: string;
   button2Text?: string;
 }
@@ -28,6 +29,7 @@ export default function HeroLandingPage({
   description = "At Sabir's Grill, we serve freshly grilled food made with quality ingredients and bold flavours. Every dish is prepared with care, cooked to perfection, and designed to give you a satisfying dining experience worth coming back for.",
   button1Text = "Order Now",
   button2Text = "Explore Menu",
+  maxWidth = "880px",
 }: HeroLandingPageProps) {
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
@@ -80,7 +82,7 @@ export default function HeroLandingPage({
           >
             <Box
               sx={{
-                maxWidth: "880px",
+                maxWidth: maxWidth,
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",

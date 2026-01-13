@@ -42,7 +42,7 @@ export default function LandingPage6() {
       <HeroLandingPage
         icon={svgs.familyFriendlyRestaurantInSheffield}
         bannerText="Family Friendly Restaurant in Sheffield"
-        bgImage="./LandingPages/bgHeroLandingPage5.png"
+        bgImage="./LandingPages/bgHeroLandingPage6.png"
         heading1="Relaxed Dining for"
         heading2="Families & Groups"
         description="At Sabir’s, we bring people together over great food in a welcoming, relaxed space. Known as a family friendly restaurant in Sheffield, we’re the perfect place for family meals, catch-ups with friends, and group dining in Sheffield. With spacious seating, generous portions, and a comfortable atmosphere, every visit feels easy and enjoyable."

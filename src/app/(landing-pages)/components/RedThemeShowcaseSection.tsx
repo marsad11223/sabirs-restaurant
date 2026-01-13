@@ -19,6 +19,7 @@ export interface RedThemeShowcaseSectionProps {
   primaryHeading1: string;
   primaryHeading2: string;
   primaryDescription?: string;
+  description2?: string;
   secondaryHeading1: string;
   secondaryHeading2: string;
   items?: ShowcaseCardItem[];
@@ -29,6 +30,7 @@ export default function RedThemeShowcaseSection({
   primaryHeading1,
   primaryHeading2,
   primaryDescription,
+  description2,
   secondaryHeading1,
   secondaryHeading2,
   items = [],
@@ -130,36 +132,43 @@ export default function RedThemeShowcaseSection({
 
         {/* Cards Grid */}
         {/* Cards Grid */}
-        <Grid
-          container
-          spacing={{ xs: 3, sm: 3.5, md: 3, lg: 4 }}
+        <Box
           sx={{
-            maxWidth: "1440px",
-            margin: "0 auto",
-            justifyContent: "center",
+            // margin: "auto",
+            width: "100%",
           }}
         >
-          {items.map((item, index) => (
-            <Grid
-              item
-              key={index}
-              xs={12}
-              md={6}
-              lg={3}
-              sx={{
-                justifyContent: "center",
-              }}
-            >
-              <ShowcaseCard
-                image={item.image}
-                title={item.title}
-                title2={item.title2}
-                price={item.price}
-                description={item.description}
-              />
-            </Grid>
-          ))}
-        </Grid>
+          <Grid
+            container
+            spacing={{ xs: 3, sm: 3.5, md: 3, lg: 4 }}
+            sx={{
+              maxWidth: "1440px",
+              justifyContent: "center",
+              margin: "auto !important",
+            }}
+          >
+            {items.map((item, index) => (
+              <Grid
+                item
+                key={index}
+                xs={12}
+                md={6}
+                lg={3}
+                sx={{
+                  justifyContent: "center",
+                }}
+              >
+                <ShowcaseCard
+                  image={item.image}
+                  title={item.title}
+                  title2={item.title2}
+                  price={item.price}
+                  description={item.description}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
         <Typography
           sx={{
             fontSize: fonts.p4,
@@ -171,7 +180,7 @@ export default function RedThemeShowcaseSection({
             textAlign: "center",
           }}
         >
-          {primaryDescription}
+          {description2}
         </Typography>
 
         {/* bottom button */}

@@ -37,6 +37,7 @@ export default function PizzaStylesForEveryTaste() {
               lg: "calc(50% - 50px)",
               xl: "calc(50% - 80px)",
             },
+            maxWidth: "480px",
           }}
         >
           <Typography

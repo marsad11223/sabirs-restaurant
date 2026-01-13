@@ -68,12 +68,13 @@ export default function LandingPage7() {
       <HeroLandingPage
         icon={svgs.halalFoodPreparedWithCare}
         bannerText="Halal food prepared with care"
-        bgImage="./LandingPages/bgHeroLandingPage5.png"
+        bgImage="./LandingPages/bgHeroLandingPage7.png"
         heading1="Halal & Vegetarian"
         heading2="Friendly Restaurant"
         description="Enjoy great food with confidence at Sabir’s — a trusted halal restaurant in Sheffield offering delicious meat and vegetarian options for every taste. Whether you’re dining in, ordering takeaway, or getting food delivered, we make it easy to enjoy flavourful meals that suit your lifestyle."
         button1Text="Order Online"
         button2Text="Explore Menu"
+        maxWidth="900px"
       />
       <InfoSection
         heading1="Halal Food"
@@ -93,6 +94,7 @@ export default function LandingPage7() {
         primaryHeading1="Vegetarian Food Options"
         primaryHeading2="In Sheffield"
         primaryDescription="Looking for vegetarian food in Sheffield? Sabir’s offers a range of vegetarian-friendly choices that don’t compromise on flavour."
+        description2="We keep things simple here — for full details and custom options, you can explore our complete food menu online."
         secondaryHeading1="Customer"
         secondaryHeading2="favourites"
         items={showcaseItems}
@@ -104,10 +106,11 @@ export default function LandingPage7() {
         cards={highlightCardsData}
       />
       <InfoSection
-        heading1="Halal Food"
+        heading1="Halal Grilled Food"
         heading2="You Can Trust"
         description="We proudly serve halal-certified meats, prepared with care and respect at every stage. From sourcing to grilling, our process ensures both quality and authenticity. Whether you’re dining in or ordering takeaway, you can enjoy delicious halal kebabs in Sheffield with complete confidence."
-        imageSrc={webp.halalFoodYouCanTrust}
+        imageSrc={webp.halalGrilledFoodYouCanTrust}
+        reverseOrder={true}
       />
       <CTASection
         headingWhite="Visit or"

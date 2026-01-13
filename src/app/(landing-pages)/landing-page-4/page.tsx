@@ -133,7 +133,7 @@ export default function LandingPage4() {
       <PizzaStylesForEveryTaste />
       <InfoSection
         heading1="Freshly Baked Pizza"
-        heading2="Served Generousl"
+        heading2="Served Generously"
         description="Every pizza at Sabir’s is baked fresh to order — never rushed, never reheated. Our portions are designed to satisfy, whether you’re ordering for yourself or sharing with friends and family."
         imageSrc={webp.freshlyBakedPizzay}
         backgroundColor="#851A1D"

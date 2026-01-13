@@ -22,6 +22,7 @@ export interface FeatureGridSectionProps {
   backgroundColor?: string;
   backgroundImage?: string;
   buttonText?: string;
+  maxWidth?: string;
 }
 
 export default function FeatureGridSection({
@@ -32,6 +33,7 @@ export default function FeatureGridSection({
   backgroundColor = colors.White,
   backgroundImage,
   buttonText,
+  maxWidth = "1400px",
 }: FeatureGridSectionProps) {
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
@@ -59,7 +61,7 @@ export default function FeatureGridSection({
           flexDirection: "column",
           alignItems: "center",
           gap: { xs: "30px", sm: "40px", md: "50px" },
-          maxWidth: "1440px",
+          maxWidth: maxWidth,
           margin: "auto",
         }}
       >

@@ -42,12 +42,12 @@ import Ramzan from "./ramzan.webp";
 import whyOurBurgersAreSpecial from "./infoSection/whyOurBurgersAreSpecial.png";
 import freshlyBakedPizzay from "./infoSection/freshlyBakedPizzay.png";
 import whyOurPizza from "./infoSection/whyOurPizza.png";
-import halalGrilledFoodYouCanTrust from "./infoSection/halalGrilledFoodYouCanTrust.png";
 import aPlaceFamiliesFeelWelcome from "./infoSection/aPlaceFamiliesFeelWelcome.png";
 import whatMakesThemGreat from "./infoSection/whatMakesThemGreat.png";
 import aTrueGrillRestaurantInSheffield from "./infoSection/aTrueGrillRestaurantInSheffield.png";
 import groupDiningMadeEasy from "./infoSection/groupDiningMadeEasy.png";
 import halalFoodYouCanTrust from "./infoSection/halalFoodYouCanTrust.png";
+import halalGrilledFoodYouCanTrust from "./infoSection/halalGrilledFoodYouCanTrust.png";
 
 // images redThemeShowcaseSection
 import popularChoices1 from "./redThemeShowcaseSection/popularChoices1.png";

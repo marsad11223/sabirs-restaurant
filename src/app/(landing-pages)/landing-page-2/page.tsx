@@ -49,6 +49,7 @@ export default function LandingPage2() {
         heading1="Local Diner Sheffield"
         heading2="& Rotherham"
         description="Looking for a diner in Sheffield that serves great food, offers both dine-in and takeaway, and is conveniently located on London Road Sheffield? You’ve come to the right place!"
+        maxWidth="940px"
       />
       <FeatureGridSection
         heading1="Where Flavour"
@@ -57,6 +58,7 @@ export default function LandingPage2() {
             destination that brings bold, comforting flavours to every plate:"
         features={features}
         backgroundColor="#FFFFFF"
+        maxWidth="1200px"
       />
       <FoodWorthTheTrip />
       <CTASection

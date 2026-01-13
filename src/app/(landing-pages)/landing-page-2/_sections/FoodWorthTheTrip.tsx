@@ -19,19 +19,19 @@ export default function FoodWorthTheTrip() {
       },
       infoItems: [
         {
-          iconSrc: svgs.goldContact,
+          iconSrc: svgs.goldLocation,
           title: "Address",
           typography:
             "224-230 London Rd, Highfield, Sheffield S2 4LW, United Kingdom",
         },
         {
-          iconSrc: svgs.goldLocation,
+          iconSrc: svgs.goldTime,
           title: "Timing",
           typography:
             "Monday - Sunday: See our Order page for latest times or call ahead.",
         },
         {
-          iconSrc: svgs.goldTime,
+          iconSrc: svgs.goldContact,
           title: "Contact",
           typography: "0114 4790022",
         },
@@ -45,18 +45,18 @@ export default function FoodWorthTheTrip() {
       },
       infoItems: [
         {
-          iconSrc: svgs.goldContact,
+          iconSrc: svgs.goldLocation,
           title: "Address",
           typography: "36 Westgate, Rotherham S60 1AS, United Kingdom",
         },
         {
-          iconSrc: svgs.goldLocation,
+          iconSrc: svgs.goldTime,
           title: "Timing",
           typography:
             "Monday - Sunday: See our Order page for latest times or call ahead.",
         },
         {
-          iconSrc: svgs.goldTime,
+          iconSrc: svgs.goldContact,
           title: "Contact",
           typography: "01709 838899",
         },
