@@ -21,14 +21,22 @@ interface HeroLandingPageProps {
 }
 
 export default function HeroLandingPage({
-  bgImage = "./bgHeroLandingPage.png",
-  icon = svgs.redStar,
-  bannerText = "Rated #1 Burger Joint in Sheffield",
-  heading1 = "SHEFFIELD'S BEST",
-  heading2 = "CRAFTED menu",
-  description = "At Sabir's Grill, we serve freshly grilled food made with quality ingredients and bold flavours. Every dish is prepared with care, cooked to perfection, and designed to give you a satisfying dining experience worth coming back for.",
-  button1Text = "Order Now",
-  button2Text = "Explore Menu",
+  bgImage,
+  icon,
+  bannerText,
+  heading1,
+  heading2,
+  description,
+  button1Text,
+  button2Text,
+  // bgImage = "./bgHeroLandingPage.png",
+  // icon = svgs.redStar,
+  // bannerText = "Rated #1 Burger Joint in Sheffield",
+  // heading1 = "SHEFFIELD'S BEST",
+  // heading2 = "CRAFTED menu",
+  // description = "At Sabir's Grill, we serve freshly grilled food made with quality ingredients and bold flavours. Every dish is prepared with care, cooked to perfection, and designed to give you a satisfying dining experience worth coming back for.",
+  // button1Text = "Order Now",
+  // button2Text = "Explore Menu",
   maxWidth = "880px",
 }: HeroLandingPageProps) {
   useEffect(() => {
@@ -185,83 +193,87 @@ export default function HeroLandingPage({
                 }}
               >
                 {/* Order Now Button */}
-                <Box
-                  data-aos="zoom-in"
-                  data-aos-duration="400"
-                  data-aos-delay="700"
-                >
+                {button1Text && (
                   <Box
-                    component="button"
-                    sx={{
-                      backgroundColor: colors.secondaryYellow,
-                      color: "#851A1D",
-                      border: "none",
-                      borderRadius: "10px",
-                      padding: {
-                        xs: "15px 30px",
-                        md: "20px 40px",
-                      },
-                      height: "56px",
-                      fontSize: fonts.p5,
-                      lineHeight: fonts.p5,
-                      fontWeight: "700",
-                      fontFamily: "inherit",
-                      cursor: "pointer",
-                      transition: "all 0.3s ease",
-                      textTransform: "none",
-                      "&:hover": {
-                        backgroundColor: "#FFE033",
-                        transform: "translateY(-2px)",
-                        boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
-                      },
-                      "&:active": {
-                        transform: "translateY(0)",
-                      },
-                      minWidth: "200px",
-                    }}
+                    data-aos="zoom-in"
+                    data-aos-duration="400"
+                    data-aos-delay="700"
                   >
-                    {button1Text}
+                    <Box
+                      component="button"
+                      sx={{
+                        backgroundColor: colors.secondaryYellow,
+                        color: "#851A1D",
+                        border: "none",
+                        borderRadius: "10px",
+                        padding: {
+                          xs: "15px 30px",
+                          md: "20px 40px",
+                        },
+                        height: "56px",
+                        fontSize: fonts.p5,
+                        lineHeight: fonts.p5,
+                        fontWeight: "700",
+                        fontFamily: "inherit",
+                        cursor: "pointer",
+                        transition: "all 0.3s ease",
+                        textTransform: "none",
+                        "&:hover": {
+                          backgroundColor: "#FFE033",
+                          transform: "translateY(-2px)",
+                          boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
+                        },
+                        "&:active": {
+                          transform: "translateY(0)",
+                        },
+                        minWidth: "200px",
+                      }}
+                    >
+                      {button1Text}
+                    </Box>
                   </Box>
-                </Box>
+                )}
                 {/* Explore Menu Button */}
-                <Box
-                  data-aos="zoom-in"
-                  data-aos-duration="400"
-                  data-aos-delay="700"
-                >
+                {button2Text && (
                   <Box
-                    component="button"
-                    sx={{
-                      backgroundColor: "#FFFFFF33",
-                      border: "none",
-                      color: colors.White,
-                      borderRadius: "10px",
-                      padding: {
-                        xs: "15px 30px",
-                        md: "20px 40px",
-                      },
-                      height: "56px",
-                      fontSize: fonts.p5,
-                      lineHeight: fonts.p5,
-                      fontWeight: "700",
-                      fontFamily: "inherit",
-                      cursor: "pointer",
-                      transition: "all 0.3s ease",
-                      textTransform: "none",
-                      "&:hover": {
-                        backgroundColor: "rgba(133, 26, 29, 0.9)",
-                        transform: "translateY(-2px)",
-                        boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
-                      },
-                      "&:active": {
-                        transform: "translateY(0)",
-                      },
-                      minWidth: "200px",
-                    }}
+                    data-aos="zoom-in"
+                    data-aos-duration="400"
+                    data-aos-delay="700"
                   >
-                    {button2Text}
+                    <Box
+                      component="button"
+                      sx={{
+                        backgroundColor: "#FFFFFF33",
+                        border: "none",
+                        color: colors.White,
+                        borderRadius: "10px",
+                        padding: {
+                          xs: "15px 30px",
+                          md: "20px 40px",
+                        },
+                        height: "56px",
+                        fontSize: fonts.p5,
+                        lineHeight: fonts.p5,
+                        fontWeight: "700",
+                        fontFamily: "inherit",
+                        cursor: "pointer",
+                        transition: "all 0.3s ease",
+                        textTransform: "none",
+                        "&:hover": {
+                          backgroundColor: "rgba(133, 26, 29, 0.9)",
+                          transform: "translateY(-2px)",
+                          boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
+                        },
+                        "&:active": {
+                          transform: "translateY(0)",
+                        },
+                        minWidth: "200px",
+                      }}
+                    >
+                      {button2Text}
+                    </Box>
                   </Box>
-                </Box>
+                )}
               </Box>
             </Box>
           </Box>

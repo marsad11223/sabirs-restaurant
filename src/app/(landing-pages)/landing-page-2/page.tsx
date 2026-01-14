@@ -48,6 +48,8 @@ export default function LandingPage2() {
         bgImage="./LandingPages/bgHeroLandingPage2.png"
         heading1="Local Diner Sheffield"
         heading2="& Rotherham"
+        button1Text="Order Now"
+        button2Text="Explore Menu"
         description="Looking for a diner in Sheffield that serves great food, offers both dine-in and takeaway, and is conveniently located on London Road Sheffield? You’ve come to the right place!"
         maxWidth="940px"
       />

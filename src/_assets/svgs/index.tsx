@@ -59,7 +59,6 @@ import trustedTakeawayInSheffield from "./iconsFeatureCard/trustedTakeawayInShef
 import one from "./iconsFeatureCard/one.svg";
 import two from "./iconsFeatureCard/two.svg";
 import three from "./iconsFeatureCard/three.svg";
-
 // hero banner icons
 import redStar from "./heroBannerIcon/redStar.svg";
 import redPrityIcon from "./heroBannerIcon/redPrityIcon.svg";
@@ -68,6 +67,7 @@ import flameGrilledSpicedMeat from "./heroBannerIcon/flameGrilledSpicedMeat.svg"
 import familyFriendlyRestaurantInSheffield from "./heroBannerIcon/familyFriendlyRestaurantInSheffield.svg";
 import halalFoodPreparedWithCare from "./heroBannerIcon/halalFoodPreparedWithCare.svg";
 import collectionOnLondonRoad from "./heroBannerIcon/collectionOnLondonRoad.svg";
+import whatWeServe from "./heroBannerIcon/whatWeServe.svg";
 
 const svgs = {
   // base / common icons
@@ -140,6 +140,7 @@ const svgs = {
   familyFriendlyRestaurantInSheffield,
   halalFoodPreparedWithCare,
   collectionOnLondonRoad,
+  whatWeServe,
 };
 
 export default svgs;

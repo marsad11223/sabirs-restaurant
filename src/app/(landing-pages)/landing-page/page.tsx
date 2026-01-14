@@ -58,7 +58,17 @@ export default function LandingPage() {
   ];
   return (
     <Box>
-      <HeroLandingPage bgImage="./LandingPages/bgHeroLandingPage.png" />
+      <HeroLandingPage
+        icon={svgs.redStar}
+        bannerText="Rated #1 Burger Joint in Sheffield"
+        heading1="SHEFFIELD'S BEST"
+        heading2="CRAFTED menu"
+        description="At Sabir's Grill, we serve freshly grilled food made with quality ingredients and bold flavours. Every dish is prepared with care, cooked to perfection, and designed to give you a satisfying dining experience worth coming back for."
+        button1Text="Order Now"
+        button2Text="Explore Menu"
+        maxWidth="880px"
+        bgImage="./LandingPages/bgHeroLandingPage.png"
+      />
       <SabirsGrillYourChoice />
       <FeatureGridSection
         heading1="Sabir’s Grill"

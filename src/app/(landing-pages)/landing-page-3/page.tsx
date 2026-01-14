@@ -38,7 +38,8 @@ export default function LandingPage3() {
         bgImage="./LandingPages/bgHeroLandingPage3.png"
         heading1="Best Burgers"
         heading2="at sabir’s"
-        button1Text="Visit Our Diner"
+        button1Text="Order Now"
+        button2Text="Explore Menu"
         description="Find classic beef burgers, crispy chicken burgers and tasty veg options — all cooked to order and served with fresh toppings and sauces."
       />
       <InfoSection
