@@ -11,7 +11,7 @@ export interface FeatureItem {
   icon: StaticImageData | string;
   firstWord: string;
   secondWord: string;
-  description: string;
+  description?: string;
 }
 
 export interface FeatureGridSectionProps {

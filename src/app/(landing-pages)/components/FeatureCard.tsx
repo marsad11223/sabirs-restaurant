@@ -10,7 +10,7 @@ interface FeatureCardProps {
   icon: any;
   firstWord: string;
   secondWord: string;
-  description: string;
+  description?: string;
 }
 
 export default function FeatureCard({
@@ -84,15 +84,17 @@ export default function FeatureCard({
       </Typography>
 
       {/* Description */}
-      <Typography
-        sx={{
-          fontSize: fonts.p4,
-          lineHeight: fonts.p4,
-          color: "#414143 !important",
-        }}
-      >
-        {description}
-      </Typography>
+      {description && (
+        <Typography
+          sx={{
+            fontSize: fonts.p4,
+            lineHeight: fonts.p4,
+            color: "#414143 !important",
+          }}
+        >
+          {description}
+        </Typography>
+      )}
     </Box>
   );
 }

@@ -6,12 +6,14 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import HighlightCard from "./HighlightCard";
+import { StaticImageData } from "next/image";
 
 export interface HighlightCardItem {
   title: string;
   description: string;
   linkText?: string;
   link?: string;
+  image?: string | StaticImageData;
 }
 
 interface FeatureHighlightsProps {
@@ -120,6 +122,7 @@ export default function FeatureHighlights({
                   redTheme={redTheme}
                   linkText={card.linkText}
                   link={card.link}
+                  image={card.image}
                 />
               </Box>
             </Grid>

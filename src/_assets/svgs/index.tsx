@@ -60,6 +60,11 @@ import trustedTakeawayInSheffield from "./iconsFeatureCard/trustedTakeawayInShef
 import one from "./iconsFeatureCard/one.svg";
 import two from "./iconsFeatureCard/two.svg";
 import three from "./iconsFeatureCard/three.svg";
+import comfortableSeating from "./iconsFeatureCard/comfortableSeating.svg";
+import friendlyService2 from "./iconsFeatureCard/friendlyService2.svg";
+import idealForStudyBreaks from "./iconsFeatureCard/idealForStudyBreaks.svg";
+import greatForGroup from "./iconsFeatureCard/greatForGroup.svg";
+
 // hero banner icons
 import redStar from "./heroBannerIcon/redStar.svg";
 import redPrityIcon from "./heroBannerIcon/redPrityIcon.svg";
@@ -69,6 +74,12 @@ import familyFriendlyRestaurantInSheffield from "./heroBannerIcon/familyFriendly
 import halalFoodPreparedWithCare from "./heroBannerIcon/halalFoodPreparedWithCare.svg";
 import collectionOnLondonRoad from "./heroBannerIcon/collectionOnLondonRoad.svg";
 import whatWeServe from "./heroBannerIcon/whatWeServe.svg";
+import affordableFillingFullOfFlavour from "./heroBannerIcon/affordableFillingFullOfFlavour.svg";
+// golden icons
+import easyInStoreOrdering from "./goldenIcons/easyInStoreOrdering.svg";
+import fastPreparationTimes from "./goldenIcons/fastPreparationTimes.svg";
+import idealForLunchBreaks from "./goldenIcons/idealForLunchBreaks.svg";
+import quickTakeawayOptions from "./goldenIcons/quickTakeawayOptions.svg";
 
 const svgs = {
   // base / common icons
@@ -134,6 +145,11 @@ const svgs = {
   one,
   two,
   three,
+  comfortableSeating,
+  friendlyService2,
+  idealForStudyBreaks,
+  greatForGroup,
+
   // hero banner icons
   redStar,
   redPrityIcon,
@@ -143,6 +159,12 @@ const svgs = {
   halalFoodPreparedWithCare,
   collectionOnLondonRoad,
   whatWeServe,
+  affordableFillingFullOfFlavour,
+  // golden icons
+  easyInStoreOrdering,
+  fastPreparationTimes,
+  idealForLunchBreaks,
+  quickTakeawayOptions,
 };
 
 export default svgs;

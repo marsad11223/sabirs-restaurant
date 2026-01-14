@@ -6,8 +6,8 @@ interface CTASectionProps {
   headingWhite: string;
   headingRed: string;
   description: string;
-  button1Text: string;
-  button2Text: string;
+  button1Text?: string;
+  button2Text?: string;
 }
 
 export default function CTASection({
@@ -69,62 +69,66 @@ export default function CTASection({
             flexWrap: "wrap",
           }}
         >
-          <Box
-            component="button"
-            sx={{
-              backgroundColor: colors.primaryRed,
-              color: "#fff",
-              border: "none",
-              borderRadius: "10px",
-              padding: { xs: "15px 30px", md: "20px 40px" },
-              fontSize: fonts.p5,
-              cursor: "pointer",
-              transition: "all 0.3s ease",
-              whiteSpace: "nowrap",
-              "&:hover": {
-                backgroundColor: "#A01F23",
-                transform: "translateY(-2px)",
-                boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
-              },
-              "&:active": {
-                transform: "translateY(0)",
-              },
-              marginTop: { xs: "40px", sm: "40px", md: "60px", lg: "80px" },
-              margin: "auto",
-              fontWeight: "700",
-              minWidth: "210px",
-            }}
-          >
-            {button1Text}
-          </Box>
-          <Box
-            component="button"
-            sx={{
-              color: colors.primaryRed,
-              backgroundColor: "#fff",
-              border: "none",
-              borderRadius: "10px",
-              padding: { xs: "15px 30px", md: "20px 40px" },
-              fontSize: fonts.p5,
-              cursor: "pointer",
-              transition: "all 0.3s ease",
-              whiteSpace: "nowrap",
-              "&:hover": {
+          {button1Text && (
+            <Box
+              component="button"
+              sx={{
+                backgroundColor: colors.primaryRed,
+                color: "#fff",
+                border: "none",
+                borderRadius: "10px",
+                padding: { xs: "15px 30px", md: "20px 40px" },
+                fontSize: fonts.p5,
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+                whiteSpace: "nowrap",
+                "&:hover": {
+                  backgroundColor: "#A01F23",
+                  transform: "translateY(-2px)",
+                  boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
+                },
+                "&:active": {
+                  transform: "translateY(0)",
+                },
+                marginTop: { xs: "40px", sm: "40px", md: "60px", lg: "80px" },
+                margin: "auto",
+                fontWeight: "700",
+                minWidth: "210px",
+              }}
+            >
+              {button1Text}
+            </Box>
+          )}
+          {button2Text && (
+            <Box
+              component="button"
+              sx={{
+                color: colors.primaryRed,
                 backgroundColor: "#fff",
-                transform: "translateY(-2px)",
-                boxShadow: `0px 4px 12px rgba(1, 1, 1, 0.2)`,
-              },
-              "&:active": {
-                transform: "translateY(0)",
-              },
-              marginTop: { sm: "40px", md: "60px", lg: "80px" },
-              margin: "auto",
-              fontWeight: "700",
-              minWidth: "210px",
-            }}
-          >
-            {button2Text}
-          </Box>
+                border: "none",
+                borderRadius: "10px",
+                padding: { xs: "15px 30px", md: "20px 40px" },
+                fontSize: fonts.p5,
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+                whiteSpace: "nowrap",
+                "&:hover": {
+                  backgroundColor: "#fff",
+                  transform: "translateY(-2px)",
+                  boxShadow: `0px 4px 12px rgba(1, 1, 1, 0.2)`,
+                },
+                "&:active": {
+                  transform: "translateY(0)",
+                },
+                marginTop: { sm: "40px", md: "60px", lg: "80px" },
+                margin: "auto",
+                fontWeight: "700",
+                minWidth: "210px",
+              }}
+            >
+              {button2Text}
+            </Box>
+          )}
         </Box>
       </Box>
     </Box>

@@ -68,6 +68,9 @@ import customerFavourites9 from "./redThemeShowcaseSection/customerFavourites9.p
 import customerFavourites10 from "./redThemeShowcaseSection/customerFavourites10.png";
 import customerFavourites11 from "./redThemeShowcaseSection/customerFavourites11.png";
 import mixKebabPlate from "./redThemeShowcaseSection/mixKebabPlate.png";
+import grilledKebabsMixedPlatters from "./redThemeShowcaseSection/grilledKebabsMixedPlatters.png";
+import riceGrillMeals from "./redThemeShowcaseSection/riceGrillMeals.png";
+import sidesAddOns from "./redThemeShowcaseSection/sidesAddOns.png";
 
 const webp = {
   // main / hero & general images
@@ -146,6 +149,9 @@ const webp = {
   customerFavourites10,
   customerFavourites11,
   mixKebabPlate,
+  grilledKebabsMixedPlatters,
+  riceGrillMeals,
+  sidesAddOns,
 };
 
 export default webp;

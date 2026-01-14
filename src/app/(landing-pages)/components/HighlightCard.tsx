@@ -2,7 +2,7 @@
 
 import { Box, Typography } from "@mui/material";
 import { fonts } from "@/app/utils/themes";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import svgs from "@/_assets/svgs";
 
 interface HighlightCardProps {
@@ -11,6 +11,7 @@ interface HighlightCardProps {
   link?: string;
   linkText?: string;
   redTheme?: boolean;
+  image?: string | StaticImageData;
 }
 
 export default function HighlightCard({
@@ -19,6 +20,7 @@ export default function HighlightCard({
   link,
   linkText,
   redTheme,
+  image,
 }: HighlightCardProps) {
   return (
     <Box
@@ -31,6 +33,20 @@ export default function HighlightCard({
         paddingY: "10px",
       }}
     >
+      {image && (
+        <Box
+          sx={{
+            width: { xs: "40px", md: "60px" },
+            marginBottom: { xs: "5px", md: "10px" },
+          }}
+        >
+          <Image
+            style={{ height: "100%", width: "100%", objectFit: "contain" }}
+            src={image}
+            alt="images"
+          />
+        </Box>
+      )}
       <Typography
         sx={{
           fontSize: fonts.primaryTypography,

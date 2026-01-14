@@ -94,7 +94,7 @@ export default function HeroLandingPage({
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
-                gap: { xs: "20px", md: "30px", lg: "50px" },
+                gap: { xs: "20px", md: "30px", lg: "40px" },
                 alignItems: { xs: "center", md: "flex-start" },
                 textAlign: { xs: "center", md: "left" },
               }}
