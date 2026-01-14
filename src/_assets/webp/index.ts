@@ -48,6 +48,7 @@ import aTrueGrillRestaurantInSheffield from "./infoSection/aTrueGrillRestaurantI
 import groupDiningMadeEasy from "./infoSection/groupDiningMadeEasy.png";
 import halalFoodYouCanTrust from "./infoSection/halalFoodYouCanTrust.png";
 import halalGrilledFoodYouCanTrust from "./infoSection/halalGrilledFoodYouCanTrust.png";
+import localTakeawayOnLondonRoad from "./infoSection/localTakeawayOnLondonRoad.png";
 
 // images redThemeShowcaseSection
 import popularChoices1 from "./redThemeShowcaseSection/popularChoices1.png";
@@ -118,6 +119,7 @@ const webp = {
   freshlyBakedPizzay,
   whyOurPizza,
   halalGrilledFoodYouCanTrust,
+  localTakeawayOnLondonRoad,
   aPlaceFamiliesFeelWelcome,
   whatMakesThemGreat,
   aTrueGrillRestaurantInSheffield,

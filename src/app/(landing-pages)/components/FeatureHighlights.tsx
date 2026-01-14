@@ -17,6 +17,7 @@ interface FeatureHighlightsProps {
   heading2: string;
   cards: HighlightCardItem[];
   redTheme?: boolean;
+  description?: string;
 }
 
 export default function FeatureHighlights({
@@ -24,6 +25,7 @@ export default function FeatureHighlights({
   heading2,
   cards,
   redTheme = false,
+  description,
 }: FeatureHighlightsProps) {
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
@@ -66,6 +68,15 @@ export default function FeatureHighlights({
             }}
           >
             {heading2}
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: fonts.p4,
+              color: redTheme ? "#ffffff" : "#414143",
+              marginTop: { xs: "10px", md: "15px" },
+            }}
+          >
+            {description}
           </Typography>
         </Box>
 
