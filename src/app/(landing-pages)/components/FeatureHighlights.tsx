@@ -10,6 +10,8 @@ import HighlightCard from "./HighlightCard";
 export interface HighlightCardItem {
   title: string;
   description: string;
+  linkText?: string;
+  link?: string;
 }
 
 interface FeatureHighlightsProps {
@@ -18,6 +20,7 @@ interface FeatureHighlightsProps {
   cards: HighlightCardItem[];
   redTheme?: boolean;
   description?: string;
+  button?: string;
 }
 
 export default function FeatureHighlights({
@@ -26,6 +29,7 @@ export default function FeatureHighlights({
   cards,
   redTheme = false,
   description,
+  button,
 }: FeatureHighlightsProps) {
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
@@ -91,6 +95,8 @@ export default function FeatureHighlights({
             maxWidth: "1240px",
             rowGap: { xs: "20px", md: "40px" },
             marginTop: { xs: "40px", md: "80px" },
+            marginX: "auto",
+            marginRight: "0px",
           }}
         >
           {cards.map((card, index) => (
@@ -112,11 +118,45 @@ export default function FeatureHighlights({
                   title={card.title}
                   description={card.description}
                   redTheme={redTheme}
+                  linkText={card.linkText}
+                  link={card.link}
                 />
               </Box>
             </Grid>
           ))}
         </Grid>
+        {button && (
+          <Box
+            component="button"
+            sx={{
+              backgroundColor: colors.primaryRed,
+              color: "#FFD40D",
+              border: "none",
+              borderRadius: "10px",
+              padding: { xs: "15px 30px", md: "20px 40px" },
+              fontSize: fonts.p5,
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+              whiteSpace: "nowrap",
+              fontWeight: "700",
+              minWidth: "210px",
+              width: "fit-content",
+              marginTop: { xs: "40px", md: "60px", lg: "80px" },
+              "&:hover": {
+                backgroundColor: "#A01F23",
+                transform: "translateY(-2px)",
+                boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
+              },
+              "&:active": {
+                transform: "translateY(0)",
+              },
+              margin: "auto",
+              display: "block",
+            }}
+          >
+            {button}
+          </Box>
+        )}
       </Box>
     </Box>
   );

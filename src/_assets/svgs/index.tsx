@@ -24,6 +24,7 @@ import LocationYellowIcon from "./locationYellowIcon.svg";
 import goldContact from "./goldContact.svg";
 import goldLocation from "./goldLocation.svg";
 import goldTime from "./goldTime.svg";
+import yellowExternalLinkIcon from "./yellowExternalLinkIcon.svg";
 // iconsFeatureCard
 import authenticKebabsMadeFresh from "./iconsFeatureCard/authenticKebabsMadeFresh.svg";
 import boldMarinadesAndSpices from "./iconsFeatureCard/boldMarinadesAndSpices.svg";
@@ -96,6 +97,7 @@ const svgs = {
   goldContact,
   goldLocation,
   goldTime,
+  yellowExternalLinkIcon,
 
   // iconsFeatureCard
   authenticKebabsMadeFresh,

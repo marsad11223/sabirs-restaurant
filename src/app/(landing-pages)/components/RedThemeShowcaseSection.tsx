@@ -20,8 +20,8 @@ export interface RedThemeShowcaseSectionProps {
   primaryHeading2: string;
   primaryDescription?: string;
   description2?: string;
-  secondaryHeading1: string;
-  secondaryHeading2: string;
+  secondaryHeading1?: string;
+  secondaryHeading2?: string;
   items?: ShowcaseCardItem[];
   button?: string;
 }

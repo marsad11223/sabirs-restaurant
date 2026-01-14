@@ -14,6 +14,7 @@ export interface InfoSectionProps {
   description2?: string;
   imageSrc: StaticImageData | string;
   reverseOrder?: boolean;
+  button?: string;
 }
 
 export default function InfoSection({
@@ -24,6 +25,7 @@ export default function InfoSection({
   description2,
   imageSrc,
   reverseOrder = false,
+  button,
 }: InfoSectionProps) {
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
@@ -61,13 +63,7 @@ export default function InfoSection({
           data-aos={reverseOrder ? "fade-left" : "fade-right"}
           data-aos-duration="400"
         >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: { xs: "16px", md: "24px" },
-            }}
-          >
+          <Box>
             {/* Heading Part 1 - Yellow */}
             <Typography
               sx={{
@@ -92,7 +88,7 @@ export default function InfoSection({
                     : colors.primaryRed,
                 fontFamily: '"Bebas Neue", sans-serif',
                 textTransform: "uppercase",
-                marginTop: { xs: "-8px", md: "-12px" },
+                // marginTop: { xs: "-8px", md: "-12px" },
               }}
             >
               {heading2}
@@ -108,7 +104,7 @@ export default function InfoSection({
                     backgroundColor === "#851A1D"
                       ? colors.White
                       : colors.darkGrey,
-                  marginTop: { xs: "8px", md: "12px" },
+                  marginTop: { xs: "8px", md: "12px", lg: "15px" },
                   maxWidth: "100%",
                 }}
               >
@@ -122,13 +118,43 @@ export default function InfoSection({
                     backgroundColor === "#851A1D"
                       ? colors.White
                       : colors.darkGrey,
-                  marginTop: { xs: "8px", md: "12px" },
+                  marginTop: { xs: "8px", md: "12px", lg: "15px" },
                   maxWidth: "100%",
                 }}
               >
                 {description2}
               </Typography>
             </Box>
+            {button && (
+              <Box
+                component="button"
+                sx={{
+                  backgroundColor: colors.primaryRed,
+                  color: "#FFD40D",
+                  border: "none",
+                  borderRadius: "10px",
+                  padding: { xs: "15px 30px", md: "20px 40px" },
+                  fontSize: fonts.p5,
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                  whiteSpace: "nowrap",
+                  fontWeight: "700",
+                  minWidth: "210px",
+                  width: "fit-content",
+                  marginTop: { xs: "8px", md: "12px", lg: "15px" },
+                  "&:hover": {
+                    backgroundColor: "#A01F23",
+                    transform: "translateY(-2px)",
+                    boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
+                  },
+                  "&:active": {
+                    transform: "translateY(0)",
+                  },
+                }}
+              >
+                {button}
+              </Box>
+            )}
           </Box>
         </Box>
 

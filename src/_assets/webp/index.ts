@@ -49,6 +49,7 @@ import groupDiningMadeEasy from "./infoSection/groupDiningMadeEasy.png";
 import halalFoodYouCanTrust from "./infoSection/halalFoodYouCanTrust.png";
 import halalGrilledFoodYouCanTrust from "./infoSection/halalGrilledFoodYouCanTrust.png";
 import localTakeawayOnLondonRoad from "./infoSection/localTakeawayOnLondonRoad.png";
+import aboutSabirsFoodPhilosophy from "./infoSection/aboutSabirsFoodPhilosophy.png";
 
 // images redThemeShowcaseSection
 import popularChoices1 from "./redThemeShowcaseSection/popularChoices1.png";
@@ -66,6 +67,7 @@ import customerFavourites8 from "./redThemeShowcaseSection/customerFavourites8.p
 import customerFavourites9 from "./redThemeShowcaseSection/customerFavourites9.png";
 import customerFavourites10 from "./redThemeShowcaseSection/customerFavourites10.png";
 import customerFavourites11 from "./redThemeShowcaseSection/customerFavourites11.png";
+import mixKebabPlate from "./redThemeShowcaseSection/mixKebabPlate.png";
 
 const webp = {
   // main / hero & general images
@@ -120,6 +122,7 @@ const webp = {
   whyOurPizza,
   halalGrilledFoodYouCanTrust,
   localTakeawayOnLondonRoad,
+  aboutSabirsFoodPhilosophy,
   aPlaceFamiliesFeelWelcome,
   whatMakesThemGreat,
   aTrueGrillRestaurantInSheffield,
@@ -142,6 +145,7 @@ const webp = {
   customerFavourites9,
   customerFavourites10,
   customerFavourites11,
+  mixKebabPlate,
 };
 
 export default webp;
