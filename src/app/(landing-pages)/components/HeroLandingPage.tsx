@@ -10,7 +10,7 @@ import Image, { StaticImageData } from "next/image";
 
 interface HeroLandingPageProps {
   bgImage?: string;
-  icon?: StaticImageData | string;
+  icon?: string | StaticImageData;
   bannerText?: string;
   heading1?: string;
   heading2?: string;
@@ -100,42 +100,44 @@ export default function HeroLandingPage({
               }}
             >
               {/* Rating Badge */}
-              <Box
-                data-aos="zoom-in"
-                data-aos-duration="400"
-                data-aos-delay="300"
-                sx={{
-                  backgroundColor: "#FFD40D",
-                  borderRadius: "30px",
-                  padding: { xs: "8px 16px", sm: "10px 20px" },
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  width: "fit-content",
-                }}
-              >
-                <Image
-                  src={icon}
-                  alt="icon"
-                  style={{
-                    width: "20px",
-                    height: "20px",
-                  }}
-                  width={20}
-                  height={20}
-                />
-                <Typography
-                  component="span"
+              {icon && (
+                <Box
+                  data-aos="zoom-in"
+                  data-aos-duration="400"
+                  data-aos-delay="300"
                   sx={{
-                    fontSize: { xs: "14px", md: "16px" },
-                    color: "#851A1D",
-                    fontFamily: '"Open Sans", sans-serif',
-                    textTransform: "uppercase",
+                    backgroundColor: "#FFD40D",
+                    borderRadius: "30px",
+                    padding: { xs: "8px 16px", sm: "10px 20px" },
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    width: "fit-content",
                   }}
                 >
-                  {bannerText}
-                </Typography>
-              </Box>
+                  <Image
+                    src={icon}
+                    alt="icon"
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                    }}
+                    width={20}
+                    height={20}
+                  />
+                  <Typography
+                    component="span"
+                    sx={{
+                      fontSize: { xs: "14px", md: "16px" },
+                      color: "#851A1D",
+                      fontFamily: '"Open Sans", sans-serif',
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    {bannerText}
+                  </Typography>
+                </Box>
+              )}
 
               <Box>
                 {/* Main Headline - Part 1 */}
