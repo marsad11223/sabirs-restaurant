@@ -59,8 +59,9 @@ export default function SabirsGrillYourChoice() {
           sx={{
             display: "flex",
             gap: { xs: "10px", sm: "20px", md: "40px" },
-            alignItems: "flex-start",
+            alignItems: { xs: "center", sm: "flex-start" },
             textAlign: { xs: "center", md: "left" },
+            flexDirection: { xs: "column", smn: "row" },
           }}
         >
           <Typography
@@ -82,6 +83,8 @@ export default function SabirsGrillYourChoice() {
                 fontWeight: fonts.h5,
                 color: colors.White,
                 fontFamily: '"Bebas Neue", sans-serif',
+                maxWidth: { xs: "330px", sm: "none" },
+                margin: { xs: "auto", sm: "unset" },
               }}
             >
               MEAL DEAL: 2 BURGERS + 2 FRIES + 2 DRINKS
@@ -125,6 +128,7 @@ export default function SabirsGrillYourChoice() {
               transform: "translateY(0)",
             },
             fontWeight: "700",
+            margin: { xs: "auto", sm: "unset" },
           }}
         >
           Claim Now

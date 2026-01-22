@@ -94,9 +94,8 @@ export default function HeroLandingPage({
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
-                gap: { xs: "20px", md: "30px", lg: "40px" },
-                alignItems: { xs: "center", md: "flex-start" },
-                textAlign: { xs: "center", md: "left" },
+                gap: { xs: "15px", md: "30px", lg: "40px" },
+                alignItems: { xs: "flex-start", md: "flex-start" },
               }}
             >
               {/* Rating Badge */}
@@ -108,11 +107,12 @@ export default function HeroLandingPage({
                   sx={{
                     backgroundColor: "#FFD40D",
                     borderRadius: "30px",
-                    padding: { xs: "8px 16px", sm: "10px 20px" },
+                    padding: { xs: "10px 14px", sm: "10px 20px" },
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "10px",
                     width: "fit-content",
+                    marginBottom: { xs: "20px", sm: "unset" },
                   }}
                 >
                   <Image
@@ -146,8 +146,19 @@ export default function HeroLandingPage({
                   data-aos-duration="400"
                   sx={{
                     color: colors.secondaryYellow,
-                    fontSize: fonts.headingPrimaryLandingpage,
-                    lineHeight: fonts.headingPrimaryLandingpage,
+                    fontSize: {
+                      xs: "48px",
+                      sm: "80px",
+                      md: "100px",
+                      xl: "128px",
+                    },
+                    lineHeight: {
+                      xs: "48px",
+                      sm: "80px",
+                      md: "100px",
+                      xl: "128px",
+                    },
+                    textAlign: "left",
                     textTransform: "uppercase",
                     fontFamily: '"Bebas Neue", sans-serif',
                   }}
@@ -160,10 +171,22 @@ export default function HeroLandingPage({
                   data-aos-duration="400"
                   sx={{
                     color: colors.White,
-                    fontSize: fonts.headingPrimaryLandingpage,
-                    lineHeight: fonts.headingPrimaryLandingpage,
+                    fontSize: {
+                      xs: "48px",
+                      sm: "80px",
+                      md: "100px",
+                      xl: "128px",
+                    },
+                    lineHeight: {
+                      xs: "48px",
+                      sm: "80px",
+                      md: "100px",
+                      xl: "128px",
+                    },
                     textTransform: "uppercase",
+                    // textAlign: { xs: "left", sm: "unset" },
                     fontFamily: '"Bebas Neue", sans-serif',
+                    textAlign: "left",
                   }}
                 >
                   {heading2}
@@ -179,6 +202,7 @@ export default function HeroLandingPage({
                   color: colors.White,
                   fontSize: fonts.p4,
                   fontFamily: '"Open Sans", sans-serif',
+                  textAlign: "left",
                 }}
               >
                 {description}
@@ -188,7 +212,7 @@ export default function HeroLandingPage({
               <Box
                 sx={{
                   display: "flex",
-                  flexDirection: { xs: "column", sm: "row" },
+                  // flexDirection: { xs: "column", sm: "row" },
                   gap: { xs: "8px", sm: "20px" },
                   marginTop: { xs: "20px", md: "10px" },
                   width: { xs: "100%", sm: "auto" },
@@ -200,6 +224,9 @@ export default function HeroLandingPage({
                     data-aos="zoom-in"
                     data-aos-duration="400"
                     data-aos-delay="700"
+                    sx={{
+                      width: { xs: "50%", sm: "auto" },
+                    }}
                   >
                     <Box
                       component="button"
@@ -228,7 +255,8 @@ export default function HeroLandingPage({
                         "&:active": {
                           transform: "translateY(0)",
                         },
-                        minWidth: "200px",
+                        minWidth: { sm: "200px" },
+                        width: { xs: "100%", sm: "auto" },
                       }}
                     >
                       {button1Text}
@@ -241,6 +269,9 @@ export default function HeroLandingPage({
                     data-aos="zoom-in"
                     data-aos-duration="400"
                     data-aos-delay="700"
+                    sx={{
+                      width: { xs: "50%", sm: "auto" },
+                    }}
                   >
                     <Box
                       component="button"
@@ -269,7 +300,8 @@ export default function HeroLandingPage({
                         "&:active": {
                           transform: "translateY(0)",
                         },
-                        minWidth: "200px",
+                        minWidth: { sm: "200px" },
+                        width: { xs: "100%", sm: "auto" },
                       }}
                     >
                       {button2Text}
