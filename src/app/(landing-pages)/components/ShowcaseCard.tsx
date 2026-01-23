@@ -36,8 +36,8 @@ export default function FoodCard({
         display: "flex",
         flexDirection: "column",
         height: "100%",
-        maxWidth: "450px",
-        margin: "auto",
+        maxWidth: { xs: "450px", lg: "unset" },
+        margin: { xs: "auto", lg: "unset" },
       }}
     >
       {/* Image */}
@@ -94,6 +94,12 @@ export default function FoodCard({
                 fontSize: "inherit",
                 lineHeight: "inherit",
                 fontFamily: "inherit",
+                // elipsis there
+                display: "-webkit-box",
+                WebkitLineClamp: 1,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
               }}
             >
               {title}
@@ -106,6 +112,12 @@ export default function FoodCard({
                 fontSize: "inherit",
                 lineHeight: "inherit",
                 fontFamily: "inherit",
+                // elipsis there
+                display: "-webkit-box",
+                WebkitLineClamp: 1,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
               }}
             >
               {title2}
@@ -131,6 +143,12 @@ export default function FoodCard({
             color: "#00000080",
             lineHeight: "1.5",
             flexGrow: 1,
+            // elipsis there
+            display: "-webkit-box",
+            WebkitLineClamp: 1,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
         >
           {description}

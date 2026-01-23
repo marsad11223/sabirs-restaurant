@@ -36,12 +36,14 @@ export default function FoodCard({
         display: "flex",
         flexDirection: "column",
         height: "100%",
+        maxWidth: "350px",
+        margin: "auto",
       }}
     >
       {/* Image */}
       <Box
         sx={{
-          width: "100%",
+          // width: "100%",
           overflow: "hidden",
           aspectRatio: "139 / 125",
         }}

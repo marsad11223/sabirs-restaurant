@@ -47,7 +47,7 @@ export default function PizzaStylesForEveryTaste() {
               color: colors.secondaryYellow,
               fontFamily: '"Bebas Neue", sans-serif',
               textTransform: "uppercase",
-              textAlign: "left !important",
+              textAlign: { xs: "center", sm: "left !important" },
             }}
           >
             Pizza Styles for
@@ -59,7 +59,7 @@ export default function PizzaStylesForEveryTaste() {
               color: colors.primaryRed,
               fontFamily: '"Bebas Neue", sans-serif',
               textTransform: "uppercase",
-              textAlign: "left !important",
+              textAlign: { xs: "center", sm: "left !important" },
             }}
           >
             Every Taste
@@ -70,7 +70,7 @@ export default function PizzaStylesForEveryTaste() {
               lineHeight: fonts.p4,
               color: colors.darkGrey,
               marginTop: { xs: "16px", md: "20px" },
-              textAlign: "left !important",
+              textAlign: { xs: "center", sm: "left !important" },
             }}
           >
             Whether you like it simple or fully loaded, our pizza range has

@@ -15,6 +15,7 @@ export interface InfoSectionProps {
   imageSrc: StaticImageData | string;
   reverseOrder?: boolean;
   button?: string;
+  rightAlignInMobile?: boolean;
 }
 
 export default function InfoSection({
@@ -26,6 +27,7 @@ export default function InfoSection({
   imageSrc,
   reverseOrder = false,
   button,
+  rightAlignInMobile,
 }: InfoSectionProps) {
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
@@ -47,7 +49,7 @@ export default function InfoSection({
             xs: "column",
             md: reverseOrder ? "row-reverse" : "row",
           },
-          alignItems: "center",
+          alignItems: { md: "center" },
           justifyContent: "space-between",
           gap: { xs: "32px", md: "48px", lg: "60px" },
           maxWidth: "1200px",
@@ -57,7 +59,7 @@ export default function InfoSection({
         {/* Text Content Section */}
         <Box
           sx={{
-            width: { xs: "100%", md: "100%" },
+            width: { xs: "100%", md: "50%" },
             maxWidth: "530px",
           }}
           data-aos={reverseOrder ? "fade-left" : "fade-right"}
@@ -72,6 +74,9 @@ export default function InfoSection({
                 color: colors.secondaryYellow,
                 fontFamily: '"Bebas Neue", sans-serif',
                 textTransform: "uppercase",
+                textAlign: rightAlignInMobile
+                  ? { xs: "right", sm: "left" }
+                  : "left",
               }}
             >
               {heading1}
@@ -88,7 +93,9 @@ export default function InfoSection({
                     : colors.primaryRed,
                 fontFamily: '"Bebas Neue", sans-serif',
                 textTransform: "uppercase",
-                // marginTop: { xs: "-8px", md: "-12px" },
+                textAlign: rightAlignInMobile
+                  ? { xs: "right", sm: "left" }
+                  : "left",
               }}
             >
               {heading2}
@@ -106,6 +113,9 @@ export default function InfoSection({
                       : colors.darkGrey,
                   marginTop: { xs: "8px", md: "12px", lg: "15px" },
                   maxWidth: "100%",
+                  textAlign: rightAlignInMobile
+                    ? { xs: "right", sm: "left" }
+                    : "left",
                 }}
               >
                 {description}
@@ -120,6 +130,9 @@ export default function InfoSection({
                       : colors.darkGrey,
                   marginTop: { xs: "8px", md: "12px", lg: "15px" },
                   maxWidth: "100%",
+                  textAlign: rightAlignInMobile
+                    ? { xs: "right", sm: "left" }
+                    : "left",
                 }}
               >
                 {description2}

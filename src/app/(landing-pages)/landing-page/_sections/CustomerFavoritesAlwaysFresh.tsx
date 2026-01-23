@@ -1,15 +1,72 @@
 "use client";
 import { Box, Typography, Grid } from "@mui/material";
 import { fonts, colors, sectionPadding } from "@/app/utils/themes";
-import Image, { StaticImageData } from "next/image";
 import webp from "@/_assets/webp";
-import { useEffect } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import FoodCard from "../../components/FoodCard";
 import MenuTickets from "../../components/MenuTickets";
+import SliderArrow from "@/_components/SliderArrow";
+import svgs from "@/_assets/svgs";
 
 export default function CustomerFavoritesAlwaysFresh() {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+    nextArrow: (
+      <SliderArrow
+        image={svgs.sliderArrow}
+        onClick={() => console.log("Left clicked")}
+        sx={{
+          left: "calc(50% + 10px )",
+          bottom: { xs: "-55px", sm: "-80px" },
+        }}
+      />
+    ),
+
+    // left arrow
+    prevArrow: (
+      <SliderArrow
+        image={svgs.sliderArrow}
+        onClick={() => console.log("Left clicked")}
+        sx={{
+          left: "calc(50% - 10px )",
+          bottom: { xs: "-55px", sm: "-80px" },
+          transform: "translateX(-100%) rotate(180deg)",
+        }}
+      />
+    ),
+  };
+
   const foodItems = [
     {
       image: webp.customerFavourites1,
@@ -142,7 +199,7 @@ export default function CustomerFavoritesAlwaysFresh() {
         {/* Food Cards Grid */}
         <Box
           sx={{
-            display: "grid",
+            display: { xs: "none", lg: "grid" },
             gridTemplateColumns: {
               xs: "1fr",
               sm: "repeat(2, 1fr)",
@@ -165,128 +222,159 @@ export default function CustomerFavoritesAlwaysFresh() {
             />
           ))}
         </Box>
+        {/* Food Cards Slider */}
         <Box
           sx={{
+            display: { xs: "block", lg: "none" },
             maxWidth: "1440px",
             margin: "0 auto",
+            paddingBottom: { xs: "40px", sm: "60px", lg: "unset" },
           }}
         >
-          <Grid sx={{}} spacing={2} container>
-            <Grid sx={{}} item xs={12} md={6}>
-              <Box>
-                <Typography
-                  sx={{
-                    fontSize: fonts.h4,
-                    lineHeight: fonts.h4,
-                    color: colors.secondaryYellow,
-                    fontFamily: '"Bebas Neue", sans-serif',
-                    textTransform: "uppercase",
-                  }}
-                >
-                  sides
-                </Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    width: "100%",
-                    gap: "20px",
-                    paddingTop: { xs: "20px", md: "40px" },
-                  }}
-                >
-                  <MenuTickets
-                    title="Fresh Garden Salad"
-                    description="A crisp mix of seasonal greens and fresh veggies."
-                    price="£4.99"
-                  />
-                  <MenuTickets
-                    title="Garlic Bread"
-                    description="Toasted bread with a rich, buttery garlic spread."
-                    price="£3.99"
-                  />
-                  <MenuTickets
-                    title="Grilled Corn on Cob"
-                    description="Sweet corn, char-grilled and lightly seasoned."
-                    price="£3.49"
-                  />
-                </Box>
+          <Slider {...settings}>
+            {foodItems.map((item, index) => (
+              <Box
+                key={index}
+                sx={{
+                  paddingX: "10px",
+                  margin: "auto",
+                  width: "auto",
+                }}
+              >
+                <FoodCard
+                  image={item.image}
+                  title={item.title}
+                  title2={item.title2}
+                  price={item.price}
+                  description={item.description}
+                />
               </Box>
-            </Grid>
-            <Grid sx={{}} item xs={12} md={6}>
-              <Box>
-                <Typography
-                  sx={{
-                    fontSize: fonts.h4,
-                    lineHeight: fonts.h4,
-                    color: colors.secondaryYellow,
-                    fontFamily: '"Bebas Neue", sans-serif',
-                    textTransform: "uppercase",
-                  }}
-                >
-                  drinks
-                </Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    width: "100%",
-                    gap: "20px",
-                    paddingTop: { xs: "20px", md: "40px" },
-                  }}
-                >
-                  <MenuTickets
-                    title="Classic Cola"
-                    description="Chilled and refreshing, perfect with any meal."
-                    price="£2.00"
-                  />
-                  <MenuTickets
-                    title="Fresh Lemonade"
-                    description="Made daily with zesty lemons for a crisp taste."
-                    price="£2.50"
-                  />
-                  <MenuTickets
-                    title="Mint Iced Tea"
-                    description="Cool, invigorating, and lightly sweetened with fresh mint."
-                    price="£2.75"
-                  />
-                </Box>
+            ))}
+          </Slider>
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          maxWidth: "1440px",
+          margin: "0 auto",
+          padding: sectionPadding,
+        }}
+      >
+        <Grid sx={{}} spacing={2} container>
+          <Grid sx={{}} item xs={12} md={6}>
+            <Box>
+              <Typography
+                sx={{
+                  fontSize: fonts.h4,
+                  lineHeight: fonts.h4,
+                  color: colors.secondaryYellow,
+                  fontFamily: '"Bebas Neue", sans-serif',
+                  textTransform: "uppercase",
+                }}
+              >
+                sides
+              </Typography>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "100%",
+                  gap: "20px",
+                  paddingTop: { xs: "20px", md: "40px" },
+                }}
+              >
+                <MenuTickets
+                  title="Fresh Garden Salad"
+                  description="A crisp mix of seasonal greens and fresh veggies."
+                  price="£4.99"
+                />
+                <MenuTickets
+                  title="Garlic Bread"
+                  description="Toasted bread with a rich, buttery garlic spread."
+                  price="£3.99"
+                />
+                <MenuTickets
+                  title="Grilled Corn on Cob"
+                  description="Sweet corn, char-grilled and lightly seasoned."
+                  price="£3.49"
+                />
               </Box>
-            </Grid>
-            <Box
-              component="button"
-              sx={{
-                backgroundColor: colors.secondaryYellow,
-                color: "#851A1D",
-                border: "none",
-                borderRadius: "10px",
-                padding: {
-                  xs: "15px 30px",
-                  md: "20px 40px",
-                },
-                height: "56px",
-                fontSize: fonts.p5,
-                lineHeight: fonts.p5,
-                fontWeight: "700",
-                fontFamily: "inherit",
-                cursor: "pointer",
-                transition: "all 0.3s ease",
-                textTransform: "none",
-                "&:hover": {
-                  backgroundColor: "#FFE033",
-                  transform: "translateY(-2px)",
-                  boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
-                },
-                "&:active": {
-                  transform: "translateY(0)",
-                },
-                margin: "auto",
-                marginTop: { xs: "30px", sm: "40px", md: "60px", lg: "80px" },
-              }}
-            >
-              View More
             </Box>
           </Grid>
-        </Box>
+          <Grid sx={{}} item xs={12} md={6}>
+            <Box>
+              <Typography
+                sx={{
+                  fontSize: fonts.h4,
+                  lineHeight: fonts.h4,
+                  color: colors.secondaryYellow,
+                  fontFamily: '"Bebas Neue", sans-serif',
+                  textTransform: "uppercase",
+                }}
+              >
+                drinks
+              </Typography>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "100%",
+                  gap: "20px",
+                  paddingTop: { xs: "20px", md: "40px" },
+                }}
+              >
+                <MenuTickets
+                  title="Classic Cola"
+                  description="Chilled and refreshing, perfect with any meal."
+                  price="£2.00"
+                />
+                <MenuTickets
+                  title="Fresh Lemonade"
+                  description="Made daily with zesty lemons for a crisp taste."
+                  price="£2.50"
+                />
+                <MenuTickets
+                  title="Mint Iced Tea"
+                  description="Cool, invigorating, and lightly sweetened with fresh mint."
+                  price="£2.75"
+                />
+              </Box>
+            </Box>
+          </Grid>
+          <Box
+            component="button"
+            sx={{
+              backgroundColor: colors.secondaryYellow,
+              color: "#851A1D",
+              border: "none",
+              borderRadius: "10px",
+              padding: {
+                xs: "15px 30px",
+                md: "20px 40px",
+              },
+              height: "56px",
+              fontSize: fonts.p5,
+              lineHeight: fonts.p5,
+              fontWeight: "700",
+              fontFamily: "inherit",
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+              textTransform: "none",
+              "&:hover": {
+                backgroundColor: "#FFE033",
+                transform: "translateY(-2px)",
+                boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.2)`,
+              },
+              "&:active": {
+                transform: "translateY(0)",
+              },
+              margin: "auto",
+              marginTop: { xs: "30px", sm: "40px", md: "60px", lg: "80px" },
+            }}
+          >
+            View More
+          </Box>
+        </Grid>
       </Box>
     </Box>
   );

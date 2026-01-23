@@ -65,8 +65,8 @@ export default function CTASection({
             justifyContent: "center",
             alignItems: "center",
             gap: { xs: "8px", sm: "20px" },
-            flexDirection: { xs: "column", sm: "row" },
             flexWrap: "wrap",
+            marginTop: { xs: "40px", sm: "40px", md: "60px", lg: "80px" },
           }}
         >
           {button1Text && (
@@ -77,7 +77,7 @@ export default function CTASection({
                 color: "#fff",
                 border: "none",
                 borderRadius: "10px",
-                padding: { xs: "15px 30px", md: "20px 40px" },
+                padding: { xs: "15px 10px", md: "20px 40px" },
                 fontSize: fonts.p5,
                 cursor: "pointer",
                 transition: "all 0.3s ease",
@@ -90,10 +90,9 @@ export default function CTASection({
                 "&:active": {
                   transform: "translateY(0)",
                 },
-                marginTop: { xs: "40px", sm: "40px", md: "60px", lg: "80px" },
                 margin: "auto",
                 fontWeight: "700",
-                minWidth: "210px",
+                minWidth: { xs: "170px", sm: "210px" },
               }}
             >
               {button1Text}
@@ -107,7 +106,7 @@ export default function CTASection({
                 backgroundColor: "#fff",
                 border: "none",
                 borderRadius: "10px",
-                padding: { xs: "15px 30px", md: "20px 40px" },
+                padding: { xs: "15px 10px", md: "20px 40px" },
                 fontSize: fonts.p5,
                 cursor: "pointer",
                 transition: "all 0.3s ease",
@@ -123,7 +122,7 @@ export default function CTASection({
                 marginTop: { sm: "40px", md: "60px", lg: "80px" },
                 margin: "auto",
                 fontWeight: "700",
-                minWidth: "210px",
+                minWidth: { xs: "170px", sm: "210px" },
               }}
             >
               {button2Text}

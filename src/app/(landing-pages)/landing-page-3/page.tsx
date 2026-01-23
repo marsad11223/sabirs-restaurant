@@ -55,6 +55,7 @@ export default function LandingPage3() {
         imageSrc={webp.whatMakesThemGreat}
         backgroundColor="#851A1D"
         reverseOrder={true}
+        rightAlignInMobile={true}
       />
       <FeatureGridSection
         heading1="how we cook"

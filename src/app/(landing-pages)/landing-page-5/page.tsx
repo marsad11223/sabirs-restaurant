@@ -112,6 +112,7 @@ export default function LandingPage5() {
         description="We proudly serve halal-certified meats, prepared with care and respect at every stage. From sourcing to grilling, our process ensures both quality and authenticity. Whether you’re dining in or ordering takeaway, you can enjoy delicious halal kebabs in Sheffield with complete confidence."
         imageSrc={webp.halalGrilledFoodYouCanTrust}
         reverseOrder={true}
+        rightAlignInMobile={true}
       />
       <CTASection
         headingWhite="Craving authentic"

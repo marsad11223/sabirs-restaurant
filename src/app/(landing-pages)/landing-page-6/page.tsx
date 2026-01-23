@@ -63,6 +63,7 @@ export default function LandingPage6() {
         description="Looking for group dining in Sheffield that feels relaxed and effortless? Sabir’s is ideal for group meals of all kinds — birthdays, celebrations, work gatherings, or casual meet-ups with friends."
         description2="Our flexible seating allows groups to sit together comfortably, making it easy to share food, conversations, and memorable moments. Whether it’s a small group or a larger gathering, we ensure everyone feels included."
         imageSrc={webp.groupDiningMadeEasy}
+        rightAlignInMobile={true}
       />
       <FeatureHighlights
         heading1="Why Families "

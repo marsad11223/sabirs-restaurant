@@ -236,7 +236,7 @@ export default function HeroLandingPage({
                         border: "none",
                         borderRadius: "10px",
                         padding: {
-                          xs: "15px 30px",
+                          xs: "15px",
                           md: "20px 40px",
                         },
                         height: "56px",
@@ -281,7 +281,7 @@ export default function HeroLandingPage({
                         color: colors.White,
                         borderRadius: "10px",
                         padding: {
-                          xs: "15px 30px",
+                          xs: "15px",
                           md: "20px 40px",
                         },
                         height: "56px",

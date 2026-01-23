@@ -5,6 +5,11 @@ import { fonts, colors, sectionPadding } from "@/app/utils/themes";
 import ShowcaseCard from "./ShowcaseCard";
 import { StaticImageData } from "next/image";
 // import { RedThemeShowcaseSectionProps } from "./types";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import SliderArrow from "@/_components/SliderArrow";
+import svgs from "@/_assets/svgs";
 
 export interface ShowcaseCardItem {
   image: StaticImageData;
@@ -36,6 +41,60 @@ export default function RedThemeShowcaseSection({
   items = [],
   button,
 }: RedThemeShowcaseSectionProps) {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+    nextArrow: (
+      <SliderArrow
+        image={svgs.sliderArrow}
+        onClick={() => console.log("Left clicked")}
+        sx={{
+          left: "calc(50% + 10px )",
+          bottom: { xs: "-55px", sm: "-80px" },
+        }}
+      />
+    ),
+
+    // left arrow
+    prevArrow: (
+      <SliderArrow
+        image={svgs.sliderArrow}
+        onClick={() => console.log("Left clicked")}
+        sx={{
+          left: "calc(50% - 10px )",
+          bottom: { xs: "-55px", sm: "-80px" },
+          transform: "translateX(-100%) rotate(180deg)",
+        }}
+      />
+    ),
+  };
+
   return (
     <Box sx={{ backgroundColor: colors.primaryRed }}>
       <Box
@@ -129,33 +188,50 @@ export default function RedThemeShowcaseSection({
             {secondaryHeading2}
           </Typography>
         </Box>
-
-        {/* Cards Grid */}
         {/* Cards Grid */}
         <Box
           sx={{
-            // margin: "auto",
-            width: "100%",
+            display: { xs: "none", lg: "grid" },
+            gridTemplateColumns: {
+              xs: "1fr",
+              sm: "repeat(2, 1fr)",
+              md: "repeat(4, 1fr)",
+            },
+            gap: { xs: "24px", sm: "28px", md: "24px", lg: "32px" },
+            maxWidth: "1440px",
+            margin: "0 auto",
+            marginBottom: { xs: "30px", sm: "40px", md: "60px", lg: "80px" },
           }}
         >
-          <Grid
-            container
-            spacing={{ xs: 3, sm: 3.5, md: 3, lg: 4 }}
-            sx={{
-              maxWidth: "1440px",
-              justifyContent: "center",
-              margin: "auto !important",
-            }}
-          >
+          {items.map((item, index) => (
+            // <Grid item key={index} xs={12} md={6} lg={3}>
+            <ShowcaseCard
+              image={item.image}
+              title={item.title}
+              title2={item.title2}
+              price={item.price}
+              description={item.description}
+            />
+            // </Grid>
+          ))}
+        </Box>
+        {/* Food Cards Slider */}
+        <Box
+          sx={{
+            display: { xs: "block", lg: "none" },
+            maxWidth: "1440px",
+            margin: "0 auto",
+            paddingBottom: { xs: "40px", sm: "60px", lg: "unset" },
+          }}
+        >
+          <Slider {...settings}>
             {items.map((item, index) => (
-              <Grid
-                item
+              <Box
                 key={index}
-                xs={12}
-                md={6}
-                lg={3}
                 sx={{
-                  justifyContent: "center",
+                  paddingX: "10px",
+                  margin: "auto",
+                  width: "auto",
                 }}
               >
                 <ShowcaseCard
@@ -165,9 +241,9 @@ export default function RedThemeShowcaseSection({
                   price={item.price}
                   description={item.description}
                 />
-              </Grid>
+              </Box>
             ))}
-          </Grid>
+          </Slider>
         </Box>
         <Typography
           sx={{

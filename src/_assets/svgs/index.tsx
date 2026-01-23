@@ -81,6 +81,8 @@ import fastPreparationTimes from "./goldenIcons/fastPreparationTimes.svg";
 import idealForLunchBreaks from "./goldenIcons/idealForLunchBreaks.svg";
 import quickTakeawayOptions from "./goldenIcons/quickTakeawayOptions.svg";
 
+import sliderArrow from "./sliderArrow.svg";
+
 const svgs = {
   // base / common icons
   Logo,
@@ -165,6 +167,8 @@ const svgs = {
   fastPreparationTimes,
   idealForLunchBreaks,
   quickTakeawayOptions,
+
+  sliderArrow,
 };
 
 export default svgs;

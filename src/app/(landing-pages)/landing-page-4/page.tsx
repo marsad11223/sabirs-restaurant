@@ -137,6 +137,7 @@ export default function LandingPage4() {
         description="Every pizza at Sabir’s is baked fresh to order — never rushed, never reheated. Our portions are designed to satisfy, whether you’re ordering for yourself or sharing with friends and family."
         imageSrc={webp.freshlyBakedPizzay}
         backgroundColor="#851A1D"
+        rightAlignInMobile={true}
       />
       <FeatureGridSection
         heading1="Why Our Pizza"
