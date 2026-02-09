@@ -8,7 +8,7 @@ import CTASection from "../components/CTASection";
 import FeatureHighlights from "../components/FeatureHighlights";
 import GenerousPortionsMeantForSharing from "./_sections/GenerousPortionsMeantForSharing";
 
-export default function LandingPage6() {
+export default function FamilyFriendlyRestaurantSheffieldPage() {
   const highlightCardsData = [
     {
       title: "Family friendly restaurant in Sheffield",

@@ -9,7 +9,7 @@ import CTASection from "../components/CTASection";
 import PizzaStylesForEveryTaste from "../components/PizzaStylesForEveryTaste";
 import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
 
-export default function LandingPage4() {
+export default function PizzaSheffieldFreshlyBakedPage() {
   const features = [
     {
       icon: svgs.cookedFreshToOrder,

@@ -8,9 +8,8 @@ import CTASection from "../components/CTASection";
 import FeatureHighlights from "../components/FeatureHighlights";
 import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
 import FeatureGridSection from "../components/FeatureGridSection";
-import { link } from "fs";
 
-export default function LandingPage9() {
+export default function ExploreOurMenuPage() {
   const highlightCardsData = [
     {
       title: "Burgers & Wraps",

@@ -183,6 +183,99 @@ const Footer = ({ applyBorderTop = true }: FooterProps) => {
                     textAlign: { xs: "center ", sm: "inherit" },
                   }}
                 >
+                  Explore
+                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: { xs: "center", sm: "flex-start" },
+                    gap: { xs: "14px", md: "10px", lg: "15px" },
+                    flexDirection: { xs: "row", sm: "column" },
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <Typography
+                    sx={{ ...textStyles }}
+                    onClick={() => router.push("sheffields-best-crafted-menu")}
+                  >
+                    Sheffield&apos;s Best Burgers
+                  </Typography>
+                  <Typography
+                    sx={{ ...textStyles }}
+                    onClick={() =>
+                      router.push("local-diner-sheffield-rotherham")
+                    }
+                  >
+                    Local Diner Sheffield &amp; Rotherham
+                  </Typography>
+                  <Typography
+                    sx={{ ...textStyles }}
+                    onClick={() => router.push("best-burgers-sheffield")}
+                  >
+                    Best Burgers Sheffield
+                  </Typography>
+                  <Typography
+                    sx={{ ...textStyles }}
+                    onClick={() => router.push("pizza-sheffield-freshly-baked")}
+                  >
+                    Pizza Sheffield Freshly Baked
+                  </Typography>
+                  <Typography
+                    sx={{ ...textStyles }}
+                    onClick={() => router.push("flame-grilled-meat-sheffield")}
+                  >
+                    Flame-Grilled Meat Sheffield
+                  </Typography>
+                  <Typography
+                    sx={{ ...textStyles }}
+                    onClick={() =>
+                      router.push("family-friendly-restaurant-sheffield")
+                    }
+                  >
+                    Family Friendly Restaurant
+                  </Typography>
+                  <Typography
+                    sx={{ ...textStyles }}
+                    onClick={() =>
+                      router.push("halal-vegetarian-restaurant-sheffield")
+                    }
+                  >
+                    Halal &amp; Vegetarian Restaurant
+                  </Typography>
+                  <Typography
+                    sx={{ ...textStyles }}
+                    onClick={() => router.push("sheffield-takeaway-fast-fresh")}
+                  >
+                    Sheffield Takeaway
+                  </Typography>
+                  <Typography
+                    sx={{ ...textStyles }}
+                    onClick={() => router.push("explore-our-menu")}
+                  >
+                    Explore Our Menu
+                  </Typography>
+                  <Typography
+                    sx={{ ...textStyles }}
+                    onClick={() => router.push("student-food-sheffield")}
+                  >
+                    Student Food Sheffield
+                  </Typography>
+                </Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  gap: { xs: "20px", sm: "30px", lg: "40px" },
+                }}
+              >
+                <Typography
+                  sx={{
+                    ...headingStyles,
+                    textAlign: { xs: "center ", sm: "inherit" },
+                  }}
+                >
                   Follow
                 </Typography>
                 <Box

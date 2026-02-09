@@ -6,7 +6,7 @@ import svgs from "@/_assets/svgs";
 import FeatureGridSection from "../components/FeatureGridSection";
 import CTASection from "../components/CTASection";
 
-export default function LandingPage2() {
+export default function LocalDinerSheffieldRotherhamPage() {
   const features = [
     {
       icon: svgs.juicySmashBurgers,

@@ -7,7 +7,7 @@ import webp from "@/_assets/webp";
 import FeatureGridSection from "../components/FeatureGridSection";
 import CTASection from "../components/CTASection";
 
-export default function LandingPage3() {
+export default function BestBurgersSheffieldPage() {
   const features = [
     {
       icon: svgs.cookedFreshToOrder,

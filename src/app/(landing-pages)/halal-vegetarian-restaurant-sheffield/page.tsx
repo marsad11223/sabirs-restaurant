@@ -8,7 +8,7 @@ import CTASection from "../components/CTASection";
 import FeatureHighlights from "../components/FeatureHighlights";
 import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
 
-export default function LandingPage7() {
+export default function HalalVegetarianRestaurantSheffieldPage() {
   const showcaseItems = [
     {
       image: webp.customerFavourites9,

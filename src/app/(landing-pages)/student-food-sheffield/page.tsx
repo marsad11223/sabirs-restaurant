@@ -9,7 +9,7 @@ import FeatureHighlights from "../components/FeatureHighlights";
 import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
 import FeatureGridSection from "../components/FeatureGridSection";
 
-export default function LandingPage9() {
+export default function StudentFoodSheffieldPage() {
   const highlightCardsData = [
     {
       title: "Hearty meals designed to keep you full",

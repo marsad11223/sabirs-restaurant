@@ -43,4 +43,56 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Landing Pages -->
+  <url>
+    <loc>https://www.sabirs.co.uk/sheffields-best-crafted-menu</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sabirs.co.uk/local-diner-sheffield-rotherham</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sabirs.co.uk/best-burgers-sheffield</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sabirs.co.uk/pizza-sheffield-freshly-baked</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sabirs.co.uk/flame-grilled-meat-sheffield</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sabirs.co.uk/family-friendly-restaurant-sheffield</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sabirs.co.uk/halal-vegetarian-restaurant-sheffield</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sabirs.co.uk/sheffield-takeaway-fast-fresh</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sabirs.co.uk/explore-our-menu</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sabirs.co.uk/student-food-sheffield</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

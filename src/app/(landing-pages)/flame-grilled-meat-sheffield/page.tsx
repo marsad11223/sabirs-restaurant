@@ -8,7 +8,7 @@ import CTASection from "../components/CTASection";
 import FeatureHighlights from "../components/FeatureHighlights";
 import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
 
-export default function LandingPage5() {
+export default function FlameGrilledMeatSheffieldPage() {
   const highlightCardsData = [
     {
       title: "Charcoal & flame-grilled meats",

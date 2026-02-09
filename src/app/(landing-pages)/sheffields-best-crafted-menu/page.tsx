@@ -6,7 +6,7 @@ import Footer from "@/_components/Footer";
 import FeatureGridSection from "../components/FeatureGridSection";
 import svgs from "@/_assets/svgs";
 
-export default function LandingPage() {
+export default function SheffieldsBestCraftedMenuPage() {
   const features = [
     {
       icon: svgs.expertChefs,

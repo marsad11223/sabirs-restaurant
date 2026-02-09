@@ -9,7 +9,7 @@ import FeatureHighlights from "../components/FeatureHighlights";
 import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
 import FeatureGridSection from "../components/FeatureGridSection";
 
-export default function LandingPage8() {
+export default function SheffieldTakeawayFastFreshPage() {
   const features = [
     {
       icon: svgs.freshFoodMadeToOrder,
