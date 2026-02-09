@@ -1,3 +1,4 @@
+"use client";
 import { Box } from "@mui/material";
 import HeroLandingPage from "../components/HeroLandingPage";
 import Footer from "@/_components/Footer";
@@ -7,8 +8,10 @@ import webp from "@/_assets/webp";
 import CTASection from "../components/CTASection";
 import FeatureHighlights from "../components/FeatureHighlights";
 import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
+import { useRouter } from "next/navigation";
 
 export default function HalalVegetarianRestaurantSheffieldPage() {
+  const router = useRouter();
   const showcaseItems = [
     {
       image: webp.customerFavourites9,
@@ -17,6 +20,7 @@ export default function HalalVegetarianRestaurantSheffieldPage() {
       price: "£8.99",
       description:
         "Perfectly baked vegetarian pizzas with bold flavours in every bite.",
+      onClick: () => router.push("/order-sheffield"),
     },
     {
       image: webp.customerFavourites10,
@@ -25,6 +29,7 @@ export default function HalalVegetarianRestaurantSheffieldPage() {
       price: "£3.99",
       description:
         "Crisp, freshly prepared salads made with quality ingredients.",
+      onClick: () => router.push("/order-sheffield"),
     },
     {
       image: webp.customerFavourites11,
@@ -32,6 +37,7 @@ export default function HalalVegetarianRestaurantSheffieldPage() {
       title2: "sides",
       price: "£8.99",
       description: "Crispy, golden sides prepared without meat",
+      onClick: () => router.push("/order-sheffield"),
     },
   ];
 
@@ -75,6 +81,8 @@ export default function HalalVegetarianRestaurantSheffieldPage() {
         button1Text="Order Online"
         button2Text="Explore Menu"
         maxWidth="900px"
+        button1OnClick={() => router.push("/order-sheffield")}
+        button2OnClick={() => router.push("/order-sheffield")}
       />
       <InfoSection
         heading1="Halal Food"
@@ -99,6 +107,7 @@ export default function HalalVegetarianRestaurantSheffieldPage() {
         secondaryHeading2="favourites"
         items={showcaseItems}
         button="View More"
+        buttonOnClick={() => router.push("/order-sheffield")}
       />
       <FeatureHighlights
         heading1="Why Customers"
@@ -118,6 +127,8 @@ export default function HalalVegetarianRestaurantSheffieldPage() {
         description="Whether you’re searching for a halal restaurant in Sheffield or tasty vegetarian food in Sheffield, Sabir’s is ready to serve you."
         button1Text="Order Now"
         button2Text="Contact Us"
+        button1OnClick={() => router.push("/order-sheffield")}
+        button2OnClick={() => router.push("/contact-us")}
       />
       <Footer applyBorderTop={false} />
     </Box>
