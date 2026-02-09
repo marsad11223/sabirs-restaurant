@@ -1,3 +1,4 @@
+"use client";
 import { Box } from "@mui/material";
 import HeroLandingPage from "../components/HeroLandingPage";
 import Footer from "@/_components/Footer";
@@ -7,8 +8,10 @@ import webp from "@/_assets/webp";
 import CTASection from "../components/CTASection";
 import FeatureHighlights from "../components/FeatureHighlights";
 import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
+import { useRouter } from "next/navigation";
 
 export default function FlameGrilledMeatSheffieldPage() {
+  const router = useRouter();
   const highlightCardsData = [
     {
       title: "Charcoal & flame-grilled meats",
@@ -48,6 +51,7 @@ export default function FlameGrilledMeatSheffieldPage() {
       title2: "Kebab",
       price: "£8.99",
       description: "Tender chicken breast marinated for 24 hours.",
+      onClick: () => router.push("/order-sheffield"),
     },
     {
       image: webp.customerFavourites6,
@@ -56,6 +60,7 @@ export default function FlameGrilledMeatSheffieldPage() {
       price: "£3.99",
       description:
         "The ultimate grill experience. Perfect for the seriously hungry.",
+      onClick: () => router.push("/order-sheffield"),
     },
     {
       image: webp.customerFavourites7,
@@ -64,6 +69,7 @@ export default function FlameGrilledMeatSheffieldPage() {
       price: "£8.99",
       description:
         "Juicy chicken grilled over charcoal for a rich, smoky flavour.",
+      onClick: () => router.push("/order-sheffield"),
     },
     {
       image: webp.customerFavourites8,
@@ -71,6 +77,7 @@ export default function FlameGrilledMeatSheffieldPage() {
       title2: "Kebabs",
       price: "£9.99",
       description: "Premium cuts of lamb marinated in Middle Eastern spices.",
+      onClick: () => router.push("/order-sheffield"),
     },
   ];
 
@@ -85,6 +92,8 @@ export default function FlameGrilledMeatSheffieldPage() {
         description="Welcome to Sabir’s, a trusted grill restaurant in Sheffield known for expertly cooked kebabs, charcoal-grilled meats, and bold flavours. Every dish is freshly prepared using halal meats and grilled to perfection for that unmistakable smoky taste."
         button1Text="Order Online"
         button2Text="View Grill Menu"
+        button1OnClick={() => router.push("/order-sheffield")}
+        button2OnClick={() => router.push("/order-sheffield")}
       />
       <InfoSection
         heading1="A True Grill Restaurant"
@@ -105,6 +114,7 @@ export default function FlameGrilledMeatSheffieldPage() {
         secondaryHeading2="favourites"
         items={showcaseItems}
         button="View More"
+        buttonOnClick={() => router.push("/order-sheffield")}
       />
       <InfoSection
         heading1="Halal Grilled Food"
@@ -120,6 +130,8 @@ export default function FlameGrilledMeatSheffieldPage() {
         description="Visit Sabir’s or order online for freshly prepared kebabs and grilled meats."
         button1Text="Go To Main Page"
         button2Text="Our Menu"
+        button1OnClick={() => router.push("/home")}
+        button2OnClick={() => router.push("/order-sheffield")}
       />
       <Footer applyBorderTop={false} />
     </Box>
