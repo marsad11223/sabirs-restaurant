@@ -8,6 +8,8 @@ interface CTASectionProps {
   description: string;
   button1Text?: string;
   button2Text?: string;
+  button1OnClick?: () => void;
+  button2OnClick?: () => void;
 }
 
 export default function CTASection({
@@ -16,6 +18,8 @@ export default function CTASection({
   description,
   button1Text,
   button2Text,
+  button1OnClick,
+  button2OnClick,
 }: CTASectionProps) {
   return (
     <Box sx={{ width: "100%", backgroundColor: "#FFD40D" }}>
@@ -72,6 +76,7 @@ export default function CTASection({
           {button1Text && (
             <Box
               component="button"
+              onClick={button1OnClick}
               sx={{
                 backgroundColor: colors.primaryRed,
                 color: "#fff",
@@ -90,7 +95,6 @@ export default function CTASection({
                 "&:active": {
                   transform: "translateY(0)",
                 },
-                margin: "auto",
                 fontWeight: "700",
                 minWidth: { xs: "170px", sm: "210px" },
               }}
@@ -101,6 +105,7 @@ export default function CTASection({
           {button2Text && (
             <Box
               component="button"
+              onClick={button2OnClick}
               sx={{
                 color: colors.primaryRed,
                 backgroundColor: "#fff",
@@ -119,8 +124,6 @@ export default function CTASection({
                 "&:active": {
                   transform: "translateY(0)",
                 },
-                marginTop: { sm: "40px", md: "60px", lg: "80px" },
-                margin: "auto",
                 fontWeight: "700",
                 minWidth: { xs: "170px", sm: "210px" },
               }}

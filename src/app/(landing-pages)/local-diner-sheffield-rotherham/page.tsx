@@ -1,4 +1,6 @@
+"use client";
 import { Box } from "@mui/material";
+import { useRouter } from "next/navigation";
 import HeroLandingPage from "../components/HeroLandingPage";
 import FoodWorthTheTrip from "./_sections/FoodWorthTheTrip";
 import Footer from "@/_components/Footer";
@@ -7,6 +9,8 @@ import FeatureGridSection from "../components/FeatureGridSection";
 import CTASection from "../components/CTASection";
 
 export default function LocalDinerSheffieldRotherhamPage() {
+  const router = useRouter();
+
   const features = [
     {
       icon: svgs.juicySmashBurgers,
@@ -52,6 +56,8 @@ export default function LocalDinerSheffieldRotherhamPage() {
         button2Text="Explore Menu"
         description="Looking for a diner in Sheffield that serves great food, offers both dine-in and takeaway, and is conveniently located on London Road Sheffield? You’ve come to the right place!"
         maxWidth="940px"
+        button1OnClick={() => router.push("/order")}
+        button2OnClick={() => router.push("/order")}
       />
       <FeatureGridSection
         heading1="Where Flavour"
@@ -69,6 +75,8 @@ export default function LocalDinerSheffieldRotherhamPage() {
         description="Big flavours, quality ingredients, and food you’ll love—freshly prepared, perfectly grilled, and served just the way it should be."
         button1Text="Order Now"
         button2Text="Reserve Your Table"
+        button1OnClick={() => router.push("/order")}
+        button2OnClick={() => router.push("/contact-us")}
       />
       <Footer applyBorderTop={false} />
     </Box>
