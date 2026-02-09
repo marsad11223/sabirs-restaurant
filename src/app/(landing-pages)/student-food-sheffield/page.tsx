@@ -1,4 +1,6 @@
+"use client";
 import { Box } from "@mui/material";
+import { useRouter } from "next/navigation";
 import HeroLandingPage from "../components/HeroLandingPage";
 import Footer from "@/_components/Footer";
 import svgs from "@/_assets/svgs";
@@ -10,6 +12,7 @@ import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
 import FeatureGridSection from "../components/FeatureGridSection";
 
 export default function StudentFoodSheffieldPage() {
+  const router = useRouter();
   const highlightCardsData = [
     {
       title: "Hearty meals designed to keep you full",
@@ -39,6 +42,7 @@ export default function StudentFoodSheffieldPage() {
       title2: "Mixed Platters",
       price: "£8.99",
       description: "Proper meals that satisfy serious hunger",
+      onClick: () => router.push("/order-sheffield"),
     },
     {
       image: webp.riceGrillMeals,
@@ -46,6 +50,7 @@ export default function StudentFoodSheffieldPage() {
       title2: "Meals",
       price: "£6.99",
       description: "Balanced, filling, and perfect for lunch or dinner",
+      onClick: () => router.push("/order-sheffield"),
     },
     {
       image: webp.sidesAddOns,
@@ -53,6 +58,7 @@ export default function StudentFoodSheffieldPage() {
       title2: "Add-ons",
       price: "£8.99",
       description: "Ideal for sharing or boosting your meal",
+      onClick: () => router.push("/order-sheffield"),
     },
   ];
   const features = [
@@ -115,6 +121,8 @@ export default function StudentFoodSheffieldPage() {
         button1Text="Order Now"
         button2Text="Explore Menu"
         maxWidth="680px"
+        button1OnClick={() => router.push("/order-sheffield")}
+        button2OnClick={() => router.push("/order-sheffield")}
       />
       <FeatureHighlights
         heading1="Why Students"
@@ -132,6 +140,7 @@ export default function StudentFoodSheffieldPage() {
         button="View More"
         secondaryHeading1="Popular"
         secondaryHeading2="student picks"
+        buttonOnClick={() => router.push("/order-sheffield")}
       />
       <FeatureGridSection
         heading1="Casual, Student-"
@@ -155,6 +164,7 @@ export default function StudentFoodSheffieldPage() {
         description="If you’re tired of small portions and overpriced meals, it’s time to try Sabir’s. We’re proud to serve student-friendly food in Sheffield that’s affordable, filling, and full of flavour."
         button1Text="Visit Us"
         // button2Text="Order For Rotherham"
+        button1OnClick={() => router.push("/contact-us")}
       />
       <Footer applyBorderTop={false} />
     </Box>
