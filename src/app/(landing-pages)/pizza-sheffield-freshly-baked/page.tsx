@@ -1,3 +1,4 @@
+"use client";
 import { Box } from "@mui/material";
 import HeroLandingPage from "../components/HeroLandingPage";
 import Footer from "@/_components/Footer";
@@ -8,8 +9,10 @@ import FeatureGridSection from "../components/FeatureGridSection";
 import CTASection from "../components/CTASection";
 import PizzaStylesForEveryTaste from "../components/PizzaStylesForEveryTaste";
 import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
+import { useRouter } from "next/navigation";
 
 export default function PizzaSheffieldFreshlyBakedPage() {
+  const router = useRouter();
   const features = [
     {
       icon: svgs.cookedFreshToOrder,
@@ -71,6 +74,7 @@ export default function PizzaSheffieldFreshlyBakedPage() {
       title2: "Pizza",
       price: "£8.99",
       description: "Juicy chicken with bold tikka flavour.",
+      onClick: () => router.push("/order-sheffield"),
     },
     {
       image: webp.popularChoices2,
@@ -78,6 +82,7 @@ export default function PizzaSheffieldFreshlyBakedPage() {
       title2: "Pizza",
       price: "£3.99",
       description: "Loaded with spicy pepperoni slices",
+      onClick: () => router.push("/order-sheffield"),
     },
     {
       image: webp.popularChoices3,
@@ -85,6 +90,7 @@ export default function PizzaSheffieldFreshlyBakedPage() {
       title2: "Pizza",
       price: "£8.99",
       description: "A rich mix of premium meats.",
+      onClick: () => router.push("/order-sheffield"),
     },
     {
       image: webp.popularChoices4,
@@ -93,6 +99,7 @@ export default function PizzaSheffieldFreshlyBakedPage() {
       price: "£9.99",
       description:
         "Classic thin crust with fresh tomatoes, mozzarella, and basil.",
+      onClick: () => router.push("/order-sheffield"),
     },
   ];
 
@@ -107,6 +114,8 @@ export default function PizzaSheffieldFreshlyBakedPage() {
         description="Craving authentic, freshly baked pizza in Sheffield? At Sabir’s on London Road, we serve generous, flavour-packed pizzas made fresh to order — from classic favourites to bold signature specials."
         button1Text="Order Pizza"
         button2Text="Explore Menu"
+        button1OnClick={() => router.push("/order-sheffield")}
+        button2OnClick={() => router.push("/order-sheffield")}
       />
       <InfoSection
         heading1="WHY OUR"
@@ -129,6 +138,7 @@ export default function PizzaSheffieldFreshlyBakedPage() {
         secondaryHeading2="Choices"
         items={showcaseItems}
         button="View More"
+        buttonOnClick={() => router.push("/order-sheffield")}
       />
       <PizzaStylesForEveryTaste />
       <InfoSection
@@ -151,6 +161,8 @@ export default function PizzaSheffieldFreshlyBakedPage() {
         description="Hungry for freshly baked pizza on London Road? Order now and enjoy bold flavours, generous portions and fast service."
         button1Text="Go To Main Page"
         button2Text="Our Menu"
+        button1OnClick={() => router.push("/home")}
+        button2OnClick={() => router.push("/order-sheffield")}
       />
       <Footer applyBorderTop={false} />
     </Box>

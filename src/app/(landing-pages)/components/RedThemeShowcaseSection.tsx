@@ -18,6 +18,7 @@ export interface ShowcaseCardItem {
   price?: string;
   description?: string;
   button?: string;
+  onClick?: () => void;
 }
 
 export interface RedThemeShowcaseSectionProps {
@@ -29,6 +30,7 @@ export interface RedThemeShowcaseSectionProps {
   secondaryHeading2?: string;
   items?: ShowcaseCardItem[];
   button?: string;
+  buttonOnClick?: () => void;
 }
 
 export default function RedThemeShowcaseSection({
@@ -40,6 +42,7 @@ export default function RedThemeShowcaseSection({
   secondaryHeading2,
   items = [],
   button,
+  buttonOnClick,
 }: RedThemeShowcaseSectionProps) {
   const settings = {
     dots: false,
@@ -204,15 +207,15 @@ export default function RedThemeShowcaseSection({
           }}
         >
           {items.map((item, index) => (
-            // <Grid item key={index} xs={12} md={6} lg={3}>
             <ShowcaseCard
+              key={index}
               image={item.image}
               title={item.title}
               title2={item.title2}
               price={item.price}
               description={item.description}
+              onClick={item.onClick}
             />
-            // </Grid>
           ))}
         </Box>
         {/* Food Cards Slider */}
@@ -240,6 +243,7 @@ export default function RedThemeShowcaseSection({
                   title2={item.title2}
                   price={item.price}
                   description={item.description}
+                  onClick={item.onClick}
                 />
               </Box>
             ))}
@@ -263,6 +267,7 @@ export default function RedThemeShowcaseSection({
         {button && (
           <Box
             component="button"
+            onClick={buttonOnClick}
             sx={{
               marginTop: { xs: "40px", md: "60px", lg: "80px" },
               backgroundColor: colors.secondaryYellow,

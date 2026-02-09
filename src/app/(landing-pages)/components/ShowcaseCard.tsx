@@ -6,21 +6,23 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-interface FoodCardProps {
+interface ShowcaseCardProps {
   image: StaticImageData;
   title: string;
   title2?: string;
   price?: string;
   description?: string;
+  onClick?: () => void;
 }
 
-export default function FoodCard({
+export default function ShowcaseCard({
   image,
   title,
   title2,
   price,
   description,
-}: FoodCardProps) {
+  onClick,
+}: ShowcaseCardProps) {
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
     AOS.refresh();
@@ -157,6 +159,7 @@ export default function FoodCard({
         {/* Button */}
         <Box
           component="button"
+          onClick={onClick}
           sx={{
             backgroundColor: "#851A1D",
             color: colors.White,
