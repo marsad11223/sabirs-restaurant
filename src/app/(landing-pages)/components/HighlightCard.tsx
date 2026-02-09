@@ -29,7 +29,6 @@ export default function HighlightCard({
         borderLeft: redTheme
           ? { xs: "2px solid #FFD40D", md: "3px solid #FFD40D" }
           : { xs: "2px solid #6D1212", md: "3px solid #6D1212" },
-        height: "-webkit-fill-available",
         paddingY: "10px",
       }}
     >

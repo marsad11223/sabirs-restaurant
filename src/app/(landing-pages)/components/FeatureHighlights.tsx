@@ -102,18 +102,11 @@ export default function FeatureHighlights({
           }}
         >
           {cards.map((card, index) => (
-            <Grid
-              key={index}
-              item
-              xs={12}
-              md={6}
-              sx={{ height: "-webkit-fill-available" }}
-            >
+            <Grid key={index} item xs={12} md={6}>
               <Box
                 sx={{
                   width: "fit-content",
                   maxWidth: "510px",
-                  height: "-webkit-fill-available",
                 }}
               >
                 <HighlightCard
