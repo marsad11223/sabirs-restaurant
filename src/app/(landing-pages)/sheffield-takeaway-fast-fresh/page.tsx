@@ -1,4 +1,6 @@
+"use client";
 import { Box } from "@mui/material";
+import { useRouter } from "next/navigation";
 import HeroLandingPage from "../components/HeroLandingPage";
 import Footer from "@/_components/Footer";
 import svgs from "@/_assets/svgs";
@@ -10,6 +12,7 @@ import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
 import FeatureGridSection from "../components/FeatureGridSection";
 
 export default function SheffieldTakeawayFastFreshPage() {
+  const router = useRouter();
   const features = [
     {
       icon: svgs.freshFoodMadeToOrder,
@@ -88,6 +91,8 @@ export default function SheffieldTakeawayFastFreshPage() {
         button1Text="Order Online"
         button2Text="Explore Menu"
         maxWidth="900px"
+        button1OnClick={() => router.push("/order-sheffield")}
+        button2OnClick={() => router.push("/order-sheffield")}
       />
       <FeatureGridSection
         heading1="Why Choose"
@@ -125,6 +130,8 @@ export default function SheffieldTakeawayFastFreshPage() {
         description="Order now and collect your food from Sabir’s on London Road — simple, convenient, and always freshly prepared."
         button1Text="Order Now"
         button2Text="Contact Us"
+        button1OnClick={() => router.push("/order-sheffield")}
+        button2OnClick={() => router.push("/contact-us")}
       />
       <Footer applyBorderTop={false} />
     </Box>
