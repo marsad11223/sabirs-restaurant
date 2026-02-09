@@ -33,7 +33,6 @@ export default function MenuTickets({
         justifyContent: "space-between",
         flexWrap: "nowrap",
         alignItems: "flex-start",
-        height: "-webkit-fill-available",
       }}
     >
       <Box>
