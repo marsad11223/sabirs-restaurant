@@ -1,3 +1,4 @@
+"use client";
 import { Box } from "@mui/material";
 import HeroLandingPage from "../components/HeroLandingPage";
 import Footer from "@/_components/Footer";
@@ -7,8 +8,10 @@ import webp from "@/_assets/webp";
 import CTASection from "../components/CTASection";
 import FeatureHighlights from "../components/FeatureHighlights";
 import GenerousPortionsMeantForSharing from "./_sections/GenerousPortionsMeantForSharing";
+import { useRouter } from "next/navigation";
 
 export default function FamilyFriendlyRestaurantSheffieldPage() {
+  const router = useRouter();
   const highlightCardsData = [
     {
       title: "Family friendly restaurant in Sheffield",
@@ -48,6 +51,8 @@ export default function FamilyFriendlyRestaurantSheffieldPage() {
         description="At Sabir’s, we bring people together over great food in a welcoming, relaxed space. Known as a family friendly restaurant in Sheffield, we’re the perfect place for family meals, catch-ups with friends, and group dining in Sheffield. With spacious seating, generous portions, and a comfortable atmosphere, every visit feels easy and enjoyable."
         button1Text="Book a Table"
         button2Text="Plan Group Dining"
+        button1OnClick={() => router.push("/contact-us")}
+        button2OnClick={() => router.push("/contact-us")}
       />
       <InfoSection
         heading1="A Place Families"
@@ -77,6 +82,8 @@ export default function FamilyFriendlyRestaurantSheffieldPage() {
         description="Enjoy generous portions, a relaxed atmosphere, and meals made to be shared with family and friends."
         button1Text="Reserve Your Table"
         button2Text="Contact Us"
+        button1OnClick={() => router.push("/contact-us")}
+        button2OnClick={() => router.push("/contact-us")}
       />
       <Footer applyBorderTop={false} />
     </Box>
