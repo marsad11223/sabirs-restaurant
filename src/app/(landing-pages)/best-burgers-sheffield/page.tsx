@@ -45,8 +45,8 @@ export default function BestBurgersSheffieldPage() {
         button1Text="Order Now"
         button2Text="Explore Menu"
         description="Find classic beef burgers, crispy chicken burgers and tasty veg options — all cooked to order and served with fresh toppings and sauces."
-        button1OnClick={() => router.push("/order")}
-        button2OnClick={() => router.push("/order")}
+        button1OnClick={() => router.push("/order-sheffield")}
+        button2OnClick={() => router.push("/order-sheffield")}
       />
       <InfoSection
         heading1="WHY OUR BURGERS"
@@ -77,7 +77,7 @@ export default function BestBurgersSheffieldPage() {
         button1Text="Go To Main Page"
         button2Text="Our Menu"
         button1OnClick={() => router.push("/home")}
-        button2OnClick={() => router.push("/our-food")}
+        button2OnClick={() => router.push("/order-sheffield")}
       />
       <Footer applyBorderTop={false} />
     </Box>
