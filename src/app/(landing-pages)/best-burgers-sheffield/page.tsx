@@ -1,4 +1,6 @@
+"use client";
 import { Box } from "@mui/material";
+import { useRouter } from "next/navigation";
 import HeroLandingPage from "../components/HeroLandingPage";
 import Footer from "@/_components/Footer";
 import svgs from "@/_assets/svgs";
@@ -8,6 +10,8 @@ import FeatureGridSection from "../components/FeatureGridSection";
 import CTASection from "../components/CTASection";
 
 export default function BestBurgersSheffieldPage() {
+  const router = useRouter();
+
   const features = [
     {
       icon: svgs.cookedFreshToOrder,
@@ -41,6 +45,8 @@ export default function BestBurgersSheffieldPage() {
         button1Text="Order Now"
         button2Text="Explore Menu"
         description="Find classic beef burgers, crispy chicken burgers and tasty veg options — all cooked to order and served with fresh toppings and sauces."
+        button1OnClick={() => router.push("/order")}
+        button2OnClick={() => router.push("/order")}
       />
       <InfoSection
         heading1="WHY OUR BURGERS"
@@ -70,6 +76,8 @@ export default function BestBurgersSheffieldPage() {
         description="Explore more on our main diner page and see the full menu overview:"
         button1Text="Go To Main Page"
         button2Text="Our Menu"
+        button1OnClick={() => router.push("/home")}
+        button2OnClick={() => router.push("/our-food")}
       />
       <Footer applyBorderTop={false} />
     </Box>
