@@ -15,6 +15,7 @@ export interface InfoSectionProps {
   imageSrc: StaticImageData | string;
   reverseOrder?: boolean;
   button?: string;
+  buttonOnClick?: () => void;
   rightAlignInMobile?: boolean;
 }
 
@@ -27,6 +28,7 @@ export default function InfoSection({
   imageSrc,
   reverseOrder = false,
   button,
+  buttonOnClick,
   rightAlignInMobile,
 }: InfoSectionProps) {
   useEffect(() => {
@@ -141,6 +143,7 @@ export default function InfoSection({
             {button && (
               <Box
                 component="button"
+                onClick={buttonOnClick}
                 sx={{
                   backgroundColor: colors.primaryRed,
                   color: "#FFD40D",

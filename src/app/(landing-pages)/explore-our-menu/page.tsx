@@ -1,3 +1,4 @@
+"use client";
 import { Box } from "@mui/material";
 import HeroLandingPage from "../components/HeroLandingPage";
 import Footer from "@/_components/Footer";
@@ -8,8 +9,10 @@ import CTASection from "../components/CTASection";
 import FeatureHighlights from "../components/FeatureHighlights";
 import RedThemeShowcaseSection from "../components/RedThemeShowcaseSection";
 import FeatureGridSection from "../components/FeatureGridSection";
+import { useRouter } from "next/navigation";
 
 export default function ExploreOurMenuPage() {
+  const router = useRouter();
   const highlightCardsData = [
     {
       title: "Burgers & Wraps",
@@ -48,6 +51,7 @@ export default function ExploreOurMenuPage() {
       price: "£8.99",
       description:
         "Juicy beef patty, melted cheese, fresh salad, and house sauce.",
+      onClick: () => router.push("/order"),
     },
     {
       image: webp.popularChoices3,
@@ -55,6 +59,7 @@ export default function ExploreOurMenuPage() {
       title2: "Special Pizza",
       price: "£6.99",
       description: "Loaded with spicy pepperoni slices",
+      onClick: () => router.push("/order"),
     },
     {
       image: webp.mixKebabPlate,
@@ -63,6 +68,7 @@ export default function ExploreOurMenuPage() {
       price: "£8.99",
       description:
         "Tender chicken grilled to perfection with peri peri spices.",
+      onClick: () => router.push("/order"),
     },
     {
       image: webp.customerFavourites3,
@@ -71,6 +77,7 @@ export default function ExploreOurMenuPage() {
       price: "£9.99",
       description:
         "Juicy chicken grilled over charcoal for a rich, smoky flavour.",
+      onClick: () => router.push("/order"),
     },
   ];
   return (
@@ -85,6 +92,8 @@ export default function ExploreOurMenuPage() {
         // button1Text="Order Online"
         button2Text="Explore Menu"
         maxWidth="900px"
+        button1OnClick={() => router.push("/order-sheffield")}
+        button2OnClick={() => router.push("/order-sheffield")}
       />
       <InfoSection
         heading1="About Sabir’s"
@@ -93,6 +102,7 @@ export default function ExploreOurMenuPage() {
         imageSrc={webp.aboutSabirsFoodPhilosophy}
         reverseOrder={true}
         button="Learn More"
+        buttonOnClick={() => router.push("/about-us")}
       />
       <FeatureHighlights
         heading1="Choose Your"
@@ -113,6 +123,8 @@ export default function ExploreOurMenuPage() {
         description="Ordering your Sabir’s favourites is quick and easy. Choose collection for Sheffield or Rotherham:"
         button1Text="Order For Sheffield"
         button2Text="Order For Rotherham"
+        button1OnClick={() => router.push("/order-sheffield")}
+        button2OnClick={() => router.push("/order-rotherham")}
       />
       <Footer applyBorderTop={false} />
     </Box>
