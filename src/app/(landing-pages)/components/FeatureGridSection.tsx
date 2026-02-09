@@ -12,6 +12,7 @@ export interface FeatureItem {
   firstWord: string;
   secondWord: string;
   description?: string;
+  onClick?: () => void;
 }
 
 export interface FeatureGridSectionProps {
@@ -22,6 +23,7 @@ export interface FeatureGridSectionProps {
   backgroundColor?: string;
   backgroundImage?: string;
   buttonText?: string;
+  buttonOnClick?: () => void;
   maxWidth?: string;
 }
 
@@ -33,6 +35,7 @@ export default function FeatureGridSection({
   backgroundColor = colors.White,
   backgroundImage,
   buttonText,
+  buttonOnClick,
   maxWidth = "1400px",
 }: FeatureGridSectionProps) {
   useEffect(() => {
@@ -119,11 +122,11 @@ export default function FeatureGridSection({
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
-              // key={index}
               icon={feature.icon}
               firstWord={feature.firstWord}
               secondWord={feature.secondWord}
               description={feature.description}
+              onClick={feature.onClick}
             />
           ))}
         </Box>
@@ -133,6 +136,7 @@ export default function FeatureGridSection({
           <Box>
             <Box
               component="button"
+              onClick={buttonOnClick}
               sx={{
                 backgroundColor: colors.primaryRed,
                 color: "#FFFFFF",

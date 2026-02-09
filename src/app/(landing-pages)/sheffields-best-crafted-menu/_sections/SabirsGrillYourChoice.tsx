@@ -6,7 +6,13 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function SabirsGrillYourChoice() {
+interface SabirsGrillYourChoiceProps {
+  onClaimNowClick?: () => void;
+}
+
+export default function SabirsGrillYourChoice({
+  onClaimNowClick,
+}: SabirsGrillYourChoiceProps) {
   const features = [
     {
       icon: svgs.expertChefs,
@@ -106,6 +112,7 @@ export default function SabirsGrillYourChoice() {
           data-aos="fade-left"
           data-aos-duration="400"
           component="button"
+          onClick={onClaimNowClick}
           sx={{
             backgroundColor: colors.primaryRed,
             color: "#FFD40D",

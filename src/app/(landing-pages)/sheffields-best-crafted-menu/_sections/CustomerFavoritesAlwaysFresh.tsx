@@ -1,5 +1,6 @@
 "use client";
 import { Box, Typography, Grid } from "@mui/material";
+import { useRouter } from "next/navigation";
 import { fonts, colors, sectionPadding } from "@/app/utils/themes";
 import webp from "@/_assets/webp";
 import "slick-carousel/slick/slick.css";
@@ -13,6 +14,8 @@ import SliderArrow from "@/_components/SliderArrow";
 import svgs from "@/_assets/svgs";
 
 export default function CustomerFavoritesAlwaysFresh() {
+  const router = useRouter();
+
   const settings = {
     dots: false,
     infinite: true,
@@ -219,6 +222,7 @@ export default function CustomerFavoritesAlwaysFresh() {
               title2={item.title2}
               price={item.price}
               description={item.description}
+              onClick={() => router.push("/order-sheffield")}
             />
           ))}
         </Box>
@@ -247,6 +251,7 @@ export default function CustomerFavoritesAlwaysFresh() {
                   title2={item.title2}
                   price={item.price}
                   description={item.description}
+                  onClick={() => router.push("/order-sheffield")}
                 />
               </Box>
             ))}
@@ -343,6 +348,7 @@ export default function CustomerFavoritesAlwaysFresh() {
           </Grid>
           <Box
             component="button"
+            onClick={() => router.push("/order-sheffield")}
             sx={{
               backgroundColor: colors.secondaryYellow,
               color: "#851A1D",

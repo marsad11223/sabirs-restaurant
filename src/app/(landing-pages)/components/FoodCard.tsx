@@ -12,6 +12,7 @@ interface FoodCardProps {
   title2?: string;
   price?: string;
   description?: string;
+  onClick?: () => void;
 }
 
 export default function FoodCard({
@@ -20,6 +21,7 @@ export default function FoodCard({
   title2,
   price,
   description,
+  onClick,
 }: FoodCardProps) {
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
@@ -139,6 +141,7 @@ export default function FoodCard({
         {/* Button */}
         <Box
           component="button"
+          onClick={onClick}
           sx={{
             backgroundColor: "#851A1D",
             color: colors.White,

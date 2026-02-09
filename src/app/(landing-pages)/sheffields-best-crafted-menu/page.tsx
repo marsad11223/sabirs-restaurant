@@ -1,4 +1,6 @@
+"use client";
 import { Box } from "@mui/material";
+import { useRouter } from "next/navigation";
 import HeroLandingPage from "../components/HeroLandingPage";
 import SabirsGrillYourChoice from "./_sections/SabirsGrillYourChoice";
 import CustomerFavoritesAlwaysFresh from "./_sections/CustomerFavoritesAlwaysFresh";
@@ -7,6 +9,8 @@ import FeatureGridSection from "../components/FeatureGridSection";
 import svgs from "@/_assets/svgs";
 
 export default function SheffieldsBestCraftedMenuPage() {
+  const router = useRouter();
+
   const features = [
     {
       icon: svgs.expertChefs,
@@ -14,12 +18,14 @@ export default function SheffieldsBestCraftedMenuPage() {
       secondWord: "CHEFS",
       description:
         "Trained specialists perfecting every burger with precision.",
+      onClick: () => router.push("/order-sheffield"),
     },
     {
       icon: svgs.premiumQuality,
       firstWord: "PREMIUM",
       secondWord: "QUALITY",
       description: "Only the finest ingredients sourced locally.",
+      onClick: () => router.push("/order-sheffield"),
     },
     {
       icon: svgs.madeWithLove,
@@ -27,6 +33,7 @@ export default function SheffieldsBestCraftedMenuPage() {
       secondWord: "LOVE",
       description:
         "Every item is crafted with passion and attention to detail.",
+      onClick: () => router.push("/order-sheffield"),
     },
   ];
 
@@ -36,24 +43,28 @@ export default function SheffieldsBestCraftedMenuPage() {
       firstWord: "Flexible ",
       secondWord: "seating",
       description: "Flexible seating for small to large groups",
+      onClick: () => router.push("/contact-us"),
     },
     {
       icon: svgs.customizableMenus,
       firstWord: "Customizable",
       secondWord: "menus",
       description: "Customizable menus tailored to your event",
+      onClick: () => router.push("/contact-us"),
     },
     {
       icon: svgs.eventCoordinator,
       firstWord: "event ",
       secondWord: "coordinator",
       description: "Dedicated event coordinator for seamless planning",
+      onClick: () => router.push("/contact-us"),
     },
     {
       icon: svgs.equipmentAvailability,
       firstWord: "equipment",
       secondWord: "availability",
       description: "Audio and visual equipment available upon request",
+      onClick: () => router.push("/contact-us"),
     },
   ];
   return (
@@ -66,10 +77,12 @@ export default function SheffieldsBestCraftedMenuPage() {
         description="At Sabir's Grill, we serve freshly grilled food made with quality ingredients and bold flavours. Every dish is prepared with care, cooked to perfection, and designed to give you a satisfying dining experience worth coming back for."
         button1Text="Order Now"
         button2Text="Explore Menu"
+        button1OnClick={() => router.push("/order-sheffield")}
+        button2OnClick={() => router.push("/order-sheffield")}
         maxWidth="880px"
         bgImage="./LandingPages/bgHeroLandingPage.png"
       />
-      <SabirsGrillYourChoice />
+      <SabirsGrillYourChoice onClaimNowClick={() => router.push("/order")} />
       <FeatureGridSection
         heading1="Sabir’s Grill"
         heading2="Your Choice"
@@ -87,6 +100,7 @@ export default function SheffieldsBestCraftedMenuPage() {
         description="Enjoy delicious food and personalized service in the perfect setting for your next party or event."
         features={features2}
         buttonText="Reserve Your Spot"
+        buttonOnClick={() => router.push("/contact-us")}
       />
       <Footer applyBorderTop={false} />
     </Box>

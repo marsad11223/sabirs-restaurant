@@ -18,6 +18,8 @@ interface HeroLandingPageProps {
   maxWidth?: string;
   button1Text?: string;
   button2Text?: string;
+  button1OnClick?: () => void;
+  button2OnClick?: () => void;
 }
 
 export default function HeroLandingPage({
@@ -29,6 +31,8 @@ export default function HeroLandingPage({
   description,
   button1Text,
   button2Text,
+  button1OnClick,
+  button2OnClick,
   // bgImage = "./bgHeroLandingPage.png",
   // icon = svgs.redStar,
   // bannerText = "Rated #1 Burger Joint in Sheffield",
@@ -230,6 +234,7 @@ export default function HeroLandingPage({
                   >
                     <Box
                       component="button"
+                      onClick={button1OnClick}
                       sx={{
                         backgroundColor: colors.secondaryYellow,
                         color: "#851A1D",
@@ -275,6 +280,7 @@ export default function HeroLandingPage({
                   >
                     <Box
                       component="button"
+                      onClick={button2OnClick}
                       sx={{
                         backgroundColor: "#FFFFFF33",
                         border: "none",

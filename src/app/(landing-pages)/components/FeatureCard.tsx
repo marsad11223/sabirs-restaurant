@@ -11,6 +11,7 @@ interface FeatureCardProps {
   firstWord: string;
   secondWord: string;
   description?: string;
+  onClick?: () => void;
 }
 
 export default function FeatureCard({
@@ -18,6 +19,7 @@ export default function FeatureCard({
   firstWord,
   secondWord,
   description,
+  onClick,
 }: FeatureCardProps) {
   useEffect(() => {
     AOS.init({ duration: 10000, once: true });
@@ -28,6 +30,7 @@ export default function FeatureCard({
     <Box
       data-aos="zoom-in"
       data-aos-duration="400"
+      onClick={onClick}
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -35,8 +38,10 @@ export default function FeatureCard({
         textAlign: "center",
         gap: { xs: "12px", md: "16px" },
         maxWidth: { xs: "300px", sm: "280px", md: "300px" },
-        // margin: "auto",
         width: "100%",
+        cursor: onClick ? "pointer" : "default",
+        transition: onClick ? "transform 0.3s ease" : "none",
+        "&:hover": onClick ? { transform: "translateY(-4px)" } : {},
       }}
     >
       {/* Icon Circle */}
